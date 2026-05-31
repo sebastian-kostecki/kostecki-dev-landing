@@ -40,7 +40,7 @@
         "company": "PanelAlpha",
         "companyUrl": "https://panelalpha.com",
         "logo": "/assets/experience/panelalpha.svg",
-        "role": "PHP Developer",
+        "role": "Backend Developer",
         "period": "3,5+ roku",
         "summary": "Backend aplikacji Laravel — self-hosted platforma B2B do automatyzacji WordPress dla hosterów. Integracje billingowe (WHMCS), API, Dockerowy provisioning.",
         "highlights": [
