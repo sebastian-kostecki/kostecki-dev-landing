@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
+import BrandMark from '@/components/ui/BrandMark.vue'
 import { useContent } from '@/composables/useContent'
 
 const { footer } = useContent()
@@ -36,9 +37,18 @@ const year = new Date().getFullYear()
       <div
         class="mt-8 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 md:flex-row"
       >
-        <p class="text-center text-sm text-muted md:text-left">
-          {{ footer.copyright }} &copy; {{ year }}
-        </p>
+        <div class="flex items-center gap-3">
+          <a
+            href="#"
+            class="inline-flex shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
+            aria-label="Strona główna"
+          >
+            <BrandMark :size="22" decorative />
+          </a>
+          <p class="text-center text-sm text-muted md:text-left">
+            {{ footer.copyright }} &copy; {{ year }}
+          </p>
+        </div>
         <div class="flex gap-4">
           <a
             v-for="social in footer.social"
