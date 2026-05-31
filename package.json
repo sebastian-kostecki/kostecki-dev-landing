@@ -13,7 +13,8 @@
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
     "format": "prettier --write --experimental-cli src/",
-    "generate:favicons": "node scripts/generate-favicons.mjs"
+    "generate:favicons": "node scripts/generate-favicons.mjs",
+    "generate:og-image": "node scripts/generate-og-image.mjs"
   },
   "dependencies": {
     "@iconify/vue": "^5.0.1",
