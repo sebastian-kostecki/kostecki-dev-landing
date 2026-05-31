@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brand mark variants — kostecki.dev</title>
+    <style>
+      :root {
+        --bg: #0c0c0e;
+        --surface: #141416;
+        --accent: #e63946;
+        --border: rgb(255 255 255 / 0.1);
+        --muted: #a1a1aa;
+        --font: 'Segoe UI', system-ui, sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 2rem;
+        font-family: var(--font);
+        background: var(--bg);
+        color: #fff;
+      }
+      h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 0 0.5rem;
+      }
+      p.lead {
+        color: var(--muted);
+        max-width: 52rem;
+        line-height: 1.6;
+        margin: 0 0 2rem;
+      }
+      .grid {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        max-width: 1100px;
+      }
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 1rem;
+        padding: 1.25rem;
+      }
+      .card.recommended {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 1px var(--accent);
+      }
+      .card h2 {
+        font-size: 1rem;
+        margin: 0 0 0.25rem;
+      }
+      .badge {
+        display: inline-block;
+        font-size: 0.65rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--accent);
+        margin-bottom: 0.5rem;
+      }
+      .card p {
+        font-size: 0.8rem;
+        color: var(--muted);
+        line-height: 1.5;
+        margin: 0 0 1rem;
+      }
+      .sizes {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        gap: 1.25rem;
+      }
+      .size {
+        text-align: center;
+      }
+      .size span {
+        display: block;
+        font-size: 0.65rem;
+        color: var(--muted);
+        margin-top: 0.35rem;
+      }
+      .header-demo {
+        margin-top: 1rem;
+        padding: 0.75rem 1rem;
+        background: rgb(12 12 14 / 0.8);
+        border: 1px solid var(--border);
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+      .header-demo span {
+        font-size: 0.75rem;
+        color: var(--muted);
+      }
+      .note {
+        margin-top: 2rem;
+        padding: 1rem;
+        border-radius: 0.75rem;
+        background: rgb(230 57 70 / 0.08);
+        border: 1px solid rgb(230 57 70 / 0.25);
+        font-size: 0.85rem;
+        color: var(--muted);
+        max-width: 52rem;
+      }
+      .note strong {
+        color: #fff;
+      }
+      .zoom-panel {
+        margin-top: 2rem;
+        max-width: 520px;
+        padding: 1.5rem;
+        background: var(--surface);
+        border: 1px solid var(--accent);
+        border-radius: 1rem;
+      }
+      .zoom-panel h2 {
+        font-size: 1rem;
+        margin: 0 0 1rem;
+      }
+      .zoom-panel svg {
+        display: block;
+      }
+      .zoom-panel p {
+        margin: 1rem 0 0;
+        font-size: 0.8rem;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Shared mark: variant 1 full (SK as bold filled letterforms) -->
+    <svg width="0" height="0" aria-hidden="true" focusable="false">
+      <defs>
+        <symbol id="mark-v1-full" viewBox="0 0 32 32">
+          <rect width="32" height="32" rx="6" fill="#0c0c0e" />
+          <path
+            d="M4.5 7 L8.25 16 L4.5 25"
+            fill="none"
+            stroke="#e63946"
+            stroke-width="2.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M27.5 7 L23.75 16 L27.5 25"
+            fill="none"
+            stroke="#e63946"
+            stroke-width="2.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <!-- S: bold stroke (readable at 32px+) -->
+          <path
+            d="M 11.5 10.5
+               C 8.5 10.5 7.5 13.2 9.8 14.8
+               C 12 16.2 12 16.2 9.8 17.8
+               C 7.5 19.5 8.5 23 11.8 23.5
+               C 15 24 17 21.8 16.2 19.8"
+            fill="none"
+            stroke="#ffffff"
+            stroke-width="3.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <!-- K: bold stroke -->
+          <path
+            d="M 17.5 10 L 17.5 23 M 17.5 16 L 22.5 10 M 17.5 16.5 L 22.5 23"
+            fill="none"
+            stroke="#ffffff"
+            stroke-width="3.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </symbol>
+        <symbol id="mark-v1-16" viewBox="0 0 32 32">
+          <rect width="32" height="32" rx="6" fill="#0c0c0e" />
+          <path
+            d="M5 8 L8.5 16 L5 24 M27 8 L23.5 16 L27 24"
+            fill="none"
+            stroke="#e63946"
+            stroke-width="3.4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </symbol>
+      </defs>
+    </svg>
+
+    <h1>Warianty znaku — SK + &lt; &gt;</h1>
+    <p class="lead">
+      Porównanie trzech kierunków z briefu. Paleta: tło <code>#0c0c0e</code>, akcent
+      <code>#e63946</code>, litery białe. Rozmiary: 16px (favicon), 32px (favicon/header),
+      180px (apple-touch), demo nagłówka.
+    </p>
+
+    <div class="grid">
+      <!-- Variant 1: Recommended -->
+      <article class="card recommended">
+        <span class="badge">Rekomendowany</span>
+        <h2>1. Wspólna oś nawiasów</h2>
+        <p>
+          Czerwone nawiasy + <strong style="color:#fff">białe, wypełnione SK</strong> między nimi.
+          Przy 16px tylko nawiasy (SK znika).
+        </p>
+        <div class="sizes">
+          <div class="size">
+            <svg width="16" height="16" aria-hidden="true"><use href="#mark-v1-16" /></svg>
+            <span>16px simplified</span>
+          </div>
+          <div class="size">
+            <svg width="32" height="32" aria-hidden="true"><use href="#mark-v1-full" /></svg>
+            <span>32px full</span>
+          </div>
+          <div class="size">
+            <svg width="72" height="72" aria-hidden="true"><use href="#mark-v1-full" /></svg>
+            <span>72px</span>
+          </div>
+        </div>
+        <div class="header-demo">
+          <svg width="28" height="28" aria-hidden="true"><use href="#mark-v1-full" /></svg>
+          <span>Header (~28px)</span>
+        </div>
+      </article>
+
+      <!-- Variant 2: Chevrons -->
+      <article class="card">
+        <h2>2. Nakładające się chevrony</h2>
+        <p>Abstrakcyjny krzyż ukośnych linii; SK tylko sugerowane — mocny przy 16px, słabsze inicjały.</p>
+        <div class="sizes">
+          <div class="size">
+            <svg width="16" height="16" viewBox="0 0 32 32" aria-hidden="true">
+              <rect width="32" height="32" rx="6" fill="#0c0c0e" />
+              <path
+                d="M8 6 L24 26 M24 6 L8 26"
+                fill="none"
+                stroke="#e63946"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+              <path d="M14 16 L18 16" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <span>16px</span>
+          </div>
+          <div class="size">
+            <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+              <rect width="32" height="32" rx="6" fill="#0c0c0e" />
+              <path
+                d="M7 5 L25 27 M25 5 L7 27"
+                fill="none"
+                stroke="#e63946"
+                stroke-width="2.6"
+                stroke-linecap="round"
+              />
+              <circle cx="16" cy="16" r="2" fill="#ffffff" />
+            </svg>
+            <span>32px</span>
+          </div>
+          <div class="size">
+            <svg width="72" height="72" viewBox="0 0 32 32" aria-hidden="true">
+              <rect width="32" height="32" rx="6" fill="#0c0c0e" />
+              <path
+                d="M7 5 L25 27 M25 5 L7 27"
+                fill="none"
+                stroke="#e63946"
+                stroke-width="2.6"
+                stroke-linecap="round"
+              />
+              <circle cx="16" cy="16" r="2" fill="#ffffff" />
+            </svg>
+            <span>72px</span>
+          </div>
+        </div>
+        <div class="header-demo">
+          <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="6" fill="#0c0c0e" />
+            <path
+              d="M7 5 L25 27 M25 5 L7 27"
+              fill="none"
+              stroke="#e63946"
+              stroke-width="2.6"
+              stroke-linecap="round"
+            />
+            <circle cx="16" cy="16" r="2" fill="#ffffff" />
+          </svg>
+          <span>Header (~28px)</span>
+        </div>
+      </article>
+
+      <!-- Variant 3: Linear -->
+      <article class="card">
+        <h2>3. Monogram liniowy</h2>
+        <p>Cienka linia &lt; S K &gt; w jednym rytmie — czytelne w headerze, słabe w 16px.</p>
+        <div class="sizes">
+          <div class="size">
+            <svg width="16" height="16" viewBox="0 0 32 32" aria-hidden="true">
+              <rect width="32" height="32" rx="6" fill="#0c0c0e" />
+              <path
+                d="M6 16 L10 8 M6 16 L10 24 M26 16 L22 8 M26 16 L22 24"
+                fill="none"
+                stroke="#e63946"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+            <span>16px (zlewa się)</span>
+          </div>
+          <div class="size">
+            <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+              <rect width="32" height="32" rx="6" fill="#0c0c0e" />
+              <path
+                d="M5 16 L9 7 M5 16 L9 25"
+                fill="none"
+                stroke="#e63946"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12 10 Q14 16 12 22 M16 10 L16 22 M16 15 L19 10 M16 17 L20 22"
+                fill="none"
+                stroke="#fff"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+              <path
+                d="M27 16 L23 7 M27 16 L23 25"
+                fill="none"
+                stroke="#e63946"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>32px</span>
+          </div>
+          <div class="size">
+            <svg width="72" height="72" viewBox="0 0 32 32" aria-hidden="true">
+              <rect width="32" height="32" rx="6" fill="#0c0c0e" />
+              <path
+                d="M5 16 L9 7 M5 16 L9 25"
+                fill="none"
+                stroke="#e63946"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12 10 Q14 16 12 22 M16 10 L16 22 M16 15 L19 10 M16 17 L20 22"
+                fill="none"
+                stroke="#fff"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+              <path
+                d="M27 16 L23 7 M27 16 L23 25"
+                fill="none"
+                stroke="#e63946"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>72px</span>
+          </div>
+        </div>
+        <div class="header-demo">
+          <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="6" fill="#0c0c0e" />
+            <path
+              d="M5 16 L9 7 M5 16 L9 25"
+              fill="none"
+              stroke="#e63946"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M12 10 Q14 16 12 22 M16 10 L16 22 M16 15 L19 10 M16 17 L20 22"
+              fill="none"
+              stroke="#fff"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            />
+            <path
+              d="M27 16 L23 7 M27 16 L23 25"
+              fill="none"
+              stroke="#e63946"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>Header (~28px)</span>
+        </div>
+      </article>
+    </div>
+
+    <section class="zoom-panel" aria-labelledby="zoom-title">
+      <h2 id="zoom-title">Wariant 1 — powiększenie (inicjały SK)</h2>
+      <svg width="256" height="256" aria-hidden="true"><use href="#mark-v1-full" /></svg>
+      <p>
+        Białe litery to <strong style="color:#fff">wypełnione ścieżki</strong> (nie cienkie linie).
+        Jeśli przy 32px nadal są słabo widoczne, odśwież stronę (Ctrl+F5) — poprzednia wersja miała
+        zbyt cienkie obrysy.
+      </p>
+    </section>
+
+    <p class="note">
+      <strong>Uwaga:</strong> To szkice koncepcyjne do wyboru kierunku, nie finalne assety. Po
+      wyborze wariantu dopracujemy ścieżki SVG (symetria, grubość, wersja 16px) i zapiszemy w
+      specyfikacji.
+    </p>
+  </body>
+</html>
