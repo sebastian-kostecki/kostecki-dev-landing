@@ -118,7 +118,9 @@
           { "name": "Vue.js", "icon": "simple-icons:vuedotjs" },
           { "name": "Vuetify", "icon": "simple-icons:vuetify" },
           { "name": "Tailwind CSS", "icon": "simple-icons:tailwindcss" },
-          { "name": "JavaScript", "icon": "simple-icons:javascript" }
+          { "name": "JavaScript", "icon": "simple-icons:javascript" },
+          { "name": "Ionic", "icon": "simple-icons:ionic" },
+          { "name": "Inertia.js", "icon": "simple-icons:inertia" }
         ]
       },
       {
@@ -140,7 +142,7 @@
     "items": [
       {
         "title": "Ogarniam Portfel",
-        "subtitle": "Side project — aplikacja do zarządzania domowym budżetem (Laravel, MySQL).",
+        "subtitle": "Side project — aplikacja do zarządzania domowym budżetem",
         "image": "/assets/projects/keep-wallet.png",
         "links": [
           {
@@ -156,17 +158,26 @@
       },
       {
         "title": "O Nią & O Niego",
-        "subtitle": "Side project — aplikacja mobilna (Ionic) dostępna w Google Play.",
+        "subtitle": "Side project — aplikacja mobilna (Ionic)",
         "image": "/assets/projects/o-nia-o-niego.jpg",
         "links": [
           {
-            "title": "Przejdź do aplikacji",
-            "url": "https://play.google.com/store/apps/details?id=kostecki.sebastian.oniaoniego",
+            "title": "Przejdź do GitHub",
+            "url": "https://github.com/sebastian-kostecki/o-nia-o-niego",
             "primary": true
-          },
+          }
+        ]
+      },
+      {
+        "title": "Menu Maker",
+        "subtitle": "Side project (WIP) — planowanie tygodniowych posiłków z AI, skalowaniem składników i eksportem PDF",
+        "image": "/assets/projects/menu-maker.png",
+        "placeholderIndex": 2,
+        "links": [
           {
             "title": "Przejdź do GitHub",
-            "url": "https://github.com/sebastian-kostecki/o-nia-o-niego"
+            "url": "https://github.com/sebastian-kostecki/menu-maker",
+            "primary": true
           }
         ]
       }
