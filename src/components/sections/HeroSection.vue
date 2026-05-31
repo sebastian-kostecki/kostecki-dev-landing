@@ -26,9 +26,26 @@ const { hero, nav } = useContent()
           <span class="text-gradient">{{ hero.name }}</span>
         </h1>
         <p class="mt-4 text-lg text-muted sm:text-xl lg:text-2xl">{{ hero.tagline }}</p>
+        <p v-if="hero.subtitle" class="mt-3 text-base text-muted sm:text-lg lg:max-w-2xl">
+          {{ hero.subtitle }}
+        </p>
         <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
-          <a :href="hero.ctaPrimary.href" class="btn-primary">{{ hero.ctaPrimary.label }}</a>
-          <a :href="hero.ctaSecondary.href" class="btn-secondary">{{ hero.ctaSecondary.label }}</a>
+          <a
+            :href="hero.ctaPrimary.href"
+            class="btn-primary"
+            :target="hero.ctaPrimary.href.startsWith('http') ? '_blank' : undefined"
+            :rel="hero.ctaPrimary.href.startsWith('http') ? 'noopener noreferrer' : undefined"
+          >
+            {{ hero.ctaPrimary.label }}
+          </a>
+          <a
+            :href="hero.ctaSecondary.href"
+            class="btn-secondary"
+            :target="hero.ctaSecondary.href.startsWith('http') ? '_blank' : undefined"
+            :rel="hero.ctaSecondary.href.startsWith('http') ? 'noopener noreferrer' : undefined"
+          >
+            {{ hero.ctaSecondary.label }}
+          </a>
         </div>
       </div>
 

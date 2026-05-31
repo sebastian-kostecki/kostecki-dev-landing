@@ -1,79 +1,146 @@
 {
   "meta": {
-    "title": "Sebastian Kostecki",
-    "description": "Webdeveloper | PHP | Laravel",
+    "title": "Sebastian Kostecki — Backend Developer (Laravel)",
+    "description": "Backend developer specjalizujący się w Laravel. Integracje hostingowe, provisioning WordPress, API. 4 lata komercyjnie.",
     "lang": "pl"
   },
   "nav": [
     { "id": "about", "label": "O mnie" },
+    { "id": "experience", "label": "Doświadczenie" },
     { "id": "skills", "label": "Umiejętności" },
     { "id": "projects", "label": "Projekty" },
     { "id": "contact", "label": "Kontakt" }
   ],
   "hero": {
     "name": "Sebastian Kostecki",
-    "tagline": "Webdeveloper | PHP | Laravel",
+    "tagline": "Backend Developer · PHP · Laravel",
+    "subtitle": "4 lata komercyjnie · backend Laravel · integracje hostingowe i infrastrukturalne",
     "ctaPrimary": {
-      "label": "Skontaktuj się",
-      "href": "#contact"
+      "label": "Porozmawiajmy",
+      "href": "https://www.linkedin.com/in/kostecki-sebastian"
     },
     "ctaSecondary": {
-      "label": "Umiejętności",
-      "href": "#skills"
+      "label": "Doświadczenie",
+      "href": "#experience"
     }
   },
   "about": {
     "title": "O mnie",
     "paragraphs": [
-      "Cześć! Jestem pasjonatem tworzenia stron internetowych. Specjalizuję się w frameworku Laravel, który pozwala mi tworzyć niezwykle wydajne i niezawodne aplikacje. Moje umiejętności obejmują głównie back-end, ale rozwijam również swoją wiedzę z zakresu front-endu.",
-      "Z pasją podchodzę do swoich zadań. Staram się w pełni zrozumieć oczekiwania klienta, aby następnie tworzyć wysokiej jakości produkty końcowe. Poza pracą skupiam się głównie na czasie z rodziną oraz rozwoju swoich umiejętności w IT."
+      "Od 4 lat pracuję w ModulesGarden — firmie tworzącej oprogramowanie dla branży hostingowej. Zacząłem od customowych modułów WHMCS (PHP, JavaScript), a obecnie rozwijam backend PanelAlpha — self-hosted platformy, która hosterom umożliwia provisionowanie i zarządzanie instalacjami WordPress klientów.",
+      "Skupiam się na warstwie backendowej — nowe feature'y, integracje z infrastrukturą hostingową oraz logika zarządzania instancjami WordPress. Obecnie rozwijam m.in. obsługę Git dla WordPressów. Gdy feature tego wymaga, wprowadzam też zmiany we frontendzie (Vue.js, Vuetify). Konkretne integracje i obszary pracy opisuję w sekcji Doświadczenie.",
+      "W codziennej pracy korzystam z narzędzi wspieranych AI — m.in. Cursor — przy implementacji, refaktoryzacji i analizie kodu.",
+      "Poza pracą — czas z rodziną i rozwój w IT."
+    ]
+  },
+  "experience": {
+    "title": "Doświadczenie",
+    "entries": [
+      {
+        "company": "PanelAlpha",
+        "companyUrl": "https://panelalpha.com",
+        "logo": "/assets/experience/panelalpha.svg",
+        "role": "PHP Developer",
+        "period": "3,5+ roku",
+        "summary": "Backend aplikacji Laravel — self-hosted platforma B2B do automatyzacji WordPress dla hosterów. Integracje billingowe (WHMCS), API, Dockerowy provisioning.",
+        "highlights": [
+          "Integracje z panelami hostingowymi: cPanel, Plesk, DirectAdmin, WP Cloud",
+          "Integracje DNS: PowerDNS, Cloudflare, Bunny DNS",
+          "Integracje z serwerami email: mailcow",
+          "Let's Encrypt — automatyzacja certyfikatów SSL",
+          "Analityka: Google Analytics, AWStats",
+          "Integracja onboardingu WordPress: Exendify, 10Web",
+          "Import i zarządzanie instancjami WordPress",
+          "Backupy lokalne i zdalne (S3, FTP, SFTP, FTPS)",
+          "Obsługa Git dla WordPressów",
+          "Frontend (Vue.js, Vuetify) — gdy feature wymaga zmian po obu stronach"
+        ]
+      },
+      {
+        "company": "ModulesGarden",
+        "companyUrl": "https://modulesgarden.com",
+        "logo": "/assets/experience/modulesgarden.svg",
+        "role": "PHP Developer",
+        "period": "~6 miesięcy",
+        "project": "Moduły WHMCS",
+        "summary": "Customowe moduły i integracje dla platformy billingowej hosterów (PHP, JavaScript, Smarty)."
+      }
     ]
   },
   "skills": {
     "title": "Umiejętności",
     "groups": [
       {
-        "description": "Pracuję głównie w języku PHP korzystając z frameworku Laravel. W przyszłości planuję naukę Symfony.",
+        "description": "Logika biznesowa, nowe feature'y, integracje z systemami zewnętrznymi.",
         "items": [
           { "name": "PHP", "icon": "simple-icons:php" },
           { "name": "Laravel", "icon": "simple-icons:laravel" }
         ]
       },
       {
-        "description": "W pracy wykorzystuję framework Vue.js w wersji 2. Obecnie poznaję wersję 3. Tworząc aplikację mobilną wykorzystywałem framework Ionic.",
+        "description": "Serwery hostingowe, DNS, SSL, storage, analityka, billing.",
+        "layout": "compact",
         "items": [
-          { "name": "JavaScript", "icon": "simple-icons:javascript" },
-          { "name": "Vue.js", "icon": "simple-icons:vuedotjs" },
-          { "name": "Ionic", "icon": "simple-icons:ionic" }
+          { "name": "cPanel", "icon": "simple-icons:cpanel" },
+          { "name": "Plesk", "icon": "simple-icons:plesk" },
+          { "name": "DirectAdmin", "image": "/assets/skills/directadmin.svg" },
+          { "name": "WP Cloud", "image": "/assets/skills/wp-cloud.svg" },
+          { "name": "TenWeb", "image": "/assets/skills/tenweb.svg" },
+          { "name": "PowerDNS", "image": "/assets/skills/powerdns.svg" },
+          { "name": "Cloudflare", "icon": "simple-icons:cloudflare" },
+          { "name": "Bunny DNS", "icon": "simple-icons:bunnydotnet" },
+          { "name": "Let's Encrypt", "icon": "simple-icons:letsencrypt" },
+          { "name": "S3", "icon": "simple-icons:amazons3" },
+          { "name": "FTP", "icon": "mdi:folder-upload" },
+          { "name": "SFTP", "icon": "mdi:folder-lock" },
+          { "name": "FTPS", "icon": "mdi:folder-key" },
+          { "name": "Google Analytics", "icon": "simple-icons:googleanalytics" },
+          { "name": "AWStats", "image": "/assets/skills/awstats.svg" },
+          { "name": "Extendify", "image": "/assets/skills/extendify.svg" },
+          { "name": "WHMCS", "image": "/assets/skills/whmcs.svg" }
         ]
       },
       {
-        "description": "Pracuję na bazie danych MySQL.",
+        "description": "Modele, migracje, zapytania w aplikacji produkcyjnej.",
         "items": [
           { "name": "MySQL", "icon": "simple-icons:mysql" }
         ]
       },
       {
-        "description": "Posługuję się systemem kontroli wersji GIT oraz korzystam z Dockera.",
+        "description": "Konteneryzacja, provisioning WordPress.",
         "items": [
-          { "name": "GIT", "icon": "simple-icons:git" },
           { "name": "Docker", "icon": "simple-icons:docker" }
         ]
       },
       {
-        "description": "Moim środowiskiem programistycznym jest PHP Storm.",
+        "description": "Zmiany UI w ramach feature'ów end-to-end.",
         "items": [
-          { "name": "PHP Storm", "icon": "simple-icons:phpstorm" }
+          { "name": "Vue.js", "icon": "simple-icons:vuedotjs" },
+          { "name": "Vuetify", "icon": "simple-icons:vuetify" },
+          { "name": "Tailwind CSS", "icon": "simple-icons:tailwindcss" },
+          { "name": "JavaScript", "icon": "simple-icons:javascript" }
+        ]
+      },
+      {
+        "description": "Kontrola wersji, środowisko developerskie.",
+        "items": [
+          { "name": "Git", "icon": "simple-icons:git" }
+        ]
+      },
+      {
+        "description": "Narzędzia AI w codziennym procesie developmentu — implementacja, refaktoryzacja, analiza kodu.",
+        "items": [
+          { "name": "Cursor", "icon": "simple-icons:cursor" }
         ]
       }
     ]
   },
   "projects": {
-    "title": "Moje Projekty",
+    "title": "Projekty własne",
     "items": [
       {
         "title": "Ogarniam Portfel",
-        "subtitle": "Aplikacja internetowa do zarządzania domowym budżetem.",
+        "subtitle": "Side project — aplikacja do zarządzania domowym budżetem (Laravel, MySQL).",
         "image": "/assets/projects/keep-wallet.png",
         "links": [
           {
@@ -89,7 +156,7 @@
       },
       {
         "title": "O Nią & O Niego",
-        "subtitle": "Aplikacja mobilna pomagająca użytkownikowi odmawiać odpowiednią tajemnicę różańcową.",
+        "subtitle": "Side project — aplikacja mobilna (Ionic) dostępna w Google Play.",
         "image": "/assets/projects/o-nia-o-niego.jpg",
         "links": [
           {
@@ -106,45 +173,39 @@
     ]
   },
   "contact": {
-    "title": "Kontakt ze mną",
-    "subtitle": "Chcesz współpracować? To świetnie! Oto moje dane kontaktowe:",
+    "title": "Porozmawiajmy",
+    "subtitle": "Zainteresowany współpracą lub rozmową o backendzie? Napisz do mnie.",
     "methods": [
-      {
-        "type": "email",
-        "label": "E-mail",
-        "value": "sebastian.kostecki@gmail.com",
-        "href": "mailto:sebastian.kostecki@gmail.com"
-      },
-      {
-        "type": "phone",
-        "label": "Telefon",
-        "value": "+48 502 321 934",
-        "href": "tel:+48502321934"
-      },
       {
         "type": "linkedin",
         "label": "LinkedIn",
         "value": "in/kostecki-sebastian",
         "href": "https://www.linkedin.com/in/kostecki-sebastian"
+      },
+      {
+        "type": "email",
+        "label": "E-mail",
+        "value": "sebastian.kostecki@gmail.com",
+        "href": "mailto:sebastian.kostecki@gmail.com"
       }
     ],
-    "ctaHeadline": "Czekasz na idealnego developera?",
+    "ctaHeadline": "Chcesz dowiedzieć się więcej o moim doświadczeniu?",
     "ctaPrimary": {
-      "label": "Skontaktuj się ze mną",
-      "href": "mailto:sebastian.kostecki@gmail.com"
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/kostecki-sebastian"
     },
     "ctaSecondary": {
-      "label": "Sprawdź moje umiejętności",
-      "href": "#skills"
+      "label": "GitHub",
+      "href": "https://github.com/sebastian-kostecki"
     }
   },
   "footer": {
-    "servicesTitle": "Usługi",
+    "servicesTitle": "Specjalizacja",
     "services": [
-      "Tworzenie stron i aplikacji internetowych",
-      "Back-end dla aplikacji internetowych"
+      "Backend Laravel w aplikacjach produkcyjnych",
+      "Integracje z systemami hostingowymi i infrastrukturalnymi"
     ],
-    "mediaTitle": "Media",
+    "mediaTitle": "Profile",
     "social": [
       {
         "name": "LinkedIn",

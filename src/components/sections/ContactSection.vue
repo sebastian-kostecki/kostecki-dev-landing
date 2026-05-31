@@ -49,7 +49,7 @@ onMounted(() => {
         <p class="mt-4 text-center text-muted">{{ contact.subtitle }}</p>
       </RevealOnScroll>
 
-      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:mx-auto lg:max-w-2xl">
         <ContactCard
           v-for="(method, index) in contact.methods"
           :key="method.type"
@@ -64,8 +64,20 @@ onMounted(() => {
             {{ contact.ctaHeadline }}
           </h3>
           <div class="mt-6 flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
-            <a :href="contact.ctaPrimary.href" class="btn-primary">{{ contact.ctaPrimary.label }}</a>
-            <a :href="contact.ctaSecondary.href" class="btn-secondary">
+            <a
+              :href="contact.ctaPrimary.href"
+              class="btn-primary"
+              :target="contact.ctaPrimary.href.startsWith('http') ? '_blank' : undefined"
+              :rel="contact.ctaPrimary.href.startsWith('http') ? 'noopener noreferrer' : undefined"
+            >
+              {{ contact.ctaPrimary.label }}
+            </a>
+            <a
+              :href="contact.ctaSecondary.href"
+              class="btn-secondary"
+              :target="contact.ctaSecondary.href.startsWith('http') ? '_blank' : undefined"
+              :rel="contact.ctaSecondary.href.startsWith('http') ? 'noopener noreferrer' : undefined"
+            >
               {{ contact.ctaSecondary.label }}
             </a>
           </div>

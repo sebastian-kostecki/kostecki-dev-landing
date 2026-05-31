@@ -10,12 +10,26 @@ export interface CtaLink {
 
 export interface SkillItem {
   name: string
-  icon: string
+  icon?: string
+  image?: string
 }
 
 export interface SkillGroup {
   description: string
   items: SkillItem[]
+  layout?: 'icons' | 'tags' | 'compact'
+}
+
+export interface ExperienceEntry {
+  company: string
+  companyUrl?: string
+  logo?: string
+  role: string
+  period: string
+  project?: string
+  projectUrl?: string
+  summary: string
+  highlights?: string[]
 }
 
 export interface ProjectLink {
@@ -55,12 +69,17 @@ export interface SiteContent {
   hero: {
     name: string
     tagline: string
+    subtitle?: string
     ctaPrimary: CtaLink
     ctaSecondary: CtaLink
   }
   about: {
     title: string
     paragraphs: string[]
+  }
+  experience: {
+    title: string
+    entries: ExperienceEntry[]
   }
   skills: {
     title: string
