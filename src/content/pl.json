@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "title": "Sebastian Kostecki",
+    "description": "Webdeveloper | PHP | Laravel",
+    "lang": "pl"
+  },
+  "nav": [
+    { "id": "about", "label": "O mnie" },
+    { "id": "skills", "label": "Umiejętności" },
+    { "id": "projects", "label": "Projekty" },
+    { "id": "contact", "label": "Kontakt" }
+  ],
+  "hero": {
+    "name": "Sebastian Kostecki",
+    "tagline": "Webdeveloper | PHP | Laravel",
+    "ctaPrimary": {
+      "label": "Skontaktuj się",
+      "href": "#contact"
+    },
+    "ctaSecondary": {
+      "label": "Umiejętności",
+      "href": "#skills"
+    }
+  },
+  "about": {
+    "title": "O mnie",
+    "paragraphs": [
+      "Cześć! Jestem pasjonatem tworzenia stron internetowych. Specjalizuję się w frameworku Laravel, który pozwala mi tworzyć niezwykle wydajne i niezawodne aplikacje. Moje umiejętności obejmują głównie back-end, ale rozwijam również swoją wiedzę z zakresu front-endu.",
+      "Z pasją podchodzę do swoich zadań. Staram się w pełni zrozumieć oczekiwania klienta, aby następnie tworzyć wysokiej jakości produkty końcowe. Poza pracą skupiam się głównie na czasie z rodziną oraz rozwoju swoich umiejętności w IT."
+    ]
+  },
+  "skills": {
+    "title": "Umiejętności",
+    "groups": [
+      {
+        "description": "Pracuję głównie w języku PHP korzystając z frameworku Laravel. W przyszłości planuję naukę Symfony.",
+        "items": [
+          { "name": "PHP", "icon": "simple-icons:php" },
+          { "name": "Laravel", "icon": "simple-icons:laravel" }
+        ]
+      },
+      {
+        "description": "W pracy wykorzystuję framework Vue.js w wersji 2. Obecnie poznaję wersję 3. Tworząc aplikację mobilną wykorzystywałem framework Ionic.",
+        "items": [
+          { "name": "JavaScript", "icon": "simple-icons:javascript" },
+          { "name": "Vue.js", "icon": "simple-icons:vuedotjs" },
+          { "name": "Ionic", "icon": "simple-icons:ionic" }
+        ]
+      },
+      {
+        "description": "Pracuję na bazie danych MySQL.",
+        "items": [
+          { "name": "MySQL", "icon": "simple-icons:mysql" }
+        ]
+      },
+      {
+        "description": "Posługuję się systemem kontroli wersji GIT oraz korzystam z Dockera.",
+        "items": [
+          { "name": "GIT", "icon": "simple-icons:git" },
+          { "name": "Docker", "icon": "simple-icons:docker" }
+        ]
+      },
+      {
+        "description": "Moim środowiskiem programistycznym jest PHP Storm.",
+        "items": [
+          { "name": "PHP Storm", "icon": "simple-icons:phpstorm" }
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Moje Projekty",
+    "items": [
+      {
+        "title": "Ogarniam Portfel",
+        "subtitle": "Aplikacja internetowa do zarządzania domowym budżetem.",
+        "image": "/assets/projects/keep-wallet.png",
+        "links": [
+          {
+            "title": "Przejdź do strony",
+            "url": "https://budget.sebastian-kostecki.profesjonalnyprogramista.pl/",
+            "primary": true
+          },
+          {
+            "title": "Przejdź do GitHub",
+            "url": "https://github.com/sebastian-kostecki/keep-wallet"
+          }
+        ]
+      },
+      {
+        "title": "O Nią & O Niego",
+        "subtitle": "Aplikacja mobilna pomagająca użytkownikowi odmawiać odpowiednią tajemnicę różańcową.",
+        "image": "/assets/projects/o-nia-o-niego.jpg",
+        "links": [
+          {
+            "title": "Przejdź do aplikacji",
+            "url": "https://play.google.com/store/apps/details?id=kostecki.sebastian.oniaoniego",
+            "primary": true
+          },
+          {
+            "title": "Przejdź do GitHub",
+            "url": "https://github.com/sebastian-kostecki/o-nia-o-niego"
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Kontakt ze mną",
+    "subtitle": "Chcesz współpracować? To świetnie! Oto moje dane kontaktowe:",
+    "methods": [
+      {
+        "type": "email",
+        "label": "E-mail",
+        "value": "sebastian.kostecki@gmail.com",
+        "href": "mailto:sebastian.kostecki@gmail.com"
+      },
+      {
+        "type": "phone",
+        "label": "Telefon",
+        "value": "+48 502 321 934",
+        "href": "tel:+48502321934"
+      },
+      {
+        "type": "linkedin",
+        "label": "LinkedIn",
+        "value": "in/kostecki-sebastian",
+        "href": "https://www.linkedin.com/in/kostecki-sebastian"
+      }
+    ],
+    "ctaHeadline": "Czekasz na idealnego developera?",
+    "ctaPrimary": {
+      "label": "Skontaktuj się ze mną",
+      "href": "mailto:sebastian.kostecki@gmail.com"
+    },
+    "ctaSecondary": {
+      "label": "Sprawdź moje umiejętności",
+      "href": "#skills"
+    }
+  },
+  "footer": {
+    "servicesTitle": "Usługi",
+    "services": [
+      "Tworzenie stron i aplikacji internetowych",
+      "Back-end dla aplikacji internetowych"
+    ],
+    "mediaTitle": "Media",
+    "social": [
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/kostecki-sebastian",
+        "icon": "simple-icons:linkedin"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/sebastian-kostecki",
+        "icon": "simple-icons:github"
+      }
+    ],
+    "copyright": "Wszystkie prawa zastrzeżone"
+  }
+}

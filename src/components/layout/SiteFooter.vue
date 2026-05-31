@@ -1,0 +1,58 @@
+<script setup lang="ts">
+import { Icon } from '@iconify/vue'
+import { useContent } from '@/composables/useContent'
+
+const { footer } = useContent()
+const year = new Date().getFullYear()
+</script>
+
+<template>
+  <footer class="border-t border-border bg-bg py-12 lg:py-16">
+    <div class="container mx-auto px-4 lg:px-8">
+      <div class="grid gap-8 md:grid-cols-2">
+        <div class="text-center md:text-left">
+          <p class="font-display font-bold text-white">{{ footer.servicesTitle }}</p>
+          <ul class="mt-3 space-y-2 text-sm text-muted">
+            <li v-for="service in footer.services" :key="service">{{ service }}</li>
+          </ul>
+        </div>
+        <div class="text-center md:text-left">
+          <p class="font-display font-bold text-white">{{ footer.mediaTitle }}</p>
+          <ul class="mt-3 space-y-2">
+            <li v-for="social in footer.social" :key="social.name">
+              <a
+                :href="social.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
+              >
+                <Icon :icon="social.icon" class="h-4 w-4" aria-hidden="true" />
+                {{ social.name }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="mt-8 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 md:flex-row"
+      >
+        <p class="text-center text-sm text-muted md:text-left">
+          {{ footer.copyright }} &copy; {{ year }}
+        </p>
+        <div class="flex gap-4">
+          <a
+            v-for="social in footer.social"
+            :key="social.name"
+            :href="social.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
+            :aria-label="social.name"
+          >
+            <Icon :icon="social.icon" class="h-5 w-5" aria-hidden="true" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</template>

@@ -1,12 +1,22 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import SiteHeader from '@/components/layout/SiteHeader.vue'
+import SiteFooter from '@/components/layout/SiteFooter.vue'
+import HeroSection from '@/components/sections/HeroSection.vue'
+import AboutSection from '@/components/sections/AboutSection.vue'
+import SkillsSection from '@/components/sections/SkillsSection.vue'
+import ProjectsSection from '@/components/sections/ProjectsSection.vue'
+import ContactSection from '@/components/sections/ContactSection.vue'
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
-  <p>asdas</p>
+  <a href="#about" class="skip-link">Przejdź do treści</a>
+  <SiteHeader />
+  <HeroSection />
+  <main id="main-content">
+    <AboutSection />
+    <SkillsSection />
+    <ProjectsSection />
+    <ContactSection />
+  </main>
+  <SiteFooter />
 </template>
-
-<style scoped></style>
