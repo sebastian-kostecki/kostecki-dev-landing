@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import BrandMark from '@/components/ui/BrandMark.vue'
 import { useScrollPosition } from '@/composables/useScrollReveal'
 import { useContent } from '@/composables/useContent'
 
@@ -7,17 +8,6 @@ const { nav } = useContent()
 const { scrollY } = useScrollPosition()
 
 const isVisible = computed(() => scrollY.value > 80)
-
-function getInitials(name: string): string {
-  return name
-    .split(' ')
-    .map((part) => part[0])
-    .join('')
-    .toUpperCase()
-}
-
-const { hero } = useContent()
-const initials = computed(() => getInitials(hero.name))
 </script>
 
 <template>
@@ -33,10 +23,10 @@ const initials = computed(() => getInitials(hero.name))
     <div class="container mx-auto flex items-center justify-between px-4 py-4 lg:px-8">
       <a
         href="#"
-        class="font-display text-lg font-bold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
+        class="inline-flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
         aria-label="Strona główna"
       >
-        {{ initials }}
+        <BrandMark :size="28" decorative />
       </a>
       <nav aria-label="Sekcje strony">
         <ul class="hidden items-center gap-6 md:flex">
