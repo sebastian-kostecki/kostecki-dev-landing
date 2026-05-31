@@ -1,6 +1,8 @@
 # kostecki-dev-landing
 
-This template should help get you started developing with Vue 3 in Vite.
+Landing page for [kostecki.dev](https://kostecki.dev) — Vue 3, TypeScript, Vite.
+
+Infrastructure and deploy: [kostecki-dev-infra](https://github.com/sebastian-kostecki/kostecki-dev-infra) (`docs/LANDING.md`).
 
 ## Recommended IDE Setup
 
