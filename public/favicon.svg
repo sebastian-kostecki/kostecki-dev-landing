@@ -1,12 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="SK">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Sebastian Kostecki">
   <rect width="32" height="32" rx="6" fill="#0c0c0e"/>
-  <text
-    x="16"
-    y="22"
-    text-anchor="middle"
-    font-family="system-ui, -apple-system, sans-serif"
-    font-size="13"
-    font-weight="700"
-    fill="#e63946"
-  >SK</text>
+  <path
+    d="M7 5 L25 27 M25 5 L7 27"
+    fill="none"
+    stroke="#e63946"
+    stroke-width="2.6"
+    stroke-linecap="round"
+  />
+  <circle cx="16" cy="16" r="2" fill="#ffffff"/>
 </svg>
