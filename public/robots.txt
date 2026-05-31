@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kostecki.dev/sitemap.xml
