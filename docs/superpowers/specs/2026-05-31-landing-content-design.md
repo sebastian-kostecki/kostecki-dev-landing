@@ -1,7 +1,7 @@
 # Landing Page Content Redesign — Design Spec
 
 **Date:** 2026-05-31  
-**Status:** Approved (brainstorming)  
+**Status:** Approved  
 **Scope:** Content and structure of kostecki.dev landing page (`src/content/pl.json` + related UI)
 
 ## Goals
@@ -64,9 +64,13 @@ Wire `meta.title` and `meta.description` into the page at runtime (currently onl
 
 1. Od 4 lat pracuję w ModulesGarden — firmie tworzącej oprogramowanie dla branży hostingowej. Zacząłem od customowych modułów WHMCS (PHP, JavaScript), a obecnie rozwijam backend PanelAlpha — self-hosted platformy, która hosterom umożliwia provisionowanie i zarządzanie instalacjami WordPress klientów.
 
-2. Na co dzień dodaję nowe funkcje backendowe — m.in. integracje z serwerami (cPanel, Plesk, DirectAdmin, WP Cloud, TenWeb), DNS (PowerDNS, Cloudflare), serwerami mailowymi, Let's Encrypt, analityką (Google Analytics, AWStats), Extendify, import instancji, backupy (lokalne i zdalne, np. S3) oraz obsługę Git dla WordPressów. Gdy trzeba, wprowadzam też zmiany we frontendzie (Vue.js, Vuetify).
+2. Skupiam się na warstwie backendowej — nowe feature'y, integracje z infrastrukturą hostingową oraz logika zarządzania instancjami WordPress. Obecnie rozwijam m.in. obsługę Git dla WordPressów. Gdy feature tego wymaga, wprowadzam też zmiany we frontendzie (Vue.js, Vuetify). Konkretne integracje i obszary pracy opisuję w sekcji Doświadczenie.
 
-3. Poza pracą — czas z rodziną i rozwój w IT.
+3. W codziennej pracy korzystam z narzędzi wspieranych AI — m.in. Cursor — przy implementacji, refaktoryzacji i analizie kodu.
+
+4. Poza pracą — czas z rodziną i rozwój w IT.
+
+**Content split rationale:** „O mnie” = narracja i kontekst. Szczegółowa lista integracji = wyłącznie sekcja Doświadczenie (bullets). AI = krótka wzmianka tutaj + osobna grupa w Umiejętnościach.
 
 External links in copy (ModulesGarden, PanelAlpha) should be clickable where rendered.
 
@@ -91,13 +95,13 @@ External links in copy (ModulesGarden, PanelAlpha) should be clickable where ren
 **Highlights (bullet list):**
 
 - Integracje z panelami hostingowymi: cPanel, Plesk, DirectAdmin, WP Cloud, TenWeb
-- Integracje DNS: PowerDNS, Cloudflare
+- Integracje DNS: PowerDNS, Cloudflare, Bunny DNS
 - Serwery mailowe
 - Let's Encrypt — automatyzacja certyfikatów SSL
 - Analityka: Google Analytics, AWStats
 - Extendify — integracja onboardingu WordPress
 - Import i zarządzanie instancjami WordPress
-- Backupy lokalne i zdalne (S3)
+- Backupy lokalne i zdalne (S3, FTP, SFTP, FTPS)
 - Obsługa Git dla WordPressów (obecny obszar pracy)
 - Frontend (Vue.js, Vuetify) — gdy feature wymaga zmian po obu stronach
 
@@ -119,11 +123,14 @@ Note: Entry 2 is a sub-period within the same ModulesGarden employment — prese
 | Group | Description | Items |
 |---|---|---|
 | Backend | Logika biznesowa, nowe feature'y, integracje z systemami zewnętrznymi | PHP, Laravel |
-| Integracje | Serwery hostingowe, DNS, SSL, storage, analityka, billing | cPanel, Plesk, DirectAdmin, WP Cloud, TenWeb, PowerDNS, Cloudflare, Let's Encrypt, S3, Google Analytics, AWStats, Extendify, WHMCS |
+| Integracje | Serwery hostingowe, DNS, SSL, storage, analityka, billing | cPanel, Plesk, DirectAdmin, WP Cloud, TenWeb, PowerDNS, Cloudflare, Bunny DNS, Let's Encrypt, S3, FTP, SFTP, FTPS, Google Analytics, AWStats, Extendify, WHMCS |
 | Bazy danych | Modele, migracje, zapytania w aplikacji produkcyjnej | MySQL |
 | Infrastruktura | Konteneryzacja, provisioning WordPress | Docker |
 | Frontend (uzupełnienie) | Zmiany UI w ramach feature'ów end-to-end | Vue.js, Vuetify, JavaScript |
-| Narzędzia | — | Git |
+| Narzędzia | Kontrola wersji, środowisko developerskie | Git |
+| AI & workflow | Narzędzia AI w codziennym procesie developmentu — implementacja, refaktoryzacja, analiza kodu | Cursor |
+
+**AI wording note:** Frame as modern developer workflow, not as a replacement for engineering judgment. Avoid hype ("AI expert"); keep factual and brief.
 
 **Removed from current content:**
 
@@ -163,15 +170,14 @@ Positioned as supplementary side projects, not primary proof of competence.
 | `contact.ctaSecondary.label` | GitHub |
 | `contact.ctaSecondary.href` | `https://github.com/sebastian-kostecki` |
 
-**Contact methods order:** LinkedIn first, then email, then phone (optional — keep phone unless user removes later).
+**Contact methods** (phone removed):
 
-Existing contact data unchanged:
+| Order | Type | Value |
+|---|---|---|
+| 1 | LinkedIn | in/kostecki-sebastian |
+| 2 | Email | sebastian.kostecki@gmail.com |
 
-- Email: sebastian.kostecki@gmail.com
-- Phone: +48 502 321 934
-- LinkedIn: in/kostecki-sebastian
-
-**Removed:** "Czekasz na idealnego developera?" headline.
+**Removed:** phone contact method, "Czekasz na idealnego developera?" headline.
 
 ### Stopka
 
@@ -234,7 +240,6 @@ interface SiteContent {
 - English language version (`en.json`)
 - Open Graph / Twitter Card meta tags
 - Email address change to `@kostecki.dev`
-- Removing phone number from contact
 - New side projects beyond existing two
 
 ## Self-Review Checklist
@@ -246,3 +251,6 @@ interface SiteContent {
 - [x] All user-confirmed integrations included (TenWeb, Extendify, GA, AWStats, Let's Encrypt)
 - [x] NDA-safe: public product/partner names only, no internal metrics or roadmap details
 - [x] PanelAlpha described as self-hosted B2B platform (not SaaS)
+- [x] AI/Cursor covered in O mnie (brief) and Umiejętności (dedicated group)
+- [x] O mnie paragraph 2 simplified — integration details only in Doświadczenie
+- [x] Phone removed from contact methods
