@@ -7,7 +7,7 @@ const { hero, nav } = useContent()
 <template>
   <section
     id="hero"
-    class="relative flex min-h-screen items-center overflow-hidden"
+    class="relative flex min-h-screen flex-col overflow-hidden"
     aria-label="Hero"
   >
     <div
@@ -20,40 +20,43 @@ const { hero, nav } = useContent()
       aria-hidden="true"
     />
 
-    <div class="container relative mx-auto px-4 py-24 lg:px-8">
-      <div class="max-w-3xl text-center lg:text-left">
-        <h1 class="font-display text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-7xl">
-          <span class="text-gradient">{{ hero.name }}</span>
-        </h1>
-        <p class="mt-4 text-lg text-muted sm:text-xl lg:text-2xl">{{ hero.tagline }}</p>
-        <p v-if="hero.subtitle" class="mt-3 text-base text-muted sm:text-lg lg:max-w-2xl">
-          {{ hero.subtitle }}
-        </p>
-        <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
-          <a
-            :href="hero.ctaPrimary.href"
-            class="btn-primary"
-            :target="hero.ctaPrimary.href.startsWith('http') ? '_blank' : undefined"
-            :rel="hero.ctaPrimary.href.startsWith('http') ? 'noopener noreferrer' : undefined"
-          >
-            {{ hero.ctaPrimary.label }}
-          </a>
-          <a
-            :href="hero.ctaSecondary.href"
-            class="btn-secondary"
-            :target="hero.ctaSecondary.href.startsWith('http') ? '_blank' : undefined"
-            :rel="hero.ctaSecondary.href.startsWith('http') ? 'noopener noreferrer' : undefined"
-          >
-            {{ hero.ctaSecondary.label }}
-          </a>
+    <div
+      class="container relative mx-auto flex flex-1 flex-col justify-between px-4 py-12 lg:px-8 lg:py-24"
+    >
+      <div class="flex flex-1 flex-col justify-center">
+        <div class="max-w-3xl text-center lg:text-left">
+          <h1 class="font-display text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-7xl">
+            <span class="text-gradient">{{ hero.name }}</span>
+          </h1>
+          <p class="mt-4 text-lg text-muted sm:text-xl lg:text-2xl">{{ hero.tagline }}</p>
+          <p v-if="hero.subtitle" class="mt-3 text-base text-muted sm:text-lg lg:max-w-2xl">
+            {{ hero.subtitle }}
+          </p>
+          <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
+            <a
+              :href="hero.ctaPrimary.href"
+              class="btn-primary"
+              :target="hero.ctaPrimary.href.startsWith('http') ? '_blank' : undefined"
+              :rel="hero.ctaPrimary.href.startsWith('http') ? 'noopener noreferrer' : undefined"
+            >
+              {{ hero.ctaPrimary.label }}
+            </a>
+            <a
+              :href="hero.ctaSecondary.href"
+              class="btn-secondary"
+              :target="hero.ctaSecondary.href.startsWith('http') ? '_blank' : undefined"
+              :rel="hero.ctaSecondary.href.startsWith('http') ? 'noopener noreferrer' : undefined"
+            >
+              {{ hero.ctaSecondary.label }}
+            </a>
+          </div>
         </div>
       </div>
 
-      <nav
-        class="absolute bottom-8 left-1/2 -translate-x-1/2 lg:bottom-12 lg:left-8 lg:translate-x-0"
-        aria-label="Główna nawigacja"
-      >
-        <ul class="flex flex-col items-center gap-3 sm:flex-row sm:gap-6">
+      <nav class="shrink-0 pt-10 lg:pt-12" aria-label="Główna nawigacja">
+        <ul
+          class="flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-6 lg:items-start lg:justify-start"
+        >
           <li v-for="item in nav" :key="item.id">
             <a
               :href="`#${item.id}`"
