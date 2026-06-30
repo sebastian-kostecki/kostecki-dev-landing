@@ -21,7 +21,7 @@ const gradientClass = gradientClasses[(props.project.placeholderIndex ?? props.i
     class="group surface-card overflow-hidden transition-transform duration-300 hover:scale-[1.02] reveal"
     :style="{ transitionDelay: `${index * 100}ms` }"
   >
-    <div class="relative aspect-video overflow-hidden">
+    <div class="relative aspect-[2/1] overflow-hidden">
       <img
         v-if="project.image"
         :src="project.image"
@@ -29,7 +29,7 @@ const gradientClass = gradientClasses[(props.project.placeholderIndex ?? props.i
         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         loading="lazy"
         width="640"
-        height="360"
+        height="320"
       />
       <div
         v-else
@@ -37,7 +37,7 @@ const gradientClass = gradientClasses[(props.project.placeholderIndex ?? props.i
         :class="gradientClass"
         aria-hidden="true"
       >
-        <span class="font-display text-6xl font-bold text-white/20">
+        <span class="font-display text-5xl font-bold text-white/20">
           {{ project.placeholderIndex ?? index + 1 }}
         </span>
       </div>
@@ -46,16 +46,19 @@ const gradientClass = gradientClasses[(props.project.placeholderIndex ?? props.i
         aria-hidden="true"
       />
     </div>
-    <div class="p-6">
+    <div class="p-4 lg:p-5">
       <p class="mono-label">side project</p>
-      <h3 class="mt-1 font-display text-xl font-bold text-white">{{ project.title }}</h3>
-      <p class="mt-2 text-sm leading-relaxed text-muted">{{ project.subtitle }}</p>
-      <div class="mt-4 flex flex-wrap gap-3">
+      <h3 class="mt-1 font-display text-lg font-bold text-white">{{ project.title }}</h3>
+      <p class="mt-1.5 text-sm leading-relaxed text-muted">{{ project.subtitle }}</p>
+      <div class="mt-3 flex flex-wrap gap-2">
         <a
           v-for="link in project.links"
           :key="link.url"
           :href="link.url"
-          :class="link.primary ? 'btn-primary' : 'btn-secondary'"
+          :class="[
+            link.primary ? 'btn-primary' : 'btn-secondary',
+            '!px-4 !py-2 text-xs',
+          ]"
           :target="link.url.startsWith('http') ? '_blank' : undefined"
           :rel="link.url.startsWith('http') ? 'noopener noreferrer' : undefined"
         >

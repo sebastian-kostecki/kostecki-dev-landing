@@ -39,7 +39,7 @@ onMounted(() => {
   <section
     id="projects"
     ref="sectionRef"
-    class="py-20 lg:py-28"
+    class="py-16 lg:py-24"
     aria-labelledby="projects-heading"
   >
     <div class="container mx-auto px-4 lg:px-8">
@@ -48,7 +48,7 @@ onMounted(() => {
         :command="content.projects.command"
         :title="content.projects.title"
       />
-      <div class="mt-10 grid gap-6 md:grid-cols-2">
+      <div class="mt-8 grid gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3">
         <ProjectCard
           v-for="(project, index) in content.projects.items"
           :key="project.title"
