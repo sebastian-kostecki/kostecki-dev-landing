@@ -47,7 +47,8 @@ const gradientClass = gradientClasses[(props.project.placeholderIndex ?? props.i
       />
     </div>
     <div class="p-6">
-      <h3 class="font-display text-xl font-bold text-white">{{ project.title }}</h3>
+      <p class="mono-label">side project</p>
+      <h3 class="mt-1 font-display text-xl font-bold text-white">{{ project.title }}</h3>
       <p class="mt-2 text-sm leading-relaxed text-muted">{{ project.subtitle }}</p>
       <div class="mt-4 flex flex-wrap gap-3">
         <a

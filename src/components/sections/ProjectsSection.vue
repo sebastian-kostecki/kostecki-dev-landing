@@ -4,7 +4,7 @@ import SectionHeading from '@/components/ui/SectionHeading.vue'
 import ProjectCard from '@/components/ui/ProjectCard.vue'
 import { useContent } from '@/composables/useContent'
 
-const { projects } = useContent()
+const content = useContent()
 const sectionRef = ref<HTMLElement | null>(null)
 
 onMounted(() => {
@@ -39,14 +39,18 @@ onMounted(() => {
   <section
     id="projects"
     ref="sectionRef"
-    class="py-16 lg:py-24"
+    class="py-20 lg:py-28"
     aria-labelledby="projects-heading"
   >
     <div class="container mx-auto px-4 lg:px-8">
-      <SectionHeading id="projects-heading" :title="projects.title" light />
+      <SectionHeading
+        id="projects-heading"
+        :command="content.projects.command"
+        :title="content.projects.title"
+      />
       <div class="mt-10 grid gap-6 md:grid-cols-2">
         <ProjectCard
-          v-for="(project, index) in projects.items"
+          v-for="(project, index) in content.projects.items"
           :key="project.title"
           :project="project"
           :index="index"
