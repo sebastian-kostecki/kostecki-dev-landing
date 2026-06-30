@@ -1,0 +1,219 @@
+{
+  "meta": {
+    "title": "Sebastian Kostecki — Backend Developer (Laravel)",
+    "description": "Backend Developer (Laravel). I build and integrate production hosting platforms — APIs, WordPress provisioning, infrastructure integrations. 4 years commercial experience.",
+    "lang": "en"
+  },
+  "ui": {
+    "skipToContent": "Skip to content",
+    "languageLabel": "Language",
+    "downloadCv": "Download CV",
+    "expand": "Expand",
+    "collapse": "Collapse",
+    "homeLabel": "Home",
+    "navLabel": "Main navigation"
+  },
+  "nav": [
+    { "id": "about", "label": "About" },
+    { "id": "experience", "label": "Experience" },
+    { "id": "skills", "label": "Skills" },
+    { "id": "projects", "label": "Projects" },
+    { "id": "contact", "label": "Contact" }
+  ],
+  "hero": {
+    "label": "// BACKEND ENGINEER · LARAVEL",
+    "name": "Sebastian Kostecki",
+    "valueProp": "I build and integrate production hosting platforms with Laravel.",
+    "subtitle": "Backend Developer with 4 years of commercial experience. Focus: infrastructure integrations, APIs, and WordPress automation.",
+    "metrics": [
+      { "value": "4 years", "label": "commercial" },
+      { "value": "15+", "label": "infra integrations" },
+      { "value": "PanelAlpha", "label": "B2B product" }
+    ],
+    "ctaPrimary": {
+      "label": "Let's talk",
+      "href": "https://www.linkedin.com/in/kostecki-sebastian"
+    }
+  },
+  "cv": {
+    "href": ""
+  },
+  "about": {
+    "command": "$ cat about.md",
+    "title": "About me",
+    "paragraphs": [
+      "For 4 years I've been building backend systems at ModulesGarden, a company creating software for the hosting industry. I currently develop PanelAlpha: a self-hosted B2B platform that lets hosting providers provision and manage their customers' WordPress installations.",
+      "My focus is the backend layer — new features, integrations with hosting infrastructure, and the logic for managing WordPress instances (including Git support for WordPress sites). When a feature requires it, I also work on the frontend (Vue.js, Vuetify).",
+      "In my daily work I use AI tools (such as Cursor) for implementation, refactoring, and code analysis. Outside of work — family and growing in IT."
+    ]
+  },
+  "experience": {
+    "command": "$ git log --experience",
+    "title": "Experience",
+    "entries": [
+      {
+        "company": "PanelAlpha",
+        "companyUrl": "https://panelalpha.com",
+        "logo": "/assets/experience/panelalpha.svg",
+        "role": "Backend Developer",
+        "period": "3.5+ years",
+        "summary": "Backend of a Laravel application — a self-hosted B2B platform for WordPress automation for hosting providers. Billing integrations (WHMCS), APIs, Docker-based provisioning.",
+        "highlights": [
+          "Hosting panel integrations: cPanel, Plesk, DirectAdmin, WP Cloud",
+          "DNS integrations: PowerDNS, Cloudflare, Bunny DNS",
+          "Email server integrations: mailcow",
+          "Let's Encrypt — automated SSL certificates",
+          "Analytics: Google Analytics, AWStats",
+          "WordPress onboarding integrations: Extendify, 10Web",
+          "Importing and managing WordPress instances",
+          "Local and remote backups (S3, FTP, SFTP, FTPS)",
+          "Git support for WordPress sites",
+          "Frontend (Vue.js, Vuetify) — when a feature requires changes on both sides"
+        ]
+      },
+      {
+        "company": "ModulesGarden",
+        "companyUrl": "https://modulesgarden.com",
+        "logo": "/assets/experience/mg.jpeg",
+        "role": "PHP Developer",
+        "period": "~6 months",
+        "project": "WHMCS modules",
+        "summary": "Custom modules and integrations for the hosting providers' billing platform (PHP, JavaScript, Smarty)."
+      }
+    ]
+  },
+  "skills": {
+    "command": "$ ls skills/",
+    "title": "Skills",
+    "coreDescription": "The core of my work: business logic, new features, and production integrations.",
+    "core": [
+      { "name": "PHP", "icon": "simple-icons:php" },
+      { "name": "Laravel", "icon": "simple-icons:laravel" },
+      { "name": "MySQL", "icon": "simple-icons:mysql" },
+      { "name": "Docker", "icon": "simple-icons:docker" }
+    ],
+    "categories": [
+      {
+        "name": "Hosting panels",
+        "items": [
+          { "name": "cPanel", "icon": "simple-icons:cpanel" },
+          { "name": "Plesk", "icon": "simple-icons:plesk" },
+          { "name": "DirectAdmin", "image": "/assets/skills/directadmin.svg" },
+          { "name": "WP Cloud", "image": "/assets/skills/wp-cloud.svg" }
+        ]
+      },
+      {
+        "name": "DNS",
+        "items": [
+          { "name": "PowerDNS", "image": "/assets/skills/powerdns.svg" },
+          { "name": "Cloudflare", "icon": "simple-icons:cloudflare" },
+          { "name": "Bunny DNS", "icon": "simple-icons:bunnydotnet" }
+        ]
+      },
+      {
+        "name": "Storage and backup",
+        "items": [
+          { "name": "S3", "icon": "simple-icons:amazons3" },
+          { "name": "FTP", "icon": "mdi:folder-upload" },
+          { "name": "SFTP", "icon": "mdi:folder-lock" },
+          { "name": "FTPS", "icon": "mdi:folder-key" }
+        ]
+      },
+      {
+        "name": "Email and SSL",
+        "items": [
+          { "name": "Let's Encrypt", "icon": "simple-icons:letsencrypt" },
+          { "name": "mailcow", "icon": "mdi:email-cog" }
+        ]
+      },
+      {
+        "name": "Analytics and billing",
+        "items": [
+          { "name": "Google Analytics", "icon": "simple-icons:googleanalytics" },
+          { "name": "AWStats", "image": "/assets/skills/awstats.svg" },
+          { "name": "WHMCS", "image": "/assets/skills/whmcs.svg" },
+          { "name": "Extendify", "image": "/assets/skills/extendify.svg" },
+          { "name": "TenWeb", "image": "/assets/skills/tenweb.svg" }
+        ]
+      },
+      {
+        "name": "Frontend",
+        "items": [
+          { "name": "Vue.js", "icon": "simple-icons:vuedotjs" },
+          { "name": "Vuetify", "icon": "simple-icons:vuetify" },
+          { "name": "Tailwind CSS", "icon": "simple-icons:tailwindcss" },
+          { "name": "JavaScript", "icon": "simple-icons:javascript" },
+          { "name": "Ionic", "icon": "simple-icons:ionic" },
+          { "name": "Inertia.js", "icon": "simple-icons:inertia" }
+        ]
+      },
+      {
+        "name": "Tools and AI",
+        "items": [
+          { "name": "Git", "icon": "simple-icons:git" },
+          { "name": "Cursor", "icon": "simple-icons:cursor" }
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "command": "$ ls projects/",
+    "title": "Personal projects",
+    "items": [
+      {
+        "title": "Ogarniam Portfel",
+        "subtitle": "Side project — a household budget management app",
+        "image": "/assets/projects/keep-wallet.png",
+        "links": [
+          { "title": "Website", "url": "https://budget.sebastian-kostecki.profesjonalnyprogramista.pl/", "primary": true },
+          { "title": "GitHub", "url": "https://github.com/sebastian-kostecki/keep-wallet" }
+        ]
+      },
+      {
+        "title": "O Nią & O Niego",
+        "subtitle": "Side project — a mobile app (Ionic)",
+        "image": "/assets/projects/o-nia-o-niego.jpg",
+        "links": [
+          { "title": "GitHub", "url": "https://github.com/sebastian-kostecki/o-nia-o-niego", "primary": true }
+        ]
+      },
+      {
+        "title": "Menu Maker",
+        "subtitle": "Side project (WIP) — weekly meal planning with AI, ingredient scaling, and PDF export",
+        "image": "/assets/projects/menu-maker.png",
+        "placeholderIndex": 2,
+        "links": [
+          { "title": "GitHub", "url": "https://github.com/sebastian-kostecki/menu-maker", "primary": true }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "command": "$ ./contact.sh",
+    "title": "Let's talk",
+    "subtitle": "Interested in working together or chatting about backend? Get in touch.",
+    "methods": [
+      { "type": "linkedin", "label": "LinkedIn", "value": "in/kostecki-sebastian", "href": "https://www.linkedin.com/in/kostecki-sebastian" },
+      { "type": "email", "label": "E-mail", "value": "sebastian.kostecki@gmail.com", "href": "mailto:sebastian.kostecki@gmail.com" }
+    ],
+    "ctaHeadline": "Want to learn more about my experience?",
+    "github": {
+      "label": "Code and projects",
+      "handle": "@sebastian-kostecki",
+      "href": "https://github.com/sebastian-kostecki"
+    }
+  },
+  "footer": {
+    "servicesTitle": "Specialization",
+    "services": [
+      "Laravel backend in production applications",
+      "Integrations with hosting and infrastructure systems"
+    ],
+    "mediaTitle": "Profiles",
+    "social": [
+      { "name": "LinkedIn", "url": "https://www.linkedin.com/in/kostecki-sebastian", "icon": "simple-icons:linkedin" },
+      { "name": "GitHub", "url": "https://github.com/sebastian-kostecki", "icon": "simple-icons:github" }
+    ],
+    "copyright": "All rights reserved"
+  }
+}
