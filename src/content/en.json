@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Sebastian Kostecki — Backend Developer (Laravel)",
-    "description": "Backend Developer (Laravel). I build and integrate production hosting platforms — APIs, WordPress provisioning, infrastructure integrations. 4 years commercial experience.",
+    "description": "Backend Developer (Laravel). I build and maintain production PHP backends — including API integrations, infrastructure, and WordPress automation. 4 years commercial experience.",
     "lang": "en"
   },
   "ui": {
@@ -21,10 +21,10 @@
     { "id": "contact", "label": "Contact" }
   ],
   "hero": {
-    "label": "// BACKEND ENGINEER · LARAVEL",
+    "label": "// BACKEND DEVELOPER · LARAVEL",
     "name": "Sebastian Kostecki",
-    "valueProp": "I build and integrate production hosting platforms with Laravel.",
-    "subtitle": "Backend Developer with 4 years of commercial experience. Focus: infrastructure integrations, APIs, and WordPress automation.",
+    "valueProp": "I build and maintain production PHP backends.",
+    "subtitle": "Backend Developer with 4 years of commercial experience — including API integrations, infrastructure, and WordPress automation in B2B SaaS.",
     "metrics": [
       { "value": "4 years", "label": "commercial" },
       { "value": "15+", "label": "infra integrations" },
