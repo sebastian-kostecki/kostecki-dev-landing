@@ -119,11 +119,6 @@ export interface SiteContent {
     subtitle: string
     methods: ContactMethod[]
     ctaHeadline: string
-    github: {
-      label: string
-      handle: string
-      href: string
-    }
   }
   footer: {
     servicesTitle: string

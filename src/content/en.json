@@ -196,12 +196,7 @@
       { "type": "linkedin", "label": "LinkedIn", "value": "in/kostecki-sebastian", "href": "https://www.linkedin.com/in/kostecki-sebastian" },
       { "type": "email", "label": "E-mail", "value": "sebastian.kostecki@gmail.com", "href": "mailto:sebastian.kostecki@gmail.com" }
     ],
-    "ctaHeadline": "Want to learn more about my experience?",
-    "github": {
-      "label": "Code and projects",
-      "handle": "@sebastian-kostecki",
-      "href": "https://github.com/sebastian-kostecki"
-    }
+    "ctaHeadline": "Want to learn more about my experience?"
   },
   "footer": {
     "servicesTitle": "Specialization",

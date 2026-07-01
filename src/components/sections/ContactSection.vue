@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue'
-import { Icon } from '@iconify/vue'
 import SectionHeading from '@/components/ui/SectionHeading.vue'
 import ContactCard from '@/components/ui/ContactCard.vue'
 import RevealOnScroll from '@/components/ui/RevealOnScroll.vue'
@@ -42,12 +41,11 @@ onMounted(() => {
           id="contact-heading"
           :command="content.contact.command"
           :title="content.contact.title"
-          centered
         />
-        <p class="mt-4 text-center text-muted">{{ content.contact.subtitle }}</p>
+        <p class="mt-4 text-center text-muted lg:text-left">{{ content.contact.subtitle }}</p>
       </RevealOnScroll>
 
-      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:mx-auto lg:max-w-2xl">
+      <div class="mt-10 grid gap-6 sm:grid-cols-2">
         <ContactCard
           v-for="(method, index) in content.contact.methods"
           :key="method.type"
@@ -57,24 +55,11 @@ onMounted(() => {
       </div>
 
       <RevealOnScroll>
-        <a
-          :href="content.contact.github.href"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="mt-6 flex items-center justify-center gap-3 rounded-2xl border border-border bg-white/5 p-5 transition-colors hover:border-accent/50 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent lg:mx-auto lg:max-w-2xl"
-        >
-          <Icon icon="simple-icons:github" class="h-6 w-6 text-white" aria-hidden="true" />
-          <span class="font-display font-semibold text-white">{{ content.contact.github.label }}</span>
-          <span class="font-mono text-sm text-muted">{{ content.contact.github.handle }}</span>
-        </a>
-      </RevealOnScroll>
-
-      <RevealOnScroll>
-        <div class="mt-12 rounded-2xl border border-border bg-white/5 p-8 text-center lg:p-12">
+        <div class="mt-12 rounded-2xl border border-border bg-white/5 p-8 lg:p-12">
           <h3 class="font-display text-2xl font-bold text-white lg:text-3xl">
             {{ content.contact.ctaHeadline }}
           </h3>
-          <div class="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div class="mt-6 flex flex-col gap-4 sm:flex-row">
             <a
               :href="content.hero.ctaPrimary.href"
               class="btn-primary"
