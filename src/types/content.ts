@@ -8,16 +8,20 @@ export interface CtaLink {
   href: string
 }
 
+export interface MetricItem {
+  value: string
+  label: string
+}
+
 export interface SkillItem {
   name: string
   icon?: string
   image?: string
 }
 
-export interface SkillGroup {
-  description: string
+export interface SkillCategory {
+  name: string
   items: SkillItem[]
-  layout?: 'icons' | 'tags' | 'compact'
 }
 
 export interface ExperienceEntry {
@@ -43,6 +47,7 @@ export interface Project {
   subtitle: string
   image: string | null
   placeholderIndex?: number
+  badge?: 'wip'
   links: ProjectLink[]
 }
 
@@ -65,37 +70,63 @@ export interface SiteContent {
     description: string
     lang: string
   }
+  ui: {
+    skipToContent: string
+    languageLabel: string
+    downloadCv: string
+    expand: string
+    collapse: string
+    homeLabel: string
+    navLabel: string
+    projectCardLabel: string
+    wipBadge: string
+    projectScreenshotAlt: string
+    openMenu: string
+    closeMenu: string
+    sectionsNavLabel: string
+  }
   nav: NavItem[]
   hero: {
+    label: string
     name: string
-    tagline: string
+    valueProp: string
     subtitle?: string
+    metrics: MetricItem[]
     ctaPrimary: CtaLink
-    ctaSecondary: CtaLink
+  }
+  cv: {
+    // Empty href => CV buttons are hidden (graceful handling until the file exists).
+    href: string
   }
   about: {
+    command: string
     title: string
     paragraphs: string[]
   }
   experience: {
+    command: string
     title: string
     entries: ExperienceEntry[]
   }
   skills: {
+    command: string
     title: string
-    groups: SkillGroup[]
+    coreTitle: string
+    coreDescription: string
+    core: SkillItem[]
+    categories: SkillCategory[]
   }
   projects: {
+    command: string
     title: string
     items: Project[]
   }
   contact: {
+    command: string
     title: string
     subtitle: string
     methods: ContactMethod[]
     ctaHeadline: string
-    ctaPrimary: CtaLink
-    ctaSecondary: CtaLink
   }
   footer: {
     servicesTitle: string

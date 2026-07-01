@@ -1,8 +1,17 @@
-import contentData from '@/content/pl.json'
+import { computed, type ComputedRef } from 'vue'
+import pl from '@/content/pl.json'
+import en from '@/content/en.json'
 import type { SiteContent } from '@/types/content'
+import { useLocale, type Locale } from '@/composables/useLocale'
 
-const content = contentData as SiteContent
+const dictionaries: Record<Locale, SiteContent> = {
+  pl: pl as SiteContent,
+  en: en as SiteContent,
+}
 
-export function useContent(): SiteContent {
-  return content
+// Returns a ComputedRef. In templates the ref auto-unwraps, so
+// `content.hero.name` works directly; in <script> use `content.value`.
+export function useContent(): ComputedRef<SiteContent> {
+  const { locale } = useLocale()
+  return computed(() => dictionaries[locale.value])
 }

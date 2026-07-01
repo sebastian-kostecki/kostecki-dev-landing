@@ -4,7 +4,7 @@ import SectionHeading from '@/components/ui/SectionHeading.vue'
 import ProjectCard from '@/components/ui/ProjectCard.vue'
 import { useContent } from '@/composables/useContent'
 
-const { projects } = useContent()
+const content = useContent()
 const sectionRef = ref<HTMLElement | null>(null)
 
 onMounted(() => {
@@ -43,10 +43,14 @@ onMounted(() => {
     aria-labelledby="projects-heading"
   >
     <div class="container mx-auto px-4 lg:px-8">
-      <SectionHeading id="projects-heading" :title="projects.title" light />
-      <div class="mt-10 grid gap-6 md:grid-cols-2">
+      <SectionHeading
+        id="projects-heading"
+        :command="content.projects.command"
+        :title="content.projects.title"
+      />
+      <div class="mt-8 grid gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3 [&>*]:h-full">
         <ProjectCard
-          v-for="(project, index) in projects.items"
+          v-for="(project, index) in content.projects.items"
           :key="project.title"
           :project="project"
           :index="index"

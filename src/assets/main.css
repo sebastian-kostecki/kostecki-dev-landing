@@ -10,6 +10,7 @@
   --color-muted: #a1a1aa;
   --font-display: 'Outfit', ui-sans-serif, system-ui, sans-serif;
   --font-body: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 @layer base {
@@ -75,5 +76,32 @@
 
   .reveal-visible {
     @apply opacity-100 translate-y-0;
+  }
+
+  .blueprint-grid {
+    background-image:
+      linear-gradient(rgb(255 255 255 / 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .cmd-label {
+    @apply font-mono text-xs font-medium tracking-wide text-accent;
+  }
+
+  .mono-label {
+    @apply font-mono text-[0.7rem] uppercase tracking-[0.15em] text-muted;
+  }
+
+  .tech-tag {
+    @apply inline-flex items-center gap-2 rounded-lg border border-border bg-white/5 px-3 py-1.5 font-mono text-xs font-medium text-white/90 transition-colors hover:border-accent/50 hover:bg-white/10;
+  }
+
+  .metric-value {
+    @apply font-display text-2xl font-extrabold text-white sm:text-3xl;
+  }
+
+  .metric-label {
+    @apply font-mono text-[0.7rem] uppercase tracking-wide text-muted;
   }
 }

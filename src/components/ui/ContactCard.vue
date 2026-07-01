@@ -21,24 +21,26 @@ const icon = iconMap[props.method.type]
 
 <template>
   <div
-    class="surface-card flex flex-col items-center p-6 text-center reveal"
+    class="surface-card flex flex-row items-center gap-4 p-6 reveal"
     :style="{ transitionDelay: `${index * 100}ms` }"
   >
     <div
-      class="flex h-16 w-16 items-center justify-center rounded-full bg-white/10"
+      class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white/10"
       aria-hidden="true"
     >
       <component :is="icon" v-if="typeof icon !== 'string'" class="h-7 w-7 text-white" />
       <Icon v-else :icon="icon" class="h-7 w-7 text-white" />
     </div>
-    <p class="mt-4 text-xs font-bold uppercase tracking-wider text-muted">{{ method.label }}</p>
-    <a
-      :href="method.href"
-      class="mt-1 text-sm font-medium text-white transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
-      :target="method.type === 'linkedin' ? '_blank' : undefined"
-      :rel="method.type === 'linkedin' ? 'noopener noreferrer' : undefined"
-    >
-      {{ method.value }}
-    </a>
+    <div class="min-w-0 text-left">
+      <p class="text-xs font-bold uppercase tracking-wider text-muted">{{ method.label }}</p>
+      <a
+        :href="method.href"
+        class="mt-1 block text-sm font-medium text-white transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
+        :target="method.type === 'linkedin' ? '_blank' : undefined"
+        :rel="method.type === 'linkedin' ? 'noopener noreferrer' : undefined"
+      >
+        {{ method.value }}
+      </a>
+    </div>
   </div>
 </template>
