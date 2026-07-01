@@ -3,7 +3,7 @@ import { Icon } from '@iconify/vue'
 import BrandMark from '@/components/ui/BrandMark.vue'
 import { useContent } from '@/composables/useContent'
 
-const { footer } = useContent()
+const content = useContent()
 const year = new Date().getFullYear()
 </script>
 
@@ -12,15 +12,15 @@ const year = new Date().getFullYear()
     <div class="container mx-auto px-4 lg:px-8">
       <div class="grid gap-8 md:grid-cols-2">
         <div class="text-center md:text-left">
-          <p class="font-display font-bold text-white">{{ footer.servicesTitle }}</p>
+          <p class="font-display font-bold text-white">{{ content.footer.servicesTitle }}</p>
           <ul class="mt-3 space-y-2 text-sm text-muted">
-            <li v-for="service in footer.services" :key="service">{{ service }}</li>
+            <li v-for="service in content.footer.services" :key="service">{{ service }}</li>
           </ul>
         </div>
         <div class="text-center md:text-left">
-          <p class="font-display font-bold text-white">{{ footer.mediaTitle }}</p>
+          <p class="font-display font-bold text-white">{{ content.footer.mediaTitle }}</p>
           <ul class="mt-3 space-y-2">
-            <li v-for="social in footer.social" :key="social.name">
+            <li v-for="social in content.footer.social" :key="social.name">
               <a
                 :href="social.url"
                 target="_blank"
@@ -41,17 +41,17 @@ const year = new Date().getFullYear()
           <a
             href="#"
             class="inline-flex shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
-            aria-label="Strona główna"
+            :aria-label="content.ui.homeLabel"
           >
             <BrandMark :size="22" decorative />
           </a>
-          <p class="text-center text-sm text-muted md:text-left">
-            {{ footer.copyright }} &copy; {{ year }}
+          <p class="font-mono text-center text-sm text-muted md:text-left">
+            {{ content.footer.copyright }} &copy; {{ year }}
           </p>
         </div>
         <div class="flex gap-4">
           <a
-            v-for="social in footer.social"
+            v-for="social in content.footer.social"
             :key="social.name"
             :href="social.url"
             target="_blank"
