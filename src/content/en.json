@@ -42,9 +42,9 @@
     "command": "$ cat about.md",
     "title": "About me",
     "paragraphs": [
-      "For 4 years I've been building backend systems at ModulesGarden, a company creating software for the hosting industry. I currently develop PanelAlpha: a self-hosted B2B platform that lets hosting providers provision and manage their customers' WordPress installations.",
-      "My focus is the backend layer — new features, integrations with hosting infrastructure, and the logic for managing WordPress instances (including Git support for WordPress sites). When a feature requires it, I also work on the frontend (Vue.js, Vuetify).",
-      "In my daily work I use AI tools (such as Cursor) for implementation, refactoring, and code analysis. Outside of work — family and growing in IT."
+      "For 4 years I've been building PHP backends — mostly Laravel — on a production B2B product. At ModulesGarden I work on PanelAlpha, a platform that helps service companies automate WordPress management.",
+      "I like owning a feature from the backend layer through to working business logic — and when needed, I pick up the frontend (Vue.js). I work on a live product, so I care about code that actually works for customers.",
+      "Day to day I use AI tools (including Cursor) to support implementation and refactoring. Outside of code — family, time outdoors, and keeping up with the industry."
     ]
   },
   "experience": {
