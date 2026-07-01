@@ -57,18 +57,13 @@
         "logo": "/assets/experience/panelalpha.svg",
         "role": "Backend Developer",
         "period": "3.5+ years",
-        "summary": "Backend of a Laravel application — a self-hosted B2B platform for WordPress automation for hosting providers. Billing integrations (WHMCS), APIs, Docker-based provisioning.",
+        "summary": "I develop the Laravel backend of a production B2B platform that automates WordPress management for service companies. I'm responsible for APIs, integrations with external infrastructure, and the logic for managing WordPress instances.",
         "highlights": [
-          "Hosting panel integrations: cPanel, Plesk, DirectAdmin, WP Cloud",
-          "DNS integrations: PowerDNS, Cloudflare, Bunny DNS",
-          "Email server integrations: mailcow",
-          "Let's Encrypt — automated SSL certificates",
-          "Analytics: Google Analytics, AWStats",
-          "WordPress onboarding integrations: Extendify, 10Web",
-          "Importing and managing WordPress instances",
-          "Local and remote backups (S3, FTP, SFTP, FTPS)",
-          "Git support for WordPress sites",
-          "Frontend (Vue.js, Vuetify) — when a feature requires changes on both sides"
+          "Infrastructure integrations — hosting panels (cPanel, Plesk, DirectAdmin, WP Cloud), DNS (PowerDNS, Cloudflare, Bunny), mail servers (mailcow), and SSL certificate automation (Let's Encrypt)",
+          "WordPress lifecycle — instance import and management, Git support, onboarding (Extendify, 10Web)",
+          "Backup and storage — local and remote backups (S3, FTP, SFTP, FTPS)",
+          "Billing and API — WHMCS integrations and platform API development",
+          "Full-stack — frontend (Vue.js, Vuetify) for features that span backend and UI"
         ]
       },
       {
@@ -78,7 +73,12 @@
         "role": "PHP Developer",
         "period": "~6 months",
         "project": "WHMCS modules",
-        "summary": "Custom modules and integrations for the hosting providers' billing platform (PHP, JavaScript, Smarty)."
+        "summary": "I built custom WHMCS modules for a hosting billing platform — business logic, integrations, and operational tooling (PHP, JavaScript, Smarty).",
+        "highlights": [
+          "Billing automation — including Invoice Sub Status, Automated Refunds, Auto Upgrade For Early Payments For WHMCS, admin fees on product changes",
+          "Integrations — Domain data from Plesk, Docker S3 Container",
+          "Operational tooling — BulkUpdater for bulk updates in WHMCS"
+        ]
       }
     ]
   },
