@@ -1,10 +1,14 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import type { Project } from '@/types/content'
+import { useContent } from '@/composables/useContent'
 
 const props = defineProps<{
   project: Project
   index: number
 }>()
+
+const content = useContent()
 
 const gradientClasses = [
   'from-accent/40 via-purple-500/30 to-blue-500/30',
@@ -14,18 +18,22 @@ const gradientClasses = [
 ]
 
 const gradientClass = gradientClasses[(props.project.placeholderIndex ?? props.index) % gradientClasses.length]
+
+const imageAlt = computed(
+  () => `${content.value.ui.projectScreenshotAlt} ${props.project.title}`,
+)
 </script>
 
 <template>
   <article
-    class="group surface-card overflow-hidden transition-transform duration-300 hover:scale-[1.02] reveal"
+    class="group flex h-full flex-col surface-card overflow-hidden transition-transform duration-300 hover:scale-[1.02] reveal"
     :style="{ transitionDelay: `${index * 100}ms` }"
   >
-    <div class="relative aspect-[2/1] overflow-hidden">
+    <div class="relative aspect-[2/1] shrink-0 overflow-hidden">
       <img
         v-if="project.image"
         :src="project.image"
-        :alt="`Zrzut ekranu projektu ${project.title}`"
+        :alt="imageAlt"
         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         loading="lazy"
         width="640"
@@ -46,11 +54,19 @@ const gradientClass = gradientClasses[(props.project.placeholderIndex ?? props.i
         aria-hidden="true"
       />
     </div>
-    <div class="p-4 lg:p-5">
-      <p class="mono-label">side project</p>
+    <div class="flex flex-1 flex-col p-4 lg:p-5">
+      <div class="flex flex-wrap items-center gap-2">
+        <p class="mono-label">{{ content.ui.projectCardLabel }}</p>
+        <span
+          v-if="project.badge === 'wip'"
+          class="rounded-md border border-accent/40 bg-accent/10 px-2 py-0.5 font-mono text-[0.65rem] font-semibold uppercase tracking-wide text-accent"
+        >
+          {{ content.ui.wipBadge }}
+        </span>
+      </div>
       <h3 class="mt-1 font-display text-lg font-bold text-white">{{ project.title }}</h3>
       <p class="mt-1.5 text-sm leading-relaxed text-muted">{{ project.subtitle }}</p>
-      <div class="mt-3 flex flex-wrap gap-2">
+      <div class="mt-auto flex flex-wrap gap-2 pt-3">
         <a
           v-for="link in project.links"
           :key="link.url"

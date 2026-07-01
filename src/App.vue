@@ -14,12 +14,24 @@ import { useLocale } from '@/composables/useLocale'
 const content = useContent()
 const { locale } = useLocale()
 
+function setMetaContent(selector: string, value: string) {
+  const element = document.querySelector(selector)
+  if (element) element.setAttribute('content', value)
+}
+
 function applyMeta() {
   const { meta } = content.value
+  const ogLocale = meta.lang === 'pl' ? 'pl_PL' : 'en_US'
+
   document.title = meta.title
   document.documentElement.lang = meta.lang
-  const description = document.querySelector('meta[name="description"]')
-  if (description) description.setAttribute('content', meta.description)
+
+  setMetaContent('meta[name="description"]', meta.description)
+  setMetaContent('meta[property="og:title"]', meta.title)
+  setMetaContent('meta[property="og:description"]', meta.description)
+  setMetaContent('meta[property="og:locale"]', ogLocale)
+  setMetaContent('meta[name="twitter:title"]', meta.title)
+  setMetaContent('meta[name="twitter:description"]', meta.description)
 }
 
 onMounted(applyMeta)

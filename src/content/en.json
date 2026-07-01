@@ -11,7 +11,13 @@
     "expand": "Expand",
     "collapse": "Collapse",
     "homeLabel": "Home",
-    "navLabel": "Main navigation"
+    "navLabel": "Main navigation",
+    "projectCardLabel": "Side project",
+    "wipBadge": "WIP",
+    "projectScreenshotAlt": "Screenshot of project",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "sectionsNavLabel": "Section navigation"
   },
   "nav": [
     { "id": "about", "label": "About" },
@@ -85,29 +91,28 @@
   "skills": {
     "command": "$ ls skills/",
     "title": "Skills",
-    "coreDescription": "The core of my work: business logic, new features, and production integrations.",
+    "coreTitle": "Core stack",
+    "coreDescription": "The stack I use to build and maintain production backends — and frontend when a feature requires it. The integration categories below mirror the areas from my experience.",
     "core": [
       { "name": "PHP", "icon": "simple-icons:php" },
       { "name": "Laravel", "icon": "simple-icons:laravel" },
       { "name": "MySQL", "icon": "simple-icons:mysql" },
-      { "name": "Docker", "icon": "simple-icons:docker" }
+      { "name": "Docker", "icon": "simple-icons:docker" },
+      { "name": "Vue.js", "icon": "simple-icons:vuedotjs" }
     ],
     "categories": [
       {
-        "name": "Hosting panels",
+        "name": "Infrastructure",
         "items": [
           { "name": "cPanel", "icon": "simple-icons:cpanel" },
           { "name": "Plesk", "icon": "simple-icons:plesk" },
           { "name": "DirectAdmin", "image": "/assets/skills/directadmin.svg" },
-          { "name": "WP Cloud", "image": "/assets/skills/wp-cloud.svg" }
-        ]
-      },
-      {
-        "name": "DNS",
-        "items": [
+          { "name": "WP Cloud", "image": "/assets/skills/wp-cloud.svg" },
           { "name": "PowerDNS", "image": "/assets/skills/powerdns.svg" },
           { "name": "Cloudflare", "icon": "simple-icons:cloudflare" },
-          { "name": "Bunny DNS", "icon": "simple-icons:bunnydotnet" }
+          { "name": "Bunny DNS", "icon": "simple-icons:bunnydotnet" },
+          { "name": "Let's Encrypt", "icon": "simple-icons:letsencrypt" },
+          { "name": "mailcow", "icon": "mdi:email-cog" }
         ]
       },
       {
@@ -120,14 +125,7 @@
         ]
       },
       {
-        "name": "Email and SSL",
-        "items": [
-          { "name": "Let's Encrypt", "icon": "simple-icons:letsencrypt" },
-          { "name": "mailcow", "icon": "mdi:email-cog" }
-        ]
-      },
-      {
-        "name": "Analytics and billing",
+        "name": "WordPress and billing",
         "items": [
           { "name": "Google Analytics", "icon": "simple-icons:googleanalytics" },
           { "name": "AWStats", "image": "/assets/skills/awstats.svg" },
@@ -139,7 +137,6 @@
       {
         "name": "Frontend",
         "items": [
-          { "name": "Vue.js", "icon": "simple-icons:vuedotjs" },
           { "name": "Vuetify", "icon": "simple-icons:vuetify" },
           { "name": "Tailwind CSS", "icon": "simple-icons:tailwindcss" },
           { "name": "JavaScript", "icon": "simple-icons:javascript" },
@@ -148,7 +145,7 @@
         ]
       },
       {
-        "name": "Tools and AI",
+        "name": "Tools",
         "items": [
           { "name": "Git", "icon": "simple-icons:git" },
           { "name": "Cursor", "icon": "simple-icons:cursor" }
@@ -162,7 +159,7 @@
     "items": [
       {
         "title": "Ogarniam Portfel",
-        "subtitle": "Side project — a household budget management app",
+        "subtitle": "A household budget app with spending categories and reports. Laravel, MySQL — live demo online.",
         "image": "/assets/projects/keep-wallet.png",
         "links": [
           { "title": "Website", "url": "https://budget.sebastian-kostecki.profesjonalnyprogramista.pl/", "primary": true },
@@ -171,7 +168,7 @@
       },
       {
         "title": "O Nią & O Niego",
-        "subtitle": "Side project — a mobile app (Ionic)",
+        "subtitle": "A mobile app that supports prayer for a future spouse — spiritual content and tools in one place. Ionic, Vue.",
         "image": "/assets/projects/o-nia-o-niego.jpg",
         "links": [
           { "title": "GitHub", "url": "https://github.com/sebastian-kostecki/o-nia-o-niego", "primary": true }
@@ -179,9 +176,10 @@
       },
       {
         "title": "Menu Maker",
-        "subtitle": "Side project (WIP) — weekly meal planning with AI, ingredient scaling, and PDF export",
+        "subtitle": "Weekly meal planning with AI, ingredient scaling, and PDF export. Laravel, Vue, Inertia.",
         "image": "/assets/projects/menu-maker.png",
         "placeholderIndex": 2,
+        "badge": "wip",
         "links": [
           { "title": "GitHub", "url": "https://github.com/sebastian-kostecki/menu-maker", "primary": true }
         ]
@@ -201,8 +199,8 @@
   "footer": {
     "servicesTitle": "Specialization",
     "services": [
-      "Laravel backend in production applications",
-      "Integrations with hosting and infrastructure systems"
+      "Production PHP backends (Laravel)",
+      "APIs, external integrations, and WordPress automation"
     ],
     "mediaTitle": "Profiles",
     "social": [

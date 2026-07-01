@@ -48,7 +48,7 @@ onMounted(() => {
         :command="content.projects.command"
         :title="content.projects.title"
       />
-      <div class="mt-8 grid gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3">
+      <div class="mt-8 grid gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3 [&>*]:h-full">
         <ProjectCard
           v-for="(project, index) in content.projects.items"
           :key="project.title"

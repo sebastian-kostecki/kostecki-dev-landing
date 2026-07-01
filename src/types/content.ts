@@ -47,6 +47,7 @@ export interface Project {
   subtitle: string
   image: string | null
   placeholderIndex?: number
+  badge?: 'wip'
   links: ProjectLink[]
 }
 
@@ -77,6 +78,12 @@ export interface SiteContent {
     collapse: string
     homeLabel: string
     navLabel: string
+    projectCardLabel: string
+    wipBadge: string
+    projectScreenshotAlt: string
+    openMenu: string
+    closeMenu: string
+    sectionsNavLabel: string
   }
   nav: NavItem[]
   hero: {
@@ -104,6 +111,7 @@ export interface SiteContent {
   skills: {
     command: string
     title: string
+    coreTitle: string
     coreDescription: string
     core: SkillItem[]
     categories: SkillCategory[]

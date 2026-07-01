@@ -42,18 +42,21 @@ onMounted(() => {
       />
 
       <div class="mt-10 reveal">
-        <div class="flex flex-wrap gap-3">
-          <span v-for="item in content.skills.core" :key="item.name" class="tech-tag !px-4 !py-2 !text-sm">
-            <SkillIcon :item="item" size-class="h-5 w-5" />
-            {{ item.name }}
-          </span>
+        <div class="surface-card p-5 lg:p-6">
+          <h3 class="font-display text-lg font-semibold text-white">{{ content.skills.coreTitle }}</h3>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <span v-for="item in content.skills.core" :key="item.name" class="tech-tag !px-4 !py-2 !text-sm">
+              <SkillIcon :item="item" size-class="h-5 w-5" />
+              {{ item.name }}
+            </span>
+          </div>
+          <p class="mt-4 max-w-2xl text-sm leading-relaxed text-muted">
+            {{ content.skills.coreDescription }}
+          </p>
         </div>
-        <p class="mt-4 max-w-2xl text-sm leading-relaxed text-muted">
-          {{ content.skills.coreDescription }}
-        </p>
       </div>
 
-      <div class="mt-8 grid gap-3 reveal md:grid-cols-2">
+      <div class="mt-8 flex flex-col gap-3 reveal">
         <SkillCategory
           v-for="(category, index) in content.skills.categories"
           :key="category.name"

@@ -11,7 +11,13 @@
     "expand": "Rozwiń",
     "collapse": "Zwiń",
     "homeLabel": "Strona główna",
-    "navLabel": "Główna nawigacja"
+    "navLabel": "Główna nawigacja",
+    "projectCardLabel": "Projekt własny",
+    "wipBadge": "WIP",
+    "projectScreenshotAlt": "Zrzut ekranu projektu",
+    "openMenu": "Otwórz menu",
+    "closeMenu": "Zamknij menu",
+    "sectionsNavLabel": "Nawigacja sekcji"
   },
   "nav": [
     { "id": "about", "label": "O mnie" },
@@ -85,29 +91,28 @@
   "skills": {
     "command": "$ ls skills/",
     "title": "Umiejętności",
-    "coreDescription": "Trzon mojej pracy: logika biznesowa, nowe feature'y i integracje produkcyjne.",
+    "coreTitle": "Stack podstawowy",
+    "coreDescription": "Stack, w którym buduję i utrzymuję produkcyjny backend — oraz frontend, gdy feature tego wymaga. Kategorie integracji poniżej odpowiadają obszarom z mojego doświadczenia.",
     "core": [
       { "name": "PHP", "icon": "simple-icons:php" },
       { "name": "Laravel", "icon": "simple-icons:laravel" },
       { "name": "MySQL", "icon": "simple-icons:mysql" },
-      { "name": "Docker", "icon": "simple-icons:docker" }
+      { "name": "Docker", "icon": "simple-icons:docker" },
+      { "name": "Vue.js", "icon": "simple-icons:vuedotjs" }
     ],
     "categories": [
       {
-        "name": "Panele hostingowe",
+        "name": "Infrastruktura",
         "items": [
           { "name": "cPanel", "icon": "simple-icons:cpanel" },
           { "name": "Plesk", "icon": "simple-icons:plesk" },
           { "name": "DirectAdmin", "image": "/assets/skills/directadmin.svg" },
-          { "name": "WP Cloud", "image": "/assets/skills/wp-cloud.svg" }
-        ]
-      },
-      {
-        "name": "DNS",
-        "items": [
+          { "name": "WP Cloud", "image": "/assets/skills/wp-cloud.svg" },
           { "name": "PowerDNS", "image": "/assets/skills/powerdns.svg" },
           { "name": "Cloudflare", "icon": "simple-icons:cloudflare" },
-          { "name": "Bunny DNS", "icon": "simple-icons:bunnydotnet" }
+          { "name": "Bunny DNS", "icon": "simple-icons:bunnydotnet" },
+          { "name": "Let's Encrypt", "icon": "simple-icons:letsencrypt" },
+          { "name": "mailcow", "icon": "mdi:email-cog" }
         ]
       },
       {
@@ -120,14 +125,7 @@
         ]
       },
       {
-        "name": "Email i SSL",
-        "items": [
-          { "name": "Let's Encrypt", "icon": "simple-icons:letsencrypt" },
-          { "name": "mailcow", "icon": "mdi:email-cog" }
-        ]
-      },
-      {
-        "name": "Analityka i billing",
+        "name": "WordPress i billing",
         "items": [
           { "name": "Google Analytics", "icon": "simple-icons:googleanalytics" },
           { "name": "AWStats", "image": "/assets/skills/awstats.svg" },
@@ -139,7 +137,6 @@
       {
         "name": "Frontend",
         "items": [
-          { "name": "Vue.js", "icon": "simple-icons:vuedotjs" },
           { "name": "Vuetify", "icon": "simple-icons:vuetify" },
           { "name": "Tailwind CSS", "icon": "simple-icons:tailwindcss" },
           { "name": "JavaScript", "icon": "simple-icons:javascript" },
@@ -148,7 +145,7 @@
         ]
       },
       {
-        "name": "Narzędzia i AI",
+        "name": "Narzędzia",
         "items": [
           { "name": "Git", "icon": "simple-icons:git" },
           { "name": "Cursor", "icon": "simple-icons:cursor" }
@@ -162,7 +159,7 @@
     "items": [
       {
         "title": "Ogarniam Portfel",
-        "subtitle": "Side project — aplikacja do zarządzania domowym budżetem",
+        "subtitle": "Aplikacja do zarządzania domowym budżetem — kategorie wydatków i raporty. Laravel, MySQL; działająca wersja demo online.",
         "image": "/assets/projects/keep-wallet.png",
         "links": [
           { "title": "Strona", "url": "https://budget.sebastian-kostecki.profesjonalnyprogramista.pl/", "primary": true },
@@ -171,7 +168,7 @@
       },
       {
         "title": "O Nią & O Niego",
-        "subtitle": "Side project — aplikacja mobilna (Ionic)",
+        "subtitle": "Mobilna aplikacja wspierająca modlitwę o przyszłego męża lub żonę — treści i narzędzia duchowe w jednym miejscu. Ionic, Vue.",
         "image": "/assets/projects/o-nia-o-niego.jpg",
         "links": [
           { "title": "GitHub", "url": "https://github.com/sebastian-kostecki/o-nia-o-niego", "primary": true }
@@ -179,9 +176,10 @@
       },
       {
         "title": "Menu Maker",
-        "subtitle": "Side project (WIP) — planowanie tygodniowych posiłków z AI, skalowaniem składników i eksportem PDF",
+        "subtitle": "Planowanie tygodniowych posiłków z AI, skalowaniem składników i eksportem PDF. Laravel, Vue, Inertia.",
         "image": "/assets/projects/menu-maker.png",
         "placeholderIndex": 2,
+        "badge": "wip",
         "links": [
           { "title": "GitHub", "url": "https://github.com/sebastian-kostecki/menu-maker", "primary": true }
         ]
@@ -201,8 +199,8 @@
   "footer": {
     "servicesTitle": "Specjalizacja",
     "services": [
-      "Backend Laravel w aplikacjach produkcyjnych",
-      "Integracje z systemami hostingowymi i infrastrukturalnymi"
+      "Produkcyjne aplikacje backendowe w PHP (Laravel)",
+      "API, integracje zewnętrzne i automatyzacja WordPress"
     ],
     "mediaTitle": "Profile",
     "social": [

@@ -41,7 +41,7 @@ const year = new Date().getFullYear()
           <a
             href="#"
             class="inline-flex shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
-            aria-label="Strona główna"
+            :aria-label="content.ui.homeLabel"
           >
             <BrandMark :size="22" decorative />
           </a>

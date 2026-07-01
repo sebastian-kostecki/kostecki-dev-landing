@@ -28,7 +28,7 @@ const panelId = `skill-cat-${props.index}`
       </span>
       <span class="font-mono text-sm text-accent" aria-hidden="true">{{ open ? '−' : '+' }}</span>
     </button>
-    <div v-show="open" :id="panelId" class="flex flex-wrap gap-2 px-4 pb-5 lg:px-5">
+    <div v-show="open" :id="panelId" class="flex flex-wrap gap-2 border-t border-border px-4 pt-4 pb-5 lg:px-5">
       <span v-for="item in category.items" :key="item.name" class="tech-tag">
         <SkillIcon :item="item" size-class="h-4 w-4" />
         {{ item.name }}
