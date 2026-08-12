@@ -86,6 +86,7 @@
     "subtitle": "The stack I use to build and maintain production backends — the integration categories mirror the areas from my experience.",
     "coreTitle": "Core stack",
     "coreDescription": "The stack I use to build and maintain production backends — and frontend when a feature requires it.",
+    "competenciesLabel": "Competencies",
     "core": [
       { "name": "PHP", "icon": "simple-icons:php", "level": "Core language" },
       { "name": "Laravel", "icon": "simple-icons:laravel", "level": "Production backends" },
@@ -95,54 +96,38 @@
     ],
     "categories": [
       {
-        "name": "Infrastructure",
-        "items": [
-          { "name": "cPanel", "icon": "simple-icons:cpanel" },
-          { "name": "Plesk", "icon": "simple-icons:plesk" },
-          { "name": "DirectAdmin", "image": "/assets/skills/directadmin.svg" },
-          { "name": "WP Cloud", "image": "/assets/skills/wp-cloud.svg" },
-          { "name": "PowerDNS", "image": "/assets/skills/powerdns.svg" },
-          { "name": "Cloudflare", "icon": "simple-icons:cloudflare" },
-          { "name": "Bunny DNS", "icon": "simple-icons:bunnydotnet" },
-          { "name": "Let's Encrypt", "icon": "simple-icons:letsencrypt" },
-          { "name": "mailcow", "icon": "mdi:email-cog" }
+        "name": "Infrastructure integrations",
+        "description": "I integrate hosting panels, DNS services, SSL automation, and e-mail infrastructure.",
+        "tags": [
+          "cPanel",
+          "Plesk",
+          "DirectAdmin",
+          "PowerDNS",
+          "Cloudflare",
+          "Bunny DNS",
+          "Let's Encrypt",
+          "mailcow"
         ]
       },
       {
-        "name": "Storage and backup",
-        "items": [
-          { "name": "S3", "icon": "simple-icons:amazons3" },
-          { "name": "FTP", "icon": "mdi:folder-upload" },
-          { "name": "SFTP", "icon": "mdi:folder-lock" },
-          { "name": "FTPS", "icon": "mdi:folder-key" }
-        ]
+        "name": "WordPress automation",
+        "description": "I develop WordPress instance lifecycle, Git support, onboarding, and backup workflows.",
+        "tags": ["WordPress", "WP Cloud", "S3"]
       },
       {
-        "name": "WordPress and billing",
-        "items": [
-          { "name": "Google Analytics", "icon": "simple-icons:googleanalytics" },
-          { "name": "AWStats", "image": "/assets/skills/awstats.svg" },
-          { "name": "WHMCS", "image": "/assets/skills/whmcs.svg" },
-          { "name": "Extendify", "image": "/assets/skills/extendify.svg" },
-          { "name": "TenWeb", "image": "/assets/skills/tenweb.svg" }
-        ]
+        "name": "Billing and WHMCS",
+        "description": "I build modules that extend billing, automation, and operational workflows in WHMCS.",
+        "tags": ["WHMCS", "Smarty", "JavaScript", "jQuery"]
       },
       {
-        "name": "Frontend",
-        "items": [
-          { "name": "Vuetify", "icon": "simple-icons:vuetify" },
-          { "name": "Tailwind CSS", "icon": "simple-icons:tailwindcss" },
-          { "name": "JavaScript", "icon": "simple-icons:javascript" },
-          { "name": "Ionic", "icon": "simple-icons:ionic" },
-          { "name": "Inertia.js", "icon": "simple-icons:inertia" }
-        ]
+        "name": "Supporting frontend",
+        "description": "I implement UI work when a feature spans both backend and frontend changes.",
+        "tags": ["Vue.js", "Vuetify", "Tailwind CSS"]
       },
       {
-        "name": "Tools",
-        "items": [
-          { "name": "Git", "icon": "simple-icons:git" },
-          { "name": "Cursor", "icon": "simple-icons:cursor" }
-        ]
+        "name": "Tools and workflow",
+        "description": "I use Git and LLM tools to support implementation and refactoring.",
+        "tags": ["Git", "Cursor", "LLM"]
       }
     ]
   },

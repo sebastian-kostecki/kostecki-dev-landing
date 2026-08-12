@@ -86,6 +86,7 @@
     "subtitle": "Stack, w którym buduję i utrzymuję produkcyjny backend — oraz frontend, gdy feature tego wymaga. Kategorie integracji odpowiadają obszarom z doświadczenia.",
     "coreTitle": "Stack podstawowy",
     "coreDescription": "Stack, w którym buduję i utrzymuję produkcyjny backend — oraz frontend, gdy feature tego wymaga.",
+    "competenciesLabel": "Kompetencje",
     "core": [
       { "name": "PHP", "icon": "simple-icons:php", "level": "Język główny" },
       { "name": "Laravel", "icon": "simple-icons:laravel", "level": "Backend produkcyjny" },
@@ -95,54 +96,38 @@
     ],
     "categories": [
       {
-        "name": "Infrastruktura",
-        "items": [
-          { "name": "cPanel", "icon": "simple-icons:cpanel" },
-          { "name": "Plesk", "icon": "simple-icons:plesk" },
-          { "name": "DirectAdmin", "image": "/assets/skills/directadmin.svg" },
-          { "name": "WP Cloud", "image": "/assets/skills/wp-cloud.svg" },
-          { "name": "PowerDNS", "image": "/assets/skills/powerdns.svg" },
-          { "name": "Cloudflare", "icon": "simple-icons:cloudflare" },
-          { "name": "Bunny DNS", "icon": "simple-icons:bunnydotnet" },
-          { "name": "Let's Encrypt", "icon": "simple-icons:letsencrypt" },
-          { "name": "mailcow", "icon": "mdi:email-cog" }
+        "name": "Integracje infrastrukturalne",
+        "description": "Integruję panele hostingowe, usługi DNS, automatyzację SSL oraz infrastrukturę e-mail.",
+        "tags": [
+          "cPanel",
+          "Plesk",
+          "DirectAdmin",
+          "PowerDNS",
+          "Cloudflare",
+          "Bunny DNS",
+          "Let's Encrypt",
+          "mailcow"
         ]
       },
       {
-        "name": "Storage i backup",
-        "items": [
-          { "name": "S3", "icon": "simple-icons:amazons3" },
-          { "name": "FTP", "icon": "mdi:folder-upload" },
-          { "name": "SFTP", "icon": "mdi:folder-lock" },
-          { "name": "FTPS", "icon": "mdi:folder-key" }
-        ]
+        "name": "Automatyzacja WordPress",
+        "description": "Rozwijam cykl życia instancji WordPress, obsługę Git, onboarding oraz procesy backupu.",
+        "tags": ["WordPress", "WP Cloud", "S3"]
       },
       {
-        "name": "WordPress i billing",
-        "items": [
-          { "name": "Google Analytics", "icon": "simple-icons:googleanalytics" },
-          { "name": "AWStats", "image": "/assets/skills/awstats.svg" },
-          { "name": "WHMCS", "image": "/assets/skills/whmcs.svg" },
-          { "name": "Extendify", "image": "/assets/skills/extendify.svg" },
-          { "name": "TenWeb", "image": "/assets/skills/tenweb.svg" }
-        ]
+        "name": "Billing i WHMCS",
+        "description": "Tworzę moduły rozszerzające billing, automatyzację i operacyjne procesy WHMCS.",
+        "tags": ["WHMCS", "Smarty", "JavaScript", "jQuery"]
       },
       {
-        "name": "Frontend",
-        "items": [
-          { "name": "Vuetify", "icon": "simple-icons:vuetify" },
-          { "name": "Tailwind CSS", "icon": "simple-icons:tailwindcss" },
-          { "name": "JavaScript", "icon": "simple-icons:javascript" },
-          { "name": "Ionic", "icon": "simple-icons:ionic" },
-          { "name": "Inertia.js", "icon": "simple-icons:inertia" }
-        ]
+        "name": "Frontend uzupełniający",
+        "description": "Implementuję warstwę UI, gdy funkcja obejmuje zmiany po stronie backendu i frontendu.",
+        "tags": ["Vue.js", "Vuetify", "Tailwind CSS"]
       },
       {
-        "name": "Narzędzia",
-        "items": [
-          { "name": "Git", "icon": "simple-icons:git" },
-          { "name": "Cursor", "icon": "simple-icons:cursor" }
-        ]
+        "name": "Narzędzia i workflow",
+        "description": "Korzystam z Git oraz narzędzi LLM jako wsparcia przy implementacji i refaktoryzacji.",
+        "tags": ["Git", "Cursor", "LLM"]
       }
     ]
   },

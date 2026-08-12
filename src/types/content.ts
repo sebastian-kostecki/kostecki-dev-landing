@@ -18,7 +18,8 @@ export interface SkillItem {
 
 export interface SkillCategory {
   name: string
-  items: SkillItem[]
+  description: string
+  tags: string[]
 }
 
 export interface ProjectLink {
@@ -156,6 +157,7 @@ export interface SiteContent {
     subtitle: string
     coreTitle: string
     coreDescription: string
+    competenciesLabel: string
     core: SkillItem[]
     categories: SkillCategory[]
   }

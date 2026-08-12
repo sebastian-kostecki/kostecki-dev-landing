@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import SectionHeading from '@/components/ui/SectionHeading.vue'
 import SkillBadge from '@/components/ui/SkillBadge.vue'
+import SkillCompetencyCard from '@/components/ui/SkillCompetencyCard.vue'
 import { useContent } from '@/composables/useContent'
 
 const content = useContent()
@@ -39,20 +40,12 @@ const content = useContent()
           </div>
         </section>
 
-        <section v-for="category in content.skills.categories" :key="category.name">
-          <div class="mb-5 flex items-center gap-4">
-            <h3 class="font-mono text-lg font-semibold text-foreground">{{ category.name }}</h3>
-            <span aria-hidden="true" class="h-px flex-1 bg-border" />
-            <span class="font-mono text-xs text-muted-foreground">{{ category.items.length }}</span>
-          </div>
-          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <SkillBadge
-              v-for="skill in category.items"
-              :key="skill.name"
-              :name="skill.name"
-              :icon="skill.icon"
-              :image="skill.image"
-              :level="skill.level"
+        <section :aria-label="content.skills.competenciesLabel">
+          <div class="grid gap-5 md:grid-cols-2">
+            <SkillCompetencyCard
+              v-for="category in content.skills.categories"
+              :key="category.name"
+              :category="category"
             />
           </div>
         </section>
