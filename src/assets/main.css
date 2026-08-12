@@ -1,16 +1,25 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-bg: #0c0c0e;
-  --color-surface: #141416;
-  --color-surface-hover: #1a1a1e;
-  --color-border: rgb(255 255 255 / 0.1);
+  --color-background: #0c0c0e;
+  --color-foreground: #ffffff;
+  --color-card: #141416;
+  --color-card-foreground: #ffffff;
+  --color-primary: #e63946;
+  --color-primary-foreground: #ffffff;
+  --color-primary-glow: #ff6b75;
+  --color-secondary: #1a1a1e;
+  --color-secondary-foreground: #ffffff;
+  --color-muted: #1a1a1e;
+  --color-muted-foreground: #a1a1aa;
   --color-accent: #e63946;
   --color-accent-hover: #ff4d5a;
-  --color-muted: #a1a1aa;
-  --font-display: 'Outfit', ui-sans-serif, system-ui, sans-serif;
-  --font-body: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --color-border: rgb(255 255 255 / 0.1);
+  --color-bg: #0c0c0e;
+  --font-sans: 'Work Sans', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-body: 'Work Sans', ui-sans-serif, system-ui, sans-serif;
+  --radius: 0.25rem;
 }
 
 @layer base {
@@ -33,75 +42,106 @@
   }
 
   body {
-    @apply bg-bg font-body text-white antialiased;
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-mono);
+    letter-spacing: -0.02em;
   }
 
   ::selection {
-    @apply bg-accent/30 text-white;
+    @apply bg-primary/30 text-foreground;
   }
 }
 
 @layer utilities {
+  .gradient-hero {
+    background:
+      radial-gradient(
+        ellipse 70% 55% at 15% -10%,
+        color-mix(in oklab, var(--color-primary) 30%, transparent),
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 60% 50% at 90% 10%,
+        color-mix(in oklab, var(--color-primary-glow) 16%, transparent),
+        transparent 70%
+      );
+  }
+
+  .grid-lines {
+    background-image:
+      linear-gradient(
+        to right,
+        color-mix(in oklab, var(--color-foreground) 5%, transparent) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        color-mix(in oklab, var(--color-foreground) 5%, transparent) 1px,
+        transparent 1px
+      );
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, black, transparent 85%);
+  }
+
+  .panel {
+    background: linear-gradient(
+      160deg,
+      color-mix(in oklab, var(--color-card) 92%, var(--color-primary) 8%),
+      var(--color-card)
+    );
+    border: 1px solid var(--color-border);
+    box-shadow: inset 0 1px 0 0 color-mix(in oklab, var(--color-foreground) 6%, transparent);
+  }
+
+  .panel-hover {
+    transition:
+      border-color 200ms ease,
+      box-shadow 250ms ease,
+      transform 250ms ease;
+  }
+
+  .panel-hover:hover {
+    border-color: color-mix(in oklab, var(--color-primary) 45%, transparent);
+    box-shadow: 0 20px 60px -25px color-mix(in oklab, var(--color-primary) 65%, transparent);
+    transform: translateY(-2px);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-glow));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .rule-accent {
+    background: linear-gradient(
+      to right,
+      color-mix(in oklab, var(--color-primary) 70%, transparent),
+      transparent
+    );
+  }
+
   .container {
     @apply mx-auto w-full max-w-6xl;
   }
 
-  .text-gradient {
-    @apply bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent;
-  }
-
-  .surface-card {
-    @apply rounded-2xl border border-border bg-white/5 backdrop-blur-sm;
-  }
-
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg;
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-primary px-6 py-3 font-mono text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-glow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-xl border border-border bg-transparent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-bg;
-  }
-
-  .nav-link {
-    @apply text-sm text-muted transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg rounded-sm;
+    @apply inline-flex items-center justify-center gap-2 rounded-sm border border-border px-6 py-3 font-mono text-sm font-semibold text-foreground transition-colors hover:border-primary/50 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
   }
 
   .skip-link {
-    @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white;
-  }
-
-  .reveal {
-    @apply opacity-0 translate-y-4 transition-all duration-500 ease-out;
-  }
-
-  .reveal-visible {
-    @apply opacity-100 translate-y-0;
-  }
-
-  .blueprint-grid {
-    background-image:
-      linear-gradient(rgb(255 255 255 / 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgb(255 255 255 / 0.04) 1px, transparent 1px);
-    background-size: 40px 40px;
-  }
-
-  .cmd-label {
-    @apply font-mono text-xs font-medium tracking-wide text-accent;
-  }
-
-  .mono-label {
-    @apply font-mono text-[0.7rem] uppercase tracking-[0.15em] text-muted;
-  }
-
-  .tech-tag {
-    @apply inline-flex items-center gap-2 rounded-lg border border-border bg-white/5 px-3 py-1.5 font-mono text-xs font-medium text-white/90 transition-colors hover:border-accent/50 hover:bg-white/10;
-  }
-
-  .metric-value {
-    @apply font-display text-2xl font-extrabold text-white sm:text-3xl;
-  }
-
-  .metric-label {
-    @apply font-mono text-[0.7rem] uppercase tracking-wide text-muted;
+    @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-sm focus:bg-primary focus:px-4 focus:py-2 focus:font-mono focus:text-sm focus:font-semibold focus:text-primary-foreground;
   }
 }

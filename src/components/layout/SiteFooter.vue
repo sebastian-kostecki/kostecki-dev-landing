@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
-import BrandMark from '@/components/ui/BrandMark.vue'
 import { useContent } from '@/composables/useContent'
 
 const content = useContent()
@@ -8,60 +7,47 @@ const year = new Date().getFullYear()
 </script>
 
 <template>
-  <footer class="border-t border-border bg-bg py-12 lg:py-16">
-    <div class="container mx-auto px-4 lg:px-8">
-      <div class="grid gap-8 md:grid-cols-2">
-        <div class="text-center md:text-left">
-          <p class="font-display font-bold text-white">{{ content.footer.servicesTitle }}</p>
-          <ul class="mt-3 space-y-2 text-sm text-muted">
-            <li v-for="service in content.footer.services" :key="service">{{ service }}</li>
-          </ul>
+  <footer class="w-full bg-background">
+    <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+          <p class="font-mono text-sm font-semibold text-foreground">{{ content.ui.brandName }}</p>
+          <p class="mt-2 max-w-xs text-sm text-muted-foreground">{{ content.ui.footerTagline }}</p>
         </div>
-        <div class="text-center md:text-left">
-          <p class="font-display font-bold text-white">{{ content.footer.mediaTitle }}</p>
-          <ul class="mt-3 space-y-2">
-            <li v-for="social in content.footer.social" :key="social.name">
-              <a
-                :href="social.url"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
-              >
-                <Icon :icon="social.icon" class="h-4 w-4" aria-hidden="true" />
-                {{ social.name }}
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div
-        class="mt-8 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 md:flex-row"
-      >
-        <div class="flex items-center gap-3">
-          <a
-            href="#"
-            class="inline-flex shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
-            :aria-label="content.ui.homeLabel"
+
+        <nav class="flex flex-col gap-2" :aria-label="content.ui.navLabel">
+          <RouterLink
+            v-for="link in content.nav"
+            :key="link.to"
+            :to="link.to"
+            class="font-mono text-sm text-muted-foreground transition-colors hover:text-primary"
           >
-            <BrandMark :size="22" decorative />
-          </a>
-          <p class="font-mono text-center text-sm text-muted md:text-left">
-            {{ content.footer.copyright }} &copy; {{ year }}
-          </p>
-        </div>
-        <div class="flex gap-4">
+            {{ link.label }}
+          </RouterLink>
+        </nav>
+
+        <div class="flex items-center gap-2">
           <a
             v-for="social in content.footer.social"
             :key="social.name"
             :href="social.url"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-muted transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
             :aria-label="social.name"
+            class="flex h-9 w-9 items-center justify-center rounded-sm border border-border text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
           >
-            <Icon :icon="social.icon" class="h-5 w-5" aria-hidden="true" />
+            <Icon :icon="social.icon" class="h-4 w-4" />
           </a>
         </div>
+      </div>
+
+      <div
+        class="mt-10 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <p class="font-mono text-xs text-muted-foreground">
+          © {{ year }} — {{ content.footer.copyright }}
+        </p>
+        <p class="font-mono text-xs text-muted-foreground">{{ content.ui.footerStack }}</p>
       </div>
     </div>
   </footer>

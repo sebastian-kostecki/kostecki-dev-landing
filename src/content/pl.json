@@ -4,6 +4,28 @@
     "description": "Backend Developer (Laravel). Buduję i rozwijam produkcyjne aplikacje backendowe w PHP — m.in. integracje API, infrastruktura i automatyzacja WordPress. 4 lata komercyjnie.",
     "lang": "pl"
   },
+  "routes": {
+    "home": {
+      "title": "Sebastian Kostecki — Backend Developer (Laravel)",
+      "description": "Backend Developer (Laravel). Buduję i rozwijam produkcyjne aplikacje backendowe w PHP — m.in. integracje API, infrastruktura i automatyzacja WordPress. 4 lata komercyjnie."
+    },
+    "projects": {
+      "title": "Projekty — Sebastian Kostecki",
+      "description": "Wybrane realizacje komercyjne: PanelAlpha, autorskie moduły WHMCS dla ModulesGarden oraz projekty własne."
+    },
+    "skills": {
+      "title": "Umiejętności — Sebastian Kostecki",
+      "description": "PHP, Laravel, MySQL, Docker i Vue.js oraz integracje hostingowe, DNS, storage, WordPress i billing używane produkcyjnie."
+    },
+    "contact": {
+      "title": "Kontakt — Sebastian Kostecki",
+      "description": "Zainteresowany współpracą lub rozmową o backendzie? Napisz na LinkedIn, GitHub lub e-mail."
+    },
+    "notFound": {
+      "title": "Nie znaleziono — kostecki.dev",
+      "description": "Strona, której szukasz, nie istnieje."
+    }
+  },
   "ui": {
     "skipToContent": "Przejdź do treści",
     "languageLabel": "Język",
@@ -17,184 +39,246 @@
     "projectScreenshotAlt": "Zrzut ekranu projektu",
     "openMenu": "Otwórz menu",
     "closeMenu": "Zamknij menu",
-    "sectionsNavLabel": "Nawigacja sekcji"
+    "seeAllProjects": "Zobacz wszystkie projekty",
+    "exploreAllSkills": "Zobacz wszystkie umiejętności",
+    "viewMyWork": "Zobacz projekty",
+    "liveDemo": "Demo",
+    "sourceCode": "Kod źródłowy",
+    "backHome": "Strona główna",
+    "notFoundTitle": "Nie znaleziono strony",
+    "notFoundBody": "Strona, której szukasz, nie istnieje albo została przeniesiona.",
+    "brandName": "kostecki.dev",
+    "footerTagline": "Backend Developer (Laravel) — API, integracje i automatyzacja infrastruktury.",
+    "footerStack": "Laravel · PHP · Docker"
   },
   "nav": [
-    { "id": "about", "label": "O mnie" },
-    { "id": "experience", "label": "Doświadczenie" },
-    { "id": "skills", "label": "Umiejętności" },
-    { "id": "projects", "label": "Projekty" },
-    { "id": "contact", "label": "Kontakt" }
+    { "to": "/", "label": "Start", "index": "01" },
+    { "to": "/projects", "label": "Projekty", "index": "02" },
+    { "to": "/skills", "label": "Umiejętności", "index": "03" },
+    { "to": "/contact", "label": "Kontakt", "index": "04" }
   ],
   "hero": {
-    "label": "// BACKEND DEVELOPER · LARAVEL",
+    "label": "Backend Developer / Laravel",
     "name": "Sebastian Kostecki",
-    "valueProp": "Buduję i rozwijam produkcyjne aplikacje backendowe w PHP.",
-    "subtitle": "Backend Developer z 4-letnim komercyjnym doświadczeniem — m.in. integracje API, infrastruktura i automatyzacja WordPress w B2B SaaS.",
-    "metrics": [
-      { "value": "4 lata", "label": "komercyjnie" },
-      { "value": "15+", "label": "integracji infra" },
-      { "value": "PanelAlpha", "label": "produkt B2B" }
-    ],
+    "valueProp": "Buduję i rozwijam",
+    "valuePropAccent": "produkcyjne aplikacje backendowe w PHP.",
+    "subtitle": "Rozwijam platformy B2B, integracje API oraz automatyzację infrastruktury i WordPress.",
     "ctaPrimary": {
       "label": "Porozmawiajmy",
-      "href": "https://www.linkedin.com/in/kostecki-sebastian"
+      "href": "/contact"
     }
   },
   "cv": {
     "href": ""
   },
   "about": {
-    "command": "$ cat about.md",
-    "title": "O mnie",
+    "index": "01 / O mnie",
+    "title": "Jak pracuję",
     "paragraphs": [
       "Od 4 lat buduję backend w PHP — głównie Laravel — w produkcyjnym produkcie B2B. Pracuję w ModulesGarden nad platformą PanelAlpha, która firmom usługowym umożliwia automatyzację zarządzania WordPress.",
       "Lubię przejąć feature i dowieźć go od warstwy backendowej po działającą logikę — a gdy potrzeba, wchodzę we frontend (Vue.js). Pracuję na żywym produkcie, więc liczy się dla mnie kod, który faktycznie działa u klientów.",
       "Na co dzień korzystam z narzędzi AI (m.in. Cursor) jako wsparcia przy implementacji i refaktoryzacji. Poza kodem — rodzina, wypoczynek na świeżym powietrzu i ciągły rozwój w IT."
     ]
   },
-  "experience": {
-    "command": "$ git log --experience",
-    "title": "Doświadczenie",
-    "entries": [
-      {
-        "company": "PanelAlpha",
-        "companyUrl": "https://panelalpha.com",
-        "logo": "/assets/experience/panelalpha.svg",
-        "role": "Backend Developer",
-        "period": "3,5+ roku",
-        "summary": "Rozwijam backend Laravel w produkcyjnej platformie B2B do automatyzacji WordPress dla firm usługowych. Odpowiadam za API, integracje z zewnętrzną infrastrukturą i logikę zarządzania instancjami WordPress.",
-        "highlights": [
-          "Integracje infrastrukturalne — panele hostingowe (cPanel, Plesk, DirectAdmin, WP Cloud), DNS (PowerDNS, Cloudflare, Bunny), serwery email (mailcow) i automatyzacja certyfikatów SSL (Let's Encrypt)",
-          "Cykl życia WordPress — import i zarządzanie instancjami, obsługa Git, onboarding (Extendify, 10Web)",
-          "Backup i storage — lokalne i zdalne kopie zapasowe (S3, FTP, SFTP, FTPS)",
-          "Billing i API — integracje z WHMCS i rozwój warstwy API platformy",
-          "Full-stack — frontend (Vue.js, Vuetify) przy feature'ach wymagających zmian po stronie backendu i UI"
-        ]
-      },
-      {
-        "company": "ModulesGarden",
-        "companyUrl": "https://modulesgarden.com",
-        "logo": "/assets/experience/mg.jpeg",
-        "role": "PHP Developer",
-        "period": "~6 miesięcy",
-        "project": "Moduły WHMCS",
-        "summary": "Tworzyłem autorskie moduły WHMCS dla platformy billingowej hosterów — logika biznesowa, integracje i narzędzia operacyjne (PHP, JavaScript, Smarty).",
-        "highlights": [
-          "Automatyzacja billingu — m.in. Invoice Sub Status, Automated Refunds, Auto Upgrade For Early Payments For WHMCS, opłaty admin przy zmianie produktu",
-          "Integracje — Domain data from Plesk, Docker S3 Container",
-          "Narzędzia operacyjne — BulkUpdater do masowych aktualizacji w WHMCS"
-        ]
-      }
-    ]
-  },
   "skills": {
-    "command": "$ ls skills/",
-    "title": "Umiejętności",
+    "index": "03 / Umiejętności",
+    "title": "Umiejętności i narzędzia",
+    "subtitle": "Stack, w którym buduję i utrzymuję produkcyjny backend — oraz kompetencje uzupełniające używane w pracy komercyjnej.",
     "coreTitle": "Stack podstawowy",
-    "coreDescription": "Stack, w którym buduję i utrzymuję produkcyjny backend — oraz frontend, gdy feature tego wymaga. Kategorie integracji poniżej odpowiadają obszarom z mojego doświadczenia.",
+    "coreDescription": "Stack, w którym buduję i utrzymuję produkcyjny backend — oraz frontend, gdy feature tego wymaga.",
+    "competenciesLabel": "Kompetencje",
     "core": [
-      { "name": "PHP", "icon": "simple-icons:php" },
-      { "name": "Laravel", "icon": "simple-icons:laravel" },
-      { "name": "MySQL", "icon": "simple-icons:mysql" },
-      { "name": "Docker", "icon": "simple-icons:docker" },
-      { "name": "Vue.js", "icon": "simple-icons:vuedotjs" }
+      { "name": "PHP", "icon": "simple-icons:php", "level": "Język główny" },
+      { "name": "Laravel", "icon": "simple-icons:laravel", "level": "Backend produkcyjny" },
+      { "name": "MySQL", "icon": "simple-icons:mysql", "level": "Modelowanie danych" },
+      { "name": "Docker", "icon": "simple-icons:docker", "level": "Środowiska" },
+      { "name": "Vue.js", "icon": "simple-icons:vuedotjs", "level": "Frontend feature'ów" }
     ],
     "categories": [
       {
-        "name": "Infrastruktura",
-        "items": [
-          { "name": "cPanel", "icon": "simple-icons:cpanel" },
-          { "name": "Plesk", "icon": "simple-icons:plesk" },
-          { "name": "DirectAdmin", "image": "/assets/skills/directadmin.svg" },
-          { "name": "WP Cloud", "image": "/assets/skills/wp-cloud.svg" },
-          { "name": "PowerDNS", "image": "/assets/skills/powerdns.svg" },
-          { "name": "Cloudflare", "icon": "simple-icons:cloudflare" },
-          { "name": "Bunny DNS", "icon": "simple-icons:bunnydotnet" },
-          { "name": "Let's Encrypt", "icon": "simple-icons:letsencrypt" },
-          { "name": "mailcow", "icon": "mdi:email-cog" }
+        "name": "Integracje infrastrukturalne",
+        "description": "Integruję panele hostingowe, usługi DNS, automatyzację SSL oraz infrastrukturę e-mail.",
+        "tags": [
+          "cPanel",
+          "Plesk",
+          "DirectAdmin",
+          "PowerDNS",
+          "Cloudflare",
+          "Bunny DNS",
+          "Let's Encrypt",
+          "mailcow",
+          "Fastly",
+          "Admin Bolt"
         ]
       },
       {
-        "name": "Storage i backup",
-        "items": [
-          { "name": "S3", "icon": "simple-icons:amazons3" },
-          { "name": "FTP", "icon": "mdi:folder-upload" },
-          { "name": "SFTP", "icon": "mdi:folder-lock" },
-          { "name": "FTPS", "icon": "mdi:folder-key" }
-        ]
+        "name": "WordPress",
+        "description": "Ogarniam WordPressy — WP Cloud, backupy, themes i plugins.",
+        "tags": ["WordPress", "WP Cloud", "Backups", "Themes", "Plugins"]
       },
       {
-        "name": "WordPress i billing",
-        "items": [
-          { "name": "Google Analytics", "icon": "simple-icons:googleanalytics" },
-          { "name": "AWStats", "image": "/assets/skills/awstats.svg" },
-          { "name": "WHMCS", "image": "/assets/skills/whmcs.svg" },
-          { "name": "Extendify", "image": "/assets/skills/extendify.svg" },
-          { "name": "TenWeb", "image": "/assets/skills/tenweb.svg" }
-        ]
+        "name": "Billing",
+        "description": "Tworzę moduły rozszerzające billing, automatyzację i operacyjne procesy WHMCS, w tym Stripe.",
+        "tags": ["WHMCS", "Stripe"]
       },
       {
-        "name": "Frontend",
-        "items": [
-          { "name": "Vuetify", "icon": "simple-icons:vuetify" },
-          { "name": "Tailwind CSS", "icon": "simple-icons:tailwindcss" },
-          { "name": "JavaScript", "icon": "simple-icons:javascript" },
-          { "name": "Ionic", "icon": "simple-icons:ionic" },
-          { "name": "Inertia.js", "icon": "simple-icons:inertia" }
-        ]
+        "name": "Frontend uzupełniający",
+        "description": "Implementuję warstwę UI, gdy funkcja obejmuje zmiany po stronie backendu i frontendu.",
+        "tags": ["Vue.js", "Vuetify", "Tailwind CSS"]
       },
       {
-        "name": "Narzędzia",
-        "items": [
-          { "name": "Git", "icon": "simple-icons:git" },
-          { "name": "Cursor", "icon": "simple-icons:cursor" }
-        ]
+        "name": "Narzędzia i workflow",
+        "description": "Korzystam z Git, Cursor i PhpStorm przy implementacji i refaktoryzacji.",
+        "tags": ["Git", "Cursor", "PhpStorm"]
       }
     ]
   },
   "projects": {
-    "command": "$ ls projects/",
-    "title": "Projekty własne",
-    "items": [
-      {
-        "title": "Ogarniam Portfel",
-        "subtitle": "Aplikacja do zarządzania domowym budżetem — kategorie wydatków i raporty. Laravel, MySQL; działająca wersja demo online.",
-        "image": "/assets/projects/keep-wallet.png",
-        "links": [
-          { "title": "Strona", "url": "https://budget.sebastian-kostecki.profesjonalnyprogramista.pl/", "primary": true },
-          { "title": "GitHub", "url": "https://github.com/sebastian-kostecki/keep-wallet" }
-        ]
+    "homePreview": {
+      "index": "02 / Projekty",
+      "title": "Wybrane realizacje komercyjne",
+      "subtitle": "PanelAlpha oraz pięć samodzielnie zaimplementowanych modułów WHMCS."
+    },
+    "index": "01 / Projekty",
+    "title": "Wybrane projekty",
+    "subtitle": "Produkty i narzędzia, które rozwijałem komercyjnie — uzupełnione wybranymi projektami własnymi.",
+    "featured": {
+      "eyebrow": "Główny projekt komercyjny",
+      "title": "PanelAlpha",
+      "context": {
+        "employer": "ModulesGarden",
+        "role": "Backend Developer",
+        "period": "3,5+ roku"
       },
-      {
-        "title": "O Nią & O Niego",
-        "subtitle": "Mobilna aplikacja wspierająca modlitwę o przyszłego męża lub żonę — treści i narzędzia duchowe w jednym miejscu. Ionic, Vue.",
-        "image": "/assets/projects/o-nia-o-niego.jpg",
-        "links": [
-          { "title": "GitHub", "url": "https://github.com/sebastian-kostecki/o-nia-o-niego", "primary": true }
-        ]
-      },
-      {
-        "title": "Menu Maker",
-        "subtitle": "Planowanie tygodniowych posiłków z AI, skalowaniem składników i eksportem PDF. Laravel, Vue, Inertia.",
-        "image": "/assets/projects/menu-maker.png",
-        "placeholderIndex": 2,
-        "badge": "wip",
-        "links": [
-          { "title": "GitHub", "url": "https://github.com/sebastian-kostecki/menu-maker", "primary": true }
-        ]
+      "description": "Produkcyjna platforma B2B do automatyzacji zarządzania WordPress dla firm hostingowych i agencji.",
+      "contributionTitle": "Mój wkład",
+      "responsibilities": [
+        "Backend Laravel i rozwój API platformy",
+        "Integracje hostingowe, DNS, e-mail, SSL, backup i storage",
+        "Cykl życia instancji WordPress oraz obsługa Git",
+        "Integracja WHMCS i powiązana logika billingowa",
+        "Vue.js i Vuetify przy funkcjach obejmujących backend oraz UI"
+      ],
+      "tags": ["PHP", "Laravel", "MySQL", "Vue.js", "Vuetify", "WHMCS"],
+      "link": {
+        "title": "Zobacz PanelAlpha",
+        "url": "https://panelalpha.com",
+        "primary": true
       }
-    ]
+    },
+    "commercialGroup": {
+      "eyebrow": "Realizacje komercyjne",
+      "title": "Moduły WHMCS dla ModulesGarden",
+      "context": {
+        "employer": "ModulesGarden",
+        "role": "PHP Developer",
+        "period": "~6 miesięcy"
+      },
+      "description": "Narzędzia rozszerzające billing, automatyzację i obsługę infrastruktury w WHMCS.",
+      "authorship": "Każdy z poniższych modułów zaimplementowałem samodzielnie w ramach pracy dla ModulesGarden.",
+      "compactLabel": "samodzielnie zaimplementowanych modułów WHMCS",
+      "tags": ["PHP", "HTML", "CSS", "JavaScript", "jQuery", "Smarty", "WHMCS"],
+      "items": [
+        {
+          "title": "Domain Data From Plesk",
+          "description": "Udostępnia dane domen z Plesk w procesach obsługiwanych przez WHMCS."
+        },
+        {
+          "title": "Invoice Sub Status",
+          "description": "Rozszerza obsługę faktur o bardziej szczegółowe statusy."
+        },
+        {
+          "title": "Automated Refunds",
+          "description": "Automatyzuje obsługę zwrotów w WHMCS."
+        },
+        {
+          "title": "Auto Upgrade For Early Payments For WHMCS",
+          "description": "Automatyzuje skonfigurowany proces podniesienia pakietu przy wcześniejszej płatności."
+        },
+        {
+          "title": "BulkUpdater",
+          "description": "Umożliwia masowe aktualizowanie rekordów w WHMCS."
+        }
+      ]
+    },
+    "personal": {
+      "index": "02 / Projekty własne",
+      "title": "Projekty własne",
+      "subtitle": "Mniejsze produkty, w których rozwijam pomysły i sprawdzam narzędzia poza pracą komercyjną.",
+      "items": [
+        {
+          "title": "Ogarniam Portfel",
+          "subtitle": "Aplikacja do zarządzania domowym budżetem — kategorie wydatków i raporty. Laravel, MySQL; działająca wersja demo online.",
+          "image": "/assets/projects/keep-wallet.png",
+          "tags": ["Laravel", "MySQL", "Reports"],
+          "links": [
+            {
+              "title": "Strona",
+              "url": "https://budget.sebastian-kostecki.profesjonalnyprogramista.pl/",
+              "primary": true
+            },
+            {
+              "title": "GitHub",
+              "url": "https://github.com/sebastian-kostecki/keep-wallet"
+            }
+          ]
+        },
+        {
+          "title": "O Nią & O Niego",
+          "subtitle": "Mobilna aplikacja wspierająca modlitwę o przyszłego męża lub żonę — treści i narzędzia duchowe w jednym miejscu. Ionic, Vue.",
+          "image": "/assets/projects/o-nia-o-niego.jpg",
+          "tags": ["Ionic", "Vue", "Capacitor"],
+          "links": [
+            {
+              "title": "GitHub",
+              "url": "https://github.com/sebastian-kostecki/o-nia-o-niego",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "title": "Menu Maker",
+          "subtitle": "Planowanie tygodniowych posiłków z AI, skalowaniem składników i eksportem PDF. Laravel, Vue, Inertia.",
+          "image": "/assets/projects/menu-maker.png",
+          "placeholderIndex": 2,
+          "badge": "wip",
+          "tags": ["Laravel", "Vue", "Inertia.js", "AI"],
+          "links": [
+            {
+              "title": "GitHub",
+              "url": "https://github.com/sebastian-kostecki/menu-maker",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
   },
   "contact": {
-    "command": "$ ./contact.sh",
+    "index": "04 / Kontakt",
     "title": "Porozmawiajmy",
-    "subtitle": "Zainteresowany współpracą lub rozmową o backendzie? Napisz do mnie.",
+    "subtitle": "Zainteresowany współpracą lub rozmową o backendzie? Napisz — zwykle odpisuję w ciągu dnia.",
     "methods": [
-      { "type": "linkedin", "label": "LinkedIn", "value": "in/kostecki-sebastian", "href": "https://www.linkedin.com/in/kostecki-sebastian" },
-      { "type": "email", "label": "E-mail", "value": "sebastian.kostecki@gmail.com", "href": "mailto:sebastian.kostecki@gmail.com" }
+      {
+        "type": "linkedin",
+        "label": "LinkedIn",
+        "value": "in/kostecki-sebastian",
+        "href": "https://www.linkedin.com/in/kostecki-sebastian"
+      },
+      {
+        "type": "github",
+        "label": "GitHub",
+        "value": "github.com/sebastian-kostecki",
+        "href": "https://github.com/sebastian-kostecki"
+      },
+      {
+        "type": "email",
+        "label": "E-mail",
+        "value": "kontakt@kostecki.dev",
+        "href": "mailto:kontakt@kostecki.dev"
+      }
     ],
-    "ctaHeadline": "Chcesz dowiedzieć się więcej o moim doświadczeniu?"
+    "ctaHeadline": "Porozmawiajmy o współpracy"
   },
   "footer": {
     "servicesTitle": "Specjalizacja",
@@ -204,8 +288,16 @@
     ],
     "mediaTitle": "Profile",
     "social": [
-      { "name": "LinkedIn", "url": "https://www.linkedin.com/in/kostecki-sebastian", "icon": "simple-icons:linkedin" },
-      { "name": "GitHub", "url": "https://github.com/sebastian-kostecki", "icon": "simple-icons:github" }
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/kostecki-sebastian",
+        "icon": "simple-icons:linkedin"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/sebastian-kostecki",
+        "icon": "simple-icons:github"
+      }
     ],
     "copyright": "Wszystkie prawa zastrzeżone"
   }

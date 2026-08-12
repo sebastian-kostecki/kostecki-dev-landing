@@ -1,6 +1,7 @@
 export interface NavItem {
-  id: string
+  to: string
   label: string
+  index: string
 }
 
 export interface CtaLink {
@@ -8,32 +9,17 @@ export interface CtaLink {
   href: string
 }
 
-export interface MetricItem {
-  value: string
-  label: string
-}
-
 export interface SkillItem {
   name: string
   icon?: string
   image?: string
+  level?: string
 }
 
 export interface SkillCategory {
   name: string
-  items: SkillItem[]
-}
-
-export interface ExperienceEntry {
-  company: string
-  companyUrl?: string
-  logo?: string
-  role: string
-  period: string
-  project?: string
-  projectUrl?: string
-  summary: string
-  highlights?: string[]
+  description: string
+  tags: string[]
 }
 
 export interface ProjectLink {
@@ -48,7 +34,48 @@ export interface Project {
   image: string | null
   placeholderIndex?: number
   badge?: 'wip'
+  tags: string[]
   links: ProjectLink[]
+}
+
+export interface CommercialWorkContext {
+  employer: string
+  role: string
+  period: string
+}
+
+export interface FeaturedProject {
+  eyebrow: string
+  title: string
+  context: CommercialWorkContext
+  description: string
+  contributionTitle: string
+  responsibilities: string[]
+  tags: string[]
+  link?: ProjectLink
+}
+
+export interface CommercialProjectItem {
+  title: string
+  description: string
+}
+
+export interface CommercialProjectGroup {
+  eyebrow: string
+  title: string
+  context: CommercialWorkContext
+  description: string
+  authorship: string
+  compactLabel: string
+  tags: string[]
+  items: CommercialProjectItem[]
+}
+
+export interface PersonalProjects {
+  index: string
+  title: string
+  subtitle: string
+  items: Project[]
 }
 
 export interface ContactMethod {
@@ -64,11 +91,23 @@ export interface SocialLink {
   icon: string
 }
 
+export interface RouteMetaCopy {
+  title: string
+  description: string
+}
+
 export interface SiteContent {
   meta: {
     title: string
     description: string
     lang: string
+  }
+  routes: {
+    home: RouteMetaCopy
+    projects: RouteMetaCopy
+    skills: RouteMetaCopy
+    contact: RouteMetaCopy
+    notFound: RouteMetaCopy
   }
   ui: {
     skipToContent: string
@@ -83,46 +122,60 @@ export interface SiteContent {
     projectScreenshotAlt: string
     openMenu: string
     closeMenu: string
-    sectionsNavLabel: string
+    seeAllProjects: string
+    exploreAllSkills: string
+    viewMyWork: string
+    liveDemo: string
+    sourceCode: string
+    backHome: string
+    notFoundTitle: string
+    notFoundBody: string
+    brandName: string
+    footerTagline: string
+    footerStack: string
   }
   nav: NavItem[]
   hero: {
     label: string
     name: string
     valueProp: string
+    valuePropAccent: string
     subtitle?: string
-    metrics: MetricItem[]
     ctaPrimary: CtaLink
   }
   cv: {
-    // Empty href => CV buttons are hidden (graceful handling until the file exists).
     href: string
   }
   about: {
-    command: string
+    index: string
     title: string
     paragraphs: string[]
   }
-  experience: {
-    command: string
-    title: string
-    entries: ExperienceEntry[]
-  }
   skills: {
-    command: string
+    index: string
     title: string
+    subtitle: string
     coreTitle: string
     coreDescription: string
+    competenciesLabel: string
     core: SkillItem[]
     categories: SkillCategory[]
   }
   projects: {
-    command: string
+    homePreview: {
+      index: string
+      title: string
+      subtitle: string
+    }
+    index: string
     title: string
-    items: Project[]
+    subtitle: string
+    featured: FeaturedProject
+    commercialGroup: CommercialProjectGroup
+    personal: PersonalProjects
   }
   contact: {
-    command: string
+    index: string
     title: string
     subtitle: string
     methods: ContactMethod[]

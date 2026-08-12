@@ -10,7 +10,7 @@ const locales: Locale[] = ['pl', 'en']
 
 <template>
   <div
-    class="inline-flex items-center gap-1 rounded-lg border border-border bg-white/5 p-0.5 font-mono text-xs"
+    class="inline-flex items-center gap-1 rounded-sm border border-border bg-secondary/40 p-0.5 font-mono text-xs"
     role="group"
     :aria-label="content.ui.languageLabel"
   >
@@ -18,12 +18,8 @@ const locales: Locale[] = ['pl', 'en']
       v-for="code in locales"
       :key="code"
       type="button"
-      class="rounded-md px-2 py-1 font-semibold uppercase transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-      :class="
-        locale === code
-          ? 'bg-accent text-white'
-          : 'text-muted hover:text-white'
-      "
+      class="rounded-sm px-2 py-1 font-semibold uppercase transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+      :class="locale === code ? 'bg-primary text-primary-foreground' : 'text-muted-foreground hover:text-foreground'"
       :aria-pressed="locale === code"
       @click="setLocale(code)"
     >

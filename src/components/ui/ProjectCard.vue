@@ -1,86 +1,89 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { ArrowUpRight } from '@lucide/vue'
+import { Icon } from '@iconify/vue'
 import type { Project } from '@/types/content'
 import { useContent } from '@/composables/useContent'
 
 const props = defineProps<{
   project: Project
-  index: number
+  index?: string
 }>()
 
 const content = useContent()
 
-const gradientClasses = [
-  'from-accent/40 via-purple-500/30 to-blue-500/30',
-  'from-blue-500/40 via-cyan-500/30 to-emerald-500/30',
-  'from-orange-500/40 via-amber-500/30 to-red-500/30',
-  'from-violet-500/40 via-fuchsia-500/30 to-pink-500/30',
-]
-
-const gradientClass = gradientClasses[(props.project.placeholderIndex ?? props.index) % gradientClasses.length]
-
-const imageAlt = computed(
-  () => `${content.value.ui.projectScreenshotAlt} ${props.project.title}`,
+const status = computed(() =>
+  props.project.badge === 'wip' ? content.value.ui.wipBadge : undefined,
 )
+
+const demoUrl = computed(() => {
+  const link = props.project.links.find((item) => {
+    const title = item.title.toLowerCase()
+    return title.includes('strona') || title.includes('website') || title.includes('demo')
+  })
+  return link?.url
+})
+
+const repoUrl = computed(() => {
+  const link = props.project.links.find((item) => item.title.toLowerCase().includes('github'))
+  return link?.url
+})
 </script>
 
 <template>
-  <article
-    class="group flex h-full flex-col surface-card overflow-hidden transition-transform duration-300 hover:scale-[1.02] reveal"
-    :style="{ transitionDelay: `${index * 100}ms` }"
-  >
-    <div class="relative aspect-[2/1] shrink-0 overflow-hidden">
-      <img
-        v-if="project.image"
-        :src="project.image"
-        :alt="imageAlt"
-        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-        loading="lazy"
-        width="640"
-        height="320"
-      />
-      <div
-        v-else
-        class="flex h-full w-full items-center justify-center bg-gradient-to-br"
-        :class="gradientClass"
-        aria-hidden="true"
-      >
-        <span class="font-display text-5xl font-bold text-white/20">
-          {{ project.placeholderIndex ?? index + 1 }}
+  <article class="panel panel-hover group relative flex flex-col rounded-md p-6">
+    <div class="flex items-start justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <span v-if="index" class="font-mono text-xs tracking-[0.2em] text-primary">{{ index }}</span>
+        <span
+          v-if="status"
+          class="rounded-sm border border-primary/30 bg-primary/10 px-2 py-0.5 font-mono text-[10px] tracking-wider text-primary uppercase"
+        >
+          {{ status }}
         </span>
       </div>
-      <div
-        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-        aria-hidden="true"
+      <ArrowUpRight
+        class="h-4 w-4 text-muted-foreground/50 transition-colors group-hover:text-primary"
       />
     </div>
-    <div class="flex flex-1 flex-col p-4 lg:p-5">
-      <div class="flex flex-wrap items-center gap-2">
-        <p class="mono-label">{{ content.ui.projectCardLabel }}</p>
-        <span
-          v-if="project.badge === 'wip'"
-          class="rounded-md border border-accent/40 bg-accent/10 px-2 py-0.5 font-mono text-[0.65rem] font-semibold uppercase tracking-wide text-accent"
-        >
-          {{ content.ui.wipBadge }}
-        </span>
-      </div>
-      <h3 class="mt-1 font-display text-lg font-bold text-white">{{ project.title }}</h3>
-      <p class="mt-1.5 text-sm leading-relaxed text-muted">{{ project.subtitle }}</p>
-      <div class="mt-auto flex flex-wrap gap-2 pt-3">
-        <a
-          v-for="link in project.links"
-          :key="link.url"
-          :href="link.url"
-          :class="[
-            link.primary ? 'btn-primary' : 'btn-secondary',
-            '!px-4 !py-2 text-xs',
-          ]"
-          :target="link.url.startsWith('http') ? '_blank' : undefined"
-          :rel="link.url.startsWith('http') ? 'noopener noreferrer' : undefined"
-        >
-          {{ link.title }}
-        </a>
-      </div>
+
+    <h3 class="mt-4 font-mono text-lg font-semibold text-card-foreground">{{ project.title }}</h3>
+    <p class="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{{ project.subtitle }}</p>
+
+    <div class="mt-5 flex flex-wrap gap-1.5">
+      <span
+        v-for="tag in project.tags"
+        :key="tag"
+        class="rounded-sm border border-border bg-secondary/60 px-2 py-1 font-mono text-[11px] text-secondary-foreground"
+      >
+        {{ tag }}
+      </span>
+    </div>
+
+    <div
+      v-if="demoUrl || repoUrl"
+      class="mt-6 flex items-center gap-4 border-t border-border/60 pt-4"
+    >
+      <a
+        v-if="demoUrl"
+        :href="demoUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-primary transition-colors hover:text-primary-glow"
+      >
+        {{ content.ui.liveDemo }}
+        <ArrowUpRight class="h-3.5 w-3.5" />
+      </a>
+      <a
+        v-if="repoUrl"
+        :href="repoUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
+      >
+        {{ content.ui.sourceCode }}
+        <Icon icon="simple-icons:github" class="h-3.5 w-3.5" />
+      </a>
     </div>
   </article>
 </template>
