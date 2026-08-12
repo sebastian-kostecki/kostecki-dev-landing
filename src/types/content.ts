@@ -54,6 +54,38 @@ export interface Project {
   links: ProjectLink[]
 }
 
+export interface FeaturedProject {
+  eyebrow: string
+  title: string
+  description: string
+  contributionTitle: string
+  responsibilities: string[]
+  tags: string[]
+  link?: ProjectLink
+}
+
+export interface CommercialProjectItem {
+  title: string
+  description: string
+}
+
+export interface CommercialProjectGroup {
+  eyebrow: string
+  title: string
+  description: string
+  authorship: string
+  compactLabel: string
+  tags: string[]
+  items: CommercialProjectItem[]
+}
+
+export interface PersonalProjects {
+  index: string
+  title: string
+  subtitle: string
+  items: Project[]
+}
+
 export interface ContactMethod {
   type: 'email' | 'phone' | 'linkedin' | 'github'
   label: string
@@ -149,7 +181,9 @@ export interface SiteContent {
     index: string
     title: string
     subtitle: string
-    items: Project[]
+    featured: FeaturedProject
+    commercialGroup: CommercialProjectGroup
+    personal: PersonalProjects
   }
   contact: {
     index: string

@@ -21,7 +21,7 @@ function projectIndex(i: number) {
       />
       <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         <ProjectCard
-          v-for="(project, i) in content.projects.items"
+          v-for="(project, i) in content.projects.personal.items"
           :key="project.title"
           :project="project"
           :index="projectIndex(i)"

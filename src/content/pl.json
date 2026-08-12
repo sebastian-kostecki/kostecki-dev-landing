@@ -11,7 +11,7 @@
     },
     "projects": {
       "title": "Projekty — Sebastian Kostecki",
-      "description": "Projekty własne: aplikacje Laravel, narzędzia mobilne i eksperymenty poza pracą komercyjną."
+      "description": "Wybrane realizacje komercyjne: PanelAlpha, autorskie moduły WHMCS dla ModulesGarden oraz projekty własne."
     },
     "skills": {
       "title": "Umiejętności — Sebastian Kostecki",
@@ -191,40 +191,109 @@
   },
   "projects": {
     "index": "03 / Projekty",
-    "title": "Projekty własne",
-    "subtitle": "Side projekty, w których testuję pomysły i narzędzia poza pracą komercyjną.",
-    "items": [
-      {
-        "title": "Ogarniam Portfel",
-        "subtitle": "Aplikacja do zarządzania domowym budżetem — kategorie wydatków i raporty. Laravel, MySQL; działająca wersja demo online.",
-        "image": "/assets/projects/keep-wallet.png",
-        "tags": ["Laravel", "MySQL", "Reports"],
-        "links": [
-          { "title": "Strona", "url": "https://budget.sebastian-kostecki.profesjonalnyprogramista.pl/", "primary": true },
-          { "title": "GitHub", "url": "https://github.com/sebastian-kostecki/keep-wallet" }
-        ]
-      },
-      {
-        "title": "O Nią & O Niego",
-        "subtitle": "Mobilna aplikacja wspierająca modlitwę o przyszłego męża lub żonę — treści i narzędzia duchowe w jednym miejscu. Ionic, Vue.",
-        "image": "/assets/projects/o-nia-o-niego.jpg",
-        "tags": ["Ionic", "Vue", "Capacitor"],
-        "links": [
-          { "title": "GitHub", "url": "https://github.com/sebastian-kostecki/o-nia-o-niego", "primary": true }
-        ]
-      },
-      {
-        "title": "Menu Maker",
-        "subtitle": "Planowanie tygodniowych posiłków z AI, skalowaniem składników i eksportem PDF. Laravel, Vue, Inertia.",
-        "image": "/assets/projects/menu-maker.png",
-        "placeholderIndex": 2,
-        "badge": "wip",
-        "tags": ["Laravel", "Vue", "Inertia.js", "AI"],
-        "links": [
-          { "title": "GitHub", "url": "https://github.com/sebastian-kostecki/menu-maker", "primary": true }
-        ]
+    "title": "Wybrane projekty",
+    "subtitle": "Produkty i narzędzia, które rozwijałem komercyjnie — uzupełnione wybranymi projektami własnymi.",
+    "featured": {
+      "eyebrow": "Główny projekt komercyjny",
+      "title": "PanelAlpha",
+      "description": "Produkcyjna platforma B2B do automatyzacji zarządzania WordPress dla firm hostingowych i agencji.",
+      "contributionTitle": "Mój wkład",
+      "responsibilities": [
+        "Backend Laravel i rozwój API platformy",
+        "Integracje hostingowe, DNS, e-mail, SSL, backup i storage",
+        "Cykl życia instancji WordPress oraz obsługa Git",
+        "Integracja WHMCS i powiązana logika billingowa",
+        "Vue.js i Vuetify przy funkcjach obejmujących backend oraz UI"
+      ],
+      "tags": ["PHP", "Laravel", "MySQL", "Vue.js", "Vuetify", "WHMCS"],
+      "link": {
+        "title": "Zobacz PanelAlpha",
+        "url": "https://panelalpha.com",
+        "primary": true
       }
-    ]
+    },
+    "commercialGroup": {
+      "eyebrow": "Realizacje komercyjne",
+      "title": "Moduły WHMCS dla ModulesGarden",
+      "description": "Narzędzia rozszerzające billing, automatyzację i obsługę infrastruktury w WHMCS.",
+      "authorship": "Każdy z poniższych modułów zaimplementowałem samodzielnie w ramach pracy dla ModulesGarden.",
+      "compactLabel": "samodzielnie zaimplementowanych modułów WHMCS",
+      "tags": ["PHP", "HTML", "CSS", "JavaScript", "jQuery", "Smarty", "WHMCS"],
+      "items": [
+        {
+          "title": "Domain Data From Plesk",
+          "description": "Udostępnia dane domen z Plesk w procesach obsługiwanych przez WHMCS."
+        },
+        {
+          "title": "Invoice Sub Status",
+          "description": "Rozszerza obsługę faktur o bardziej szczegółowe statusy."
+        },
+        {
+          "title": "Automated Refunds",
+          "description": "Automatyzuje obsługę zwrotów w WHMCS."
+        },
+        {
+          "title": "Auto Upgrade For Early Payments For WHMCS",
+          "description": "Automatyzuje skonfigurowany proces podniesienia pakietu przy wcześniejszej płatności."
+        },
+        {
+          "title": "BulkUpdater",
+          "description": "Umożliwia masowe aktualizowanie rekordów w WHMCS."
+        }
+      ]
+    },
+    "personal": {
+      "index": "03.3 / Projekty własne",
+      "title": "Projekty własne",
+      "subtitle": "Mniejsze produkty, w których rozwijam pomysły i sprawdzam narzędzia poza pracą komercyjną.",
+      "items": [
+        {
+          "title": "Ogarniam Portfel",
+          "subtitle": "Aplikacja do zarządzania domowym budżetem — kategorie wydatków i raporty. Laravel, MySQL; działająca wersja demo online.",
+          "image": "/assets/projects/keep-wallet.png",
+          "tags": ["Laravel", "MySQL", "Reports"],
+          "links": [
+            {
+              "title": "Strona",
+              "url": "https://budget.sebastian-kostecki.profesjonalnyprogramista.pl/",
+              "primary": true
+            },
+            {
+              "title": "GitHub",
+              "url": "https://github.com/sebastian-kostecki/keep-wallet"
+            }
+          ]
+        },
+        {
+          "title": "O Nią & O Niego",
+          "subtitle": "Mobilna aplikacja wspierająca modlitwę o przyszłego męża lub żonę — treści i narzędzia duchowe w jednym miejscu. Ionic, Vue.",
+          "image": "/assets/projects/o-nia-o-niego.jpg",
+          "tags": ["Ionic", "Vue", "Capacitor"],
+          "links": [
+            {
+              "title": "GitHub",
+              "url": "https://github.com/sebastian-kostecki/o-nia-o-niego",
+              "primary": true
+            }
+          ]
+        },
+        {
+          "title": "Menu Maker",
+          "subtitle": "Planowanie tygodniowych posiłków z AI, skalowaniem składników i eksportem PDF. Laravel, Vue, Inertia.",
+          "image": "/assets/projects/menu-maker.png",
+          "placeholderIndex": 2,
+          "badge": "wip",
+          "tags": ["Laravel", "Vue", "Inertia.js", "AI"],
+          "links": [
+            {
+              "title": "GitHub",
+              "url": "https://github.com/sebastian-kostecki/menu-maker",
+              "primary": true
+            }
+          ]
+        }
+      ]
+    }
   },
   "contact": {
     "index": "04 / Kontakt",
