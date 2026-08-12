@@ -250,6 +250,23 @@
               "primary": true
             }
           ]
+        },
+        {
+          "title": "Rozgadana Jana",
+          "subtitle": "Blog o wierze, rodzinie i książkach — własny motyw WordPress (PHP), minimalistyczny i pod treści.",
+          "image": "/assets/projects/rozgadana-jana.png",
+          "tags": ["WordPress", "PHP", "Custom theme", "Custom plugin"],
+          "links": [
+            {
+              "title": "Strona",
+              "url": "https://rozgadanajana.pl",
+              "primary": true
+            },
+            {
+              "title": "GitHub",
+              "url": "https://github.com/sebastian-kostecki/rozgadana-jana"
+            }
+          ]
         }
       ]
     }
