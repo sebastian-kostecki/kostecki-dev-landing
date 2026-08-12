@@ -121,9 +121,8 @@ const content = useContent()
       </div>
     </section>
 
-    <section class="relative overflow-hidden border-t border-border/60 px-4 py-24 sm:px-6 lg:px-8">
-      <div aria-hidden="true" class="gradient-hero absolute inset-0 opacity-70" />
-      <div class="relative mx-auto max-w-3xl text-center">
+    <section class="border-t border-border/60 px-4 py-24 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
         <h2 class="font-mono text-3xl font-bold text-foreground sm:text-4xl">
           {{ content.contact.ctaHeadline }}
         </h2>
