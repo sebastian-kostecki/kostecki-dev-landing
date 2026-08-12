@@ -5,18 +5,20 @@ import { Menu, X } from '@lucide/vue'
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher.vue'
 import { useContent } from '@/composables/useContent'
 
-const SCROLL_THRESHOLD_PX = 32
+const SCROLL_THRESHOLD_PX = 80
 
 const content = useContent()
 const route = useRoute()
 const open = ref(false)
 const scrolledPastThreshold = ref(false)
+const isMobile = ref(false)
 
 const hasCv = computed(() => content.value.cv.href.length > 0)
 const isHome = computed(() => route.path === '/')
 const headerVisible = computed(() => {
   if (!isHome.value) return true
   if (open.value) return true
+  if (isMobile.value) return true
   return scrolledPastThreshold.value
 })
 
@@ -28,6 +30,11 @@ function updateScrollState() {
   scrolledPastThreshold.value = window.scrollY > SCROLL_THRESHOLD_PX
 }
 
+function updateIsMobile() {
+  isMobile.value = window.matchMedia('(max-width: 767px)').matches
+  if (!isMobile.value) open.value = false
+}
+
 watch(
   () => route.path,
   () => {
@@ -36,24 +43,32 @@ watch(
   },
 )
 
+let mobileQuery: MediaQueryList | null = null
+
 onMounted(() => {
   updateScrollState()
   window.addEventListener('scroll', updateScrollState, { passive: true })
+
+  mobileQuery = window.matchMedia('(max-width: 767px)')
+  updateIsMobile()
+  mobileQuery.addEventListener('change', updateIsMobile)
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', updateScrollState)
+  mobileQuery?.removeEventListener('change', updateIsMobile)
 })
 </script>
 
 <template>
   <header
-    class="sticky top-0 z-50 w-full border-b border-border/60 bg-background/70 backdrop-blur-xl transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none"
+    class="fixed inset-x-0 top-0 z-50 transition-all duration-300 motion-reduce:transition-none"
     :class="
       headerVisible
-        ? 'translate-y-0 opacity-100'
+        ? 'translate-y-0 border-b border-border/60 bg-background/70 opacity-100 backdrop-blur-xl'
         : 'pointer-events-none -translate-y-full opacity-0'
     "
+    :aria-hidden="headerVisible ? undefined : true"
   >
     <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
       <RouterLink to="/" class="group flex items-center gap-3" :aria-label="content.ui.homeLabel">
