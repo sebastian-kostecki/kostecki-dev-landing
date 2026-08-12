@@ -25,7 +25,6 @@ coverage
 *.sw?
 
 *.tsbuildinfo
-
 .eslintcache
 
 # Cypress
@@ -41,3 +40,5 @@ __screenshots__/
 
 # Brainstorming visual companion
 .superpowers/
+
+.vscode
