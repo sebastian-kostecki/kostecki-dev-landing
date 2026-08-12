@@ -7,7 +7,7 @@ const year = new Date().getFullYear()
 </script>
 
 <template>
-  <footer class="w-full border-t border-border/60 bg-background">
+  <footer class="w-full bg-background">
     <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
       <div class="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
         <div>
@@ -42,7 +42,7 @@ const year = new Date().getFullYear()
       </div>
 
       <div
-        class="mt-10 flex flex-col gap-2 border-t border-border/60 pt-6 sm:flex-row sm:items-center sm:justify-between"
+        class="mt-10 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between"
       >
         <p class="font-mono text-xs text-muted-foreground">
           © {{ year }} — {{ content.footer.copyright }}

@@ -58,7 +58,7 @@ const content = useContent()
       </div>
     </section>
 
-    <section class="border-t border-border/60 px-4 py-24 sm:px-6 lg:px-8">
+    <section class="px-4 py-24 sm:px-6 lg:px-8">
       <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-12">
         <div class="lg:col-span-4">
           <SectionHeading :index="content.about.index" :title="content.about.title" />
@@ -69,7 +69,7 @@ const content = useContent()
       </div>
     </section>
 
-    <section class="border-t border-border/60 px-4 py-24 sm:px-6 lg:px-8">
+    <section class="px-4 py-24 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-6xl">
         <SectionHeading
           :index="content.projects.homePreview.index"
@@ -92,7 +92,7 @@ const content = useContent()
       </div>
     </section>
 
-    <section class="border-t border-border/60 px-4 py-24 sm:px-6 lg:px-8">
+    <section class="px-4 py-24 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-6xl">
         <SectionHeading
           :index="content.skills.index"
@@ -121,7 +121,7 @@ const content = useContent()
       </div>
     </section>
 
-    <section class="border-t border-border/60 px-4 py-24 sm:px-6 lg:px-8">
+    <section class="px-4 py-24 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-3xl text-center">
         <h2 class="font-mono text-3xl font-bold text-foreground sm:text-4xl">
           {{ content.contact.ctaHeadline }}
