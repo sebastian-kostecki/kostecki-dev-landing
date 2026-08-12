@@ -329,8 +329,16 @@
     ],
     "mediaTitle": "Profile",
     "social": [
-      { "name": "LinkedIn", "url": "https://www.linkedin.com/in/kostecki-sebastian", "icon": "simple-icons:linkedin" },
-      { "name": "GitHub", "url": "https://github.com/sebastian-kostecki", "icon": "simple-icons:github" }
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/kostecki-sebastian",
+        "icon": "simple-icons:linkedin"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/sebastian-kostecki",
+        "icon": "simple-icons:github"
+      }
     ],
     "copyright": "Wszystkie prawa zastrzeżone"
   }
