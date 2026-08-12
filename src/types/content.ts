@@ -1,6 +1,7 @@
 export interface NavItem {
-  id: string
+  to: string
   label: string
+  index: string
 }
 
 export interface CtaLink {
@@ -17,6 +18,7 @@ export interface SkillItem {
   name: string
   icon?: string
   image?: string
+  level?: string
 }
 
 export interface SkillCategory {
@@ -48,6 +50,7 @@ export interface Project {
   image: string | null
   placeholderIndex?: number
   badge?: 'wip'
+  tags: string[]
   links: ProjectLink[]
 }
 
@@ -64,11 +67,23 @@ export interface SocialLink {
   icon: string
 }
 
+export interface RouteMetaCopy {
+  title: string
+  description: string
+}
+
 export interface SiteContent {
   meta: {
     title: string
     description: string
     lang: string
+  }
+  routes: {
+    home: RouteMetaCopy
+    projects: RouteMetaCopy
+    skills: RouteMetaCopy
+    contact: RouteMetaCopy
+    notFound: RouteMetaCopy
   }
   ui: {
     skipToContent: string
@@ -83,46 +98,61 @@ export interface SiteContent {
     projectScreenshotAlt: string
     openMenu: string
     closeMenu: string
-    sectionsNavLabel: string
+    atAGlance: string
+    seeAllProjects: string
+    exploreAllSkills: string
+    viewMyWork: string
+    liveDemo: string
+    sourceCode: string
+    backHome: string
+    notFoundTitle: string
+    notFoundBody: string
+    brandName: string
+    footerTagline: string
+    footerStack: string
   }
   nav: NavItem[]
   hero: {
     label: string
     name: string
     valueProp: string
+    valuePropAccent: string
     subtitle?: string
     metrics: MetricItem[]
     ctaPrimary: CtaLink
+    techTags: string[]
   }
   cv: {
-    // Empty href => CV buttons are hidden (graceful handling until the file exists).
     href: string
   }
   about: {
-    command: string
+    index: string
     title: string
     paragraphs: string[]
   }
   experience: {
-    command: string
+    index: string
     title: string
+    subtitle: string
     entries: ExperienceEntry[]
   }
   skills: {
-    command: string
+    index: string
     title: string
+    subtitle: string
     coreTitle: string
     coreDescription: string
     core: SkillItem[]
     categories: SkillCategory[]
   }
   projects: {
-    command: string
+    index: string
     title: string
+    subtitle: string
     items: Project[]
   }
   contact: {
-    command: string
+    index: string
     title: string
     subtitle: string
     methods: ContactMethod[]

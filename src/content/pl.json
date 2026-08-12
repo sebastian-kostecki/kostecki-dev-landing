@@ -4,6 +4,28 @@
     "description": "Backend Developer (Laravel). Buduję i rozwijam produkcyjne aplikacje backendowe w PHP — m.in. integracje API, infrastruktura i automatyzacja WordPress. 4 lata komercyjnie.",
     "lang": "pl"
   },
+  "routes": {
+    "home": {
+      "title": "Sebastian Kostecki — Backend Developer (Laravel)",
+      "description": "Backend Developer (Laravel). Buduję i rozwijam produkcyjne aplikacje backendowe w PHP — m.in. integracje API, infrastruktura i automatyzacja WordPress. 4 lata komercyjnie."
+    },
+    "projects": {
+      "title": "Projekty — Sebastian Kostecki",
+      "description": "Projekty własne: aplikacje Laravel, narzędzia mobilne i eksperymenty poza pracą komercyjną."
+    },
+    "skills": {
+      "title": "Umiejętności — Sebastian Kostecki",
+      "description": "PHP, Laravel, MySQL, Docker i Vue.js oraz integracje hostingowe, DNS, storage, WordPress i billing używane produkcyjnie."
+    },
+    "contact": {
+      "title": "Kontakt — Sebastian Kostecki",
+      "description": "Zainteresowany współpracą lub rozmową o backendzie? Napisz na LinkedIn, GitHub lub e-mail."
+    },
+    "notFound": {
+      "title": "Nie znaleziono — kostecki.dev",
+      "description": "Strona, której szukasz, nie istnieje."
+    }
+  },
   "ui": {
     "skipToContent": "Przejdź do treści",
     "languageLabel": "Język",
@@ -17,19 +39,30 @@
     "projectScreenshotAlt": "Zrzut ekranu projektu",
     "openMenu": "Otwórz menu",
     "closeMenu": "Zamknij menu",
-    "sectionsNavLabel": "Nawigacja sekcji"
+    "atAGlance": "W skrócie",
+    "seeAllProjects": "Zobacz wszystkie projekty",
+    "exploreAllSkills": "Zobacz wszystkie umiejętności",
+    "viewMyWork": "Zobacz projekty",
+    "liveDemo": "Demo",
+    "sourceCode": "Kod źródłowy",
+    "backHome": "Strona główna",
+    "notFoundTitle": "Nie znaleziono strony",
+    "notFoundBody": "Strona, której szukasz, nie istnieje albo została przeniesiona.",
+    "brandName": "kostecki.dev",
+    "footerTagline": "Backend Developer (Laravel) — API, integracje i automatyzacja infrastruktury.",
+    "footerStack": "Laravel · PHP · Docker"
   },
   "nav": [
-    { "id": "about", "label": "O mnie" },
-    { "id": "experience", "label": "Doświadczenie" },
-    { "id": "skills", "label": "Umiejętności" },
-    { "id": "projects", "label": "Projekty" },
-    { "id": "contact", "label": "Kontakt" }
+    { "to": "/", "label": "Start", "index": "01" },
+    { "to": "/projects", "label": "Projekty", "index": "02" },
+    { "to": "/skills", "label": "Umiejętności", "index": "03" },
+    { "to": "/contact", "label": "Kontakt", "index": "04" }
   ],
   "hero": {
-    "label": "// BACKEND DEVELOPER · LARAVEL",
+    "label": "Backend Developer / Laravel",
     "name": "Sebastian Kostecki",
-    "valueProp": "Buduję i rozwijam produkcyjne aplikacje backendowe w PHP.",
+    "valueProp": "Buduję i rozwijam",
+    "valuePropAccent": "produkcyjne aplikacje backendowe w PHP.",
     "subtitle": "Backend Developer z 4-letnim komercyjnym doświadczeniem — m.in. integracje API, infrastruktura i automatyzacja WordPress w B2B SaaS.",
     "metrics": [
       { "value": "4 lata", "label": "komercyjnie" },
@@ -38,15 +71,16 @@
     ],
     "ctaPrimary": {
       "label": "Porozmawiajmy",
-      "href": "https://www.linkedin.com/in/kostecki-sebastian"
-    }
+      "href": "/contact"
+    },
+    "techTags": ["PHP", "Laravel", "MySQL", "Docker", "Vue.js"]
   },
   "cv": {
     "href": ""
   },
   "about": {
-    "command": "$ cat about.md",
-    "title": "O mnie",
+    "index": "01 / O mnie",
+    "title": "Jak pracuję",
     "paragraphs": [
       "Od 4 lat buduję backend w PHP — głównie Laravel — w produkcyjnym produkcie B2B. Pracuję w ModulesGarden nad platformą PanelAlpha, która firmom usługowym umożliwia automatyzację zarządzania WordPress.",
       "Lubię przejąć feature i dowieźć go od warstwy backendowej po działającą logikę — a gdy potrzeba, wchodzę we frontend (Vue.js). Pracuję na żywym produkcie, więc liczy się dla mnie kod, który faktycznie działa u klientów.",
@@ -54,8 +88,9 @@
     ]
   },
   "experience": {
-    "command": "$ git log --experience",
-    "title": "Doświadczenie",
+    "index": "02 / Doświadczenie",
+    "title": "Praca komercyjna",
+    "subtitle": "Produkcyjne systemy PHP, integracje i logika biznesowa wokół nich.",
     "entries": [
       {
         "company": "PanelAlpha",
@@ -89,16 +124,17 @@
     ]
   },
   "skills": {
-    "command": "$ ls skills/",
-    "title": "Umiejętności",
+    "index": "03 / Umiejętności",
+    "title": "Umiejętności i narzędzia",
+    "subtitle": "Stack, w którym buduję i utrzymuję produkcyjny backend — oraz frontend, gdy feature tego wymaga. Kategorie integracji odpowiadają obszarom z doświadczenia.",
     "coreTitle": "Stack podstawowy",
-    "coreDescription": "Stack, w którym buduję i utrzymuję produkcyjny backend — oraz frontend, gdy feature tego wymaga. Kategorie integracji poniżej odpowiadają obszarom z mojego doświadczenia.",
+    "coreDescription": "Stack, w którym buduję i utrzymuję produkcyjny backend — oraz frontend, gdy feature tego wymaga.",
     "core": [
-      { "name": "PHP", "icon": "simple-icons:php" },
-      { "name": "Laravel", "icon": "simple-icons:laravel" },
-      { "name": "MySQL", "icon": "simple-icons:mysql" },
-      { "name": "Docker", "icon": "simple-icons:docker" },
-      { "name": "Vue.js", "icon": "simple-icons:vuedotjs" }
+      { "name": "PHP", "icon": "simple-icons:php", "level": "Język główny" },
+      { "name": "Laravel", "icon": "simple-icons:laravel", "level": "Backend produkcyjny" },
+      { "name": "MySQL", "icon": "simple-icons:mysql", "level": "Modelowanie danych" },
+      { "name": "Docker", "icon": "simple-icons:docker", "level": "Środowiska" },
+      { "name": "Vue.js", "icon": "simple-icons:vuedotjs", "level": "Frontend feature'ów" }
     ],
     "categories": [
       {
@@ -154,13 +190,15 @@
     ]
   },
   "projects": {
-    "command": "$ ls projects/",
+    "index": "03 / Projekty",
     "title": "Projekty własne",
+    "subtitle": "Side projekty, w których testuję pomysły i narzędzia poza pracą komercyjną.",
     "items": [
       {
         "title": "Ogarniam Portfel",
         "subtitle": "Aplikacja do zarządzania domowym budżetem — kategorie wydatków i raporty. Laravel, MySQL; działająca wersja demo online.",
         "image": "/assets/projects/keep-wallet.png",
+        "tags": ["Laravel", "MySQL", "Reports"],
         "links": [
           { "title": "Strona", "url": "https://budget.sebastian-kostecki.profesjonalnyprogramista.pl/", "primary": true },
           { "title": "GitHub", "url": "https://github.com/sebastian-kostecki/keep-wallet" }
@@ -170,6 +208,7 @@
         "title": "O Nią & O Niego",
         "subtitle": "Mobilna aplikacja wspierająca modlitwę o przyszłego męża lub żonę — treści i narzędzia duchowe w jednym miejscu. Ionic, Vue.",
         "image": "/assets/projects/o-nia-o-niego.jpg",
+        "tags": ["Ionic", "Vue", "Capacitor"],
         "links": [
           { "title": "GitHub", "url": "https://github.com/sebastian-kostecki/o-nia-o-niego", "primary": true }
         ]
@@ -180,6 +219,7 @@
         "image": "/assets/projects/menu-maker.png",
         "placeholderIndex": 2,
         "badge": "wip",
+        "tags": ["Laravel", "Vue", "Inertia.js", "AI"],
         "links": [
           { "title": "GitHub", "url": "https://github.com/sebastian-kostecki/menu-maker", "primary": true }
         ]
@@ -187,12 +227,28 @@
     ]
   },
   "contact": {
-    "command": "$ ./contact.sh",
+    "index": "04 / Kontakt",
     "title": "Porozmawiajmy",
-    "subtitle": "Zainteresowany współpracą lub rozmową o backendzie? Napisz do mnie.",
+    "subtitle": "Zainteresowany współpracą lub rozmową o backendzie? Napisz — zwykle odpisuję w ciągu dnia.",
     "methods": [
-      { "type": "linkedin", "label": "LinkedIn", "value": "in/kostecki-sebastian", "href": "https://www.linkedin.com/in/kostecki-sebastian" },
-      { "type": "email", "label": "E-mail", "value": "sebastian.kostecki@gmail.com", "href": "mailto:sebastian.kostecki@gmail.com" }
+      {
+        "type": "linkedin",
+        "label": "LinkedIn",
+        "value": "in/kostecki-sebastian",
+        "href": "https://www.linkedin.com/in/kostecki-sebastian"
+      },
+      {
+        "type": "github",
+        "label": "GitHub",
+        "value": "github.com/sebastian-kostecki",
+        "href": "https://github.com/sebastian-kostecki"
+      },
+      {
+        "type": "email",
+        "label": "E-mail",
+        "value": "kontakt@kostecki.dev",
+        "href": "mailto:kontakt@kostecki.dev"
+      }
     ],
     "ctaHeadline": "Chcesz dowiedzieć się więcej o moim doświadczeniu?"
   },
