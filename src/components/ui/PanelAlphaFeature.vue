@@ -30,6 +30,16 @@ withDefaults(
           <h3 class="font-mono text-2xl font-bold text-card-foreground sm:text-3xl">
             {{ project.title }}
           </h3>
+          <div
+            v-if="!compact"
+            class="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-xs text-muted-foreground"
+          >
+            <span>{{ project.context.employer }}</span>
+            <span aria-hidden="true" class="text-primary">/</span>
+            <span>{{ project.context.role }}</span>
+            <span aria-hidden="true" class="text-primary">/</span>
+            <span>{{ project.context.period }}</span>
+          </div>
           <p class="mt-4 max-w-xl leading-relaxed text-muted-foreground">
             {{ project.description }}
           </p>

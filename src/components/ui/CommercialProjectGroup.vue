@@ -28,7 +28,17 @@ function itemIndex(index: number) {
         <h3 class="font-mono text-xl font-bold text-card-foreground sm:text-2xl">
           {{ group.title }}
         </h3>
-        <p class="mt-3 leading-relaxed text-muted-foreground">{{ group.description }}</p>
+        <div
+          v-if="!compact"
+          class="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-xs text-muted-foreground"
+        >
+          <span>{{ group.context.employer }}</span>
+          <span aria-hidden="true" class="text-primary">/</span>
+          <span>{{ group.context.role }}</span>
+          <span aria-hidden="true" class="text-primary">/</span>
+          <span>{{ group.context.period }}</span>
+        </div>
+        <p class="mt-4 leading-relaxed text-muted-foreground">{{ group.description }}</p>
         <p class="mt-4 text-sm font-medium text-foreground">{{ group.authorship }}</p>
       </div>
 

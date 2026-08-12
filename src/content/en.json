@@ -196,6 +196,11 @@
     "featured": {
       "eyebrow": "Flagship commercial project",
       "title": "PanelAlpha",
+      "context": {
+        "employer": "ModulesGarden",
+        "role": "Backend Developer",
+        "period": "3.5+ years"
+      },
       "description": "A production B2B platform that automates WordPress management for hosting companies and agencies.",
       "contributionTitle": "My contribution",
       "responsibilities": [
@@ -215,6 +220,11 @@
     "commercialGroup": {
       "eyebrow": "Commercial work",
       "title": "WHMCS modules for ModulesGarden",
+      "context": {
+        "employer": "ModulesGarden",
+        "role": "PHP Developer",
+        "period": "~6 months"
+      },
       "description": "Tools extending billing, automation, and infrastructure workflows in WHMCS.",
       "authorship": "I independently implemented each module below while working for ModulesGarden.",
       "compactLabel": "independently implemented WHMCS modules",

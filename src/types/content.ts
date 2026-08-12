@@ -54,9 +54,16 @@ export interface Project {
   links: ProjectLink[]
 }
 
+export interface CommercialWorkContext {
+  employer: string
+  role: string
+  period: string
+}
+
 export interface FeaturedProject {
   eyebrow: string
   title: string
+  context: CommercialWorkContext
   description: string
   contributionTitle: string
   responsibilities: string[]
@@ -72,6 +79,7 @@ export interface CommercialProjectItem {
 export interface CommercialProjectGroup {
   eyebrow: string
   title: string
+  context: CommercialWorkContext
   description: string
   authorship: string
   compactLabel: string
