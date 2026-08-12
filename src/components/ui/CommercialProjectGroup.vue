@@ -39,7 +39,9 @@ function itemIndex(index: number) {
           <span>{{ group.context.period }}</span>
         </div>
         <p class="mt-4 leading-relaxed text-muted-foreground">{{ group.description }}</p>
-        <p class="mt-4 text-sm font-medium text-foreground">{{ group.authorship }}</p>
+        <p v-if="!compact" class="mt-4 text-sm font-medium text-foreground">
+          {{ group.authorship }}
+        </p>
       </div>
 
       <div v-if="compact" class="shrink-0 border-l-2 border-primary pl-4">
