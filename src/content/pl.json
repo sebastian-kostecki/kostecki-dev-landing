@@ -106,18 +106,20 @@
           "Cloudflare",
           "Bunny DNS",
           "Let's Encrypt",
-          "mailcow"
+          "mailcow",
+          "Fastly",
+          "Admin Bolt"
         ]
       },
       {
-        "name": "Automatyzacja WordPress",
-        "description": "Rozwijam cykl życia instancji WordPress, obsługę Git, onboarding oraz procesy backupu.",
-        "tags": ["WordPress", "WP Cloud", "S3"]
+        "name": "WordPress",
+        "description": "Ogarniam WordPressy — WP Cloud, backupy, themes i plugins.",
+        "tags": ["WordPress", "WP Cloud", "Backups", "Themes", "Plugins"]
       },
       {
-        "name": "Billing i WHMCS",
-        "description": "Tworzę moduły rozszerzające billing, automatyzację i operacyjne procesy WHMCS.",
-        "tags": ["WHMCS", "Smarty", "JavaScript", "jQuery"]
+        "name": "Billing",
+        "description": "Tworzę moduły rozszerzające billing, automatyzację i operacyjne procesy WHMCS, w tym Stripe.",
+        "tags": ["WHMCS", "Stripe"]
       },
       {
         "name": "Frontend uzupełniający",
@@ -126,8 +128,8 @@
       },
       {
         "name": "Narzędzia i workflow",
-        "description": "Korzystam z Git oraz narzędzi LLM jako wsparcia przy implementacji i refaktoryzacji.",
-        "tags": ["Git", "Cursor", "LLM"]
+        "description": "Korzystam z Git, Cursor i PhpStorm przy implementacji i refaktoryzacji.",
+        "tags": ["Git", "Cursor", "PhpStorm"]
       }
     ]
   },
