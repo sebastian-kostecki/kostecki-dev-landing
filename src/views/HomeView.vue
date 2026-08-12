@@ -1,18 +1,12 @@
 <script setup lang="ts">
 import { ArrowRight } from '@lucide/vue'
 import SectionHeading from '@/components/ui/SectionHeading.vue'
-import AtAGlancePanel from '@/components/ui/AtAGlancePanel.vue'
-import ExperienceCard from '@/components/ui/ExperienceCard.vue'
 import PanelAlphaFeature from '@/components/ui/PanelAlphaFeature.vue'
 import CommercialProjectGroup from '@/components/ui/CommercialProjectGroup.vue'
 import SkillBadge from '@/components/ui/SkillBadge.vue'
 import { useContent } from '@/composables/useContent'
 
 const content = useContent()
-
-function experienceIndex(i: number) {
-  return String(i + 1).padStart(2, '0')
-}
 </script>
 
 <template>
@@ -22,53 +16,43 @@ function experienceIndex(i: number) {
       <div aria-hidden="true" class="grid-lines absolute inset-0" />
 
       <div class="relative mx-auto max-w-6xl px-4 pt-24 pb-24 sm:px-6 sm:pt-32 lg:px-8 lg:pt-40">
-        <div class="grid gap-12 lg:grid-cols-12 lg:gap-8">
-          <div class="lg:col-span-7">
-            <div class="flex items-center gap-3">
-              <span class="h-1.5 w-1.5 rounded-full bg-primary" />
-              <p class="font-mono text-xs tracking-[0.3em] text-primary uppercase">
-                {{ content.hero.label }}
-              </p>
-            </div>
-
-            <h1
-              class="mt-6 font-mono text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl"
-            >
-              {{ content.hero.name }}
-            </h1>
-
-            <p
-              class="mt-6 font-mono text-2xl leading-tight font-semibold tracking-tight text-foreground sm:text-3xl"
-            >
-              {{ content.hero.valueProp }}
-              <br />
-              <span class="text-gradient">{{ content.hero.valuePropAccent }}</span>
+        <div class="max-w-3xl">
+          <div class="flex items-center gap-3">
+            <span class="h-1.5 w-1.5 rounded-full bg-primary" />
+            <p class="font-mono text-xs tracking-[0.3em] text-primary uppercase">
+              {{ content.hero.label }}
             </p>
-
-            <p
-              v-if="content.hero.subtitle"
-              class="mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground"
-            >
-              {{ content.hero.subtitle }}
-            </p>
-
-            <div class="mt-9 flex flex-wrap items-center gap-3">
-              <RouterLink to="/contact" class="btn-primary">
-                {{ content.hero.ctaPrimary.label }}
-                <ArrowRight class="h-4 w-4" />
-              </RouterLink>
-              <RouterLink to="/projects" class="btn-secondary">
-                {{ content.ui.viewMyWork }}
-              </RouterLink>
-            </div>
           </div>
 
-          <div class="lg:col-span-5">
-            <AtAGlancePanel
-              :metrics="content.hero.metrics"
-              :tech-tags="content.hero.techTags"
-              :label="content.ui.atAGlance"
-            />
+          <h1
+            class="mt-6 font-mono text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl"
+          >
+            {{ content.hero.name }}
+          </h1>
+
+          <p
+            class="mt-6 font-mono text-2xl leading-tight font-semibold tracking-tight text-foreground sm:text-3xl"
+          >
+            {{ content.hero.valueProp }}
+            <br />
+            <span class="text-gradient">{{ content.hero.valuePropAccent }}</span>
+          </p>
+
+          <p
+            v-if="content.hero.subtitle"
+            class="mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground"
+          >
+            {{ content.hero.subtitle }}
+          </p>
+
+          <div class="mt-9 flex flex-wrap items-center gap-3">
+            <RouterLink to="/contact" class="btn-primary">
+              {{ content.hero.ctaPrimary.label }}
+              <ArrowRight class="h-4 w-4" />
+            </RouterLink>
+            <RouterLink to="/projects" class="btn-secondary">
+              {{ content.ui.viewMyWork }}
+            </RouterLink>
           </div>
         </div>
       </div>
@@ -88,32 +72,9 @@ function experienceIndex(i: number) {
     <section class="border-t border-border/60 px-4 py-24 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-6xl">
         <SectionHeading
-          :index="content.experience.index"
-          :title="content.experience.title"
-          :subtitle="content.experience.subtitle"
-        />
-        <div class="space-y-14">
-          <ExperienceCard
-            v-for="(entry, i) in content.experience.entries"
-            :key="entry.company"
-            :index="experienceIndex(i)"
-            :company="entry.company"
-            :company-url="entry.companyUrl"
-            :role="entry.role"
-            :period="entry.period"
-            :summary="entry.summary"
-            :highlights="entry.highlights"
-          />
-        </div>
-      </div>
-    </section>
-
-    <section class="border-t border-border/60 px-4 py-24 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-6xl">
-        <SectionHeading
-          :index="content.projects.index"
-          :title="content.projects.title"
-          :subtitle="content.projects.subtitle"
+          :index="content.projects.homePreview.index"
+          :title="content.projects.homePreview.title"
+          :subtitle="content.projects.homePreview.subtitle"
         />
         <div class="space-y-5">
           <PanelAlphaFeature :project="content.projects.featured" compact />

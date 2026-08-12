@@ -9,11 +9,6 @@ export interface CtaLink {
   href: string
 }
 
-export interface MetricItem {
-  value: string
-  label: string
-}
-
 export interface SkillItem {
   name: string
   icon?: string
@@ -24,18 +19,6 @@ export interface SkillItem {
 export interface SkillCategory {
   name: string
   items: SkillItem[]
-}
-
-export interface ExperienceEntry {
-  company: string
-  companyUrl?: string
-  logo?: string
-  role: string
-  period: string
-  project?: string
-  projectUrl?: string
-  summary: string
-  highlights?: string[]
 }
 
 export interface ProjectLink {
@@ -138,7 +121,6 @@ export interface SiteContent {
     projectScreenshotAlt: string
     openMenu: string
     closeMenu: string
-    atAGlance: string
     seeAllProjects: string
     exploreAllSkills: string
     viewMyWork: string
@@ -158,9 +140,7 @@ export interface SiteContent {
     valueProp: string
     valuePropAccent: string
     subtitle?: string
-    metrics: MetricItem[]
     ctaPrimary: CtaLink
-    techTags: string[]
   }
   cv: {
     href: string
@@ -169,12 +149,6 @@ export interface SiteContent {
     index: string
     title: string
     paragraphs: string[]
-  }
-  experience: {
-    index: string
-    title: string
-    subtitle: string
-    entries: ExperienceEntry[]
   }
   skills: {
     index: string
@@ -186,6 +160,11 @@ export interface SiteContent {
     categories: SkillCategory[]
   }
   projects: {
+    homePreview: {
+      index: string
+      title: string
+      subtitle: string
+    }
     index: string
     title: string
     subtitle: string

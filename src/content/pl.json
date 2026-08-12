@@ -39,7 +39,6 @@
     "projectScreenshotAlt": "Zrzut ekranu projektu",
     "openMenu": "Otwórz menu",
     "closeMenu": "Zamknij menu",
-    "atAGlance": "W skrócie",
     "seeAllProjects": "Zobacz wszystkie projekty",
     "exploreAllSkills": "Zobacz wszystkie umiejętności",
     "viewMyWork": "Zobacz projekty",
@@ -63,17 +62,11 @@
     "name": "Sebastian Kostecki",
     "valueProp": "Buduję i rozwijam",
     "valuePropAccent": "produkcyjne aplikacje backendowe w PHP.",
-    "subtitle": "Backend Developer z 4-letnim komercyjnym doświadczeniem — m.in. integracje API, infrastruktura i automatyzacja WordPress w B2B SaaS.",
-    "metrics": [
-      { "value": "4 lata", "label": "komercyjnie" },
-      { "value": "15+", "label": "integracji infra" },
-      { "value": "PanelAlpha", "label": "produkt B2B" }
-    ],
+    "subtitle": "Rozwijam platformy B2B, integracje API oraz automatyzację infrastruktury i WordPress.",
     "ctaPrimary": {
       "label": "Porozmawiajmy",
       "href": "/contact"
-    },
-    "techTags": ["PHP", "Laravel", "MySQL", "Docker", "Vue.js"]
+    }
   },
   "cv": {
     "href": ""
@@ -85,42 +78,6 @@
       "Od 4 lat buduję backend w PHP — głównie Laravel — w produkcyjnym produkcie B2B. Pracuję w ModulesGarden nad platformą PanelAlpha, która firmom usługowym umożliwia automatyzację zarządzania WordPress.",
       "Lubię przejąć feature i dowieźć go od warstwy backendowej po działającą logikę — a gdy potrzeba, wchodzę we frontend (Vue.js). Pracuję na żywym produkcie, więc liczy się dla mnie kod, który faktycznie działa u klientów.",
       "Na co dzień korzystam z narzędzi AI (m.in. Cursor) jako wsparcia przy implementacji i refaktoryzacji. Poza kodem — rodzina, wypoczynek na świeżym powietrzu i ciągły rozwój w IT."
-    ]
-  },
-  "experience": {
-    "index": "02 / Doświadczenie",
-    "title": "Praca komercyjna",
-    "subtitle": "Produkcyjne systemy PHP, integracje i logika biznesowa wokół nich.",
-    "entries": [
-      {
-        "company": "PanelAlpha",
-        "companyUrl": "https://panelalpha.com",
-        "logo": "/assets/experience/panelalpha.svg",
-        "role": "Backend Developer",
-        "period": "3,5+ roku",
-        "summary": "Rozwijam backend Laravel w produkcyjnej platformie B2B do automatyzacji WordPress dla firm usługowych. Odpowiadam za API, integracje z zewnętrzną infrastrukturą i logikę zarządzania instancjami WordPress.",
-        "highlights": [
-          "Integracje infrastrukturalne — panele hostingowe (cPanel, Plesk, DirectAdmin, WP Cloud), DNS (PowerDNS, Cloudflare, Bunny), serwery email (mailcow) i automatyzacja certyfikatów SSL (Let's Encrypt)",
-          "Cykl życia WordPress — import i zarządzanie instancjami, obsługa Git, onboarding (Extendify, 10Web)",
-          "Backup i storage — lokalne i zdalne kopie zapasowe (S3, FTP, SFTP, FTPS)",
-          "Billing i API — integracje z WHMCS i rozwój warstwy API platformy",
-          "Full-stack — frontend (Vue.js, Vuetify) przy feature'ach wymagających zmian po stronie backendu i UI"
-        ]
-      },
-      {
-        "company": "ModulesGarden",
-        "companyUrl": "https://modulesgarden.com",
-        "logo": "/assets/experience/mg.jpeg",
-        "role": "PHP Developer",
-        "period": "~6 miesięcy",
-        "project": "Moduły WHMCS",
-        "summary": "Tworzyłem autorskie moduły WHMCS dla platformy billingowej hosterów — logika biznesowa, integracje i narzędzia operacyjne (PHP, JavaScript, Smarty).",
-        "highlights": [
-          "Automatyzacja billingu — m.in. Invoice Sub Status, Automated Refunds, Auto Upgrade For Early Payments For WHMCS, opłaty admin przy zmianie produktu",
-          "Integracje — Domain data from Plesk, Docker S3 Container",
-          "Narzędzia operacyjne — BulkUpdater do masowych aktualizacji w WHMCS"
-        ]
-      }
     ]
   },
   "skills": {
@@ -190,7 +147,12 @@
     ]
   },
   "projects": {
-    "index": "03 / Projekty",
+    "homePreview": {
+      "index": "02 / Projekty",
+      "title": "Wybrane realizacje komercyjne",
+      "subtitle": "PanelAlpha oraz pięć samodzielnie zaimplementowanych modułów WHMCS."
+    },
+    "index": "01 / Projekty",
     "title": "Wybrane projekty",
     "subtitle": "Produkty i narzędzia, które rozwijałem komercyjnie — uzupełnione wybranymi projektami własnymi.",
     "featured": {
@@ -253,7 +215,7 @@
       ]
     },
     "personal": {
-      "index": "03.3 / Projekty własne",
+      "index": "02 / Projekty własne",
       "title": "Projekty własne",
       "subtitle": "Mniejsze produkty, w których rozwijam pomysły i sprawdzam narzędzia poza pracą komercyjną.",
       "items": [
@@ -329,7 +291,7 @@
         "href": "mailto:kontakt@kostecki.dev"
       }
     ],
-    "ctaHeadline": "Chcesz dowiedzieć się więcej o moim doświadczeniu?"
+    "ctaHeadline": "Porozmawiajmy o współpracy"
   },
   "footer": {
     "servicesTitle": "Specjalizacja",

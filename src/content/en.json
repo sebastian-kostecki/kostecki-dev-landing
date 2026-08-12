@@ -39,7 +39,6 @@
     "projectScreenshotAlt": "Screenshot of project",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "atAGlance": "At a glance",
     "seeAllProjects": "See all projects",
     "exploreAllSkills": "Explore all skills",
     "viewMyWork": "View my work",
@@ -63,17 +62,11 @@
     "name": "Sebastian Kostecki",
     "valueProp": "I build and maintain",
     "valuePropAccent": "production PHP backends.",
-    "subtitle": "Backend Developer with 4 years of commercial experience — including API integrations, infrastructure, and WordPress automation in B2B SaaS.",
-    "metrics": [
-      { "value": "4 years", "label": "commercial" },
-      { "value": "15+", "label": "infra integrations" },
-      { "value": "PanelAlpha", "label": "B2B product" }
-    ],
+    "subtitle": "I develop B2B platforms, API integrations, and infrastructure and WordPress automation.",
     "ctaPrimary": {
       "label": "Let's talk",
       "href": "/contact"
-    },
-    "techTags": ["PHP", "Laravel", "MySQL", "Docker", "Vue.js"]
+    }
   },
   "cv": {
     "href": ""
@@ -85,42 +78,6 @@
       "For 4 years I've been building PHP backends — mostly Laravel — on a production B2B product. At ModulesGarden I work on PanelAlpha, a platform that helps service companies automate WordPress management.",
       "I like owning a feature from the backend layer through to working business logic — and when needed, I pick up the frontend (Vue.js). I work on a live product, so I care about code that actually works for customers.",
       "Day to day I use AI tools (including Cursor) to support implementation and refactoring. Outside of code — family, time outdoors, and keeping up with the industry."
-    ]
-  },
-  "experience": {
-    "index": "02 / Experience",
-    "title": "Commercial work",
-    "subtitle": "Production PHP systems, integrations, and the business logic around them.",
-    "entries": [
-      {
-        "company": "PanelAlpha",
-        "companyUrl": "https://panelalpha.com",
-        "logo": "/assets/experience/panelalpha.svg",
-        "role": "Backend Developer",
-        "period": "3.5+ years",
-        "summary": "I develop the Laravel backend of a production B2B platform that automates WordPress management for service companies. I'm responsible for APIs, integrations with external infrastructure, and the logic for managing WordPress instances.",
-        "highlights": [
-          "Infrastructure integrations — hosting panels (cPanel, Plesk, DirectAdmin, WP Cloud), DNS (PowerDNS, Cloudflare, Bunny), mail servers (mailcow), and SSL certificate automation (Let's Encrypt)",
-          "WordPress lifecycle — instance import and management, Git support, onboarding (Extendify, 10Web)",
-          "Backup and storage — local and remote backups (S3, FTP, SFTP, FTPS)",
-          "Billing and API — WHMCS integrations and platform API development",
-          "Full-stack — frontend (Vue.js, Vuetify) for features that span backend and UI"
-        ]
-      },
-      {
-        "company": "ModulesGarden",
-        "companyUrl": "https://modulesgarden.com",
-        "logo": "/assets/experience/mg.jpeg",
-        "role": "PHP Developer",
-        "period": "~6 months",
-        "project": "WHMCS modules",
-        "summary": "I built custom WHMCS modules for a hosting billing platform — business logic, integrations, and operational tooling (PHP, JavaScript, Smarty).",
-        "highlights": [
-          "Billing automation — including Invoice Sub Status, Automated Refunds, Auto Upgrade For Early Payments For WHMCS, admin fees on product changes",
-          "Integrations — Domain data from Plesk, Docker S3 Container",
-          "Operational tooling — BulkUpdater for bulk updates in WHMCS"
-        ]
-      }
     ]
   },
   "skills": {
@@ -190,7 +147,12 @@
     ]
   },
   "projects": {
-    "index": "03 / Projects",
+    "homePreview": {
+      "index": "02 / Projects",
+      "title": "Selected commercial work",
+      "subtitle": "PanelAlpha and five independently implemented WHMCS modules."
+    },
+    "index": "01 / Projects",
     "title": "Selected projects",
     "subtitle": "Products and tools I have developed commercially, supported by selected personal projects.",
     "featured": {
@@ -253,7 +215,7 @@
       ]
     },
     "personal": {
-      "index": "03.3 / Personal projects",
+      "index": "02 / Personal projects",
       "title": "Personal projects",
       "subtitle": "Smaller products where I develop ideas and explore tools outside commercial work.",
       "items": [
@@ -329,7 +291,7 @@
         "href": "mailto:kontakt@kostecki.dev"
       }
     ],
-    "ctaHeadline": "Want to learn more about my experience?"
+    "ctaHeadline": "Let's talk about working together"
   },
   "footer": {
     "servicesTitle": "Specialization",
