@@ -41,13 +41,22 @@ const year = new Date().getFullYear()
         </div>
       </div>
 
-      <div
-        class="mt-10 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between"
-      >
+      <div class="mt-10 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <p class="font-mono text-xs text-muted-foreground">
           © {{ year }} — {{ content.footer.copyright }}
         </p>
-        <p class="font-mono text-xs text-muted-foreground">{{ content.ui.footerStack }}</p>
+        <p class="font-mono text-xs text-muted-foreground">
+          {{ content.ui.footerStack }}
+          <span aria-hidden="true" class="mx-2 text-primary">/</span>
+          <a
+            href="https://github.com/sebastian-kostecki/kostecki-dev-landing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="transition-colors hover:text-primary"
+          >
+            {{ content.ui.siteSource }}
+          </a>
+        </p>
       </div>
     </div>
   </footer>

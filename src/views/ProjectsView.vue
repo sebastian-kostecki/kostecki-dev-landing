@@ -3,9 +3,18 @@ import SectionHeading from '@/components/ui/SectionHeading.vue'
 import PanelAlphaFeature from '@/components/ui/PanelAlphaFeature.vue'
 import CommercialProjectGroup from '@/components/ui/CommercialProjectGroup.vue'
 import ProjectCard from '@/components/ui/ProjectCard.vue'
+import FeaturedProjectCard from '@/components/ui/FeaturedProjectCard.vue'
+import { computed } from 'vue'
 import { useContent } from '@/composables/useContent'
 
 const content = useContent()
+
+const featuredPersonal = computed(() =>
+  content.value.projects.personal.items.filter((project) => project.featured),
+)
+const otherPersonal = computed(() =>
+  content.value.projects.personal.items.filter((project) => !project.featured),
+)
 
 function projectIndex(index: number) {
   return String(index + 1).padStart(2, '0')
@@ -24,6 +33,7 @@ function projectIndex(index: number) {
 
       <div class="space-y-6">
         <PanelAlphaFeature :project="content.projects.featured" />
+        <PanelAlphaFeature :project="content.projects.openSource" />
         <CommercialProjectGroup :group="content.projects.commercialGroup" />
       </div>
 
@@ -35,12 +45,20 @@ function projectIndex(index: number) {
           :subtitle="content.projects.personal.subtitle"
         />
 
-        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          <ProjectCard
-            v-for="(project, index) in content.projects.personal.items"
+        <div v-if="featuredPersonal.length" class="mb-5 space-y-5">
+          <FeaturedProjectCard
+            v-for="project in featuredPersonal"
             :key="project.title"
             :project="project"
-            :index="projectIndex(index)"
+          />
+        </div>
+
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <ProjectCard
+            v-for="(project, index) in otherPersonal"
+            :key="project.title"
+            :project="project"
+            :index="projectIndex(index + featuredPersonal.length)"
           />
         </div>
       </section>

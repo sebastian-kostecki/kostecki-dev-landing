@@ -32,8 +32,14 @@ export interface Project {
   title: string
   subtitle: string
   image: string | null
+  imageAlt?: string
   placeholderIndex?: number
   badge?: 'wip'
+  /** Featured projects render as a wide card with a screenshot and highlights. */
+  featured?: boolean
+  highlights?: string[]
+  /** Short note shown next to the links, e.g. that the repository is private. */
+  note?: string
   tags: string[]
   links: ProjectLink[]
 }
@@ -53,6 +59,21 @@ export interface FeaturedProject {
   responsibilities: string[]
   tags: string[]
   link?: ProjectLink
+  secondaryLink?: ProjectLink
+}
+
+export interface AiWorkflowStep {
+  title: string
+  body: string
+  link?: ProjectLink
+}
+
+export interface AiWorkflow {
+  index: string
+  title: string
+  subtitle: string
+  steps: AiWorkflowStep[]
+  closing: string
 }
 
 export interface CommercialProjectItem {
@@ -127,6 +148,8 @@ export interface SiteContent {
     viewMyWork: string
     liveDemo: string
     sourceCode: string
+    siteSource: string
+    featuredProjectLabel: string
     backHome: string
     notFoundTitle: string
     notFoundBody: string
@@ -151,6 +174,7 @@ export interface SiteContent {
     title: string
     paragraphs: string[]
   }
+  aiWorkflow: AiWorkflow
   skills: {
     index: string
     title: string
@@ -171,6 +195,7 @@ export interface SiteContent {
     title: string
     subtitle: string
     featured: FeaturedProject
+    openSource: FeaturedProject
     commercialGroup: CommercialProjectGroup
     personal: PersonalProjects
   }

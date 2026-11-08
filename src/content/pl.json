@@ -1,21 +1,21 @@
 {
   "meta": {
     "title": "Sebastian Kostecki — Backend Developer (Laravel)",
-    "description": "Backend Developer (Laravel). Buduję i rozwijam produkcyjne aplikacje backendowe w PHP — m.in. integracje API, infrastruktura i automatyzacja WordPress. 4 lata komercyjnie.",
+    "description": "Backend Developer (Laravel). Produkcyjne aplikacje PHP: PanelAlpha, open-source'owy PanelAlpha Engine, integracje hostingowe i WHMCS oraz własne produkty na Laravel 13.",
     "lang": "pl"
   },
   "routes": {
     "home": {
       "title": "Sebastian Kostecki — Backend Developer (Laravel)",
-      "description": "Backend Developer (Laravel). Buduję i rozwijam produkcyjne aplikacje backendowe w PHP — m.in. integracje API, infrastruktura i automatyzacja WordPress. 4 lata komercyjnie."
+      "description": "Backend Developer (Laravel). Produkcyjne aplikacje PHP: PanelAlpha, open-source'owy PanelAlpha Engine, integracje hostingowe i WHMCS oraz własne produkty na Laravel 13."
     },
     "projects": {
       "title": "Projekty — Sebastian Kostecki",
-      "description": "Wybrane realizacje komercyjne: PanelAlpha, autorskie moduły WHMCS dla ModulesGarden oraz projekty własne."
+      "description": "PanelAlpha, open-source'owy PanelAlpha Engine, moduły WHMCS dla ModulesGarden oraz własne produkty: Domowy Skarbnik i Root Keeper."
     },
     "skills": {
       "title": "Umiejętności — Sebastian Kostecki",
-      "description": "PHP, Laravel, MySQL, Docker i Vue.js oraz integracje hostingowe, DNS, storage, WordPress i billing używane produkcyjnie."
+      "description": "PHP, Laravel, PostgreSQL, MySQL, TypeScript, Docker i Vue.js oraz integracje hostingowe, testy, CI i własna infrastruktura."
     },
     "contact": {
       "title": "Kontakt — Sebastian Kostecki",
@@ -49,13 +49,31 @@
     "notFoundBody": "Strona, której szukasz, nie istnieje albo została przeniesiona.",
     "brandName": "kostecki.dev",
     "footerTagline": "Backend Developer (Laravel) — API, integracje i automatyzacja infrastruktury.",
-    "footerStack": "Laravel · PHP · Docker"
+    "footerStack": "Laravel · PHP · Docker",
+    "siteSource": "Kod strony",
+    "featuredProjectLabel": "Projekt własny na produkcji"
   },
   "nav": [
-    { "to": "/", "label": "Start", "index": "01" },
-    { "to": "/projects", "label": "Projekty", "index": "02" },
-    { "to": "/skills", "label": "Umiejętności", "index": "03" },
-    { "to": "/contact", "label": "Kontakt", "index": "04" }
+    {
+      "to": "/",
+      "label": "Start",
+      "index": "01"
+    },
+    {
+      "to": "/projects",
+      "label": "Projekty",
+      "index": "02"
+    },
+    {
+      "to": "/skills",
+      "label": "Umiejętności",
+      "index": "03"
+    },
+    {
+      "to": "/contact",
+      "label": "Kontakt",
+      "index": "04"
+    }
   ],
   "hero": {
     "label": "Backend Developer / Laravel",
@@ -77,8 +95,48 @@
     "paragraphs": [
       "Od 4 lat buduję backend w PHP — głównie Laravel — w produkcyjnym produkcie B2B. Pracuję w ModulesGarden nad platformą PanelAlpha, która firmom usługowym umożliwia automatyzację zarządzania WordPress.",
       "Lubię przejąć feature i dowieźć go od warstwy backendowej po działającą logikę — a gdy potrzeba, wchodzę we frontend (Vue.js). Pracuję na żywym produkcie, więc liczy się dla mnie kod, który faktycznie działa u klientów.",
-      "Na co dzień korzystam z narzędzi AI (m.in. Cursor) jako wsparcia przy implementacji i refaktoryzacji. Poza kodem — rodzina, wypoczynek na świeżym powietrzu i ciągły rozwój w IT."
+      "Po godzinach rozwijam dwa własne produkty działające na produkcji, Domowy Skarbnik i Root Keeper, na własnym VPS-ie za Traefikiem. Poza kodem — rodzina i wypoczynek na świeżym powietrzu."
     ]
+  },
+  "aiWorkflow": {
+    "index": "AI / Workflow",
+    "title": "Praca z agentami AI",
+    "subtitle": "Agenci (Claude Code, Cursor) piszą dużą część mojego kodu, ale to ja odpowiadam za to, co trafia na produkcję. Proces dopracowuję na kursie 10xDevs, a jego ślady są w publicznych repozytoriach.",
+    "steps": [
+      {
+        "title": "Kontekst przed kodem",
+        "body": "Słownik domeny, PRD i decyzje architektoniczne w katalogu context/. Agent pracuje na tych samych pojęciach co ja.",
+        "link": {
+          "title": "Root Keeper: context/",
+          "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context"
+        }
+      },
+      {
+        "title": "Research, plan, wdrożenie",
+        "body": "Każda zmiana ma własny folder z researchem, planem i przeglądem implementacji. Po wdrożeniu trafia do archiwum.",
+        "link": {
+          "title": "Archiwum zmian",
+          "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive"
+        }
+      },
+      {
+        "title": "Reguły dla agentów",
+        "body": "CLAUDE.md opisuje stack, wersje i zakazy. Laravel Boost daje agentowi dostęp do aplikacji przez MCP.",
+        "link": {
+          "title": "CLAUDE.md",
+          "url": "https://github.com/sebastian-kostecki/root-keeper/blob/main/CLAUDE.md"
+        }
+      },
+      {
+        "title": "Bramki jakości",
+        "body": "Lint, Larastan na poziomie 7, testy Pest i e2e w Playwright w CI. Czerwony test to sygnał, nie przeszkoda do obejścia.",
+        "link": {
+          "title": "Workflowy CI",
+          "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/.github/workflows"
+        }
+      }
+    ],
+    "closing": "Agent przyspiesza pisanie. Kontekst, testy i review decydują, co z tego zostaje."
   },
   "skills": {
     "index": "03 / Umiejętności",
@@ -88,11 +146,41 @@
     "coreDescription": "Stack, w którym buduję i utrzymuję produkcyjny backend — oraz frontend, gdy feature tego wymaga.",
     "competenciesLabel": "Kompetencje",
     "core": [
-      { "name": "PHP", "icon": "simple-icons:php", "level": "Język główny" },
-      { "name": "Laravel", "icon": "simple-icons:laravel", "level": "Backend produkcyjny" },
-      { "name": "MySQL", "icon": "simple-icons:mysql", "level": "Modelowanie danych" },
-      { "name": "Docker", "icon": "simple-icons:docker", "level": "Środowiska" },
-      { "name": "Vue.js", "icon": "simple-icons:vuedotjs", "level": "Frontend feature'ów" }
+      {
+        "name": "PHP",
+        "icon": "simple-icons:php",
+        "level": "Język główny"
+      },
+      {
+        "name": "Laravel",
+        "icon": "simple-icons:laravel",
+        "level": "Backend produkcyjny"
+      },
+      {
+        "name": "PostgreSQL",
+        "icon": "simple-icons:postgresql",
+        "level": "Produkty własne"
+      },
+      {
+        "name": "MySQL",
+        "icon": "simple-icons:mysql",
+        "level": "Produkt komercyjny"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "simple-icons:typescript",
+        "level": "Vue i React"
+      },
+      {
+        "name": "Docker",
+        "icon": "simple-icons:docker",
+        "level": "Środowiska"
+      },
+      {
+        "name": "Vue.js",
+        "icon": "simple-icons:vuedotjs",
+        "level": "Frontend feature'ów"
+      }
     ],
     "categories": [
       {
@@ -124,12 +212,30 @@
       {
         "name": "Frontend uzupełniający",
         "description": "Implementuję warstwę UI, gdy funkcja obejmuje zmiany po stronie backendu i frontendu.",
-        "tags": ["Vue.js", "Vuetify", "Tailwind CSS"]
+        "tags": [
+          "Vue.js",
+          "React",
+          "Inertia.js",
+          "TypeScript",
+          "Vuetify",
+          "Tailwind CSS",
+          "shadcn-vue"
+        ]
+      },
+      {
+        "name": "Jakość i testy",
+        "description": "Piszę testy i pilnuję ich w CI: od testów feature po e2e w przeglądarce.",
+        "tags": ["Pest", "PHPUnit", "Larastan / PHPStan", "Playwright", "GitHub Actions"]
+      },
+      {
+        "name": "Infrastruktura własna",
+        "description": "Utrzymuję własny VPS z kilkoma aplikacjami: reverse proxy, skrypty deployu i kopie zapasowe.",
+        "tags": ["Traefik", "Docker Compose", "restic", "systemd", "Cloudflare", "Linux VPS"]
       },
       {
         "name": "Narzędzia i workflow",
-        "description": "Korzystam z Git, Cursor i PhpStorm przy implementacji i refaktoryzacji.",
-        "tags": ["Git", "Cursor", "PhpStorm"]
+        "description": "Pracuję z agentami AI w procesie z kursu 10xDevs: kontekst, plan, implementacja, review.",
+        "tags": ["Git", "Claude Code", "Cursor", "PhpStorm", "Laravel Boost (MCP)", "10xDevs"]
       }
     ]
   },
@@ -137,7 +243,7 @@
     "homePreview": {
       "index": "02 / Projekty",
       "title": "Wybrane realizacje komercyjne",
-      "subtitle": "PanelAlpha oraz pięć samodzielnie zaimplementowanych modułów WHMCS."
+      "subtitle": "PanelAlpha, open-source'owy PanelAlpha Engine oraz pięć samodzielnie zaimplementowanych modułów WHMCS."
     },
     "index": "01 / Projekty",
     "title": "Wybrane projekty",
@@ -164,6 +270,33 @@
         "title": "Zobacz PanelAlpha",
         "url": "https://panelalpha.com",
         "primary": true
+      }
+    },
+    "openSource": {
+      "eyebrow": "Open source",
+      "title": "PanelAlpha Engine",
+      "context": {
+        "employer": "ModulesGarden",
+        "role": "Współautor",
+        "period": "2026"
+      },
+      "description": "Open-source'owa platforma do self-hostingu projektów na własnym VPS-ie. Agent AI wdraża i utrzymuje projekty przez MCP. Licencja Apache 2.0.",
+      "contributionTitle": "Mój wkład (publiczne commity)",
+      "responsibilities": [
+        "Automatyczny redeploy projektu po git push",
+        "Menedżer plików projektu: przenoszenie, pobieranie, zmiana uprawnień",
+        "Zarządzanie dyrektywami PHP domeny z poziomu silnika",
+        "Statystyki transferu i odwiedzin liczone z istniejących logów"
+      ],
+      "tags": ["PHP", "Docker", "MCP", "AI agents", "Self-hosting"],
+      "link": {
+        "title": "Repozytorium",
+        "url": "https://github.com/panelalpha/panelalpha-engine",
+        "primary": true
+      },
+      "secondaryLink": {
+        "title": "Moje commity",
+        "url": "https://github.com/panelalpha/panelalpha-engine/commits?author=skostecki"
       }
     },
     "commercialGroup": {
@@ -204,35 +337,60 @@
     "personal": {
       "index": "02 / Projekty własne",
       "title": "Projekty własne",
-      "subtitle": "Mniejsze produkty, w których rozwijam pomysły i sprawdzam narzędzia poza pracą komercyjną.",
+      "subtitle": "Produkty, które rozwijam po godzinach. Dwa z nich działają na produkcji na moim VPS-ie.",
       "items": [
         {
-          "title": "Ogarniam Portfel",
-          "subtitle": "Aplikacja do zarządzania domowym budżetem — kategorie wydatków i raporty. Laravel, MySQL; działająca wersja demo online.",
-          "image": "/assets/projects/keep-wallet.png",
-          "tags": ["Laravel", "MySQL", "Reports"],
+          "title": "Domowy Skarbnik",
+          "subtitle": "Roczny budżet domowy: plan kontra wykonanie, płynność na kontach i lokatach oraz import wyciągów CSV/XLSX z mBanku i BNP Paribas.",
+          "image": "/assets/projects/domowy-skarbnik.webp",
+          "imageAlt": "Pulpit Domowego Skarbnika z przykładowymi danymi",
+          "featured": true,
+          "highlights": [
+            "Kwoty w groszach jako liczby całkowite, nigdy float",
+            "14 decyzji architektonicznych (ADR), słownik domeny i CHANGELOG",
+            "Ponad 130 plików testów Pest, CI na GitHub Actions, ponad 40 PR-ów",
+            "Własny design system i wdrożenie na VPS za Traefikiem"
+          ],
+          "note": "Repozytorium prywatne, kod pokażę na rozmowie",
+          "tags": ["Laravel 13", "PHP 8.5", "PostgreSQL", "Vue 3", "TypeScript", "Inertia", "Pest"],
           "links": [
             {
-              "title": "Strona",
-              "url": "https://budget.sebastian-kostecki.profesjonalnyprogramista.pl/",
+              "title": "Wersja live",
+              "url": "https://treasurer.kostecki.dev",
               "primary": true
-            },
-            {
-              "title": "GitHub",
-              "url": "https://github.com/sebastian-kostecki/keep-wallet"
             }
           ]
         },
         {
-          "title": "O Nią & O Niego",
-          "subtitle": "Mobilna aplikacja wspierająca modlitwę o przyszłego męża lub żonę — treści i narzędzia duchowe w jednym miejscu. Ionic, Vue.",
-          "image": "/assets/projects/o-nia-o-niego.jpg",
-          "tags": ["Ionic", "Vue", "Capacitor"],
+          "title": "Root Keeper",
+          "subtitle": "Drzewo genealogiczne, w którym każda data ma źródło. Osoby, relacje i skany aktów, którymi potwierdzasz daty urodzin, ślubów i zgonów.",
+          "image": "/assets/projects/root-keeper.webp",
+          "imageAlt": "Ekran startowy Root Keepera z ilustracją drzewa, w którym każda osoba ma akt jako źródło",
+          "featured": true,
+          "highlights": [
+            "Daty częściowe jak w aktach: sam rok lub miesiąc, „około”, miesiące słownie i cyframi rzymskimi",
+            "Reguły relacji pilnowane na serwerze: najwyżej dwoje rodziców, brak cykli",
+            "Logowanie hasłem lub kluczem dostępu (passkey)",
+            "4 workflowy CI: lint, Larastan 7, testy Pest i e2e w Playwright; ponad 600 commitów"
+          ],
+          "tags": [
+            "Laravel 13",
+            "PHP 8.5",
+            "PostgreSQL",
+            "React 19",
+            "TypeScript",
+            "Inertia",
+            "Playwright"
+          ],
           "links": [
             {
-              "title": "GitHub",
-              "url": "https://github.com/sebastian-kostecki/o-nia-o-niego",
+              "title": "Wersja live",
+              "url": "https://genealog.kostecki.dev",
               "primary": true
+            },
+            {
+              "title": "GitHub",
+              "url": "https://github.com/sebastian-kostecki/root-keeper"
             }
           ]
         },
@@ -242,7 +400,7 @@
           "image": "/assets/projects/menu-maker.png",
           "placeholderIndex": 2,
           "badge": "wip",
-          "tags": ["Laravel", "Vue", "Inertia.js", "AI"],
+          "tags": ["Laravel", "Vue", "Inertia.js", "AI", "Pest"],
           "links": [
             {
               "title": "GitHub",
@@ -265,6 +423,19 @@
             {
               "title": "GitHub",
               "url": "https://github.com/sebastian-kostecki/rozgadana-jana"
+            }
+          ]
+        },
+        {
+          "title": "FocusBlocker",
+          "subtitle": "Blokada rozpraszających stron w godzinach pracy na Windows: plik hosts, Harmonogram zadań i rozszerzenie Chrome/Edge. Trwającą blokadę można tylko przedłużyć.",
+          "image": null,
+          "tags": ["PowerShell", "Windows", "Browser extension"],
+          "links": [
+            {
+              "title": "GitHub",
+              "url": "https://github.com/sebastian-kostecki/focus-bloker",
+              "primary": true
             }
           ]
         }

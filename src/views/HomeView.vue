@@ -4,6 +4,7 @@ import SectionHeading from '@/components/ui/SectionHeading.vue'
 import PanelAlphaFeature from '@/components/ui/PanelAlphaFeature.vue'
 import CommercialProjectGroup from '@/components/ui/CommercialProjectGroup.vue'
 import SkillBadge from '@/components/ui/SkillBadge.vue'
+import AiWorkflowSection from '@/components/ui/AiWorkflowSection.vue'
 import { useContent } from '@/composables/useContent'
 
 const content = useContent()
@@ -69,6 +70,8 @@ const content = useContent()
       </div>
     </section>
 
+    <AiWorkflowSection />
+
     <section class="px-4 py-24 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-6xl">
         <SectionHeading
@@ -78,6 +81,7 @@ const content = useContent()
         />
         <div class="space-y-5">
           <PanelAlphaFeature :project="content.projects.featured" compact />
+          <PanelAlphaFeature :project="content.projects.openSource" compact />
           <CommercialProjectGroup :group="content.projects.commercialGroup" compact />
         </div>
         <div class="mt-10">
