@@ -45,7 +45,9 @@ machine-readability are.
   generator.
   Direction: add a `/notes` or `/blog` section; 4–6 short posts/year on the hosting niche
   (Plesk/cPanel integration pitfalls, WHMCS module gotchas, multi-tenant Laravel).
-- [ ] **A3. AI workflow reduced to one sentence** ("I use Cursor"). No evidence of working
+- [x] **A3. AI workflow reduced to one sentence** *Done 2026-11-08: home section
+  "Working with AI agents" with four evidence-linked steps (root-keeper context, archive,
+  CLAUDE.md, CI) and the 10xDevs course.* ("I use Cursor"). No evidence of working
   with agents, reviewing generated code, or building with LLMs. Ironically this repo's
   `docs/superpowers/` contains spec-and-plan documents produced with agents and the site
   does not mention it.
@@ -91,7 +93,9 @@ machine-readability are.
   the fixed header after 80px scroll on `/`. First-time visitors see no navigation and no
   language switcher above the fold.
   Direction: show the header immediately; keep the blur/border transition on scroll.
-- [ ] **C2. Project screenshots are not rendered.** Content JSON has `image` per
+- [x] **C2. Project screenshots are not rendered.** *Partly done 2026-11-08: featured
+  personal projects render a WebP screenshot (Domowy Skarbnik, 58 KB); unused PNG/JPG
+  removed. Regular cards stay text-only.* Content JSON has `image` per
   personal project and files exist in `public/assets/projects/`, but `ProjectCard.vue`
   never renders them. `keep-wallet.png` is 815 KB and unused.
   Direction: render thumbnails (optimised WebP/AVIF, ≤100 KB each) or remove the field.
@@ -121,7 +125,10 @@ machine-readability are.
 Checked 2026-11-08 via `gh`: profile fields, 20 repos (9 public), pinned items,
 contribution calendar, READMEs, CI, tests, external contributions.
 
-- [ ] **E1. The strongest personal project is not on the site.** `wallet-master`
+- [x] **E1. The strongest personal project is not on the site.** *Done 2026-11-08:
+  Domowy Skarbnik (successor of wallet-master) is the featured personal project, Root
+  Keeper and FocusBlocker added, keep-wallet and o-nia-o-niego removed. PanelAlpha Engine
+  added as open-source commercial work (E13 site part).* `wallet-master`
   (public, Laravel 13 / PHP 8.5 / Inertia / Vue, 496 commits, 188 test files, Pest,
   Larastan, Pint, GitHub Actions lint+tests green, `AGENTS.md`, `.ai/` + `.cursor/`
   rules, Docker prod compose) is by far the most convincing repo. The site instead links

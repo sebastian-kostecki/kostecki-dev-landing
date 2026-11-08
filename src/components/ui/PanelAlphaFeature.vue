@@ -54,16 +54,31 @@ withDefaults(
             </span>
           </div>
 
-          <a
-            v-if="project.link?.url"
-            :href="project.link.url"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-primary mt-7"
+          <div
+            v-if="project.link?.url || project.secondaryLink?.url"
+            class="mt-7 flex flex-wrap items-center gap-3"
           >
-            {{ project.link.title }}
-            <ArrowUpRight class="h-4 w-4" />
-          </a>
+            <a
+              v-if="project.link?.url"
+              :href="project.link.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary"
+            >
+              {{ project.link.title }}
+              <ArrowUpRight class="h-4 w-4" />
+            </a>
+            <a
+              v-if="project.secondaryLink?.url"
+              :href="project.secondaryLink.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-secondary"
+            >
+              {{ project.secondaryLink.title }}
+              <ArrowUpRight class="h-4 w-4" />
+            </a>
+          </div>
         </div>
 
         <div v-if="!compact">
