@@ -6,7 +6,8 @@ evidence, and the intended direction. Check items off (or delete them) as they a
 
 Method: source review of this repo, live site checks (HTTP headers, link status,
 bundle contents), headless Chromium screenshots at 1440px and 390px for `/`, `/projects`,
-`/skills`, `/contact`. Browser console and runtime interactions were not inspected.
+`/skills`, `/contact`, and a `gh`-based review of the GitHub profile and repositories
+(section E). Browser console and runtime interactions were not inspected.
 
 ## Verdict
 
@@ -115,13 +116,85 @@ machine-readability are.
   AGENTS.md describes content conventions for agents (this file partly fills that gap).
   Direction: replace the README with project-specific notes and link this audit.
 
+### E. GitHub profile (github.com/sebastian-kostecki) — the site links here, so it is part of the business card
+
+Checked 2026-11-08 via `gh`: profile fields, 20 repos (9 public), pinned items,
+contribution calendar, READMEs, CI, tests, external contributions.
+
+- [ ] **E1. The strongest personal project is not on the site.** `wallet-master`
+  (public, Laravel 13 / PHP 8.5 / Inertia / Vue, 496 commits, 188 test files, Pest,
+  Larastan, Pint, GitHub Actions lint+tests green, `AGENTS.md`, `.ai/` + `.cursor/`
+  rules, Docker prod compose) is by far the most convincing repo. The site instead links
+  "Ogarniam Portfel" to `keep-wallet`: vanilla PHP from 2022 with no framework, no tests,
+  last commit 2023. A recruiter who clicks lands on the weakest possible repo.
+  Direction: make `wallet-master` the featured personal project (it is also the real
+  "household budget" successor); demote or drop `keep-wallet`; link the live demo once it
+  exists on a `kostecki.dev` subdomain.
+- [ ] **E2. Profile bio is a liability.** Current bio: "I'm very ambitious person, who
+  want change my life. I'm looking for new challanges for my professional life. I like
+  learning new stuff." Grammar errors, junior tone, and it contradicts the site's
+  "4 years production backend" positioning. `blog`/website field is empty, no social
+  accounts linked, `company` empty, status "Working from home".
+  Direction: one-line bio matching the hero ("Backend Developer (Laravel) at
+  ModulesGarden — PanelAlpha, hosting/WHMCS integrations"), set website to
+  https://kostecki.dev, add LinkedIn as a social account, set company.
+- [ ] **E3. No profile README, no pinned repositories.** Visitors see an unordered
+  list of repos with `BudgetApp`/`PingPong` (C++ learning projects from 2021) mixed in.
+  Direction: create the `sebastian-kostecki/sebastian-kostecki` profile README (short:
+  who, stack, 3 featured repos with one line each, link to site). Pin `wallet-master`,
+  `menu-maker`, `rozgadana-jana`, and the landing repo if it goes public.
+- [ ] **E4. Zero repo descriptions, topics, or homepage URLs on all 20 repos.** Every
+  public repo shows a blank description in listings and search. Only `menu-maker` and
+  `wallet-master` declare a license (via README badge, not GitHub's license field).
+  Direction: one-sentence description + topics (`laravel`, `php`, `inertia`, `whmcs`…)
+  + homepage URL per public repo; add LICENSE files where MIT is claimed.
+- [ ] **E5. Test and scaffold repos are public.** `project-pixel-perch` is a Lovable
+  scaffold whose README says "I would like to make my porfolio page (I'm Php
+  developer)", contains `test.txt`, and its last 10 commits are "test: auto-deploy
+  check 4", "test: real GitHub webhook (retry)". `test-static-page` is a one-commit
+  "Nexus Labs" demo. Both appear on the profile next to real work.
+  Direction: make private, archive, or delete. Keep the profile to repos you would
+  show in an interview.
+- [ ] **E6. Contribution graph looks empty.** Last 12 months: 414 contributions, all
+  in Jun/Aug/Sep 2026; Nov 2025–May 2026 and Oct–Nov 2026 show zero. Private
+  contributions are hidden (`restrictedContributionsCount = 0`) even though private
+  repos (`household-treasurer`, `client-area-next`, `root-keeper`) were pushed this
+  month. Commercial work is on the employer's account, so the public graph
+  under-represents real activity.
+  Direction: enable "Include private contributions on my profile"; consider moving
+  reusable, non-sensitive side work to public repos.
+- [ ] **E7. No external footprint.** 0 pull requests or issues in other people's
+  repositories, 0 gists, 1 star, 1 follower, no organisations. For a developer who
+  integrates cPanel, Plesk, DirectAdmin, PowerDNS, WHMCS daily this is a missed signal.
+  Direction: one or two small upstream PRs or well-written issues per quarter in the
+  libraries actually used (Laravel packages, WHMCS SDKs, DNS clients) are worth more
+  than another personal repo.
+- [ ] **E8. Repo quality is uneven and the site does not signal which is which.**
+  `rozgadana-jana` is a full WordPress core dump (28 MB, default `readme.html` as the
+  README, 5 commits) rather than just the theme and mu-plugin; `o-nia-o-niego` has no
+  README at all; `keep-wallet` README still points to the old
+  `profesjonalnyprogramista.pl` domain.
+  Direction: `rozgadana-jana` → repo containing only `wp-content/themes/<theme>` and
+  `wp-content/mu-plugins/<plugin>` with a README; add a README to `o-nia-o-niego` or
+  archive it; fix the demo URL in `keep-wallet` or archive it in favour of
+  `wallet-master`.
+- [ ] **E9. The AI-workflow evidence exists but is invisible.** `wallet-master` and
+  `menu-maker` carry `.ai/`, `.cursor/`, `AGENTS.md` (Laravel Boost guidelines), docs
+  folders, PHPStan baselines and Playwright/Pest suites. This is exactly the material
+  for finding A3 ("How I work with AI") and nothing on the site or profile points to it.
+  Direction: in the case study for wallet-master, link the `AGENTS.md`, the `.ai/`
+  rules and the CI config as proof of an agent-assisted but test-gated workflow.
+
 ## Suggested order of work
 
-1. A1 case studies (biggest lever; content only).
-2. A3 "How I work with AI" section + A5 CV.
-3. B1 prerender/SSG, then B2–B5 follow naturally.
-4. C1, C2, D1, D2, D3 as a single "quick wins" pass.
-5. A2 writing as an ongoing habit; A4 photo whenever available.
+1. GitHub hygiene, one evening, no code: E2 bio + website, E3 profile README + pins,
+   E4 descriptions/topics, E5 hide test repos, E6 private contributions toggle.
+2. E1 swap the featured personal project to `wallet-master` in `src/content/*.json`.
+3. A1 case studies (biggest lever; content only), using E9 material for the AI angle.
+4. A3 "How I work with AI" section + A5 CV.
+5. B1 prerender/SSG, then B2–B5 follow naturally.
+6. C1, C2, D1, D2, D3 as a single "quick wins" pass.
+7. A2 writing and E7 upstream contributions as ongoing habits; A4 photo when available.
 
 ## Notes for AI agents
 
