@@ -17,7 +17,7 @@ function isRepo(url: string) {
 
 <template>
   <article class="panel panel-hover overflow-hidden rounded-md">
-    <div class="grid lg:grid-cols-[1fr_1.1fr]">
+    <div class="grid" :class="project.image ? 'lg:grid-cols-[1fr_1.1fr]' : ''">
       <div class="flex flex-col p-6 sm:p-8">
         <p class="font-mono text-xs tracking-[0.25em] text-primary uppercase">
           {{ content.ui.featuredProjectLabel }}

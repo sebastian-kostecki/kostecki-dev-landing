@@ -6,8 +6,9 @@ Live: https://genealog.kostecki.dev
 
 ## What it does
 
-- Tree view with people, parent links and partial dates (year only, "about", "before/after").
-- Sources (records, books, gravestones) attached to facts, so every date and place can be traced back.
+- Tree view with people, parent links and partial dates: year, month or day precision, an "about" flag, and month names or Roman numerals as written in old records.
+- Sources (records, books, gravestones) and uploaded scans attached to facts, so births, marriages and deaths can be confirmed.
+- Sign-in with a password or a passkey.
 - Places and parishes index.
 - Relationship rules enforced server-side: at most two parents, no cycles.
 

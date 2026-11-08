@@ -363,12 +363,28 @@
         },
         {
           "title": "Root Keeper",
-          "subtitle": "A family tree where every fact has a source. Laravel 13, Inertia, React 19 and TypeScript; CI with Larastan 7, Pest and Playwright e2e.",
-          "image": null,
-          "tags": ["Laravel", "React 19", "TypeScript", "Inertia", "Playwright", "PostgreSQL"],
+          "subtitle": "A family tree where every date has a source. People, relationships and scanned records that confirm births, marriages and deaths.",
+          "image": "/assets/projects/root-keeper.webp",
+          "imageAlt": "Root Keeper start screen with a tree illustration where each person is backed by a record",
+          "featured": true,
+          "highlights": [
+            "Partial dates the way records have them: year or month only, “about”, month names and Roman numerals",
+            "Relationship rules enforced on the server: at most two parents, no cycles",
+            "Sign-in with a password or a passkey",
+            "4 CI workflows: lint, Larastan 7, Pest tests and Playwright e2e; 600+ commits"
+          ],
+          "tags": [
+            "Laravel 13",
+            "PHP 8.5",
+            "PostgreSQL",
+            "React 19",
+            "TypeScript",
+            "Inertia",
+            "Playwright"
+          ],
           "links": [
             {
-              "title": "Website",
+              "title": "Live app",
               "url": "https://genealog.kostecki.dev",
               "primary": true
             },
