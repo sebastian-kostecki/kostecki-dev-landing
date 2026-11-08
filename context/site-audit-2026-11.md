@@ -199,6 +199,9 @@ contribution calendar, READMEs, CI, tests, external contributions.
   Direction: replace fixtures with fully synthetic data, then either rewrite history
   (`git filter-repo --path tests/Fixtures/ --invert-paths` and re-add) or publish a fresh
   repo with squashed history. Screenshots in `context/` use seeded "Test User" data.
+- [x] **E12. Publish clean repos.** *Done 2026-11-08: kostecki-dev-landing,
+  kostecki-dev-infa and root-keeper are public after the history scan. root-keeper still
+  needs a README (see E11). household-treasurer stays private until E10 is fixed.*
 - [ ] **E11. Still to do by hand** (token lacks `user` scope; creating new public repos
   was blocked in auto mode): profile bio/website/company, LinkedIn social account,
   profile README repo (draft: `context/github-profile-README.md`), pinning, "Include
