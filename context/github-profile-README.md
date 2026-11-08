@@ -4,6 +4,8 @@ Backend developer (Laravel) at ModulesGarden, based in Lublin, Poland.
 
 I work on **[PanelAlpha](https://panelalpha.com)**, a B2B platform that automates WordPress management for hosting companies and agencies: Laravel APIs, hosting, DNS, SSL, e-mail and backup integrations, and WHMCS billing.
 
+I also co-author **[PanelAlpha Engine](https://github.com/panelalpha/panelalpha-engine)**, an open-source self-hosting platform that AI agents operate over MCP. My work account there is [@skostecki](https://github.com/skostecki).
+
 **Stack:** PHP · Laravel · PostgreSQL / MySQL · Vue 3 / React · TypeScript · Inertia · Docker · Pest · Playwright
 
 ## Side projects
@@ -17,6 +19,6 @@ I work on **[PanelAlpha](https://panelalpha.com)**, a B2B platform that automate
 
 ## How I work with AI
 
-Specs, a domain glossary and ADRs come first. Agents (Claude Code, Cursor) write much of the code. Tests, static analysis and review decide what ships.
+Specs, a domain glossary and ADRs come first. Agents (Claude Code, Cursor) write much of the code. Tests, static analysis and review decide what ships. I am refining this workflow in the 10xDevs course.
 
 [kostecki.dev](https://kostecki.dev) · [LinkedIn](https://www.linkedin.com/in/kostecki-sebastian) · kontakt@kostecki.dev

@@ -199,6 +199,11 @@ contribution calendar, READMEs, CI, tests, external contributions.
   Direction: replace fixtures with fully synthetic data, then either rewrite history
   (`git filter-repo --path tests/Fixtures/ --invert-paths` and re-add) or publish a fresh
   repo with squashed history. Screenshots in `context/` use seeded "Test User" data.
+- [ ] **E13. Work profile is disconnected.** Commercial open source lives under the work
+  account `skostecki` (contributor to `panelalpha/panelalpha-engine`), which has no bio
+  and no link to the personal profile or the site. Neither the site nor the personal
+  profile mentions the engine.
+  Direction: add the engine to the site (proposal 2.7) and cross-link both profiles.
 - [x] **E12. Publish clean repos.** *Done 2026-11-08: kostecki-dev-landing,
   kostecki-dev-infa and root-keeper are public after the history scan. root-keeper still
   needs a README (see E11). household-treasurer stays private until E10 is fixed.*

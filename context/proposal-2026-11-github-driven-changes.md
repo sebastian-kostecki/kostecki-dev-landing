@@ -82,6 +82,41 @@ no repo. Skip entirely if consent is not given.
 - About paragraph 2: mention "poza pracą rozwijam dwa produkty na produkcji
   (treasurer.kostecki.dev, genealog.kostecki.dev) z CI, ADR i changelogiem".
 
+### 2.7 PanelAlpha Engine — open-source co-authorship (added 2026-11-08)
+
+Public repo `panelalpha/panelalpha-engine` (Apache 2.0, ~36 stars, releases v2.1–v2.2,
+"287 MCP tools"): self-hosting platform that an AI agent operates over MCP. Sebastian is
+a contributor from the work profile `skostecki`; public commits (history is partly
+squashed, so they under-count the work):
+- git push redeploys the project automatically (webhook-driven auto deploy),
+- project file manager: move, download, permission changes,
+- PHP directives per domain managed by the engine,
+- transfer and visitor statistics computed from existing logs; transfer counting fix.
+
+Site changes:
+- New card in the commercial section, right after PanelAlpha, reusing the featured-project
+  component: eyebrow "Open source", title "PanelAlpha Engine", context
+  "ModulesGarden / współautor / 2026", contribution list as above, tags PHP, Docker, MCP,
+  AI agents, links: repo + "Moje commity" (`commits?author=skostecki`).
+- Home preview subtitle mentions it; it is the only public, verifiable commercial code.
+- It also strengthens the AI story: the product exists to be driven by AI agents.
+
+GitHub: cross-link the two profiles (personal profile README → `skostecki`; set a bio on
+`skostecki` pointing to `sebastian-kostecki` and kostecki.dev).
+
+### 2.8 10xDevs course (added 2026-11-08)
+
+Sebastian is taking the 10xDevs course (AI-assisted software development). Its conventions
+are already visible in his repos: `context/foundation|changes|archive`, 10x-cli skills in
+`CLAUDE.md`, research → plan → implementation review per change.
+
+Site changes:
+- "Jak pracuję z AI" section: one line that the workflow is being refined in 10xDevs,
+  and that each change goes through research, plan and review (evidence: root-keeper
+  `context/`).
+- Skills → "Narzędzia i workflow": add Claude Code, Laravel Boost (MCP), 10xDevs workflow.
+- Do not present the course as a credential; present the artefacts it produced.
+
 ### 2.6 Component / schema changes needed
 
 - `Project` type: add `status: 'live' | 'wip' | 'archived'` (replaces `badge`), optional
