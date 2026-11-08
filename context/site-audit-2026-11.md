@@ -143,12 +143,16 @@ contribution calendar, READMEs, CI, tests, external contributions.
   Direction: create the `sebastian-kostecki/sebastian-kostecki` profile README (short:
   who, stack, 3 featured repos with one line each, link to site). Pin `wallet-master`,
   `menu-maker`, `rozgadana-jana`, and the landing repo if it goes public.
-- [ ] **E4. Zero repo descriptions, topics, or homepage URLs on all 20 repos.** Every
+- [x] **E4. Zero repo descriptions, topics, or homepage URLs on all 20 repos.**
+  *Done 2026-11-08: descriptions and topics on every repo, homepage on landing and
+  rozgadana-jana, MIT LICENSE files added to menu-maker and wallet-master.* Every
   public repo shows a blank description in listings and search. Only `menu-maker` and
   `wallet-master` declare a license (via README badge, not GitHub's license field).
   Direction: one-sentence description + topics (`laravel`, `php`, `inertia`, `whmcs`…)
   + homepage URL per public repo; add LICENSE files where MIT is claimed.
-- [ ] **E5. Test and scaffold repos are public.** `project-pixel-perch` is a Lovable
+- [x] **E5. Test and scaffold repos are public.** *Done 2026-11-08: both made private;
+  keep-wallet, o-nia-o-niego, BudgetApp, PingPong, ogarniam-portfel, HomeBudgetApp and
+  BudgetAppOnline archived.* `project-pixel-perch` is a Lovable
   scaffold whose README says "I would like to make my porfolio page (I'm Php
   developer)", contains `test.txt`, and its last 10 commits are "test: auto-deploy
   check 4", "test: real GitHub webhook (retry)". `test-static-page` is a one-commit
@@ -184,6 +188,21 @@ contribution calendar, READMEs, CI, tests, external contributions.
   for finding A3 ("How I work with AI") and nothing on the site or profile points to it.
   Direction: in the case study for wallet-master, link the `AGENTS.md`, the `.ai/`
   rules and the CI config as proof of an agent-assisted but test-gated workflow.
+
+- [ ] **E10. household-treasurer cannot be published as-is.** Secret scan of full
+  history (2026-11-08) found no keys, tokens or committed `.env` files in
+  household-treasurer, root-keeper, kostecki-dev-infa or kostecki-dev-landing. But
+  `tests/Fixtures/mbank-basic.csv` and `tests/Fixtures/bnp-paribas-basic.xlsx` are only
+  partly anonymised: names are replaced, yet they keep a real-looking mBank IBAN, a Play
+  (P4) customer ID with invoice number, a kindergarten name, Lublin merchants, a masked
+  card number and real spending. Two versions of each are in history.
+  Direction: replace fixtures with fully synthetic data, then either rewrite history
+  (`git filter-repo --path tests/Fixtures/ --invert-paths` and re-add) or publish a fresh
+  repo with squashed history. Screenshots in `context/` use seeded "Test User" data.
+- [ ] **E11. Still to do by hand** (token lacks `user` scope; creating new public repos
+  was blocked in auto mode): profile bio/website/company, LinkedIn social account,
+  profile README repo (draft: `context/github-profile-README.md`), pinning, "Include
+  private contributions", root-keeper README (draft: `context/root-keeper-README-draft.md`).
 
 ## Suggested order of work
 
