@@ -24,6 +24,10 @@
     "notFound": {
       "title": "Nie znaleziono — kostecki.dev",
       "description": "Strona, której szukasz, nie istnieje."
+    },
+    "cv": {
+      "title": "CV — Sebastian Kostecki",
+      "description": "CV Sebastiana Kosteckiego, Backend Developera (Laravel): doświadczenie, własne produkty i stack. Wersja do druku i PDF."
     }
   },
   "ui": {
@@ -117,7 +121,16 @@
     ]
   },
   "cv": {
-    "href": ""
+    "href": "/cv",
+    "title": "CV",
+    "intro": "Wersja do druku tej strony. Wszystko poniżej pochodzi z tych samych danych co reszta serwisu.",
+    "print": "Zapisz jako PDF",
+    "printHint": "Otwiera okno drukowania; wybierz „Zapisz jako PDF”.",
+    "summaryTitle": "Profil",
+    "experienceTitle": "Doświadczenie",
+    "productsTitle": "Własne produkty na produkcji",
+    "skillsTitle": "Umiejętności",
+    "generated": "Wygenerowano z kostecki.dev"
   },
   "about": {
     "index": "01 / O mnie",

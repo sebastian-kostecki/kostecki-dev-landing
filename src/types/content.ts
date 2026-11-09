@@ -124,6 +124,18 @@ export interface RouteMetaCopy {
   description: string
 }
 
+export interface CvCopy {
+  title: string
+  intro: string
+  print: string
+  printHint: string
+  summaryTitle: string
+  experienceTitle: string
+  productsTitle: string
+  skillsTitle: string
+  generated: string
+}
+
 export interface SiteContent {
   meta: {
     title: string
@@ -136,6 +148,7 @@ export interface SiteContent {
     skills: RouteMetaCopy
     contact: RouteMetaCopy
     notFound: RouteMetaCopy
+    cv: RouteMetaCopy
   }
   ui: {
     skipToContent: string
@@ -179,7 +192,7 @@ export interface SiteContent {
   }
   cv: {
     href: string
-  }
+  } & CvCopy
   about: {
     index: string
     title: string

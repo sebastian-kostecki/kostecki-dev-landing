@@ -7,7 +7,7 @@ const year = new Date().getFullYear()
 </script>
 
 <template>
-  <footer class="w-full bg-background">
+  <footer class="w-full bg-background print:hidden">
     <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
       <div class="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
         <div>

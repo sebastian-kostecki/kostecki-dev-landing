@@ -20,6 +20,7 @@ const routeMeta = computed(() => {
   if (name === 'projects') return content.value.routes.projects
   if (name === 'skills') return content.value.routes.skills
   if (name === 'contact') return content.value.routes.contact
+  if (name === 'cv') return content.value.routes.cv
   if (name === 'not-found') return content.value.routes.notFound
   return content.value.routes.home
 })

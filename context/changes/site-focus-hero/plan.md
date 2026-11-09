@@ -446,36 +446,36 @@ Brak danych do migracji. Wycofanie: revert commitów faz; fazy są niezależnie 
 
 #### Automated
 
-- [x] 2.1 Testy (w tym spójność kluczy i brak nierozwiązanych tokenów po dodaniu `summary` i hero): `pnpm test`
-- [x] 2.2 Type-check przechodzi: `pnpm type-check`
-- [x] 2.3 Lint przechodzi: `pnpm lint`
-- [x] 2.4 Build przechodzi: `pnpm build`
-- [x] 2.5 Brak odwołań do usuniętego pola: `grep -rn viewMyWork src` nic nie zwraca
+- [x] 2.1 Testy (w tym spójność kluczy i brak nierozwiązanych tokenów po dodaniu `summary` i hero): `pnpm test` — 9c207a8
+- [x] 2.2 Type-check przechodzi: `pnpm type-check` — 9c207a8
+- [x] 2.3 Lint przechodzi: `pnpm lint` — 9c207a8
+- [x] 2.4 Build przechodzi: `pnpm build` — 9c207a8
+- [x] 2.5 Brak odwołań do usuniętego pola: `grep -rn viewMyWork src` nic nie zwraca — 9c207a8
 
 #### Manual
 
-- [x] 2.6 Desktop (≥1024 px): hero w dwóch kolumnach, panel po prawej, sześć wierszy w jednej kolumnie, nagłówek łamie się czytelnie
-- [x] 2.7 Mobile (375 px): panel pod tekstem hero, wiersze w jednej kolumnie, bez poziomego scrolla
-- [x] 2.8 Hero PL: „Od 4 lat rozwijam produkcyjny produkt B2B: PanelAlpha w ModulesGarden.”; EN: „For 4 years I've been building…”
-- [x] 2.9 W hero widoczny tylko przycisk „Porozmawiajmy” (CV ukryte do fazy 3)
-- [x] 2.10 Panel: wiersz Kontakt jest linkiem `mailto:`, Doświadczenie pokazuje „4 lata komercyjnie, w tym 3,5 roku przy PanelAlpha”
-- [x] 2.11 O mnie: index „01 / O mnie” / „01 / About”, tytuł „Kim jestem” / „Who I am”, placeholder z podpisem „Zdjęcie” / „Photo” w ramce
-- [x] 2.12 Stopka: „Źródło” / „Source” prowadzi do publicznego repo
+- [x] 2.6 Desktop (≥1024 px): hero w dwóch kolumnach, panel po prawej, sześć wierszy w jednej kolumnie, nagłówek łamie się czytelnie — 9c207a8
+- [x] 2.7 Mobile (375 px): panel pod tekstem hero, wiersze w jednej kolumnie, bez poziomego scrolla — 9c207a8
+- [x] 2.8 Hero PL: „Od 4 lat rozwijam produkcyjny produkt B2B: PanelAlpha w ModulesGarden.”; EN: „For 4 years I've been building…” — 9c207a8
+- [x] 2.9 W hero widoczny tylko przycisk „Porozmawiajmy” (CV ukryte do fazy 3) — 9c207a8
+- [x] 2.10 Panel: wiersz Kontakt jest linkiem `mailto:`, Doświadczenie pokazuje „4 lata komercyjnie, w tym 3,5 roku przy PanelAlpha” — 9c207a8
+- [x] 2.11 O mnie: index „01 / O mnie” / „01 / About”, tytuł „Kim jestem” / „Who I am”, placeholder z podpisem „Zdjęcie” / „Photo” w ramce — 9c207a8
+- [x] 2.12 Stopka: „Źródło” / „Source” prowadzi do publicznego repo — 9c207a8
 
 ### Phase 3: Strona `/cv`
 
 #### Automated
 
-- [ ] 3.1 Testy przechodzą (spójność kluczy po dodaniu `cv.*`, `routes.cv`): `pnpm test`
-- [ ] 3.2 Type-check przechodzi: `pnpm type-check`
-- [ ] 3.3 Lint przechodzi: `pnpm lint`
-- [ ] 3.4 Build przechodzi: `pnpm build`
-- [ ] 3.5 Żaden link CV nie otwiera nowej karty: `grep -n 'cv.href' src/components/layout/SiteHeader.vue src/views/ContactView.vue` pokazuje tylko `RouterLink`/`:to`
-- [ ] 3.10 Build nie tworzy katalogu kolidującego z trasą `/cv`: `pnpm build && test ! -e dist/cv`
+- [x] 3.1 Testy przechodzą (spójność kluczy po dodaniu `cv.*`, `routes.cv`): `pnpm test`
+- [x] 3.2 Type-check przechodzi: `pnpm type-check`
+- [x] 3.3 Lint przechodzi: `pnpm lint`
+- [x] 3.4 Build przechodzi: `pnpm build`
+- [x] 3.5 Żaden link CV nie otwiera nowej karty: `grep -n 'cv.href' src/components/layout/SiteHeader.vue src/views/ContactView.vue` pokazuje tylko `RouterLink`/`:to`
+- [x] 3.10 Build nie tworzy katalogu kolidującego z trasą `/cv`: `pnpm build && test ! -e dist/cv`
 
 #### Manual
 
-- [ ] 3.6 `/cv` (PL i EN) renderuje imię, etykietę, profil z panelu (bez wiersza kontaktu), doświadczenie, produkty, umiejętności, kontakt; tytuł karty „CV — Sebastian Kostecki”
-- [ ] 3.7 Podgląd druku (Ctrl+P) na `/cv`: tylko arkusz CV, bez nagłówka i stopki, czytelne kolory na białym tle; przycisk „Zapisz jako PDF” otwiera okno druku
-- [ ] 3.8 Przycisk „CV” w hero, nagłówku (desktop i mobile) i kontakcie prowadzi do `/cv` w tej samej karcie bez przeładowania; menu mobilne zamyka się po kliknięciu
-- [ ] 3.9 Bezpośrednie wejście na `/cv` (odświeżenie) działa w `pnpm preview`
+- [x] 3.6 `/cv` (PL i EN) renderuje imię, etykietę, profil z panelu (bez wiersza kontaktu), doświadczenie, produkty, umiejętności, kontakt; tytuł karty „CV — Sebastian Kostecki”
+- [x] 3.7 Podgląd druku (Ctrl+P) na `/cv`: tylko arkusz CV, bez nagłówka i stopki, czytelne kolory na białym tle; przycisk „Zapisz jako PDF” otwiera okno druku
+- [x] 3.8 Przycisk „CV” w hero, nagłówku (desktop i mobile) i kontakcie prowadzi do `/cv` w tej samej karcie bez przeładowania; menu mobilne zamyka się po kliknięciu
+- [x] 3.9 Bezpośrednie wejście na `/cv` (odświeżenie) działa w `pnpm preview`

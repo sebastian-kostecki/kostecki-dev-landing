@@ -30,14 +30,9 @@ const hasCv = computed(() => content.value.cv.href.length > 0)
         />
       </div>
       <div v-if="hasCv" class="mt-8 flex justify-center">
-        <a
-          :href="content.cv.href"
-          class="btn-secondary"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <RouterLink :to="content.cv.href" class="btn-secondary">
           {{ content.ui.downloadCv }}
-        </a>
+        </RouterLink>
       </div>
     </div>
   </div>

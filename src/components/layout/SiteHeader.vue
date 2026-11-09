@@ -62,7 +62,7 @@ onUnmounted(() => {
 
 <template>
   <header
-    class="fixed inset-x-0 top-0 z-50 transition-all duration-300 motion-reduce:transition-none"
+    class="fixed inset-x-0 top-0 z-50 transition-all print:hidden duration-300 motion-reduce:transition-none"
     :class="
       headerVisible
         ? 'translate-y-0 border-b border-border/60 bg-background/70 opacity-100 backdrop-blur-xl'
@@ -109,15 +109,9 @@ onUnmounted(() => {
 
       <div class="hidden items-center gap-3 md:flex">
         <LanguageSwitcher />
-        <a
-          v-if="hasCv"
-          :href="content.cv.href"
-          class="btn-secondary !px-3 !py-2 text-xs"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <RouterLink v-if="hasCv" :to="content.cv.href" class="btn-secondary !px-3 !py-2 text-xs">
           {{ content.ui.downloadCv }}
-        </a>
+        </RouterLink>
       </div>
 
       <button
@@ -152,15 +146,14 @@ onUnmounted(() => {
         </RouterLink>
         <div class="flex items-center gap-3 py-3">
           <LanguageSwitcher />
-          <a
+          <RouterLink
             v-if="hasCv"
-            :href="content.cv.href"
+            :to="content.cv.href"
             class="btn-secondary !px-3 !py-2 text-xs"
-            target="_blank"
-            rel="noopener noreferrer"
+            @click="open = false"
           >
             {{ content.ui.downloadCv }}
-          </a>
+          </RouterLink>
         </div>
       </nav>
     </div>

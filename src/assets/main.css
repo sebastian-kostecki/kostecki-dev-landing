@@ -191,4 +191,41 @@
     border-top: 0;
     border-left: 0;
   }
+
+  .cv-section {
+    @apply mt-8 border-t border-border pt-6 first-of-type:border-t-0;
+  }
+
+  .cv-heading {
+    @apply mb-4 font-mono text-xs font-semibold tracking-[0.25em] text-primary uppercase;
+  }
+}
+
+/* Print: the CV page (and any page) prints as black text on white, without chrome. */
+@media print {
+  @page {
+    margin: 14mm;
+  }
+
+  body {
+    background: #fff !important;
+    color: #111 !important;
+  }
+
+  .cv-sheet,
+  .cv-sheet * {
+    color: #111 !important;
+    background: transparent !important;
+    border-color: #d4d4d8 !important;
+    box-shadow: none !important;
+  }
+
+  .cv-sheet .cv-heading,
+  .cv-sheet .text-primary {
+    color: #b4232f !important;
+  }
+
+  .cv-avoid-break {
+    break-inside: avoid;
+  }
 }
