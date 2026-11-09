@@ -5,9 +5,9 @@ import { routes, staticRoutes } from '@/router/routes'
 import { canonicalUrl, pageMeta, SITE_URL } from '@/seo/page-meta'
 import type { SiteContent } from '@/types/content'
 
-const dictionaries: Record<string, { content: SiteContent; ogLocale: string }> = {
-  pl: { content: pl as unknown as SiteContent, ogLocale: 'pl_PL' },
-  en: { content: en as unknown as SiteContent, ogLocale: 'en_US' },
+const dictionaries: Record<string, { content: SiteContent; ogLocale: string; ogLocaleAlternate: string }> = {
+  pl: { content: pl as unknown as SiteContent, ogLocale: 'pl_PL', ogLocaleAlternate: 'en_US' },
+  en: { content: en as unknown as SiteContent, ogLocale: 'en_US', ogLocaleAlternate: 'pl_PL' },
 }
 
 const copyKey: Record<string, keyof SiteContent['routes']> = {
@@ -20,7 +20,7 @@ const copyKey: Record<string, keyof SiteContent['routes']> = {
 }
 
 describe.each(Object.keys(dictionaries))('pageMeta (%s)', (locale) => {
-  const { content, ogLocale } = dictionaries[locale]!
+  const { content, ogLocale, ogLocaleAlternate } = dictionaries[locale]!
 
   it.each(routes.map((route) => String(route.name)))(
     'maps route %s to its content.routes entry',
@@ -51,6 +51,12 @@ describe.each(Object.keys(dictionaries))('pageMeta (%s)', (locale) => {
     const meta = pageMeta('home', content, '/')
     expect(meta.ogLocale).toBe(ogLocale)
     expect(meta.lang).toBe(locale)
+  })
+
+  it('sets ogLocaleAlternate opposite to ogLocale', () => {
+    const meta = pageMeta('home', content, '/')
+    expect(meta.ogLocaleAlternate).toBe(ogLocaleAlternate)
+    expect(meta.ogLocaleAlternate).not.toBe(meta.ogLocale)
   })
 })
 

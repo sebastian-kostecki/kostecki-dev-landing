@@ -9,6 +9,7 @@ export interface PageMeta {
   description: string
   lang: string
   ogLocale: string
+  ogLocaleAlternate: string
   canonical: string | null
 }
 
@@ -45,6 +46,7 @@ export function pageMeta(routeName: string, content: SiteContent, path: string):
     description,
     lang,
     ogLocale: lang === 'pl' ? 'pl_PL' : 'en_US',
+    ogLocaleAlternate: lang === 'pl' ? 'en_US' : 'pl_PL',
     canonical: routeName === 'not-found' ? null : canonicalUrl(path),
   }
 }

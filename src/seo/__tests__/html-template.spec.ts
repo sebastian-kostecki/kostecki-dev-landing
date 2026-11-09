@@ -27,6 +27,7 @@ const meta: PageMeta = {
   description: 'Opis projektów',
   lang: 'pl',
   ogLocale: 'pl_PL',
+  ogLocaleAlternate: 'en_US',
   canonical: 'https://kostecki.dev/projects',
 }
 
@@ -43,7 +44,7 @@ describe('injectPage', () => {
     expect(out).toContain('<meta name="twitter:description" content="Opis projektów">')
     expect(out).toContain('<link rel="canonical" href="https://kostecki.dev/projects">')
     expect(out).toContain('<div id="app"><main>treść</main></div>')
-    expect(out).toContain('<meta property="og:locale:alternate" content="pl_PL">')
+    expect(out).toContain('<meta property="og:locale:alternate" content="en_US">')
     expect(out).not.toContain('old')
     expect(out).not.toContain('application/ld+json')
     expect(out).not.toContain('noindex')
@@ -90,6 +91,26 @@ describe('injectPage', () => {
     expect(out).not.toContain('og:url')
     expect(out).not.toContain('application/ld+json')
     expect(out).toContain('og:locale:alternate')
+  })
+
+  it.each([
+    ['pl_PL', 'en_US'],
+    ['en_US', 'pl_PL'],
+  ])('emits exactly one og:locale:alternate opposite to %s', (ogLocale, alternate) => {
+    const out = injectPage(template, {
+      appHtml: '',
+      meta: { ...meta, ogLocale, ogLocaleAlternate: alternate },
+    })
+    const lines = out.match(/<meta property="og:locale:alternate" content="[^"]*">/g)
+    expect(lines).toEqual([`<meta property="og:locale:alternate" content="${alternate}">`])
+  })
+
+  it('throws when the template has two og:locale:alternate lines', () => {
+    const doubled = template.replace(
+      '<meta property="og:locale:alternate" content="pl_PL">',
+      '<meta property="og:locale:alternate" content="en_US">\n    <meta property="og:locale:alternate" content="pl_PL">',
+    )
+    expect(() => injectPage(doubled, { appHtml: '', meta })).toThrow(/og:locale:alternate/)
   })
 
   it('throws naming the tag when it is missing', () => {

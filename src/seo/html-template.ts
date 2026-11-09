@@ -19,6 +19,7 @@ const TAGS = {
   'og:description': META_LINE('property', 'og:description'),
   'og:url': META_LINE('property', 'og:url'),
   'og:locale': META_LINE('property', 'og:locale'),
+  'og:locale:alternate': META_LINE('property', 'og:locale:alternate'),
   'twitter:title': META_LINE('name', 'twitter:title'),
   'twitter:description': META_LINE('name', 'twitter:description'),
   canonical: /[ \t]*<link rel="canonical" href="[^"]*">[ \t]*\n?/g,
@@ -77,6 +78,11 @@ export function injectPage(template: string, page: InjectPage): string {
     out,
     'og:locale',
     `    <meta property="og:locale" content="${escapeAttr(meta.ogLocale)}">\n`,
+  )
+  out = replaceTag(
+    out,
+    'og:locale:alternate',
+    `    <meta property="og:locale:alternate" content="${escapeAttr(meta.ogLocaleAlternate)}">\n`,
   )
   out = replaceTag(out, 'twitter:title', `    <meta name="twitter:title" content="${title}">\n`)
   out = replaceTag(

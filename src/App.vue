@@ -58,7 +58,7 @@ function applyMeta() {
   // pageMeta would fall back to home, overwriting the prerendered head.
   if (route.name === undefined) return
 
-  const { title, description, lang, ogLocale, canonical } = meta.value
+  const { title, description, lang, ogLocale, ogLocaleAlternate, canonical } = meta.value
 
   document.title = title
   document.documentElement.lang = lang
@@ -66,6 +66,7 @@ function applyMeta() {
   setMetaContent('meta[property="og:title"]', title)
   setMetaContent('meta[property="og:description"]', description)
   setMetaContent('meta[property="og:locale"]', ogLocale)
+  setMetaContent('meta[property="og:locale:alternate"]', ogLocaleAlternate)
   setMetaContent('meta[name="twitter:title"]', title)
   setMetaContent('meta[name="twitter:description"]', description)
   applyCanonical(canonical)
