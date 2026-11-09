@@ -1,3 +1,4 @@
+import type { RouteName } from '@/router/routes'
 import type { SiteContent } from '@/types/content'
 
 export const SITE_URL = 'https://kostecki.dev'
@@ -18,21 +19,22 @@ export function canonicalUrl(path: string): string {
   return `${SITE_URL}${path.replace(/\/+$/, '')}`
 }
 
-function routeCopy(routeName: string, content: SiteContent) {
-  switch (routeName) {
-    case 'projects':
-      return content.routes.projects
-    case 'skills':
-      return content.routes.skills
-    case 'contact':
-      return content.routes.contact
-    case 'cv':
-      return content.routes.cv
-    case 'not-found':
-      return content.routes.notFound
-    default:
-      return content.routes.home
+// One mapping from route name to its `content.routes` entry; Record<RouteName, …>
+// makes the compiler demand an entry for every new route.
+const routeCopyKey: Record<RouteName, keyof SiteContent['routes']> = {
+  home: 'home',
+  projects: 'projects',
+  skills: 'skills',
+  contact: 'contact',
+  cv: 'cv',
+  'not-found': 'notFound',
+}
+
+export function routeCopy(routeName: string, content: SiteContent) {
+  if (!Object.hasOwn(routeCopyKey, routeName)) {
+    throw new Error(`pageMeta: no content.routes entry for route "${routeName}"`)
   }
+  return content.routes[routeCopyKey[routeName as RouteName]]
 }
 
 export function pageMeta(routeName: string, content: SiteContent, path: string): PageMeta {

@@ -43,8 +43,8 @@ describe.each(Object.keys(dictionaries))('pageMeta (%s)', (locale) => {
     expect(pageMeta('not-found', content, '/nie-ma-takiej').canonical).toBeNull()
   })
 
-  it('falls back to home meta for an unknown route name', () => {
-    expect(pageMeta('whatever', content, '/').title).toBe(content.routes.home.title)
+  it('throws for a route name without a content.routes entry', () => {
+    expect(() => pageMeta('whatever', content, '/')).toThrow(/whatever/)
   })
 
   it('sets ogLocale and lang', () => {

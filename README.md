@@ -2,7 +2,7 @@
 
 Landing page for [kostecki.dev](https://kostecki.dev) — Vue 3, TypeScript, Vite.
 
-Infrastructure and deploy: [kostecki-dev-infra](https://github.com/sebastian-kostecki/kostecki-dev-infra) (`docs/LANDING.md`). The build produces one HTML file per route plus `404.html`, so `docker/nginx.conf` must be deployed to the server together with `dist/`.
+Infrastructure and deploy: [kostecki-dev-infra](https://github.com/sebastian-kostecki/kostecki-dev-infra) (`docs/LANDING.md`). The build produces one HTML file per route plus `404.html`, so `docker/nginx.conf` must be deployed to the server together with `dist/`. Values derived from the date (years of experience, footer year) are frozen into the prerendered HTML and `llms.txt` at build time, so a rebuild and deploy refreshes them for crawlers without JavaScript; the browser recomputes them on load.
 
 ## Archive counter
 

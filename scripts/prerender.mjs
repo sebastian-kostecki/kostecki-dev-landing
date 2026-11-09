@@ -14,13 +14,10 @@ function targetFile(routePath) {
     : path.join(distDir, ...routePath.split('/').filter(Boolean), 'index.html')
 }
 
-function escapeText(value) {
-  return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-}
-
 async function run() {
   const {
     render,
+    escapeText,
     injectPage,
     staticPaths,
     staticRoutes,
@@ -40,19 +37,27 @@ async function run() {
     )
   }
 
+  async function renderRoute(routePath) {
+    try {
+      return await render(routePath)
+    } catch (error) {
+      throw new Error(`render ${routePath} failed`, { cause: error })
+    }
+  }
+
   const pl = dictionaries.pl
   const jsonLd = buildJsonLd(pl)
   const written = []
 
   for (const { path: routePath, name } of staticRoutes) {
-    const { html, meta } = await render(routePath)
+    const { html, meta } = await renderRoute(routePath)
     const file = targetFile(routePath)
     await mkdir(path.dirname(file), { recursive: true })
     await writeFile(file, injectPage(template, { appHtml: html, meta, jsonLd }))
     written.push({ file, expectedTitle: pl.routes[name].title, routePath, expectJsonLd: true })
   }
 
-  const notFound = await render(NOT_FOUND_PATH)
+  const notFound = await renderRoute(NOT_FOUND_PATH)
   const notFoundFile = path.join(distDir, '404.html')
   await writeFile(
     notFoundFile,

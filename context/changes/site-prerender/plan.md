@@ -337,6 +337,7 @@ Pięć tras renderowanych w jednym procesie Node to sekundy; build SSR dodaje je
 #### Automated
 
 - [x] 1.1 Test `src/__tests__/entry-server.spec.ts` nie przechodzi przed dodaniem `src/entry-server.ts` (czerwony zapisany w commicie lub w opisie fazy) — 5422b51
+  - Adnotacja z impl-review (2026-11-09): czerwony stan nie został utrwalony — 5422b51 zawiera test razem z `src/entry-server.ts`. Historii nie przepisujemy.
 - [x] 1.2 Testy przechodzą: `pnpm test` — 5422b51
 - [x] 1.3 Type check przechodzi: `pnpm type-check` — 5422b51
 - [x] 1.4 Lint przechodzi: `pnpm lint` — 5422b51
@@ -385,12 +386,12 @@ Pięć tras renderowanych w jednym procesie Node to sekundy; build SSR dodaje je
 
 #### Automated
 
-- [x] 4.1 Konfiguracja jest poprawna: `nginx -t` w kontenerze `nginx:alpine`
-- [x] 4.2 Statusy na lokalnym kontenerze: 200 dla tras, `/sitemap.xml`, `/llms.txt`; 404 dla `/nie-ma`
-- [x] 4.3 `/nie-ma` zawiera tytuł z `pl.routes.notFound.title`
-- [x] 4.4 `/projects` nie jest przekierowaniem
+- [x] 4.1 Konfiguracja jest poprawna: `nginx -t` w kontenerze `nginx:alpine` — fdbb8be
+- [x] 4.2 Statusy na lokalnym kontenerze: 200 dla tras, `/sitemap.xml`, `/llms.txt`; 404 dla `/nie-ma` — fdbb8be
+- [x] 4.3 `/nie-ma` zawiera tytuł z `pl.routes.notFound.title` — fdbb8be
+- [x] 4.4 `/projects` nie jest przekierowaniem — fdbb8be
 
 #### Manual
 
-- [x] 4.5 Na kontenerze lokalnym `/nie-ma` pokazuje stronę 404, link „wróć” prowadzi do `/`
+- [x] 4.5 Na kontenerze lokalnym `/nie-ma` pokazuje stronę 404, link „wróć” prowadzi do `/` — fdbb8be
 - [ ] 4.6 Po deployu przez repo infra: `/nie-ma` zwraca 404, `/projects` zwraca 200 z treścią w HTML

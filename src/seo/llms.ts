@@ -1,18 +1,16 @@
 import { isRepo } from '@/content/links'
 import type { staticRoutes } from '@/router/routes'
-import { canonicalUrl, SITE_REPO_URL } from '@/seo/page-meta'
+import { canonicalUrl, routeCopy, SITE_REPO_URL } from '@/seo/page-meta'
 import type { SiteContent } from '@/types/content'
 
 export function buildLlmsTxt(content: SiteContent, routes: typeof staticRoutes): string {
-  const copyKey = (name: string) => (name === 'not-found' ? 'notFound' : name) as keyof SiteContent['routes']
-
   const contact = content.contact.methods.map((method) => {
     const value = method.type === 'email' || method.type === 'phone' ? method.value : method.href
     return `- ${method.label}: ${value}`
   })
 
   const pages = routes.map(({ path, name }) => {
-    const copy = content.routes[copyKey(name)]
+    const copy = routeCopy(name, content)
     return `- [${copy.title}](${canonicalUrl(path)}): ${copy.description}`
   })
 

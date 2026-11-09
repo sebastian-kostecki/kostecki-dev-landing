@@ -34,7 +34,7 @@ function escapeAttr(value: string): string {
     .replace(/>/g, '&gt;')
 }
 
-function escapeText(value: string): string {
+export function escapeText(value: string): string {
   return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 }
 

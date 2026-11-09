@@ -19,6 +19,10 @@ describe('buildSitemap', () => {
     expect(new Set(locs)).toEqual(new Set(expected))
   })
 
+  it('escapes XML special characters in <loc>', () => {
+    expect(buildSitemap(['/a&b'])).toContain('<loc>https://kostecki.dev/a&amp;b</loc>')
+  })
+
   it.each(['lastmod', 'changefreq', 'priority'])('has no %s', (field) => {
     expect(xml).not.toContain(field)
   })

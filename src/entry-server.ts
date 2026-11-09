@@ -7,7 +7,7 @@ import { useContent } from '@/composables/useContent'
 import { pageMeta, type PageMeta } from '@/seo/page-meta'
 
 export { staticPaths, staticRoutes } from '@/router/routes'
-export { injectPage } from '@/seo/html-template'
+export { escapeText, injectPage } from '@/seo/html-template'
 export { buildSitemap } from '@/seo/sitemap'
 export { buildJsonLd } from '@/seo/structured-data'
 export { buildLlmsTxt } from '@/seo/llms'
@@ -20,10 +20,13 @@ export async function render(
   const router = createRouter({ history: createMemoryHistory(), routes })
   app.use(router)
 
-  await router.push(path)
+  const failure = await router.push(path)
+  if (failure) throw new Error(`render(${path}): navigation failed`, { cause: failure })
   await router.isReady()
 
-  const routeName = String(router.currentRoute.value.name ?? 'home')
+  const name = router.currentRoute.value.name
+  if (name === undefined) throw new Error(`render(${path}): path matched no named route`)
+  const routeName = String(name)
   const html = await renderToString(app)
   const meta = pageMeta(routeName, useContent().value, path)
 

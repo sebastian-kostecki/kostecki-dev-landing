@@ -28,6 +28,11 @@ function applyCanonical(canonical: string | null) {
   if (canonical === null) {
     document.querySelector('link[rel="canonical"]')?.removeAttribute('href')
     document.querySelector('meta[property="og:url"]')?.removeAttribute('content')
+    upsertHeadElement('meta[name="robots"]', () => {
+      const robots = document.createElement('meta')
+      robots.setAttribute('name', 'robots')
+      return robots
+    }).setAttribute('content', 'noindex')
     return
   }
 
@@ -49,6 +54,10 @@ function applyCanonical(canonical: string | null) {
 const meta = computed(() => pageMeta(String(route.name ?? ''), content.value, route.path))
 
 function applyMeta() {
+  // The initial navigation is async: until it resolves the route has no name and
+  // pageMeta would fall back to home, overwriting the prerendered head.
+  if (route.name === undefined) return
+
   const { title, description, lang, ogLocale, canonical } = meta.value
 
   document.title = title
