@@ -5,7 +5,7 @@ import type { SiteContent } from '@/types/content'
 import { resolveDurations } from '@/composables/useDuration'
 import { useLocale, type Locale } from '@/composables/useLocale'
 
-const dictionaries: Record<Locale, SiteContent> = {
+export const dictionaries: Record<Locale, SiteContent> = {
   pl: resolveDurations(pl, 'pl') as SiteContent,
   en: resolveDurations(en, 'en') as SiteContent,
 }
