@@ -368,29 +368,29 @@ Pięć tras renderowanych w jednym procesie Node to sekundy; build SSR dodaje je
 
 #### Automated
 
-- [x] 3.1 Testy przechodzą: `pnpm test`
-- [x] 3.2 Type check i lint przechodzą: `pnpm type-check && pnpm lint`
-- [x] 3.3 Build przechodzi: `pnpm build`
-- [x] 3.4 Sitemap ma 5 URL-i i brak `lastmod`
-- [x] 3.5 `public/sitemap.xml` nie istnieje
-- [x] 3.6 JSON-LD na 5 stronach tras, brak na `dist/404.html`
-- [x] 3.7 `dist/llms.txt` istnieje i nie zawiera „commit”
+- [x] 3.1 Testy przechodzą: `pnpm test` — e8bf062
+- [x] 3.2 Type check i lint przechodzą: `pnpm type-check && pnpm lint` — e8bf062
+- [x] 3.3 Build przechodzi: `pnpm build` — e8bf062
+- [x] 3.4 Sitemap ma 5 URL-i i brak `lastmod` — e8bf062
+- [x] 3.5 `public/sitemap.xml` nie istnieje — e8bf062
+- [x] 3.6 JSON-LD na 5 stronach tras, brak na `dist/404.html` — e8bf062
+- [x] 3.7 `dist/llms.txt` istnieje i nie zawiera „commit” — e8bf062
 
 #### Manual
 
-- [x] 3.8 JSON-LD z `dist/index.html` przechodzi walidator schema.org bez błędów
-- [x] 3.9 Treść `dist/llms.txt` czyta się poprawnie i zgadza się ze stroną
+- [x] 3.8 JSON-LD z `dist/index.html` przechodzi walidator schema.org bez błędów — e8bf062
+- [x] 3.9 Treść `dist/llms.txt` czyta się poprawnie i zgadza się ze stroną — e8bf062
 
 ### Phase 4: nginx — prawdziwe 404 (B4)
 
 #### Automated
 
-- [ ] 4.1 Konfiguracja jest poprawna: `nginx -t` w kontenerze `nginx:alpine`
-- [ ] 4.2 Statusy na lokalnym kontenerze: 200 dla tras, `/sitemap.xml`, `/llms.txt`; 404 dla `/nie-ma`
-- [ ] 4.3 `/nie-ma` zawiera tytuł z `pl.routes.notFound.title`
-- [ ] 4.4 `/projects` nie jest przekierowaniem
+- [x] 4.1 Konfiguracja jest poprawna: `nginx -t` w kontenerze `nginx:alpine`
+- [x] 4.2 Statusy na lokalnym kontenerze: 200 dla tras, `/sitemap.xml`, `/llms.txt`; 404 dla `/nie-ma`
+- [x] 4.3 `/nie-ma` zawiera tytuł z `pl.routes.notFound.title`
+- [x] 4.4 `/projects` nie jest przekierowaniem
 
 #### Manual
 
-- [ ] 4.5 Na kontenerze lokalnym `/nie-ma` pokazuje stronę 404, link „wróć” prowadzi do `/`
+- [x] 4.5 Na kontenerze lokalnym `/nie-ma` pokazuje stronę 404, link „wróć” prowadzi do `/`
 - [ ] 4.6 Po deployu przez repo infra: `/nie-ma` zwraca 404, `/projects` zwraca 200 z treścią w HTML

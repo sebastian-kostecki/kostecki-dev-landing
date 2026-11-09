@@ -2,7 +2,7 @@
 
 Landing page for [kostecki.dev](https://kostecki.dev) — Vue 3, TypeScript, Vite.
 
-Infrastructure and deploy: [kostecki-dev-infra](https://github.com/sebastian-kostecki/kostecki-dev-infra) (`docs/LANDING.md`).
+Infrastructure and deploy: [kostecki-dev-infra](https://github.com/sebastian-kostecki/kostecki-dev-infra) (`docs/LANDING.md`). The build produces one HTML file per route plus `404.html`, so `docker/nginx.conf` must be deployed to the server together with `dist/`.
 
 ## Archive counter
 
