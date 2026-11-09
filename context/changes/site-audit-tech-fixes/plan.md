@@ -323,35 +323,35 @@ Fonty z własnej domeny usuwają dwa połączenia DNS/TLS do Google. Pakiety `@f
 
 #### Automated
 
-- [x] 1.1 Nowe testy C1 i B6 nie przechodzą przed zmianą w komponentach/SEO i przechodzą po niej: `pnpm test`
-- [x] 1.2 Type checking passes: `pnpm type-check`
-- [x] 1.3 Linting passes: `pnpm lint`
-- [x] 1.4 Build z prerenderem przechodzi: `pnpm build`
-- [x] 1.5 `dist/index.html` ma jeden `og:locale:alternate` z `en_US`, a otwierający `<header>` nie zawiera `aria-hidden`
+- [x] 1.1 Nowe testy C1 i B6 nie przechodzą przed zmianą w komponentach/SEO i przechodzą po niej: `pnpm test` — d440113
+- [x] 1.2 Type checking passes: `pnpm type-check` — d440113
+- [x] 1.3 Linting passes: `pnpm lint` — d440113
+- [x] 1.4 Build z prerenderem przechodzi: `pnpm build` — d440113
+- [x] 1.5 `dist/index.html` ma jeden `og:locale:alternate` z `en_US`, a otwierający `<header>` nie zawiera `aria-hidden` — d440113
 
 #### Manual
 
-- [x] 1.6 `/` na 1440 px: header widoczny od razu, przezroczysty nad hero, po przewinięciu dostaje tło i border; nie zasłania treści hero
-- [x] 1.7 `/` na 390 px: header i przycisk menu widoczne, menu otwiera się z tłem
-- [x] 1.8 Po przełączeniu na EN: `og:locale = en_US`, `og:locale:alternate = pl_PL`
+- [x] 1.6 `/` na 1440 px: header widoczny od razu, przezroczysty nad hero, po przewinięciu dostaje tło i border; nie zasłania treści hero — d440113
+- [x] 1.7 `/` na 390 px: header i przycisk menu widoczne, menu otwiera się z tłem — d440113
+- [x] 1.8 Po przełączeniu na EN: `og:locale = en_US`, `og:locale:alternate = pl_PL` — d440113
 
 ### Phase 2: Ikony i fonty lokalnie (D1, D2)
 
 #### Automated
 
-- [ ] 2.1 Testy D1 i D2 nie przechodzą przed zmianą i przechodzą po niej: `pnpm test`
-- [ ] 2.2 `pnpm generate:icons` kończy się sukcesem, a `git diff --exit-code src/generated/icons.json` po nim jest pusty
-- [ ] 2.3 Type checking passes: `pnpm type-check`
-- [ ] 2.4 Linting passes: `pnpm lint`
-- [ ] 2.5 Build z prerenderem przechodzi: `pnpm build`
-- [ ] 2.6 W `dist/` nie ma odwołań do zewnętrznych hostów ikon i fontów
-- [ ] 2.7 W `dist/assets/` są pliki `.woff2`
+- [x] 2.1 Testy D1 i D2 nie przechodzą przed zmianą i przechodzą po niej: `pnpm test`
+- [x] 2.2 `pnpm generate:icons` kończy się sukcesem, a `git diff --exit-code src/generated/icons.json` po nim jest pusty
+- [x] 2.3 Type checking passes: `pnpm type-check`
+- [x] 2.4 Linting passes: `pnpm lint`
+- [x] 2.5 Build z prerenderem przechodzi: `pnpm build`
+- [x] 2.6 W `dist/` nie ma odwołań do zewnętrznych hostów ikon i fontów
+- [x] 2.7 W `dist/assets/` są pliki `.woff2`
 
 #### Manual
 
-- [ ] 2.8 DevTools Network: brak żądań do `api.iconify.design`, `fonts.googleapis.com`, `fonts.gstatic.com`; ikony w stopce, na `/skills`, `/projects` i `/contact` widoczne
-- [ ] 2.9 Fonty wyglądają jak przed zmianą, polskie znaki poprawne
-- [ ] 2.10 Ikony widoczne z włączonym blokerem reklam
+- [x] 2.8 DevTools Network: brak żądań do `api.iconify.design`, `fonts.googleapis.com`, `fonts.gstatic.com`; ikony w stopce, na `/skills`, `/projects` i `/contact` widoczne
+- [x] 2.9 Fonty wyglądają jak przed zmianą, polskie znaki poprawne
+- [x] 2.10 Ikony widoczne z włączonym blokerem reklam
 
 ### Phase 3: Nagłówki bezpieczeństwa (D3)
 

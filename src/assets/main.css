@@ -16,9 +16,10 @@
   --color-accent-hover: #ff4d5a;
   --color-border: rgb(255 255 255 / 0.1);
   --color-bg: #0c0c0e;
-  --font-sans: 'Work Sans', ui-sans-serif, system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
-  --font-body: 'Work Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Work Sans Variable', 'Work Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono:
+    'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-body: 'Work Sans Variable', 'Work Sans', ui-sans-serif, system-ui, sans-serif;
   --radius: 0.25rem;
 }
 
