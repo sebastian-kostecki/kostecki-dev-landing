@@ -68,10 +68,24 @@ export interface AiWorkflowStep {
   link?: ProjectLink
 }
 
+export interface AiProofItem {
+  project: string
+  url: string
+  shows: string
+}
+
+export interface AiProof {
+  lead: string
+  items: AiProofItem[]
+  counterLabel: string
+  archiveLinks: ProjectLink[]
+}
+
 export interface AiWorkflow {
   index: string
   title: string
   subtitle: string
+  proof: AiProof
   steps: AiWorkflowStep[]
   closing: string
 }

@@ -290,31 +290,31 @@ Brak danych do migracji. Pierwszy deploy po zmianie: `git pull` na VPS przyniesi
 
 #### Automated
 
-- [x] 1.1 Testy logiki licznika są czerwone przed implementacją i zielone po niej: `pnpm test`
-- [x] 1.2 Type-check przechodzi i obejmuje `scripts/lib` oraz `scripts/__tests__`: `pnpm type-check`
-- [x] 1.3 Lint przechodzi: `pnpm lint`
-- [x] 1.4 `pnpm generate:archive` zapisuje `src/generated/archive.json` z `total` równym sumie folderów obu archiwów
-- [x] 1.5 `git status` po `pnpm build` nie pokazuje zmienionych plików w `src/generated/`
+- [x] 1.1 Testy logiki licznika są czerwone przed implementacją i zielone po niej: `pnpm test` — 788ab55
+- [x] 1.2 Type-check przechodzi i obejmuje `scripts/lib` oraz `scripts/__tests__`: `pnpm type-check` — 788ab55
+- [x] 1.3 Lint przechodzi: `pnpm lint` — 788ab55
+- [x] 1.4 `pnpm generate:archive` zapisuje `src/generated/archive.json` z `total` równym sumie folderów obu archiwów — 788ab55
+- [x] 1.5 `git status` po `pnpm build` nie pokazuje zmienionych plików w `src/generated/` — 788ab55
 
 #### Manual
 
-- [x] 1.6 Symulacja braku sieci z istniejącym `archive.json` zostawia plik i loguje ostrzeżenie z przyczyną
-- [x] 1.7 Symulacja braku sieci bez `archive.json` kopiuje fallback i loguje ostrzeżenie
-- [x] 1.8 `pnpm dev` na świeżym clonie startuje bez ręcznego `generate:archive` i przekazuje argumenty do `vite`
+- [x] 1.6 Symulacja braku sieci z istniejącym `archive.json` zostawia plik i loguje ostrzeżenie z przyczyną — 788ab55
+- [x] 1.7 Symulacja braku sieci bez `archive.json` kopiuje fallback i loguje ostrzeżenie — 788ab55
+- [x] 1.8 `pnpm dev` na świeżym clonie startuje bez ręcznego `generate:archive` i przekazuje argumenty do `vite` — 788ab55
 
 ### Phase 2: Sekcja w UI i treść
 
 #### Automated
 
-- [ ] 2.1 Testy treści i parytet locale przechodzą: `pnpm test`
-- [ ] 2.2 Type-check przechodzi: `pnpm type-check`
-- [ ] 2.3 Lint przechodzi: `pnpm lint`
-- [ ] 2.4 `pnpm build` przechodzi, a strażnik nie zgłasza brakujących folderów dla pięciu pozycji
-- [ ] 2.5 Celowa literówka w URL-u przerywa `pnpm generate:archive` z nazwą folderu
+- [x] 2.1 Testy treści i parytet locale przechodzą: `pnpm test`
+- [x] 2.2 Type-check przechodzi: `pnpm type-check`
+- [x] 2.3 Lint przechodzi: `pnpm lint`
+- [x] 2.4 `pnpm build` przechodzi, a strażnik nie zgłasza brakujących folderów dla pięciu pozycji
+- [x] 2.5 Celowa literówka w URL-u przerywa `pnpm generate:archive` z nazwą folderu
 
 #### Manual
 
-- [ ] 2.6 Na `/` w PL i EN sekcja pokazuje lead, 5 pozycji bez dat, licznik z linkami, 4 kroki, zamknięcie
-- [ ] 2.7 Każdy z 5 linków i oba linki archiwów otwierają właściwy folder na GitHubie
-- [ ] 2.8 Układ czytelny na telefonie i desktopie, bez poziomego scrolla, spójny z ciemnym motywem
-- [ ] 2.9 Licznik zgadza się z liczbą folderów widoczną na GitHubie
+- [x] 2.6 Na `/` w PL i EN sekcja pokazuje lead, 5 pozycji bez dat, licznik z linkami, 4 kroki, zamknięcie
+- [x] 2.7 Każdy z 5 linków i oba linki archiwów otwierają właściwy folder na GitHubie
+- [x] 2.8 Układ czytelny na telefonie i desktopie, bez poziomego scrolla, spójny z ciemnym motywem
+- [x] 2.9 Licznik zgadza się z liczbą folderów widoczną na GitHubie

@@ -145,6 +145,47 @@
     "index": "AI / Workflow",
     "title": "Praca z agentami AI",
     "subtitle": "Agenci (Claude Code, Cursor) piszą dużą część mojego kodu, ale to ja odpowiadam za to, co trafia na produkcję. Proces dopracowuję na kursie 10xDevs, a jego ślady są w publicznych repozytoriach.",
+    "proof": {
+      "lead": "Każda zmiana zostawia w repozytorium folder z dokumentacją. Kilka, które pokazują, jak to działa:",
+      "items": [
+        {
+          "project": "Root Keeper",
+          "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive/2026-09-22-production-data-safety",
+          "shows": "Zasady pracy na danych produkcyjnych (szyfrowane kopie, backup przed migracją) ustalone, zanim powstał pierwszy feature."
+        },
+        {
+          "project": "Root Keeper",
+          "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive/2026-10-01-restore-from-backup",
+          "shows": "Odtwarzanie z kopii jako przepływ testowany w CI, nie skrypt w szufladzie."
+        },
+        {
+          "project": "Root Keeper",
+          "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive/2026-10-02-testing-ownership-boundaries",
+          "shows": "Granice własności danych między kontami sprawdzane testami."
+        },
+        {
+          "project": "Root Keeper",
+          "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive/2026-10-22-e2e-in-ci",
+          "shows": "Playwright wpięty w pipeline przy każdym PR, nie odpalany ręcznie."
+        },
+        {
+          "project": "Domowy Skarbnik",
+          "url": "https://github.com/sebastian-kostecki/household-treasurer/tree/main/context/archive/2026-11-04-import-category-suggestions",
+          "shows": "Podpowiedzi kategorii przy imporcie jako logika domenowa (model, ADR, testy), nie tylko UI."
+        }
+      ],
+      "counterLabel": "Zarchiwizowane zmiany w dwóch publicznych repozytoriach",
+      "archiveLinks": [
+        {
+          "title": "Root Keeper: archiwum",
+          "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive"
+        },
+        {
+          "title": "Domowy Skarbnik: archiwum",
+          "url": "https://github.com/sebastian-kostecki/household-treasurer/tree/main/context/archive"
+        }
+      ]
+    },
     "steps": [
       {
         "title": "Kontekst przed kodem",
@@ -156,7 +197,7 @@
       },
       {
         "title": "Research, plan, wdrożenie",
-        "body": "Każda zmiana ma własny folder z researchem, planem i przeglądem implementacji. Po wdrożeniu trafia do archiwum.",
+        "body": "Zmiana dostaje własny folder z dokumentacją: najczęściej plan, przy większych także research i przegląd implementacji. Po wdrożeniu trafia do archiwum.",
         "link": {
           "title": "Archiwum zmian",
           "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive"
