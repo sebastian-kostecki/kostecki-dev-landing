@@ -137,9 +137,9 @@
     "index": "01 / About",
     "title": "Who I am",
     "paragraphs": [
-      "For {years:modulesGarden} I've been building PHP backends, mostly Laravel. I work on PanelAlpha (at ModulesGarden), a platform that helps service companies automate WordPress management.",
-      "I like owning a feature from the backend layer through to working business logic — and when needed, I pick up the frontend (Vue.js). I work on a live product, so I care about code that actually works for customers.",
-      "After hours I build two products of my own that run in production, Domowy Skarbnik and Root Keeper, on my own VPS behind Traefik. Outside of code — family and time outdoors."
+      "For {years:modulesGarden} I've been building PHP backends, mostly Laravel, and working on PanelAlpha (at ModulesGarden), a platform that helps service companies automate WordPress management. I've always wanted to program and build things of my own: I like technology and solving problems.",
+      "I like owning a feature from the backend layer through to working business logic — and when needed, I pick up the frontend (Vue.js). In working with others I value directness. I take responsibility for a task and see it through to the end; I work on a live product, so I care about code that actually works for customers.",
+      "I live in Lublin. After hours I build two products of my own that run in production, Domowy Skarbnik and Root Keeper, on my own VPS behind Traefik. I keep learning to work with AI: I read, test tools and take part in courses (10xDevs among them). Outside of code — family, walks and the mountains, working outdoors, and a good book."
     ]
   },
   "aiWorkflow": {

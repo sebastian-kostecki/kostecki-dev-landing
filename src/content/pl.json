@@ -137,9 +137,9 @@
     "index": "01 / O mnie",
     "title": "Kim jestem",
     "paragraphs": [
-      "Od {since:modulesGarden} buduję backend w PHP — głównie Laravel. Rozwijam platformę PanelAlpha (w ModulesGarden), która firmom usługowym umożliwia automatyzację zarządzania WordPress.",
-      "Lubię przejąć feature i dowieźć go od warstwy backendowej po działającą logikę — a gdy potrzeba, wchodzę we frontend (Vue.js). Pracuję na żywym produkcie, więc liczy się dla mnie kod, który faktycznie działa u klientów.",
-      "Po godzinach rozwijam dwa własne produkty działające na produkcji, Domowy Skarbnik i Root Keeper, na własnym VPS-ie za Traefikiem. Poza kodem — rodzina i wypoczynek na świeżym powietrzu."
+      "Od {since:modulesGarden} buduję backend w PHP — głównie Laravel — i rozwijam platformę PanelAlpha (w ModulesGarden), która firmom usługowym umożliwia automatyzację zarządzania WordPress. Zawsze chciałem programować i tworzyć coś własnego: lubię technologie i rozwiązywanie problemów.",
+      "Lubię przejąć feature i dowieźć go od warstwy backendowej po działającą logikę — a gdy potrzeba, wchodzę we frontend (Vue.js). W kontaktach cenię konkret. Biorę odpowiedzialność za zadanie i doprowadzam je do końca; pracuję na żywym produkcie, więc liczy się dla mnie kod, który faktycznie działa u klientów.",
+      "Mieszkam w Lublinie. Po godzinach rozwijam dwa własne produkty działające na produkcji, Domowy Skarbnik i Root Keeper, na własnym VPS-ie za Traefikiem. Na bieżąco uczę się pracy z AI: czytam, testuję narzędzia i biorę udział w kursach (m.in. 10xDevs). Poza kodem — rodzina, spacery i góry, praca na świeżym powietrzu i dobra książka."
     ]
   },
   "aiWorkflow": {
