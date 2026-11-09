@@ -136,7 +136,7 @@
     "index": "01 / About",
     "title": "Who I am",
     "paragraphs": [
-      "For {years:modulesGarden} I've been building PHP backends — mostly Laravel — on a production B2B product. At ModulesGarden I work on PanelAlpha, a platform that helps service companies automate WordPress management.",
+      "For {years:modulesGarden} I've been building PHP backends, mostly Laravel. I work on PanelAlpha (at ModulesGarden), a platform that helps service companies automate WordPress management.",
       "I like owning a feature from the backend layer through to working business logic — and when needed, I pick up the frontend (Vue.js). I work on a live product, so I care about code that actually works for customers.",
       "After hours I build two products of my own that run in production, Domowy Skarbnik and Root Keeper, on my own VPS behind Traefik. Outside of code — family and time outdoors."
     ]
@@ -334,7 +334,7 @@
     "homeExperience": {
       "index": "02 / Experience",
       "title": "Experience",
-      "subtitle": "The scope of my work on PanelAlpha at ModulesGarden, including contributions to the open-source PanelAlpha Engine, and WHMCS modules."
+      "subtitle": "The scope of my work on PanelAlpha, including contributions to the open-source PanelAlpha Engine, and WHMCS modules for ModulesGarden."
     },
     "index": "01 / Projects",
     "title": "Selected projects",
