@@ -4,6 +4,8 @@
 
 Strona główna dostaje kolejność sekcji z `site-focus.md` p. 5: **Doświadczenie** (PanelAlpha z zakresem odpowiedzialności, PanelAlpha Engine jako punkt w tym zakresie, moduły WHMCS) przed sekcją AI, a **Własne produkty** (dwa teasery z linią „co udowadnia”) po niej. Sekcja Skills znika z home. Engine przestaje być osobną kartą na wszystkich stronach (home, `/projects`, `/cv`). Literały liczbowe znikają z pełnych kart produktów, a Skarbnik dostaje prawdziwy link do publicznego repo. Na `/skills` każda pozycja stacku podstawowego mówi, gdzie jest użyta. Zmiana obsługuje odbiorcę 1 (rekruter widzi zakres pracy) i 2 (tech lead dostaje linki do kodu), zgodnie z p. 4, 7 i 8.
 
+> **Addendum (2026-11-09, commit 687fcaa):** w trakcie fazy 1 zrezygnowano z linku „Commity skostecki” i dopiska „konto firmowe” przy punkcie Engine. Punkt zostaje jako tekst z kontekstem MCP. Pola `openSourceContribution.link`/`linkNote`, wzorzec linku zewnętrznego w `PanelAlphaFeature` oraz odpowiednie asercje w `experience.spec.ts` opisane niżej nie obowiązują; `site-focus.md` p. 4 odzwierciedla tę decyzję.
+
 ## Current State Analysis
 
 - `src/views/HomeView.vue:44-97`: kolejność to O mnie → `AiWorkflowSection` → „Wybrane realizacje komercyjne” (`PanelAlphaFeature compact` dla `featured` i `openSource`, `CommercialProjectGroup compact`, link `/projects`) → Skills (7 `SkillBadge`, link `/skills`) → CTA kontakt. Własnych produktów na home nie ma.
@@ -368,7 +370,7 @@ Nie dotyczy (statyczna treść, brak danych użytkowników). Wycofanie = revert 
 #### Manual
 
 - [x] 1.7 Na `/` sekcja „02 / Doświadczenie” stoi między O mnie a sekcją AI i pokazuje pełną kartę PanelAlpha z listą zakresu oraz grupę WHMCS z liczbą 5
-- [x] 1.8 Ostatni punkt zakresu to Engine z linkiem „Commity skostecki · konto firmowe”, który otwiera listę commitów `skostecki` w nowej karcie
+- [x] 1.8 Ostatni punkt zakresu to Engine (tekst + zdanie kontekstu o MCP, bez linku do commitów — patrz Addendum)
 - [x] 1.9 `/projects` nie ma osobnej karty Engine; `/cv` ma jedną pozycję PanelAlpha z punktem Engine, także w podglądzie wydruku — 90ef5f8
 - [x] 1.10 Układ czytelny przy 375 px (pełna karta PanelAlpha bez poziomego scrolla) — 90ef5f8
 

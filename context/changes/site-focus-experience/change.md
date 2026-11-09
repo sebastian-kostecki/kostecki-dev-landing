@@ -1,7 +1,7 @@
 ---
 change_id: site-focus-experience
 title: Sekcja Doświadczenie i produkty z teaserami projektów i skills „gdzie użyte”
-status: implemented
+status: impl_reviewed
 created: 2026-11-09
 updated: 2026-11-09
 archived_at: null

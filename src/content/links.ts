@@ -9,5 +9,5 @@ export function hostOf(url: string): string {
 }
 
 export function isRepo(url: string): boolean {
-  return url.includes('github.com')
+  return hostOf(url) === 'github.com'
 }

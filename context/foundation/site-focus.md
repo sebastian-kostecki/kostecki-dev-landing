@@ -122,8 +122,8 @@ Spoza gałęzi, nowe: prerender (B1). Lokalizacja w URL i `hreflang` (B2) odło�
   **(tylko po zgodzie pracodawcy; inaczej pomijamy).** Zgoda nadal czeka (p. 9), więc
   punkt nie jest pokazywany.
 - Wkład w open-source'owy PanelAlpha Engine: auto-deploy z git push, menedżer plików,
-  dyrektywy PHP per domena, statystyki transferu. Link „Commity skostecki” z dopiskiem
-  „konto firmowe”. Jedno zdanie kontekstu: platforma, którą agenci AI operują przez MCP.
+  dyrektywy PHP per domena, statystyki transferu. Bez osobnego linku do commitów (p. 4).
+  Jedno zdanie kontekstu: platforma, którą agenci AI operują przez MCP.
 
 ### Praca z agentami AI
 
