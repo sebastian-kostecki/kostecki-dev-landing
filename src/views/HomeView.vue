@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { ArrowRight } from '@lucide/vue'
+import HeroIntro from '@/components/hero/HeroIntro.vue'
+import DuotonePhoto from '@/components/hero/DuotonePhoto.vue'
+import SummaryPanel from '@/components/ui/SummaryPanel.vue'
 import SectionHeading from '@/components/ui/SectionHeading.vue'
 import PanelAlphaFeature from '@/components/ui/PanelAlphaFeature.vue'
 import CommercialProjectGroup from '@/components/ui/CommercialProjectGroup.vue'
@@ -16,46 +19,11 @@ const content = useContent()
       <div aria-hidden="true" class="gradient-hero absolute inset-0" />
       <div aria-hidden="true" class="grid-lines absolute inset-0" />
 
-      <div class="relative mx-auto max-w-6xl px-4 pt-24 pb-24 sm:px-6 sm:pt-32 lg:px-8 lg:pt-40">
-        <div class="max-w-3xl">
-          <div class="flex items-center gap-3">
-            <span class="h-1.5 w-1.5 rounded-full bg-primary" />
-            <p class="font-mono text-xs tracking-[0.3em] text-primary uppercase">
-              {{ content.hero.label }}
-            </p>
-          </div>
-
-          <h1
-            class="mt-6 font-mono text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl"
-          >
-            {{ content.hero.name }}
-          </h1>
-
-          <p
-            class="mt-6 font-mono text-2xl leading-tight font-semibold tracking-tight text-foreground sm:text-3xl"
-          >
-            {{ content.hero.valueProp }}
-            <br />
-            <span class="text-gradient">{{ content.hero.valuePropAccent }}</span>
-          </p>
-
-          <p
-            v-if="content.hero.subtitle"
-            class="mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground"
-          >
-            {{ content.hero.subtitle }}
-          </p>
-
-          <div class="mt-9 flex flex-wrap items-center gap-3">
-            <RouterLink to="/contact" class="btn-primary">
-              {{ content.hero.ctaPrimary.label }}
-              <ArrowRight class="h-4 w-4" />
-            </RouterLink>
-            <RouterLink to="/projects" class="btn-secondary">
-              {{ content.ui.viewMyWork }}
-            </RouterLink>
-          </div>
-        </div>
+      <div
+        class="relative mx-auto grid max-w-6xl items-center gap-12 px-4 pt-24 pb-24 sm:px-6 sm:pt-32 lg:grid-cols-[minmax(0,1fr)_minmax(0,30rem)] lg:px-8 lg:pt-40"
+      >
+        <HeroIntro />
+        <SummaryPanel />
       </div>
     </section>
 
@@ -63,6 +31,9 @@ const content = useContent()
       <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-12">
         <div class="lg:col-span-4">
           <SectionHeading :index="content.about.index" :title="content.about.title" />
+          <div class="corner-frame mx-3 max-w-[11rem] sm:max-w-[15rem]">
+            <DuotonePhoto :placeholder-label="content.ui.photoPlaceholder" />
+          </div>
         </div>
         <div class="space-y-5 text-base leading-relaxed text-muted-foreground lg:col-span-8">
           <p v-for="(paragraph, i) in content.about.paragraphs" :key="i">{{ paragraph }}</p>

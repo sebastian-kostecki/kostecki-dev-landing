@@ -29,7 +29,7 @@
   "ui": {
     "skipToContent": "Przejdź do treści",
     "languageLabel": "Język",
-    "downloadCv": "Pobierz CV",
+    "downloadCv": "CV",
     "expand": "Rozwiń",
     "collapse": "Zwiń",
     "homeLabel": "Strona główna",
@@ -41,7 +41,6 @@
     "closeMenu": "Zamknij menu",
     "seeAllProjects": "Zobacz wszystkie projekty",
     "exploreAllSkills": "Zobacz wszystkie umiejętności",
-    "viewMyWork": "Zobacz projekty",
     "liveDemo": "Demo",
     "sourceCode": "Kod źródłowy",
     "backHome": "Strona główna",
@@ -50,8 +49,9 @@
     "brandName": "kostecki.dev",
     "footerTagline": "Backend Developer (Laravel) — API, integracje i automatyzacja infrastruktury.",
     "footerStack": "Laravel · PHP · Docker",
-    "siteSource": "Kod strony",
-    "featuredProjectLabel": "Projekt własny na produkcji"
+    "siteSource": "Źródło",
+    "featuredProjectLabel": "Projekt własny na produkcji",
+    "photoPlaceholder": "Zdjęcie"
   },
   "nav": [
     {
@@ -76,22 +76,52 @@
     }
   ],
   "hero": {
-    "label": "Backend Developer / Laravel",
+    "label": "Backend Developer / PHP · Laravel",
     "name": "Sebastian Kostecki",
-    "valueProp": "Buduję i rozwijam",
-    "valuePropAccent": "produkcyjne aplikacje backendowe w PHP.",
-    "subtitle": "Rozwijam platformy B2B, integracje API oraz automatyzację infrastruktury i WordPress.",
+    "valueProp": "Od {since:modulesGarden} rozwijam produkcyjny produkt B2B:",
+    "valuePropAccent": "PanelAlpha w ModulesGarden.",
+    "subtitle": "Integracje z panelami hostingowymi, moduły WHMCS, feature od modelu danych po działającą logikę u klienta. Kod piszę z agentami AI, w procesie z testami i review, który ma publiczne dowody.",
     "ctaPrimary": {
       "label": "Porozmawiajmy",
       "href": "/contact"
     }
+  },
+  "summary": {
+    "title": "W skrócie",
+    "items": [
+      {
+        "label": "Rola",
+        "value": "Backend Developer (PHP / Laravel), ModulesGarden"
+      },
+      {
+        "label": "Doświadczenie",
+        "value": "{years:modulesGarden} komercyjnie, w tym {years:panelAlpha} przy PanelAlpha"
+      },
+      {
+        "label": "Stack",
+        "value": "PHP 8.5 · Laravel 13 · PostgreSQL / MySQL · Vue / React · Docker"
+      },
+      {
+        "label": "Na produkcji",
+        "value": "PanelAlpha (B2B) oraz 2 własne produkty na własnym VPS-ie"
+      },
+      {
+        "label": "Praca z AI",
+        "value": "Claude Code i MCP, proces z testami i review"
+      },
+      {
+        "label": "Kontakt",
+        "value": "kontakt@kostecki.dev",
+        "href": "mailto:kontakt@kostecki.dev"
+      }
+    ]
   },
   "cv": {
     "href": ""
   },
   "about": {
     "index": "01 / O mnie",
-    "title": "Jak pracuję",
+    "title": "Kim jestem",
     "paragraphs": [
       "Od {since:modulesGarden} buduję backend w PHP — głównie Laravel — w produkcyjnym produkcie B2B. Pracuję w ModulesGarden nad platformą PanelAlpha, która firmom usługowym umożliwia automatyzację zarządzania WordPress.",
       "Lubię przejąć feature i dowieźć go od warstwy backendowej po działającą logikę — a gdy potrzeba, wchodzę we frontend (Vue.js). Pracuję na żywym produkcie, więc liczy się dla mnie kod, który faktycznie działa u klientów.",

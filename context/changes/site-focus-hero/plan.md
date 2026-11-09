@@ -433,34 +433,34 @@ Brak danych do migracji. Wycofanie: revert commitów faz; fazy są niezależnie 
 
 #### Automated
 
-- [x] 1.1 Testy staży i treści przechodzą: `pnpm test`
-- [x] 1.2 Type-check przechodzi (łącznie z plikami testów): `pnpm type-check`
-- [x] 1.3 Lint przechodzi: `pnpm lint`
-- [x] 1.4 Build przechodzi: `pnpm build`
+- [x] 1.1 Testy staży i treści przechodzą: `pnpm test` — f65297f
+- [x] 1.2 Type-check przechodzi (łącznie z plikami testów): `pnpm type-check` — f65297f
+- [x] 1.3 Lint przechodzi: `pnpm lint` — f65297f
+- [x] 1.4 Build przechodzi: `pnpm build` — f65297f
 
 #### Manual
 
-- [x] 1.5 Strona główna (PL i EN) pokazuje w O mnie „Od 4 lat” / „For 4 years”, a karta PanelAlpha „3,5 roku” / „3.5 years”
+- [x] 1.5 Strona główna (PL i EN) pokazuje w O mnie „Od 4 lat” / „For 4 years”, a karta PanelAlpha „3,5 roku” / „3.5 years” — f65297f
 
 ### Phase 2: Hero, panel „W skrócie”, O mnie, stopka
 
 #### Automated
 
-- [ ] 2.1 Testy (w tym spójność kluczy i brak nierozwiązanych tokenów po dodaniu `summary` i hero): `pnpm test`
-- [ ] 2.2 Type-check przechodzi: `pnpm type-check`
-- [ ] 2.3 Lint przechodzi: `pnpm lint`
-- [ ] 2.4 Build przechodzi: `pnpm build`
-- [ ] 2.5 Brak odwołań do usuniętego pola: `grep -rn viewMyWork src` nic nie zwraca
+- [x] 2.1 Testy (w tym spójność kluczy i brak nierozwiązanych tokenów po dodaniu `summary` i hero): `pnpm test`
+- [x] 2.2 Type-check przechodzi: `pnpm type-check`
+- [x] 2.3 Lint przechodzi: `pnpm lint`
+- [x] 2.4 Build przechodzi: `pnpm build`
+- [x] 2.5 Brak odwołań do usuniętego pola: `grep -rn viewMyWork src` nic nie zwraca
 
 #### Manual
 
-- [ ] 2.6 Desktop (≥1024 px): hero w dwóch kolumnach, panel po prawej, sześć wierszy w jednej kolumnie, nagłówek łamie się czytelnie
-- [ ] 2.7 Mobile (375 px): panel pod tekstem hero, wiersze w jednej kolumnie, bez poziomego scrolla
-- [ ] 2.8 Hero PL: „Od 4 lat rozwijam produkcyjny produkt B2B: PanelAlpha w ModulesGarden.”; EN: „For 4 years I've been building…”
-- [ ] 2.9 W hero widoczny tylko przycisk „Porozmawiajmy” (CV ukryte do fazy 3)
-- [ ] 2.10 Panel: wiersz Kontakt jest linkiem `mailto:`, Doświadczenie pokazuje „4 lata komercyjnie, w tym 3,5 roku przy PanelAlpha”
-- [ ] 2.11 O mnie: index „01 / O mnie” / „01 / About”, tytuł „Kim jestem” / „Who I am”, placeholder z podpisem „Zdjęcie” / „Photo” w ramce
-- [ ] 2.12 Stopka: „Źródło” / „Source” prowadzi do publicznego repo
+- [x] 2.6 Desktop (≥1024 px): hero w dwóch kolumnach, panel po prawej, sześć wierszy w jednej kolumnie, nagłówek łamie się czytelnie
+- [x] 2.7 Mobile (375 px): panel pod tekstem hero, wiersze w jednej kolumnie, bez poziomego scrolla
+- [x] 2.8 Hero PL: „Od 4 lat rozwijam produkcyjny produkt B2B: PanelAlpha w ModulesGarden.”; EN: „For 4 years I've been building…”
+- [x] 2.9 W hero widoczny tylko przycisk „Porozmawiajmy” (CV ukryte do fazy 3)
+- [x] 2.10 Panel: wiersz Kontakt jest linkiem `mailto:`, Doświadczenie pokazuje „4 lata komercyjnie, w tym 3,5 roku przy PanelAlpha”
+- [x] 2.11 O mnie: index „01 / O mnie” / „01 / About”, tytuł „Kim jestem” / „Who I am”, placeholder z podpisem „Zdjęcie” / „Photo” w ramce
+- [x] 2.12 Stopka: „Źródło” / „Source” prowadzi do publicznego repo
 
 ### Phase 3: Strona `/cv`
 

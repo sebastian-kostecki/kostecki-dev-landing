@@ -29,7 +29,7 @@
   "ui": {
     "skipToContent": "Skip to content",
     "languageLabel": "Language",
-    "downloadCv": "Download CV",
+    "downloadCv": "CV",
     "expand": "Expand",
     "collapse": "Collapse",
     "homeLabel": "Home",
@@ -41,7 +41,6 @@
     "closeMenu": "Close menu",
     "seeAllProjects": "See all projects",
     "exploreAllSkills": "Explore all skills",
-    "viewMyWork": "View my work",
     "liveDemo": "Live demo",
     "sourceCode": "Source",
     "backHome": "Go home",
@@ -50,8 +49,9 @@
     "brandName": "kostecki.dev",
     "footerTagline": "PHP & Laravel backend developer — APIs, integrations and infrastructure automation.",
     "footerStack": "Laravel · PHP · Docker",
-    "siteSource": "Site source",
-    "featuredProjectLabel": "Personal project in production"
+    "siteSource": "Source",
+    "featuredProjectLabel": "Personal project in production",
+    "photoPlaceholder": "Photo"
   },
   "nav": [
     {
@@ -76,22 +76,52 @@
     }
   ],
   "hero": {
-    "label": "Backend Developer / Laravel",
+    "label": "Backend Developer / PHP · Laravel",
     "name": "Sebastian Kostecki",
-    "valueProp": "I build and maintain",
-    "valuePropAccent": "production PHP backends.",
-    "subtitle": "I develop B2B platforms, API integrations, and infrastructure and WordPress automation.",
+    "valueProp": "For {years:modulesGarden} I've been building a production B2B product:",
+    "valuePropAccent": "PanelAlpha at ModulesGarden.",
+    "subtitle": "Hosting control panel integrations, WHMCS modules, features from the data model to logic running for customers. I write code with AI agents, in a process with tests and review that leaves public evidence.",
     "ctaPrimary": {
       "label": "Let's talk",
       "href": "/contact"
     }
+  },
+  "summary": {
+    "title": "At a glance",
+    "items": [
+      {
+        "label": "Role",
+        "value": "Backend Developer (PHP / Laravel), ModulesGarden"
+      },
+      {
+        "label": "Experience",
+        "value": "{years:modulesGarden} commercially, {years:panelAlpha} of it on PanelAlpha"
+      },
+      {
+        "label": "Stack",
+        "value": "PHP 8.5 · Laravel 13 · PostgreSQL / MySQL · Vue / React · Docker"
+      },
+      {
+        "label": "In production",
+        "value": "PanelAlpha (B2B) and 2 products of my own on my own VPS"
+      },
+      {
+        "label": "AI workflow",
+        "value": "Claude Code and MCP, a process with tests and review"
+      },
+      {
+        "label": "Contact",
+        "value": "kontakt@kostecki.dev",
+        "href": "mailto:kontakt@kostecki.dev"
+      }
+    ]
   },
   "cv": {
     "href": ""
   },
   "about": {
     "index": "01 / About",
-    "title": "How I work",
+    "title": "Who I am",
     "paragraphs": [
       "For {years:modulesGarden} I've been building PHP backends — mostly Laravel — on a production B2B product. At ModulesGarden I work on PanelAlpha, a platform that helps service companies automate WordPress management.",
       "I like owning a feature from the backend layer through to working business logic — and when needed, I pick up the frontend (Vue.js). I work on a live product, so I care about code that actually works for customers.",

@@ -112,6 +112,13 @@ export interface SocialLink {
   icon: string
 }
 
+export interface SummaryItem {
+  label: string
+  value: string
+  /** Wiersz z linkiem jest pomijany na `/cv` (`CvView` filtruje `!item.href`; kontakt pokazuje osobno). */
+  href?: string
+}
+
 export interface RouteMetaCopy {
   title: string
   description: string
@@ -145,10 +152,10 @@ export interface SiteContent {
     closeMenu: string
     seeAllProjects: string
     exploreAllSkills: string
-    viewMyWork: string
     liveDemo: string
     sourceCode: string
     siteSource: string
+    photoPlaceholder: string
     featuredProjectLabel: string
     backHome: string
     notFoundTitle: string
@@ -165,6 +172,10 @@ export interface SiteContent {
     valuePropAccent: string
     subtitle?: string
     ctaPrimary: CtaLink
+  }
+  summary: {
+    title: string
+    items: SummaryItem[]
   }
   cv: {
     href: string
