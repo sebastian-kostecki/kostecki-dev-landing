@@ -81,15 +81,15 @@ machine-readability are.
   always Polish regardless of what the visitor would see.
   Direction: URL-based locale (`/en/...`), `hreflang` alternates, per-locale OG.
 - [ ] **B3. Sitemap lists only `/`** with `lastmod 2026-05-31`; subpages missing.
-- [ ] **B4. Unknown paths return HTTP 200** (SPA fallback). Should be 404 for the
+- [x] **B4. Unknown paths return HTTP 200** *Done 2026-11-09 (change `site-prerender`): nginx serves prerendered routes with 200 and everything else with 404 and the app's not-found view; checked by `scripts/check-nginx.sh`.* (SPA fallback). Should be 404 for the
   not-found view (needs prerendering or server-side route list in nginx).
 - [ ] **B5. No structured data.** No JSON-LD (`Person`, `WebSite`), no `llms.txt`.
-- [ ] **B6. OG locale alternates duplicated**: `og:locale:alternate` lists both `en_US`
+- [x] **B6. OG locale alternates duplicated** *Done 2026-11-09: single `og:locale:alternate` generated from pageMeta.* `og:locale:alternate` listed both `en_US`
   and `pl_PL` while `og:locale` is already `pl_PL`.
 
 ### C. UX
 
-- [ ] **C1. Header hidden on home until scroll (desktop).** `SiteHeader.vue` only shows
+- [x] **C1. Header hidden on home until scroll (desktop).** *Done 2026-11-09: header visible on `/` from first paint, becomes solid after 80px scroll.* `SiteHeader.vue` only shows
   the fixed header after 80px scroll on `/`. First-time visitors see no navigation and no
   language switcher above the fold.
   Direction: show the header immediately; keep the blur/border transition on scroll.
@@ -106,17 +106,17 @@ machine-readability are.
 
 ### D. Technical / infra
 
-- [ ] **D1. Icons fetched at runtime** from `api.iconify.design` (`@iconify/vue`
+- [x] **D1. Icons fetched at runtime** *Done 2026-11-09: icons come from `src/generated/icons.json`, no requests to api.iconify.design.* from `api.iconify.design` (`@iconify/vue`
   default). Icons disappear with ad blockers or offline; adds a third-party request.
   Direction: bundle the used `simple-icons` set locally or inline SVGs.
-- [ ] **D2. Google Fonts loaded from Google.** Privacy (EU) and extra DNS/TLS round
+- [x] **D2. Google Fonts loaded from Google.** *Done 2026-11-09: `@fontsource-variable` fonts self-hosted.* Privacy (EU) and extra DNS/TLS round
   trips. Direction: self-host JetBrains Mono and Work Sans (woff2, subset).
-- [ ] **D3. No security headers.** Live response has no `Strict-Transport-Security`,
+- [x] **D3. No security headers.** *Done 2026-11-09: six security headers incl. CSP in `docker/nginx.conf`, verified by `scripts/check-nginx.sh`.* Live response has no `Strict-Transport-Security`,
   `Content-Security-Policy`, `X-Content-Type-Options`, `X-Frame-Options`,
   `Referrer-Policy`, `Permissions-Policy`. Add in `docker/nginx.conf` (or Cloudflare).
 - [ ] **D4. No analytics / no way to learn what visitors do.** Consider a privacy-
   friendly counter (Plausible/Umami) if measurement is wanted.
-- [ ] **D5. Repo hygiene.** `README.md` is still the Vite scaffold text; no CLAUDE.md /
+- [x] **D5. Repo hygiene.** *Done 2026-11-09: README rewritten for this project.* `README.md` is still the Vite scaffold text; no CLAUDE.md /
   AGENTS.md describes content conventions for agents (this file partly fills that gap).
   Direction: replace the README with project-specific notes and link this audit.
 

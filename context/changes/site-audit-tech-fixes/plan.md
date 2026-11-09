@@ -357,23 +357,23 @@ Fonty z własnej domeny usuwają dwa połączenia DNS/TLS do Google. Pakiety `@f
 
 #### Automated
 
-- [x] 3.1 `scripts/check-nginx.sh` nie przechodzi przed zmianą w `docker/nginx.conf` i przechodzi po niej: `pnpm build && pnpm check:nginx`
-- [x] 3.2 Linting passes: `pnpm lint`
-- [x] 3.3 Testy dalej przechodzą: `pnpm test`
+- [x] 3.1 `scripts/check-nginx.sh` nie przechodzi przed zmianą w `docker/nginx.conf` i przechodzi po niej: `pnpm build && pnpm check:nginx` — e62ead4
+- [x] 3.2 Linting passes: `pnpm lint` — e62ead4
+- [x] 3.3 Testy dalej przechodzą: `pnpm test` — e62ead4
 
 #### Manual
 
-- [x] 3.4 Na kontenerze lokalnym: wszystkie trasy i `/nie-ma` bez naruszeń CSP w konsoli; ikony, fonty, style i przełącznik języka działają
+- [x] 3.4 Na kontenerze lokalnym: wszystkie trasy i `/nie-ma` bez naruszeń CSP w konsoli; ikony, fonty, style i przełącznik języka działają — e62ead4
 - [ ] 3.5 Po deployu przez repo infra: `curl -sI` na `/` i `/nie-ma` pokazuje sześć nagłówków; securityheaders.com co najmniej A
 
 ### Phase 4: README i audyt (D5)
 
 #### Automated
 
-- [ ] 4.1 Każda komenda `pnpm <x>` z README istnieje w `package.json`
-- [ ] 4.2 Każda ścieżka plików z README istnieje w repo
-- [ ] 4.3 Pozycje B4, B6, C1, D1, D2, D3, D5 w audycie są `[x]`
+- [x] 4.1 Każda komenda `pnpm <x>` z README istnieje w `package.json`
+- [x] 4.2 Każda ścieżka plików z README istnieje w repo
+- [x] 4.3 Pozycje B4, B6, C1, D1, D2, D3, D5 w audycie są `[x]`
 
 #### Manual
 
-- [ ] 4.4 README czyta się jako opis tego projektu; wiadomo z niego, jak zbudować, przetestować i sprawdzić nginx
+- [x] 4.4 README czyta się jako opis tego projektu; wiadomo z niego, jak zbudować, przetestować i sprawdzić nginx
