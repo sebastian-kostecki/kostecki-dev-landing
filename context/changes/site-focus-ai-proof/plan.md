@@ -306,15 +306,15 @@ Brak danych do migracji. Pierwszy deploy po zmianie: `git pull` na VPS przyniesi
 
 #### Automated
 
-- [x] 2.1 Testy treści i parytet locale przechodzą: `pnpm test`
-- [x] 2.2 Type-check przechodzi: `pnpm type-check`
-- [x] 2.3 Lint przechodzi: `pnpm lint`
-- [x] 2.4 `pnpm build` przechodzi, a strażnik nie zgłasza brakujących folderów dla pięciu pozycji
-- [x] 2.5 Celowa literówka w URL-u przerywa `pnpm generate:archive` z nazwą folderu
+- [x] 2.1 Testy treści i parytet locale przechodzą: `pnpm test` — 5f41af5
+- [x] 2.2 Type-check przechodzi: `pnpm type-check` — 5f41af5
+- [x] 2.3 Lint przechodzi: `pnpm lint` — 5f41af5
+- [x] 2.4 `pnpm build` przechodzi, a strażnik nie zgłasza brakujących folderów dla pięciu pozycji — 5f41af5
+- [x] 2.5 Celowa literówka w URL-u przerywa `pnpm generate:archive` z nazwą folderu — 5f41af5
 
 #### Manual
 
-- [x] 2.6 Na `/` w PL i EN sekcja pokazuje lead, 5 pozycji bez dat, licznik z linkami, 4 kroki, zamknięcie
-- [x] 2.7 Każdy z 5 linków i oba linki archiwów otwierają właściwy folder na GitHubie
-- [x] 2.8 Układ czytelny na telefonie i desktopie, bez poziomego scrolla, spójny z ciemnym motywem
-- [x] 2.9 Licznik zgadza się z liczbą folderów widoczną na GitHubie
+- [x] 2.6 Na `/` w PL i EN sekcja pokazuje lead, 5 pozycji bez dat, licznik z linkami, 4 kroki, zamknięcie — 5f41af5
+- [x] 2.7 Każdy z 5 linków i oba linki archiwów otwierają właściwy folder na GitHubie — 5f41af5
+- [x] 2.8 Układ czytelny na telefonie i desktopie, bez poziomego scrolla, spójny z ciemnym motywem — 5f41af5
+- [x] 2.9 Licznik zgadza się z liczbą folderów widoczną na GitHubie — 5f41af5
