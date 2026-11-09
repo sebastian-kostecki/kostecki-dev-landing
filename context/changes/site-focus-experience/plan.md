@@ -393,13 +393,13 @@ Nie dotyczy (statyczna treść, brak danych użytkowników). Wycofanie = revert 
 
 #### Automated
 
-- [x] 3.1 Test treści skills nie przechodzi przed dodaniem `usedIn` i przechodzi po nim: `pnpm test skills`
-- [x] 3.2 Wszystkie testy przechodzą: `pnpm test`
-- [x] 3.3 Sprawdzenie typów przechodzi: `pnpm type-check`
-- [x] 3.4 Lint przechodzi: `pnpm lint`
-- [x] 3.5 Build przechodzi: `pnpm build`
+- [x] 3.1 Test treści skills nie przechodzi przed dodaniem `usedIn` i przechodzi po nim: `pnpm test skills` — e7e1f67
+- [x] 3.2 Wszystkie testy przechodzą: `pnpm test` — e7e1f67
+- [x] 3.3 Sprawdzenie typów przechodzi: `pnpm type-check` — e7e1f67
+- [x] 3.4 Lint przechodzi: `pnpm lint` — e7e1f67
+- [x] 3.5 Build przechodzi: `pnpm build` — e7e1f67
 
 #### Manual
 
-- [x] 3.6 Na `/skills` każda z 7 pozycji stacku podstawowego pokazuje linię „gdzie użyte” pod poziomem, w PL i EN
-- [x] 3.7 `site-focus.md` p. 7 i p. 11 zgadzają się z tym, co widać na stronie
+- [x] 3.6 Na `/skills` każda z 7 pozycji stacku podstawowego pokazuje linię „gdzie użyte” pod poziomem, w PL i EN — e7e1f67
+- [x] 3.7 `site-focus.md` p. 7 i p. 11 zgadzają się z tym, co widać na stronie — e7e1f67
