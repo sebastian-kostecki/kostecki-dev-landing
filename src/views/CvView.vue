@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { Printer } from '@lucide/vue'
 import { useContent } from '@/composables/useContent'
+import { hostOf } from '@/content/links'
 
 const content = useContent()
 
@@ -11,15 +12,6 @@ const products = computed(() =>
   content.value.projects.personal.items.filter((project) => project.featured),
 )
 const contacts = computed(() => content.value.contact.methods)
-
-function hostOf(url: string) {
-  try {
-    return new URL(url).host
-  } catch (error) {
-    console.error(`CvView: invalid project link "${url}"`, error)
-    return url
-  }
-}
 
 function printCv() {
   window.print()

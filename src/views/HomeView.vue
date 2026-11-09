@@ -6,11 +6,16 @@ import SummaryPanel from '@/components/ui/SummaryPanel.vue'
 import SectionHeading from '@/components/ui/SectionHeading.vue'
 import PanelAlphaFeature from '@/components/ui/PanelAlphaFeature.vue'
 import CommercialProjectGroup from '@/components/ui/CommercialProjectGroup.vue'
-import SkillBadge from '@/components/ui/SkillBadge.vue'
+import ProductTeaser from '@/components/ui/ProductTeaser.vue'
 import AiWorkflowSection from '@/components/ui/AiWorkflowSection.vue'
+import { computed } from 'vue'
 import { useContent } from '@/composables/useContent'
 
 const content = useContent()
+
+const featuredPersonal = computed(() =>
+  content.value.projects.personal.items.filter((project) => project.featured),
+)
 </script>
 
 <template>
@@ -60,26 +65,23 @@ const content = useContent()
     <section class="px-4 py-24 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-6xl">
         <SectionHeading
-          :index="content.skills.index"
-          :title="content.skills.coreTitle"
-          :subtitle="content.skills.coreDescription"
+          :index="content.projects.homeProducts.index"
+          :title="content.projects.homeProducts.title"
+          :subtitle="content.projects.homeProducts.subtitle"
         />
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <SkillBadge
-            v-for="skill in content.skills.core"
-            :key="skill.name"
-            :name="skill.name"
-            :icon="skill.icon"
-            :image="skill.image"
-            :level="skill.level"
+        <div class="grid gap-5 md:grid-cols-2">
+          <ProductTeaser
+            v-for="project in featuredPersonal"
+            :key="project.title"
+            :project="project"
           />
         </div>
         <div class="mt-10">
           <RouterLink
-            to="/skills"
+            to="/projects"
             class="inline-flex items-center gap-2 font-mono text-sm font-semibold text-primary transition-colors hover:text-primary-glow"
           >
-            {{ content.ui.exploreAllSkills }}
+            {{ content.ui.seeAllProjects }}
             <ArrowRight class="h-4 w-4" />
           </RouterLink>
         </div>

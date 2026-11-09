@@ -40,6 +40,8 @@ export interface Project {
   highlights?: string[]
   /** Short note shown next to the links, e.g. that the repository is private. */
   note?: string
+  /** One sentence without numbers, rendered in the teaser on the home page. */
+  proves?: string
   tags: string[]
   links: ProjectLink[]
 }
@@ -183,12 +185,12 @@ export interface SiteContent {
     openMenu: string
     closeMenu: string
     seeAllProjects: string
-    exploreAllSkills: string
     liveDemo: string
     sourceCode: string
     siteSource: string
     photoPlaceholder: string
     featuredProjectLabel: string
+    provesLabel: string
     backHome: string
     notFoundTitle: string
     notFoundBody: string
@@ -230,6 +232,11 @@ export interface SiteContent {
   }
   projects: {
     homeExperience: {
+      index: string
+      title: string
+      subtitle: string
+    }
+    homeProducts: {
       index: string
       title: string
       subtitle: string

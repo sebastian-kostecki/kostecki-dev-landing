@@ -44,7 +44,6 @@
     "openMenu": "Otwórz menu",
     "closeMenu": "Zamknij menu",
     "seeAllProjects": "Zobacz wszystkie projekty",
-    "exploreAllSkills": "Zobacz wszystkie umiejętności",
     "liveDemo": "Demo",
     "sourceCode": "Kod źródłowy",
     "backHome": "Strona główna",
@@ -55,6 +54,7 @@
     "footerStack": "Laravel · PHP · Docker",
     "siteSource": "Źródło",
     "featuredProjectLabel": "Projekt własny na produkcji",
+    "provesLabel": "Udowadnia",
     "photoPlaceholder": "Zdjęcie"
   },
   "nav": [
@@ -408,19 +408,23 @@
           "featured": true,
           "highlights": [
             "Kwoty w groszach jako liczby całkowite, nigdy float",
-            "14 decyzji architektonicznych (ADR), słownik domeny i CHANGELOG",
-            "Ponad 130 plików testów Pest, CI na GitHub Actions, ponad 40 PR-ów",
+            "Decyzje architektoniczne (ADR), słownik domeny i CHANGELOG",
+            "Testy Pest uruchamiane w CI na GitHub Actions",
             "Własny design system i wdrożenie na VPS za Traefikiem"
           ],
-          "note": "Repozytorium prywatne, kod pokażę na rozmowie",
           "tags": ["Laravel 13", "PHP 8.5", "PostgreSQL", "Vue 3", "TypeScript", "Inertia", "Pest"],
           "links": [
             {
               "title": "Wersja live",
               "url": "https://treasurer.kostecki.dev",
               "primary": true
+            },
+            {
+              "title": "GitHub",
+              "url": "https://github.com/sebastian-kostecki/household-treasurer"
             }
-          ]
+          ],
+          "proves": "Laravel 13 + PostgreSQL + Inertia od zera do produkcji, z ADR, changelogiem i testami Pest w CI."
         },
         {
           "title": "Root Keeper",
@@ -432,7 +436,7 @@
             "Daty częściowe jak w aktach: sam rok lub miesiąc, „około”, miesiące słownie i cyframi rzymskimi",
             "Reguły relacji pilnowane na serwerze: najwyżej dwoje rodziców, brak cykli",
             "Logowanie hasłem lub kluczem dostępu (passkey)",
-            "4 workflowy CI: lint, Larastan 7, testy Pest i e2e w Playwright; ponad 600 commitów"
+            "Workflowy CI: lint, Larastan 7, testy Pest i e2e w Playwright"
           ],
           "tags": [
             "Laravel 13",
@@ -453,7 +457,8 @@
               "title": "GitHub",
               "url": "https://github.com/sebastian-kostecki/root-keeper"
             }
-          ]
+          ],
+          "proves": "Ten sam backend z innym frontendem (React 19 + TypeScript), pipeline'y CI: lint, Larastan, Pest, Playwright e2e."
         },
         {
           "title": "Menu Maker",
@@ -501,6 +506,11 @@
           ]
         }
       ]
+    },
+    "homeProducts": {
+      "index": "03 / Własne produkty",
+      "title": "Własne produkty na produkcji",
+      "subtitle": "Produkty, które buduję po godzinach i utrzymuję na własnym VPS-ie. Pełne opisy na stronie projektów."
     }
   },
   "contact": {

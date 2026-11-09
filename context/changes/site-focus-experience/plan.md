@@ -376,18 +376,18 @@ Nie dotyczy (statyczna treść, brak danych użytkowników). Wycofanie = revert 
 
 #### Automated
 
-- [ ] 2.1 Test treści produktów nie przechodzi przed zmianą treści i przechodzi po niej: `pnpm test products`
-- [ ] 2.2 Wszystkie testy przechodzą: `pnpm test`
-- [ ] 2.3 Sprawdzenie typów przechodzi: `pnpm type-check`
-- [ ] 2.4 Lint przechodzi: `pnpm lint`
-- [ ] 2.5 Build przechodzi: `pnpm build`
+- [x] 2.1 Test treści produktów nie przechodzi przed zmianą treści i przechodzi po niej: `pnpm test products`
+- [x] 2.2 Wszystkie testy przechodzą: `pnpm test`
+- [x] 2.3 Sprawdzenie typów przechodzi: `pnpm type-check`
+- [x] 2.4 Lint przechodzi: `pnpm lint`
+- [x] 2.5 Build przechodzi: `pnpm build`
 
 #### Manual
 
-- [ ] 2.6 Na `/` po sekcji AI są dwa teasery (zrzut, nazwa, tagi, „Udowadnia: …”, link do hosta live i GitHub) i link do `/projects`; sekcji Skills na home nie ma
-- [ ] 2.7 Na `/projects` karta Skarbnika ma przycisk GitHub prowadzący do publicznego repo i nie ma notatki „Repozytorium prywatne”; żaden punkt kart produktów nie zawiera liczby skali
-- [ ] 2.8 `/cv` w sekcji produktów nie pokazuje „14 decyzji” ani „130 plików”
-- [ ] 2.9 Teasery czytelne przy 375 px (jedna kolumna, linki nie wychodzą poza kartę)
+- [x] 2.6 Na `/` po sekcji AI są dwa teasery (zrzut, nazwa, tagi, „Udowadnia: …”, link do hosta live i GitHub) i link do `/projects`; sekcji Skills na home nie ma
+- [x] 2.7 Na `/projects` karta Skarbnika ma przycisk GitHub prowadzący do publicznego repo i nie ma notatki „Repozytorium prywatne”; żaden punkt kart produktów nie zawiera liczby skali
+- [x] 2.8 `/cv` w sekcji produktów nie pokazuje „14 decyzji” ani „130 plików”
+- [x] 2.9 Teasery czytelne przy 375 px (jedna kolumna, linki nie wychodzą poza kartę)
 
 ### Phase 3: Skills „gdzie użyte” i domknięcie foundation
 
