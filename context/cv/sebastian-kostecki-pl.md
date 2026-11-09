@@ -8,9 +8,9 @@ Lublin, Polska · kontakt@kostecki.dev · [kostecki.dev](https://kostecki.dev) �
 
 ## Profil
 
-Od listopada 2022 buduję backend w PHP i Laravelu w produkcyjnym produkcie B2B. W ModulesGarden rozwijam PanelAlpha, platformę do automatyzacji zarządzania WordPress dla firm hostingowych: integracje z panelami hostingowymi, DNS, SSL, e-mail i backup, billing WHMCS. Dowożę feature od modelu danych po logikę działającą u klienta, a gdy trzeba, wchodzę we frontend (Vue, React).
+Od listopada 2022 buduję backend w PHP i Laravelu. Rozwijam PanelAlpha, platformę do automatyzacji zarządzania WordPress dla firm hostingowych: integracje z panelami hostingowymi, DNS, SSL, e-mail i backup, billing WHMCS. Dowożę feature od modelu danych po logikę działającą u klienta, a gdy trzeba, wchodzę we frontend (Vue, React). Biorę odpowiedzialność za zadanie i doprowadzam je do końca.
 
-Po godzinach utrzymuję dwa własne produkty na produkcji, na własnym VPS-ie. Kod piszę z agentami AI w procesie z kontekstem, planem, testami i review. Dowody tego procesu są w publicznych repozytoriach.
+Po godzinach utrzymuję dwa własne produkty na produkcji, na własnym VPS-ie. Kod piszę z agentami AI w procesie z kontekstem, planem, testami i review — to ja odpowiadam za to, co trafia na produkcję. Dowody tego procesu są w publicznych repozytoriach.
 
 ## Doświadczenie
 
