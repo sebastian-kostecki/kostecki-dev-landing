@@ -51,12 +51,15 @@ function applyCanonical(canonical: string | null) {
   document.querySelector('meta[name="robots"]')?.remove()
 }
 
-const meta = computed(() => pageMeta(String(route.name ?? ''), content.value, route.path))
+// The initial navigation is async: until it resolves the route has no name, and
+// watch() evaluates this getter during setup, so it must not throw for that state.
+const meta = computed(() =>
+  route.name === undefined ? null : pageMeta(String(route.name), content.value, route.path),
+)
 
 function applyMeta() {
-  // The initial navigation is async: until it resolves the route has no name and
-  // pageMeta would fall back to home, overwriting the prerendered head.
-  if (route.name === undefined) return
+  // Skip until the initial navigation resolves, so the prerendered head is kept.
+  if (meta.value === null) return
 
   const { title, description, lang, ogLocale, ogLocaleAlternate, canonical } = meta.value
 
