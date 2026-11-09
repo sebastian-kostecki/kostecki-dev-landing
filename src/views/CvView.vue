@@ -16,7 +16,12 @@ const products = computed(() =>
 const contacts = computed(() => content.value.contact.methods)
 
 function hostOf(url: string) {
-  return new URL(url).host
+  try {
+    return new URL(url).host
+  } catch (error) {
+    console.error(`CvView: invalid project link "${url}"`, error)
+    return url
+  }
 }
 
 function printCv() {

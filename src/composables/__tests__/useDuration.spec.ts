@@ -5,6 +5,7 @@ import {
   resolveDurations,
   yearsSince,
 } from '@/composables/useDuration'
+import { careerSince } from '@/content/career'
 
 function at(year: number, month: number, day: number) {
   vi.useFakeTimers()
@@ -113,5 +114,13 @@ describe('resolveDurations', () => {
     const snapshot = structuredClone(input)
     resolveDurations(input, 'pl')
     expect(input).toEqual(snapshot)
+  })
+})
+
+describe('careerSince', () => {
+  it('has no start date in the future', () => {
+    for (const [key, since] of Object.entries(careerSince)) {
+      expect(yearsSince(since), key).toBeGreaterThanOrEqual(0)
+    }
   })
 })

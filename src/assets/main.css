@@ -201,7 +201,8 @@
   }
 }
 
-/* Print: the CV page (and any page) prints as black text on white, without chrome. */
+/* Print: styled for the CV page only (/cv) — black text on white, without chrome.
+   Other pages are not designed for print. */
 @media print {
   @page {
     margin: 14mm;
