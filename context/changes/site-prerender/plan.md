@@ -336,33 +336,33 @@ Pięć tras renderowanych w jednym procesie Node to sekundy; build SSR dodaje je
 
 #### Automated
 
-- [x] 1.1 Test `src/__tests__/entry-server.spec.ts` nie przechodzi przed dodaniem `src/entry-server.ts` (czerwony zapisany w commicie lub w opisie fazy)
-- [x] 1.2 Testy przechodzą: `pnpm test`
-- [x] 1.3 Type check przechodzi: `pnpm type-check`
-- [x] 1.4 Lint przechodzi: `pnpm lint`
-- [x] 1.5 Build klienta nadal przechodzi: `pnpm build`
+- [x] 1.1 Test `src/__tests__/entry-server.spec.ts` nie przechodzi przed dodaniem `src/entry-server.ts` (czerwony zapisany w commicie lub w opisie fazy) — 5422b51
+- [x] 1.2 Testy przechodzą: `pnpm test` — 5422b51
+- [x] 1.3 Type check przechodzi: `pnpm type-check` — 5422b51
+- [x] 1.4 Lint przechodzi: `pnpm lint` — 5422b51
+- [x] 1.5 Build klienta nadal przechodzi: `pnpm build` — 5422b51
 
 #### Manual
 
-- [x] 1.6 `pnpm dev`: nawigacja `/` → `/projects` → `/cv` zmienia `<title>`, description i canonical w DevTools
-- [x] 1.7 Przełączenie języka nadal zmienia tytuł i treść bez przeładowania
+- [x] 1.6 `pnpm dev`: nawigacja `/` → `/projects` → `/cv` zmienia `<title>`, description i canonical w DevTools — 5422b51
+- [x] 1.7 Przełączenie języka nadal zmienia tytuł i treść bez przeładowania — 5422b51
 
 ### Phase 2: Prerender do dist/ i podpięcie w build
 
 #### Automated
 
-- [ ] 2.1 Testy przechodzą: `pnpm test`
-- [ ] 2.2 Type check i lint przechodzą: `pnpm type-check && pnpm lint`
-- [ ] 2.3 Build przechodzi i tworzy 5 plików tras oraz `dist/404.html`
-- [ ] 2.4 Każdy plik ma własny tytuł (`dist/projects/index.html` → `Projekty — Sebastian Kostecki`)
-- [ ] 2.5 Canonical per trasa w `dist/cv/index.html`, brak canonical w `dist/404.html`
-- [ ] 2.6 Ponowne `pnpm prerender` na wyrenderowanym `dist/` kończy się kodem 1 z komunikatem o placeholderze `#app`
+- [x] 2.1 Testy przechodzą: `pnpm test`
+- [x] 2.2 Type check i lint przechodzą: `pnpm type-check && pnpm lint`
+- [x] 2.3 Build przechodzi i tworzy 5 plików tras oraz `dist/404.html`
+- [x] 2.4 Każdy plik ma własny tytuł (`dist/projects/index.html` → `Projekty — Sebastian Kostecki`)
+- [x] 2.5 Canonical per trasa w `dist/cv/index.html`, brak canonical w `dist/404.html`
+- [x] 2.6 Ponowne `pnpm prerender` na wyrenderowanym `dist/` kończy się kodem 1 z komunikatem o placeholderze `#app`
 
 #### Manual
 
-- [ ] 2.7 `pnpm preview` + `curl` pokazuje treść `/skills` w HTML bez JS
-- [ ] 2.8 Przeglądarka z wyłączonym JS: `/projects` pokazuje listę projektów
-- [ ] 2.9 Z włączonym JS strona działa jak przed zmianą, w konsoli brak błędów
+- [x] 2.7 `pnpm preview` + `curl` pokazuje treść `/skills` w HTML bez JS
+- [x] 2.8 Przeglądarka z wyłączonym JS: `/projects` pokazuje listę projektów
+- [x] 2.9 Z włączonym JS strona działa jak przed zmianą, w konsoli brak błędów
 
 ### Phase 3: Artefakty dla maszyn z treści
 

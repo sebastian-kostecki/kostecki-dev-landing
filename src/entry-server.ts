@@ -7,6 +7,7 @@ import { useContent } from '@/composables/useContent'
 import { pageMeta, type PageMeta } from '@/seo/page-meta'
 
 export { staticPaths, staticRoutes } from '@/router/routes'
+export { injectPage } from '@/seo/html-template'
 export { dictionaries } from '@/composables/useContent'
 
 export async function render(
