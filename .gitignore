@@ -42,3 +42,5 @@ __screenshots__/
 .superpowers/
 
 .vscode
+# Generated at build time (src/generated/archive.fallback.json is tracked)
+src/generated/archive.json

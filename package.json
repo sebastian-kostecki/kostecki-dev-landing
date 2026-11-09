@@ -4,8 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "dev": "run-s generate:archive \"dev:app {@}\" --",
+    "dev:app": "vite",
+    "build": "run-s generate:archive \"build:app {@}\" --",
+    "build:app": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "test": "vitest run",
     "build-only": "vite build",
@@ -15,6 +17,7 @@
     "lint:eslint": "eslint . --fix --cache",
     "format": "prettier --write --experimental-cli src/",
     "generate:favicons": "node scripts/generate-favicons.mjs",
+    "generate:archive": "node scripts/fetch-archive-count.mjs",
     "generate:og-image": "node scripts/generate-og-image.mjs"
   },
   "dependencies": {
