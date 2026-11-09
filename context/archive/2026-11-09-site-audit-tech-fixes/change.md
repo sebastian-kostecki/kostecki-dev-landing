@@ -1,10 +1,10 @@
 ---
 change_id: site-audit-tech-fixes
 title: Poprawki techniczne z audytu strony (bez zmian w treści)
-status: impl_reviewed
+status: archived
 created: 2026-11-09
 updated: 2026-11-09
-archived_at: null
+archived_at: 2026-11-09T15:16:34Z
 ---
 
 ## Notes
