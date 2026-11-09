@@ -1,10 +1,10 @@
 ---
 change_id: site-focus-hero
 title: Hero i panel „W skrócie” dla rekrutera
-status: impl_reviewed
+status: archived
 created: 2026-11-09
 updated: 2026-11-09
-archived_at: null
+archived_at: 2026-11-09T10:51:35Z
 ---
 
 ## Notes
