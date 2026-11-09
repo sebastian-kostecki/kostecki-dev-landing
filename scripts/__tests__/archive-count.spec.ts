@@ -4,6 +4,7 @@ import {
   assertSameSelection,
   countArchiveFolders,
   missingFolders,
+  parseArchiveResult,
   selectedArchiveFolders,
 } from '../lib/archive-count.mjs'
 
@@ -64,6 +65,9 @@ describe('selectedArchiveFolders', () => {
     ['a nested path', url(RK, 'a/b')],
     ['a wrong branch', `https://github.com/${RK}/tree/dev/context/archive/x`],
     ['not a URL', 'restore-from-backup'],
+    ['a query string', url(RK, '2026-10-01-x') + '?plain=1'],
+    ['a fragment', url(RK, '2026-10-01-x') + '#readme'],
+    ['a trailing slash', url(RK, '2026-10-01-x') + '/'],
   ])('throws for %s', (_label, bad) => {
     expect(() => selectedArchiveFolders(contentWith(bad))).toThrow(bad)
   })
@@ -123,5 +127,45 @@ describe('assertSameSelection', () => {
 
   it('throws when one locale has more items', () => {
     expect(() => assertSameSelection(a, [])).toThrow(/PL.*EN|mismatch/i)
+  })
+})
+
+describe('parseArchiveResult', () => {
+  const valid = {
+    generatedAt: '2026-11-09T11:13:31.051Z',
+    total: 121,
+    repos: [
+      { repo: RK, count: 71 },
+      { repo: HT, count: 50 },
+    ],
+  }
+
+  it('returns a well-formed result', () => {
+    expect(parseArchiveResult(JSON.stringify(valid))).toEqual(valid)
+  })
+
+  it('throws on truncated JSON', () => {
+    expect(() => parseArchiveResult('{"generatedAt": "2026-11')).toThrow()
+  })
+
+  it('throws when total is missing or not a finite number', () => {
+    const { total: _total, ...withoutTotal } = valid
+    expect(() => parseArchiveResult(JSON.stringify(withoutTotal))).toThrow(/total/)
+    expect(() => parseArchiveResult(JSON.stringify({ ...valid, total: '121' }))).toThrow(/total/)
+  })
+
+  it('throws when repos is not an array', () => {
+    expect(() => parseArchiveResult(JSON.stringify({ ...valid, repos: {} }))).toThrow(/repos/)
+  })
+
+  it('throws when generatedAt is not a string', () => {
+    expect(() => parseArchiveResult(JSON.stringify({ ...valid, generatedAt: 1 }))).toThrow(
+      /generatedAt/,
+    )
+  })
+
+  it('throws for JSON that is not an object', () => {
+    expect(() => parseArchiveResult('null')).toThrow()
+    expect(() => parseArchiveResult('[]')).toThrow()
   })
 })

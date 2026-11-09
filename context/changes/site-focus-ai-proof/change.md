@@ -1,7 +1,7 @@
 ---
 change_id: site-focus-ai-proof
 title: Sekcja „Praca z agentami AI” z dowodami z archiwów
-status: implemented
+status: impl_reviewed
 created: 2026-11-09
 updated: 2026-11-09
 archived_at: null

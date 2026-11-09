@@ -4,7 +4,7 @@
 
 /** URL of a folder in the `context/archive` of one of the two public repos. */
 export const ARCHIVE_FOLDER_URL =
-  /^https:\/\/github\.com\/sebastian-kostecki\/(?:root-keeper|household-treasurer)\/tree\/main\/context\/archive\/[^/]+$/
+  /^https:\/\/github\.com\/sebastian-kostecki\/(?:root-keeper|household-treasurer)\/tree\/main\/context\/archive\/[\w.-]+$/
 
 /** Last path segment of the folder URL without the `YYYY-MM-DD-` prefix. */
 export function archiveFolderLabel(url: string): string {

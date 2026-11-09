@@ -12,7 +12,7 @@ export const ARCHIVE_REPOS = [
  * @typedef {{ name: string, type: string }} ListingEntry
  */
 
-const FOLDER_URL = /^https:\/\/github\.com\/([^/]+\/[^/]+)\/tree\/main\/context\/archive\/([^/]+)$/
+const FOLDER_URL = /^https:\/\/github\.com\/([^/]+\/[^/]+)\/tree\/main\/context\/archive\/([\w.-]+)$/
 
 /**
  * Counts directory entries in a GitHub contents API listing (README.md and other files are ignored).
@@ -76,4 +76,31 @@ export function assertSameSelection(pl, en) {
   throw new Error(
     `PL/EN mismatch in aiWorkflow.proof.items.\n  PL: ${plKeys.join(', ') || '(none)'}\n  EN: ${enKeys.join(', ') || '(none)'}`,
   )
+}
+
+/**
+ * @typedef {{ generatedAt: string, total: number, repos: { repo: string, count: number }[] }} ArchiveResult
+ */
+
+/**
+ * Parses and validates the text of `archive.json` / `archive.fallback.json`, so a truncated or
+ * hand-edited file is rejected instead of reaching the page (e.g. as `NaN`).
+ * @param {string} text file contents
+ * @returns {ArchiveResult}
+ */
+export function parseArchiveResult(text) {
+  const data = JSON.parse(text)
+  if (typeof data !== 'object' || data === null || Array.isArray(data)) {
+    throw new Error('Archive result is not a JSON object')
+  }
+  if (typeof data.generatedAt !== 'string') {
+    throw new Error('Archive result has no string "generatedAt"')
+  }
+  if (typeof data.total !== 'number' || !Number.isFinite(data.total)) {
+    throw new Error('Archive result has no finite numeric "total"')
+  }
+  if (!Array.isArray(data.repos)) {
+    throw new Error('Archive result has no "repos" array')
+  }
+  return data
 }

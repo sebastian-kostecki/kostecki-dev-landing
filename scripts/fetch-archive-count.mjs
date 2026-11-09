@@ -8,7 +8,7 @@
 // folder) is never a fallback case: it exits 1.
 // GITHUB_TOKEN is optional. ARCHIVE_GITHUB_API overrides the API base (offline tests).
 
-import { copyFile, mkdir, readFile, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, rename, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import {
@@ -16,6 +16,7 @@ import {
   assertSameSelection,
   countArchiveFolders,
   missingFolders,
+  parseArchiveResult,
   selectedArchiveFolders,
 } from './lib/archive-count.mjs'
 
@@ -30,9 +31,45 @@ async function github(path) {
   if (TOKEN) headers.Authorization = `Bearer ${TOKEN}`
   const response = await fetch(`${API}${path}`, { headers, signal: AbortSignal.timeout(15000) })
   if (!response.ok) {
-    throw new Error(`GitHub ${path} answered ${response.status} ${response.statusText}`)
+    const body = await response
+      .text()
+      .then((text) => text.slice(0, 200))
+      .catch((error) => `<body unreadable: ${error.message}>`)
+    const remaining = response.headers.get('x-ratelimit-remaining')
+    const reset = response.headers.get('x-ratelimit-reset')
+    throw new Error(
+      `GitHub ${path} answered ${response.status} ${response.statusText}: ${body} (rate limit remaining=${remaining}, reset=${reset})`,
+    )
   }
   return response
+}
+
+/**
+ * Reads and validates a previous result. A missing file is normal (null); an unreadable or invalid
+ * one is warned about with its cause and skipped, so the fallback chain continues.
+ */
+async function readResult(path, label) {
+  let text
+  try {
+    text = await readFile(path, 'utf8')
+  } catch (error) {
+    if (error?.code !== 'ENOENT') console.warn(`[archive] cannot read the ${label}, skipping it`, error)
+    return null
+  }
+  try {
+    return parseArchiveResult(text)
+  } catch (error) {
+    console.warn(`[archive] the ${label} is invalid, skipping it`, error)
+    return null
+  }
+}
+
+/** Writes through a temp file and a rename, so an interrupted build never leaves a truncated result. */
+async function writeResult(result) {
+  await mkdir(dirname(OUTPUT), { recursive: true })
+  const temp = `${OUTPUT}.tmp`
+  await writeFile(temp, `${JSON.stringify(result, null, 2)}\n`)
+  await rename(temp, OUTPUT)
 }
 
 async function readLocale(name) {
@@ -66,20 +103,19 @@ let listings = null
 try {
   listings = await fetchListings()
 } catch (error) {
-  const existing = await readFile(OUTPUT, 'utf8').catch(() => null)
+  const existing = await readResult(OUTPUT, 'existing result')
   if (existing) {
     console.warn(
-      `[archive] fetch failed, keeping the existing result from ${JSON.parse(existing).generatedAt}; link guard skipped`,
+      `[archive] fetch failed, keeping the existing result from ${existing.generatedAt}; link guard skipped`,
       error,
     )
     process.exit(0)
   }
-  const fallback = await readFile(FALLBACK, 'utf8').catch(() => null)
+  const fallback = await readResult(FALLBACK, 'tracked fallback')
   if (fallback) {
-    await mkdir(dirname(OUTPUT), { recursive: true })
-    await copyFile(FALLBACK, OUTPUT)
+    await writeResult(fallback)
     console.warn(
-      `[archive] fetch failed, using the tracked fallback from ${JSON.parse(fallback).generatedAt}; link guard skipped`,
+      `[archive] fetch failed, using the tracked fallback from ${fallback.generatedAt}; link guard skipped`,
       error,
     )
     process.exit(0)
@@ -89,16 +125,16 @@ try {
 }
 
 try {
+  // Counting first validates the response shape, so a non-array body gets the descriptive error.
+  const repos = ARCHIVE_REPOS.map((repo) => ({ repo, count: countArchiveFolders(listings[repo]) }))
   const missing = missingFolders(selected, listings)
   if (missing.length) {
     const names = missing.map(({ repo, folder }) => `${repo}/context/archive/${folder}`)
     throw new Error(`Linked archive folder(s) not found: ${names.join(', ')}`)
   }
-  const repos = ARCHIVE_REPOS.map((repo) => ({ repo, count: countArchiveFolders(listings[repo]) }))
   const total = repos.reduce((sum, { count }) => sum + count, 0)
   const result = { generatedAt: new Date().toISOString(), total, repos }
-  await mkdir(dirname(OUTPUT), { recursive: true })
-  await writeFile(OUTPUT, `${JSON.stringify(result, null, 2)}\n`)
+  await writeResult(result)
   console.info(`[archive] wrote ${total} archived changes to ${OUTPUT}`)
 } catch (error) {
   console.error('[archive] archive check failed', error)

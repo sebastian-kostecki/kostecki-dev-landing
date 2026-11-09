@@ -151,7 +151,7 @@
         {
           "project": "Root Keeper",
           "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive/2026-09-22-production-data-safety",
-          "shows": "Rules for working with production data (encrypted backups, a backup before every migration) set before the first feature existed."
+          "shows": "Rules for working with production data (encrypted backups, a backup before every migration) set before real data reached production."
         },
         {
           "project": "Root Keeper",

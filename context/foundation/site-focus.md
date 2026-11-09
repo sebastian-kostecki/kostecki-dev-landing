@@ -131,7 +131,7 @@ Spoza gałęzi, nowe: prerender (B1). Lokalizacja w URL i `hreflang` (B2) odło�
   pokazują, jak to działa:”
 - Wybrane zmiany (wdrożone w `site-focus-ai-proof`; etykiety bez dat):
   - Root Keeper `production-data-safety`: co pokazuje: zasady pracy na danych produkcyjnych
-    (szyfrowane kopie, backup przed migracją) ustalone, zanim powstał pierwszy feature.
+    (szyfrowane kopie, backup przed migracją) ustalone, zanim na produkcję trafiły prawdziwe dane.
   - Root Keeper `restore-from-backup`: co pokazuje: odtwarzanie z kopii jako przepływ
     testowany w CI, nie skrypt w szufladzie.
   - Root Keeper `testing-ownership-boundaries`: co pokazuje: granice własności danych

@@ -54,3 +54,20 @@ describe('archiveFolderLabel', () => {
     ).toBe('restore-from-backup')
   })
 })
+
+describe('ARCHIVE_FOLDER_URL', () => {
+  const folder = 'https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive/2026-10-01-x'
+
+  it('accepts a plain archive folder URL', () => {
+    expect(folder).toMatch(ARCHIVE_FOLDER_URL)
+  })
+
+  it.each([
+    ['a query string', `${folder}?plain=1`],
+    ['a fragment', `${folder}#readme`],
+    ['a trailing slash', `${folder}/`],
+    ['a repo outside the list', folder.replace('root-keeper', 'other')],
+  ])('rejects %s', (_label, bad) => {
+    expect(bad).not.toMatch(ARCHIVE_FOLDER_URL)
+  })
+})

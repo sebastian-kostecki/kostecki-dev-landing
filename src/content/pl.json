@@ -151,7 +151,7 @@
         {
           "project": "Root Keeper",
           "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive/2026-09-22-production-data-safety",
-          "shows": "Zasady pracy na danych produkcyjnych (szyfrowane kopie, backup przed migracją) ustalone, zanim powstał pierwszy feature."
+          "shows": "Zasady pracy na danych produkcyjnych (szyfrowane kopie, backup przed migracją) ustalone, zanim na produkcję trafiły prawdziwe dane."
         },
         {
           "project": "Root Keeper",

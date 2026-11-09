@@ -47,7 +47,7 @@ function stepIndex(index: number) {
               class="inline-flex items-center gap-1.5 break-all font-mono text-xs font-medium text-primary transition-colors hover:text-primary-glow"
             >
               {{ item.project }} / {{ archiveFolderLabel(item.url) }}
-              <ArrowUpRight class="h-3.5 w-3.5 shrink-0" />
+              <ArrowUpRight class="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
             </a>
             <p class="mt-3 text-sm leading-relaxed text-muted-foreground">{{ item.shows }}</p>
           </li>
@@ -67,7 +67,7 @@ function stepIndex(index: number) {
             class="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-primary transition-colors hover:text-primary-glow"
           >
             {{ link.title }}
-            <ArrowUpRight class="h-3.5 w-3.5" />
+            <ArrowUpRight class="h-3.5 w-3.5" aria-hidden="true" />
           </a>
         </div>
       </div>
