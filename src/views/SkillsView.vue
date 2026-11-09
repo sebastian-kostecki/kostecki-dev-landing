@@ -36,6 +36,7 @@ const content = useContent()
               :icon="skill.icon"
               :image="skill.image"
               :level="skill.level"
+              :used-in="skill.usedIn"
             />
           </div>
         </section>

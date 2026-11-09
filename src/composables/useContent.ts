@@ -2,11 +2,12 @@ import { computed, type ComputedRef } from 'vue'
 import pl from '@/content/pl.json'
 import en from '@/content/en.json'
 import type { SiteContent } from '@/types/content'
+import { resolveDurations } from '@/composables/useDuration'
 import { useLocale, type Locale } from '@/composables/useLocale'
 
-const dictionaries: Record<Locale, SiteContent> = {
-  pl: pl as SiteContent,
-  en: en as SiteContent,
+export const dictionaries: Record<Locale, SiteContent> = {
+  pl: resolveDurations(pl, 'pl') as SiteContent,
+  en: resolveDurations(en, 'en') as SiteContent,
 }
 
 // Returns a ComputedRef. In templates the ref auto-unwraps, so

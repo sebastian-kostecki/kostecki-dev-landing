@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Sebastian Kostecki — CV</title>
+<style>
+  @page { size: A4; margin: 14mm 16mm; }
+  :root { --ink: #111; --muted: #555; --line: #ddd; --accent: #b3261e; }
+  * { box-sizing: border-box; }
+  body { font: 10.5pt/1.4 "Work Sans", "Segoe UI", Arial, sans-serif; color: var(--ink); margin: 0; }
+  h1 { font-size: 20pt; margin: 0; letter-spacing: -0.01em; }
+  .role { font-size: 11.5pt; color: var(--accent); margin: 2px 0 4px; font-weight: 600; }
+  .contact { color: var(--muted); font-size: 9.5pt; }
+  .contact a { color: var(--muted); text-decoration: none; }
+  h2 { font-size: 9pt; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); border-bottom: 1px solid var(--line); padding-bottom: 3px; margin: 14px 0 6px; }
+  h3 { font-size: 11pt; margin: 8px 0 1px; }
+  .meta { color: var(--muted); font-size: 9.5pt; margin: 0 0 4px; }
+  p { margin: 0 0 6px; }
+  ul { margin: 2px 0 6px; padding-left: 16px; }
+  li { margin: 0 0 2px; }
+  .todo { background: #fff3cd; color: #7a5a00; padding: 0 4px; border-radius: 3px; font-size: 9pt; }
+  table { border-collapse: collapse; width: 100%; font-size: 9.8pt; }
+  td { padding: 2px 8px 2px 0; vertical-align: top; }
+  td:first-child { font-weight: 600; white-space: nowrap; width: 150px; }
+  .product { margin-bottom: 6px; }
+  .product strong { font-size: 10.5pt; }
+  .product .links { color: var(--muted); font-size: 9.5pt; }
+  .product .links a { color: var(--muted); }
+  .rodo { margin-top: 14px; font-size: 8pt; color: var(--muted); }
+  a { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Sebastian Kostecki</h1>
+  <div class="role">Backend Developer (PHP / Laravel)</div>
+  <div class="contact">
+    Lublin, Polska · <a href="mailto:kontakt@kostecki.dev">kontakt@kostecki.dev</a> ·
+    <a href="https://kostecki.dev">kostecki.dev</a> ·
+    <a href="https://www.linkedin.com/in/kostecki-sebastian">linkedin.com/in/kostecki-sebastian</a> ·
+    <a href="https://github.com/sebastian-kostecki">github.com/sebastian-kostecki</a>
+  </div>
+</header>
+
+<h2>Profil</h2>
+<p>Od listopada 2022 buduję backend w PHP i Laravelu. Rozwijam PanelAlpha, platformę do automatyzacji zarządzania WordPress dla firm hostingowych: integracje z panelami hostingowymi, DNS, SSL, e-mail i backup, billing WHMCS. Dowożę feature od modelu danych po logikę działającą u klienta, a gdy trzeba, wchodzę we frontend (Vue, React). Biorę odpowiedzialność za zadanie i doprowadzam je do końca.</p>
+<p>Po godzinach utrzymuję dwa własne produkty na produkcji, na własnym VPS-ie. Kod piszę z agentami AI w procesie z kontekstem, planem, testami i review — to ja odpowiadam za to, co trafia na produkcję. Dowody tego procesu są w publicznych repozytoriach.</p>
+
+<h2>Doświadczenie</h2>
+<h3>ModulesGarden — Backend Developer (PHP / Laravel)</h3>
+<p class="meta">11.2022 – obecnie</p>
+
+<p><strong>PanelAlpha</strong> (05.2023 – obecnie). Produkcyjna platforma B2B do automatyzacji zarządzania WordPress dla firm hostingowych i agencji.</p>
+<ul>
+  <li>Backend Laravel i rozwój API platformy.</li>
+  <li>Integracje z panelami hostingowymi (cPanel, Plesk, DirectAdmin) i PowerDNS oraz z usługami e-mail, SSL, backup i storage.</li>
+  <li>Cykl życia instancji WordPress i obsługa Git.</li>
+  <li>Integracja z WHMCS i powiązana logika billingowa.</li>
+  <li>Vue.js i Vuetify przy funkcjach obejmujących backend i UI.</li>
+  <li>Wkład w open-source'owy <strong>PanelAlpha Engine</strong> (Apache 2.0): auto-deploy po git push, menedżer plików, dyrektywy PHP per domena, statystyki transferu. Platforma do self-hostingu, którą agenci AI obsługują przez MCP.</li>
+</ul>
+
+<p><strong>Moduły WHMCS</strong> (11.2022 – 05.2023). Pięć modułów rozszerzających billing i automatyzację WHMCS, każdy zaimplementowany samodzielnie: Domain Data From Plesk, Invoice Sub Status, Automated Refunds, Auto Upgrade For Early Payments, BulkUpdater. PHP, Smarty, jQuery, WHMCS SDK.</p>
+
+<h3><span class="todo">UZUPEŁNIJ</span> Wcześniejsze doświadczenie</h3>
+<p class="meta">Stanowiska sprzed 11.2022 z LinkedIn: firma, rola, daty, 1–2 zdania zakresu.</p>
+
+<h2>Własne produkty na produkcji</h2>
+<div class="product">
+  <strong>Domowy Skarbnik</strong> <span class="links">· <a href="https://treasurer.kostecki.dev">treasurer.kostecki.dev</a> · <a href="https://github.com/sebastian-kostecki/household-treasurer">GitHub</a></span><br>
+  Roczny budżet domowy: plan kontra wykonanie, płynność na kontach i lokatach, import wyciągów CSV/XLSX z mBanku i BNP Paribas. Laravel 13, PHP 8.5, PostgreSQL, Vue 3, TypeScript, Inertia. Kwoty w groszach jako liczby całkowite, decyzje architektoniczne (ADR), słownik domeny, CHANGELOG, testy Pest w CI.
+</div>
+<div class="product">
+  <strong>Root Keeper</strong> <span class="links">· <a href="https://genealog.kostecki.dev">genealog.kostecki.dev</a> · <a href="https://github.com/sebastian-kostecki/root-keeper">GitHub</a></span><br>
+  Drzewo genealogiczne, w którym każda data ma źródło w skanie aktu. Laravel 13, PostgreSQL, React 19, TypeScript, Inertia. Daty częściowe jak w aktach, reguły relacji pilnowane na serwerze, logowanie passkey. CI: lint, Larastan 7, Pest, e2e Playwright.
+</div>
+<p class="meta">Oba produkty działają na własnym VPS-ie: Traefik, Docker Compose, restic, systemd, Cloudflare.</p>
+
+<h2>Praca z agentami AI</h2>
+<ul>
+  <li>Kontekst przed kodem: słownik domeny, PRD i ADR w katalogu <code>context/</code>, reguły dla agentów w <code>CLAUDE.md</code>, dostęp agenta do aplikacji przez Laravel Boost (MCP).</li>
+  <li>Każda zmiana ma folder z researchem, planem i przeglądem implementacji. Ponad 100 takich zmian w dwóch publicznych repozytoriach.</li>
+  <li>Bramki jakości w CI: lint, Larastan 7, Pest, Playwright. Czerwony test to sygnał, nie przeszkoda do obejścia.</li>
+  <li>Narzędzia: Claude Code, Cursor, Laravel Boost (MCP), PhpStorm. Proces dopracowuję w kursie 10xDevs (2026).</li>
+</ul>
+
+<h2>Umiejętności</h2>
+<table>
+  <tr><td>Backend</td><td>PHP 8.x, Laravel (do 13), REST API, MySQL, PostgreSQL, Docker</td></tr>
+  <tr><td>Integracje hostingowe</td><td>cPanel, Plesk, DirectAdmin, PowerDNS, Cloudflare, Bunny DNS, Let's Encrypt, mailcow, Fastly</td></tr>
+  <tr><td>WordPress i billing</td><td>WP Cloud, backupy, motywy i wtyczki; WHMCS, Stripe</td></tr>
+  <tr><td>Frontend</td><td>Vue 3, React 19, TypeScript, Inertia.js, Vuetify, Tailwind CSS, shadcn-vue</td></tr>
+  <tr><td>Jakość</td><td>Pest, PHPUnit, Larastan / PHPStan, Playwright, GitHub Actions</td></tr>
+  <tr><td>Infrastruktura</td><td>Linux VPS, Traefik, Docker Compose, restic, systemd</td></tr>
+  <tr><td>Narzędzia</td><td>Git, Claude Code, Cursor, PhpStorm, Laravel Boost (MCP)</td></tr>
+</table>
+
+<h2>Wykształcenie <span class="todo">UZUPEŁNIJ</span></h2>
+<p class="meta">Uczelnia, kierunek, stopień, lata z LinkedIn.</p>
+
+<h2>Kursy</h2>
+<ul>
+  <li>10xDevs — AI-assisted software development (2026, w trakcie).</li>
+  <li><span class="todo">UZUPEŁNIJ</span> certyfikaty z LinkedIn, jeśli są.</li>
+</ul>
+
+<h2>Języki <span class="todo">UZUPEŁNIJ</span></h2>
+<p>Polski (ojczysty), angielski (poziom z LinkedIn).</p>
+
+<p class="rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych w celu prowadzenia rekrutacji na aplikowane przeze mnie stanowisko.</p>
+
+</body>
+</html>

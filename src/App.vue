@@ -5,6 +5,7 @@ import SiteHeader from '@/components/layout/SiteHeader.vue'
 import SiteFooter from '@/components/layout/SiteFooter.vue'
 import { useContent } from '@/composables/useContent'
 import { useLocale } from '@/composables/useLocale'
+import { pageMeta } from '@/seo/page-meta'
 
 const content = useContent()
 const { locale } = useLocale()
@@ -15,34 +16,67 @@ function setMetaContent(selector: string, value: string) {
   if (element) element.setAttribute('content', value)
 }
 
-const routeMeta = computed(() => {
-  const name = route.name
-  if (name === 'projects') return content.value.routes.projects
-  if (name === 'skills') return content.value.routes.skills
-  if (name === 'contact') return content.value.routes.contact
-  if (name === 'not-found') return content.value.routes.notFound
-  return content.value.routes.home
-})
+function upsertHeadElement(selector: string, create: () => HTMLElement): HTMLElement {
+  const existing = document.querySelector<HTMLElement>(selector)
+  if (existing) return existing
+  const element = create()
+  document.head.appendChild(element)
+  return element
+}
+
+function applyCanonical(canonical: string | null) {
+  if (canonical === null) {
+    document.querySelector('link[rel="canonical"]')?.removeAttribute('href')
+    document.querySelector('meta[property="og:url"]')?.removeAttribute('content')
+    upsertHeadElement('meta[name="robots"]', () => {
+      const robots = document.createElement('meta')
+      robots.setAttribute('name', 'robots')
+      return robots
+    }).setAttribute('content', 'noindex')
+    return
+  }
+
+  upsertHeadElement('link[rel="canonical"]', () => {
+    const link = document.createElement('link')
+    link.setAttribute('rel', 'canonical')
+    return link
+  }).setAttribute('href', canonical)
+
+  upsertHeadElement('meta[property="og:url"]', () => {
+    const meta = document.createElement('meta')
+    meta.setAttribute('property', 'og:url')
+    return meta
+  }).setAttribute('content', canonical)
+
+  document.querySelector('meta[name="robots"]')?.remove()
+}
+
+// The initial navigation is async: until it resolves the route has no name, and
+// watch() evaluates this getter during setup, so it must not throw for that state.
+const meta = computed(() =>
+  route.name === undefined ? null : pageMeta(String(route.name), content.value, route.path),
+)
 
 function applyMeta() {
-  const { meta } = content.value
-  const page = routeMeta.value
-  const ogLocale = meta.lang === 'pl' ? 'pl_PL' : 'en_US'
-  const title = page.title
-  const description = page.description
+  // Skip until the initial navigation resolves, so the prerendered head is kept.
+  if (meta.value === null) return
+
+  const { title, description, lang, ogLocale, ogLocaleAlternate, canonical } = meta.value
 
   document.title = title
-  document.documentElement.lang = meta.lang
+  document.documentElement.lang = lang
   setMetaContent('meta[name="description"]', description)
   setMetaContent('meta[property="og:title"]', title)
   setMetaContent('meta[property="og:description"]', description)
   setMetaContent('meta[property="og:locale"]', ogLocale)
+  setMetaContent('meta[property="og:locale:alternate"]', ogLocaleAlternate)
   setMetaContent('meta[name="twitter:title"]', title)
   setMetaContent('meta[name="twitter:description"]', description)
+  applyCanonical(canonical)
 }
 
 onMounted(applyMeta)
-watch([locale, routeMeta], applyMeta)
+watch([locale, meta], applyMeta)
 </script>
 
 <template>

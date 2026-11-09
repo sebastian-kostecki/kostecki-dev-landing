@@ -15,10 +15,9 @@ const isMobile = ref(false)
 
 const hasCv = computed(() => content.value.cv.href.length > 0)
 const isHome = computed(() => route.path === '/')
-const headerVisible = computed(() => {
+const headerSolid = computed(() => {
   if (!isHome.value) return true
   if (open.value) return true
-  if (isMobile.value) return true
   return scrolledPastThreshold.value
 })
 
@@ -62,13 +61,12 @@ onUnmounted(() => {
 
 <template>
   <header
-    class="fixed inset-x-0 top-0 z-50 transition-all duration-300 motion-reduce:transition-none"
+    class="fixed inset-x-0 top-0 z-50 border-b transition-colors duration-300 print:hidden motion-reduce:transition-none"
     :class="
-      headerVisible
-        ? 'translate-y-0 border-b border-border/60 bg-background/70 opacity-100 backdrop-blur-xl'
-        : 'pointer-events-none -translate-y-full opacity-0'
+      headerSolid
+        ? 'border-border/60 bg-background/70 backdrop-blur-xl'
+        : 'border-transparent bg-transparent'
     "
-    :aria-hidden="headerVisible ? undefined : true"
   >
     <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
       <RouterLink to="/" class="group flex items-center gap-3" :aria-label="content.ui.homeLabel">
@@ -109,15 +107,9 @@ onUnmounted(() => {
 
       <div class="hidden items-center gap-3 md:flex">
         <LanguageSwitcher />
-        <a
-          v-if="hasCv"
-          :href="content.cv.href"
-          class="btn-secondary !px-3 !py-2 text-xs"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <RouterLink v-if="hasCv" :to="content.cv.href" class="btn-secondary !px-3 !py-2 text-xs">
           {{ content.ui.downloadCv }}
-        </a>
+        </RouterLink>
       </div>
 
       <button
@@ -152,15 +144,14 @@ onUnmounted(() => {
         </RouterLink>
         <div class="flex items-center gap-3 py-3">
           <LanguageSwitcher />
-          <a
+          <RouterLink
             v-if="hasCv"
-            :href="content.cv.href"
+            :to="content.cv.href"
             class="btn-secondary !px-3 !py-2 text-xs"
-            target="_blank"
-            rel="noopener noreferrer"
+            @click="open = false"
           >
             {{ content.ui.downloadCv }}
-          </a>
+          </RouterLink>
         </div>
       </nav>
     </div>

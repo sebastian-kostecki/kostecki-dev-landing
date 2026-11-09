@@ -42,3 +42,13 @@ __screenshots__/
 .superpowers/
 
 .vscode
+# Generated at build time (src/generated/archive.fallback.json is tracked)
+src/generated/archive.json
+
+# Narzędzia kursu 10xDevs (lokalne, nie część strony)
+/.claude/
+/.10x-cli.json
+/CLAUDE.md
+/context/archive/README.md
+/context/changes/README.md
+/context/foundation/README.md

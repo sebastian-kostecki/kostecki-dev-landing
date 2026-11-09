@@ -14,6 +14,7 @@ export interface SkillItem {
   icon?: string
   image?: string
   level?: string
+  usedIn?: string
 }
 
 export interface SkillCategory {
@@ -40,6 +41,8 @@ export interface Project {
   highlights?: string[]
   /** Short note shown next to the links, e.g. that the repository is private. */
   note?: string
+  /** One sentence without numbers, rendered in the teaser on the home page. */
+  proves?: string
   tags: string[]
   links: ProjectLink[]
 }
@@ -48,6 +51,11 @@ export interface CommercialWorkContext {
   employer: string
   role: string
   period: string
+}
+
+export interface OpenSourceContribution {
+  text: string
+  context: string
 }
 
 export interface FeaturedProject {
@@ -59,7 +67,7 @@ export interface FeaturedProject {
   responsibilities: string[]
   tags: string[]
   link?: ProjectLink
-  secondaryLink?: ProjectLink
+  openSourceContribution?: OpenSourceContribution
 }
 
 export interface AiWorkflowStep {
@@ -68,10 +76,24 @@ export interface AiWorkflowStep {
   link?: ProjectLink
 }
 
+export interface AiProofItem {
+  project: string
+  url: string
+  shows: string
+}
+
+export interface AiProof {
+  lead: string
+  items: AiProofItem[]
+  counterLabel: string
+  archiveLinks: ProjectLink[]
+}
+
 export interface AiWorkflow {
   index: string
   title: string
   subtitle: string
+  proof: AiProof
   steps: AiWorkflowStep[]
   closing: string
 }
@@ -112,9 +134,28 @@ export interface SocialLink {
   icon: string
 }
 
+export interface SummaryItem {
+  label: string
+  value: string
+  /** Wiersz z linkiem jest pomijany na `/cv` (`CvView` filtruje `!item.href`; kontakt pokazuje osobno). */
+  href?: string
+}
+
 export interface RouteMetaCopy {
   title: string
   description: string
+}
+
+export interface CvCopy {
+  title: string
+  intro: string
+  print: string
+  printHint: string
+  summaryTitle: string
+  experienceTitle: string
+  productsTitle: string
+  skillsTitle: string
+  generated: string
 }
 
 export interface SiteContent {
@@ -129,6 +170,7 @@ export interface SiteContent {
     skills: RouteMetaCopy
     contact: RouteMetaCopy
     notFound: RouteMetaCopy
+    cv: RouteMetaCopy
   }
   ui: {
     skipToContent: string
@@ -144,12 +186,13 @@ export interface SiteContent {
     openMenu: string
     closeMenu: string
     seeAllProjects: string
-    exploreAllSkills: string
-    viewMyWork: string
     liveDemo: string
     sourceCode: string
     siteSource: string
+    photoPlaceholder: string
+    photoAlt: string
     featuredProjectLabel: string
+    provesLabel: string
     backHome: string
     notFoundTitle: string
     notFoundBody: string
@@ -166,9 +209,13 @@ export interface SiteContent {
     subtitle?: string
     ctaPrimary: CtaLink
   }
+  summary: {
+    title: string
+    items: SummaryItem[]
+  }
   cv: {
     href: string
-  }
+  } & CvCopy
   about: {
     index: string
     title: string
@@ -186,7 +233,12 @@ export interface SiteContent {
     categories: SkillCategory[]
   }
   projects: {
-    homePreview: {
+    homeExperience: {
+      index: string
+      title: string
+      subtitle: string
+    }
+    homeProducts: {
       index: string
       title: string
       subtitle: string
@@ -195,7 +247,6 @@ export interface SiteContent {
     title: string
     subtitle: string
     featured: FeaturedProject
-    openSource: FeaturedProject
     commercialGroup: CommercialProjectGroup
     personal: PersonalProjects
   }

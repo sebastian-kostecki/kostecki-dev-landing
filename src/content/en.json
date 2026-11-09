@@ -24,12 +24,16 @@
     "notFound": {
       "title": "Not found — kostecki.dev",
       "description": "The page you are looking for does not exist."
+    },
+    "cv": {
+      "title": "CV — Sebastian Kostecki",
+      "description": "CV of Sebastian Kostecki, Backend Developer (Laravel): experience, products of his own and stack. Print and PDF ready."
     }
   },
   "ui": {
     "skipToContent": "Skip to content",
     "languageLabel": "Language",
-    "downloadCv": "Download CV",
+    "downloadCv": "CV",
     "expand": "Expand",
     "collapse": "Collapse",
     "homeLabel": "Home",
@@ -40,8 +44,6 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "seeAllProjects": "See all projects",
-    "exploreAllSkills": "Explore all skills",
-    "viewMyWork": "View my work",
     "liveDemo": "Live demo",
     "sourceCode": "Source",
     "backHome": "Go home",
@@ -50,8 +52,11 @@
     "brandName": "kostecki.dev",
     "footerTagline": "PHP & Laravel backend developer — APIs, integrations and infrastructure automation.",
     "footerStack": "Laravel · PHP · Docker",
-    "siteSource": "Site source",
-    "featuredProjectLabel": "Personal project in production"
+    "siteSource": "Source",
+    "featuredProjectLabel": "Personal project in production",
+    "provesLabel": "Proves",
+    "photoPlaceholder": "Photo",
+    "photoAlt": "Sebastian Kostecki"
   },
   "nav": [
     {
@@ -76,32 +81,113 @@
     }
   ],
   "hero": {
-    "label": "Backend Developer / Laravel",
+    "label": "Backend Developer / PHP · Laravel",
     "name": "Sebastian Kostecki",
-    "valueProp": "I build and maintain",
-    "valuePropAccent": "production PHP backends.",
-    "subtitle": "I develop B2B platforms, API integrations, and infrastructure and WordPress automation.",
+    "valueProp": "PHP and Laravel backends",
+    "valuePropAccent": "that run in production.",
+    "subtitle": "Hosting control panel integrations, WHMCS modules, features from the data model to logic running for customers. I write code with AI agents, in a process with tests and review that leaves public evidence.",
     "ctaPrimary": {
       "label": "Let's talk",
       "href": "/contact"
     }
   },
+  "summary": {
+    "title": "At a glance",
+    "items": [
+      {
+        "label": "Role",
+        "value": "Backend Developer (PHP / Laravel), PanelAlpha"
+      },
+      {
+        "label": "Experience",
+        "value": "{years:modulesGarden} commercially, {years:panelAlpha} of it on PanelAlpha"
+      },
+      {
+        "label": "Stack",
+        "value": "PHP 8.5 · Laravel 13 · PostgreSQL / MySQL · Vue / React · Docker"
+      },
+      {
+        "label": "In production",
+        "value": "PanelAlpha (B2B) and 2 products of my own on my own VPS"
+      },
+      {
+        "label": "AI workflow",
+        "value": "Claude Code and MCP, a process with tests and review"
+      },
+      {
+        "label": "Contact",
+        "value": "kontakt@kostecki.dev",
+        "href": "mailto:kontakt@kostecki.dev"
+      }
+    ]
+  },
   "cv": {
-    "href": ""
+    "href": "",
+    "title": "CV",
+    "intro": "A print-ready version of this site, built from the same data as every other page.",
+    "print": "Save as PDF",
+    "printHint": "Opens the print dialog; choose “Save as PDF”.",
+    "summaryTitle": "Profile",
+    "experienceTitle": "Experience",
+    "productsTitle": "Products of my own in production",
+    "skillsTitle": "Skills",
+    "generated": "Generated from kostecki.dev"
   },
   "about": {
     "index": "01 / About",
-    "title": "How I work",
+    "title": "Who I am",
     "paragraphs": [
-      "For 4 years I've been building PHP backends — mostly Laravel — on a production B2B product. At ModulesGarden I work on PanelAlpha, a platform that helps service companies automate WordPress management.",
-      "I like owning a feature from the backend layer through to working business logic — and when needed, I pick up the frontend (Vue.js). I work on a live product, so I care about code that actually works for customers.",
-      "After hours I build two products of my own that run in production, Domowy Skarbnik and Root Keeper, on my own VPS behind Traefik. Outside of code — family and time outdoors."
+      "For {years:modulesGarden} I've been building PHP backends, mostly Laravel, and working on PanelAlpha, a platform that helps service companies automate WordPress management. I'm closest to hosting control panel integrations (cPanel, Plesk, DirectAdmin), and I also contribute to the open-source PanelAlpha Engine. I've always wanted to program and build things of my own: I like technology and solving problems.",
+      "I like owning a feature from the backend layer through to working business logic — and when needed, I pick up the frontend (Vue.js). In working with others I value directness. I take responsibility for a task and see it through to the end; I work on a live product, so I care about code that actually works for customers.",
+      "After hours I build two products of my own that run in production, Domowy Skarbnik and Root Keeper, on my own VPS behind Traefik. I keep learning to work with AI: I read, test tools and take part in courses (10xDevs among them). I write code with AI agents in a process with tests and review — I'm the one accountable for what reaches production.",
+      "I live in Lublin. Outside of code — family, walks and the mountains, working outdoors, and a good book."
     ]
   },
   "aiWorkflow": {
     "index": "AI / Workflow",
     "title": "Working with AI agents",
     "subtitle": "Agents (Claude Code, Cursor) write a large share of my code, but I own what reaches production. I am refining the process in the 10xDevs course, and its traces are in my public repositories.",
+    "proof": {
+      "lead": "Every change leaves a documentation folder in the repository. A few that show how it works:",
+      "items": [
+        {
+          "project": "Root Keeper",
+          "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive/2026-09-22-production-data-safety",
+          "shows": "Rules for working with production data (encrypted backups, a backup before every migration) set before real data reached production."
+        },
+        {
+          "project": "Root Keeper",
+          "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive/2026-10-01-restore-from-backup",
+          "shows": "Restoring from a backup as a flow tested in CI, not a script in a drawer."
+        },
+        {
+          "project": "Root Keeper",
+          "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive/2026-10-02-testing-ownership-boundaries",
+          "shows": "Data ownership boundaries between accounts verified by tests."
+        },
+        {
+          "project": "Root Keeper",
+          "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive/2026-10-22-e2e-in-ci",
+          "shows": "Playwright wired into the pipeline on every PR, not run by hand."
+        },
+        {
+          "project": "Domowy Skarbnik",
+          "url": "https://github.com/sebastian-kostecki/household-treasurer/tree/main/context/archive/2026-11-04-import-category-suggestions",
+          "shows": "Category suggestions on import as domain logic (model, ADR, tests), not just UI."
+        }
+      ],
+      "counterLabel": "Archived changes across two public repositories",
+      "archiveLinks": [
+        {
+          "title": "Root Keeper: archive",
+          "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive"
+        },
+        {
+          "title": "Domowy Skarbnik: archive",
+          "url": "https://github.com/sebastian-kostecki/household-treasurer/tree/main/context/archive"
+        }
+      ]
+    },
     "steps": [
       {
         "title": "Context before code",
@@ -113,7 +199,7 @@
       },
       {
         "title": "Research, plan, ship",
-        "body": "Every change gets its own folder with research, a plan and an implementation review. It moves to the archive once shipped.",
+        "body": "Each change gets its own documentation folder: usually a plan, and for larger ones also research and an implementation review. It moves to the archive once shipped.",
         "link": {
           "title": "Change archive",
           "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive"
@@ -149,37 +235,44 @@
       {
         "name": "PHP",
         "icon": "simple-icons:php",
-        "level": "Core language"
+        "level": "Core language",
+        "usedIn": "PanelAlpha, WHMCS modules, Root Keeper, Domowy Skarbnik"
       },
       {
         "name": "Laravel",
         "icon": "simple-icons:laravel",
-        "level": "Production backends"
+        "level": "Production backends",
+        "usedIn": "PanelAlpha, Root Keeper, Domowy Skarbnik, Menu Maker"
       },
       {
         "name": "PostgreSQL",
         "icon": "simple-icons:postgresql",
-        "level": "Own products"
+        "level": "Own products",
+        "usedIn": "Root Keeper, Domowy Skarbnik"
       },
       {
         "name": "MySQL",
         "icon": "simple-icons:mysql",
-        "level": "Commercial product"
+        "level": "Commercial product",
+        "usedIn": "PanelAlpha"
       },
       {
         "name": "TypeScript",
         "icon": "simple-icons:typescript",
-        "level": "Vue and React"
+        "level": "Vue and React",
+        "usedIn": "Root Keeper (React), Domowy Skarbnik (Vue), this site"
       },
       {
         "name": "Docker",
         "icon": "simple-icons:docker",
-        "level": "Environments"
+        "level": "Environments",
+        "usedIn": "PanelAlpha Engine, deploys on my own VPS"
       },
       {
         "name": "Vue.js",
         "icon": "simple-icons:vuedotjs",
-        "level": "Feature frontends"
+        "level": "Feature frontends",
+        "usedIn": "PanelAlpha, Domowy Skarbnik, this site"
       }
     ],
     "categories": [
@@ -240,10 +333,10 @@
     ]
   },
   "projects": {
-    "homePreview": {
-      "index": "02 / Projects",
-      "title": "Selected commercial work",
-      "subtitle": "PanelAlpha, the open-source PanelAlpha Engine, and five independently implemented WHMCS modules."
+    "homeExperience": {
+      "index": "02 / Experience",
+      "title": "Experience",
+      "subtitle": "The scope of my work on PanelAlpha, including contributions to the open-source PanelAlpha Engine, and WHMCS modules for ModulesGarden."
     },
     "index": "01 / Projects",
     "title": "Selected projects",
@@ -254,13 +347,13 @@
       "context": {
         "employer": "ModulesGarden",
         "role": "Backend Developer",
-        "period": "3.5+ years"
+        "period": "{years:panelAlpha}"
       },
       "description": "A production B2B platform that automates WordPress management for hosting companies and agencies.",
       "contributionTitle": "My contribution",
       "responsibilities": [
         "Laravel backend and platform API development",
-        "Hosting, DNS, email, SSL, backup, and storage integrations",
+        "Integrations with hosting panels (cPanel, Plesk, DirectAdmin) and PowerDNS, plus email, SSL, backup, and storage services",
         "WordPress instance lifecycle and Git support",
         "WHMCS integration and related billing logic",
         "Vue.js and Vuetify for features spanning backend and UI"
@@ -270,33 +363,10 @@
         "title": "View PanelAlpha",
         "url": "https://panelalpha.com",
         "primary": true
-      }
-    },
-    "openSource": {
-      "eyebrow": "Open source",
-      "title": "PanelAlpha Engine",
-      "context": {
-        "employer": "ModulesGarden",
-        "role": "Co-author",
-        "period": "2026"
       },
-      "description": "An open-source platform for self-hosting projects on your own VPS. An AI agent deploys and maintains projects over MCP. Apache 2.0 licence.",
-      "contributionTitle": "My contribution (public commits)",
-      "responsibilities": [
-        "Automatic project redeploy on git push",
-        "Project file manager: move, download, permission changes",
-        "Managing a domain's PHP directives from the engine itself",
-        "Transfer and visitor statistics computed from existing logs"
-      ],
-      "tags": ["PHP", "Docker", "MCP", "AI agents", "Self-hosting"],
-      "link": {
-        "title": "Repository",
-        "url": "https://github.com/panelalpha/panelalpha-engine",
-        "primary": true
-      },
-      "secondaryLink": {
-        "title": "My commits",
-        "url": "https://github.com/panelalpha/panelalpha-engine/commits?author=skostecki"
+      "openSourceContribution": {
+        "text": "Contributions to the open-source PanelAlpha Engine: auto-deploy on git push, file manager, per-domain PHP directives, transfer statistics.",
+        "context": "A self-hosting platform for projects that AI agents operate over MCP."
       }
     },
     "commercialGroup": {
@@ -347,19 +417,23 @@
           "featured": true,
           "highlights": [
             "Amounts stored as integer minor units, never floats",
-            "14 architecture decision records, a domain glossary and a CHANGELOG",
-            "130+ Pest test files, CI on GitHub Actions, 40+ pull requests",
+            "Architecture decision records (ADR), a domain glossary and a CHANGELOG",
+            "Pest tests run in CI on GitHub Actions",
             "Its own design system, deployed on a VPS behind Traefik"
           ],
-          "note": "Private repository, happy to walk through the code in an interview",
           "tags": ["Laravel 13", "PHP 8.5", "PostgreSQL", "Vue 3", "TypeScript", "Inertia", "Pest"],
           "links": [
             {
               "title": "Live app",
               "url": "https://treasurer.kostecki.dev",
               "primary": true
+            },
+            {
+              "title": "GitHub",
+              "url": "https://github.com/sebastian-kostecki/household-treasurer"
             }
-          ]
+          ],
+          "proves": "Laravel 13 + PostgreSQL + Inertia from scratch to production, with ADRs, a changelog and Pest tests in CI."
         },
         {
           "title": "Root Keeper",
@@ -371,7 +445,7 @@
             "Partial dates the way records have them: year or month only, “about”, month names and Roman numerals",
             "Relationship rules enforced on the server: at most two parents, no cycles",
             "Sign-in with a password or a passkey",
-            "4 CI workflows: lint, Larastan 7, Pest tests and Playwright e2e; 600+ commits"
+            "CI workflows: lint, Larastan 7, Pest tests and Playwright e2e"
           ],
           "tags": [
             "Laravel 13",
@@ -392,7 +466,8 @@
               "title": "GitHub",
               "url": "https://github.com/sebastian-kostecki/root-keeper"
             }
-          ]
+          ],
+          "proves": "The same backend with a different frontend (React 19 + TypeScript), CI pipelines: lint, Larastan, Pest, Playwright e2e."
         },
         {
           "title": "Menu Maker",
@@ -440,6 +515,11 @@
           ]
         }
       ]
+    },
+    "homeProducts": {
+      "index": "03 / Own products",
+      "title": "Own products in production",
+      "subtitle": "Products I build after hours and run on my own VPS. Full descriptions are on the projects page."
     }
   },
   "contact": {

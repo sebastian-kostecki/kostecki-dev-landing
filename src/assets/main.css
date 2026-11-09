@@ -16,9 +16,10 @@
   --color-accent-hover: #ff4d5a;
   --color-border: rgb(255 255 255 / 0.1);
   --color-bg: #0c0c0e;
-  --font-sans: 'Work Sans', ui-sans-serif, system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
-  --font-body: 'Work Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Work Sans Variable', 'Work Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono:
+    'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-body: 'Work Sans Variable', 'Work Sans', ui-sans-serif, system-ui, sans-serif;
   --radius: 0.25rem;
 }
 
@@ -143,5 +144,90 @@
 
   .skip-link {
     @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-sm focus:bg-primary focus:px-4 focus:py-2 focus:font-mono focus:text-sm focus:font-semibold focus:text-primary-foreground;
+  }
+
+  /* Photo treated in the site palette: black to red duotone with faint scanlines. */
+  .duotone-img {
+    filter: grayscale(1) contrast(1.15) brightness(0.95);
+  }
+
+  .duotone-tint {
+    background: linear-gradient(160deg, var(--color-primary), #2a0c10);
+    mix-blend-mode: multiply;
+    opacity: 0.55;
+  }
+
+  .duotone-scan {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--color-foreground) 4%, transparent) 0 1px,
+      transparent 1px 3px
+    );
+  }
+
+  .corner-frame {
+    position: relative;
+  }
+
+  .corner-frame::before,
+  .corner-frame::after {
+    content: '';
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 1px solid var(--color-primary);
+    pointer-events: none;
+  }
+
+  .corner-frame::before {
+    top: -0.75rem;
+    left: -0.75rem;
+    border-right: 0;
+    border-bottom: 0;
+  }
+
+  .corner-frame::after {
+    right: -0.75rem;
+    bottom: -0.75rem;
+    border-top: 0;
+    border-left: 0;
+  }
+
+  .cv-section {
+    @apply mt-8 border-t border-border pt-6 first-of-type:border-t-0;
+  }
+
+  .cv-heading {
+    @apply mb-4 font-mono text-xs font-semibold tracking-[0.25em] text-primary uppercase;
+  }
+}
+
+/* Print: styled for the CV page only (/cv) — black text on white, without chrome.
+   Other pages are not designed for print. */
+@media print {
+  @page {
+    margin: 14mm;
+  }
+
+  body {
+    background: #fff !important;
+    color: #111 !important;
+  }
+
+  .cv-sheet,
+  .cv-sheet * {
+    color: #111 !important;
+    background: transparent !important;
+    border-color: #d4d4d8 !important;
+    box-shadow: none !important;
+  }
+
+  .cv-sheet .cv-heading,
+  .cv-sheet .text-primary {
+    color: #b4232f !important;
+  }
+
+  .cv-avoid-break {
+    break-inside: avoid;
   }
 }

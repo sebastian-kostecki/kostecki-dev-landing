@@ -3,16 +3,13 @@ import { ArrowUpRight, Check } from '@lucide/vue'
 import { Icon } from '@iconify/vue'
 import type { Project } from '@/types/content'
 import { useContent } from '@/composables/useContent'
+import { isRepo } from '@/content/links'
 
 defineProps<{
   project: Project
 }>()
 
 const content = useContent()
-
-function isRepo(url: string) {
-  return url.includes('github.com')
-}
 </script>
 
 <template>

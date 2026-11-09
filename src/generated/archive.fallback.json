@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-11-09T11:13:31.051Z",
+  "total": 121,
+  "repos": [
+    {
+      "repo": "sebastian-kostecki/root-keeper",
+      "count": 71
+    },
+    {
+      "repo": "sebastian-kostecki/household-treasurer",
+      "count": 50
+    }
+  ]
+}

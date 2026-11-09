@@ -24,12 +24,16 @@
     "notFound": {
       "title": "Nie znaleziono — kostecki.dev",
       "description": "Strona, której szukasz, nie istnieje."
+    },
+    "cv": {
+      "title": "CV — Sebastian Kostecki",
+      "description": "CV Sebastiana Kosteckiego, Backend Developera (Laravel): doświadczenie, własne produkty i stack. Wersja do druku i PDF."
     }
   },
   "ui": {
     "skipToContent": "Przejdź do treści",
     "languageLabel": "Język",
-    "downloadCv": "Pobierz CV",
+    "downloadCv": "CV",
     "expand": "Rozwiń",
     "collapse": "Zwiń",
     "homeLabel": "Strona główna",
@@ -40,8 +44,6 @@
     "openMenu": "Otwórz menu",
     "closeMenu": "Zamknij menu",
     "seeAllProjects": "Zobacz wszystkie projekty",
-    "exploreAllSkills": "Zobacz wszystkie umiejętności",
-    "viewMyWork": "Zobacz projekty",
     "liveDemo": "Demo",
     "sourceCode": "Kod źródłowy",
     "backHome": "Strona główna",
@@ -50,8 +52,11 @@
     "brandName": "kostecki.dev",
     "footerTagline": "Backend Developer (Laravel) — API, integracje i automatyzacja infrastruktury.",
     "footerStack": "Laravel · PHP · Docker",
-    "siteSource": "Kod strony",
-    "featuredProjectLabel": "Projekt własny na produkcji"
+    "siteSource": "Źródło",
+    "featuredProjectLabel": "Projekt własny na produkcji",
+    "provesLabel": "Udowadnia",
+    "photoPlaceholder": "Zdjęcie",
+    "photoAlt": "Sebastian Kostecki"
   },
   "nav": [
     {
@@ -76,32 +81,113 @@
     }
   ],
   "hero": {
-    "label": "Backend Developer / Laravel",
+    "label": "Backend Developer / PHP · Laravel",
     "name": "Sebastian Kostecki",
-    "valueProp": "Buduję i rozwijam",
-    "valuePropAccent": "produkcyjne aplikacje backendowe w PHP.",
-    "subtitle": "Rozwijam platformy B2B, integracje API oraz automatyzację infrastruktury i WordPress.",
+    "valueProp": "Backend w PHP i Laravelu,",
+    "valuePropAccent": "który działa na produkcji.",
+    "subtitle": "Integracje z panelami hostingowymi, moduły WHMCS, feature od modelu danych po działającą logikę u klienta. Kod piszę z agentami AI, w procesie z testami i review, który ma publiczne dowody.",
     "ctaPrimary": {
       "label": "Porozmawiajmy",
       "href": "/contact"
     }
   },
+  "summary": {
+    "title": "W skrócie",
+    "items": [
+      {
+        "label": "Rola",
+        "value": "Backend Developer (PHP / Laravel), PanelAlpha"
+      },
+      {
+        "label": "Doświadczenie",
+        "value": "{years:modulesGarden} komercyjnie, w tym {years:panelAlpha} przy PanelAlpha"
+      },
+      {
+        "label": "Stack",
+        "value": "PHP 8.5 · Laravel 13 · PostgreSQL / MySQL · Vue / React · Docker"
+      },
+      {
+        "label": "Na produkcji",
+        "value": "PanelAlpha (B2B) oraz 2 własne produkty na własnym VPS-ie"
+      },
+      {
+        "label": "Praca z AI",
+        "value": "Claude Code i MCP, proces z testami i review"
+      },
+      {
+        "label": "Kontakt",
+        "value": "kontakt@kostecki.dev",
+        "href": "mailto:kontakt@kostecki.dev"
+      }
+    ]
+  },
   "cv": {
-    "href": ""
+    "href": "",
+    "title": "CV",
+    "intro": "Wersja do druku tej strony. Wszystko poniżej pochodzi z tych samych danych co reszta serwisu.",
+    "print": "Zapisz jako PDF",
+    "printHint": "Otwiera okno drukowania; wybierz „Zapisz jako PDF”.",
+    "summaryTitle": "Profil",
+    "experienceTitle": "Doświadczenie",
+    "productsTitle": "Własne produkty na produkcji",
+    "skillsTitle": "Umiejętności",
+    "generated": "Wygenerowano z kostecki.dev"
   },
   "about": {
     "index": "01 / O mnie",
-    "title": "Jak pracuję",
+    "title": "Kim jestem",
     "paragraphs": [
-      "Od 4 lat buduję backend w PHP — głównie Laravel — w produkcyjnym produkcie B2B. Pracuję w ModulesGarden nad platformą PanelAlpha, która firmom usługowym umożliwia automatyzację zarządzania WordPress.",
-      "Lubię przejąć feature i dowieźć go od warstwy backendowej po działającą logikę — a gdy potrzeba, wchodzę we frontend (Vue.js). Pracuję na żywym produkcie, więc liczy się dla mnie kod, który faktycznie działa u klientów.",
-      "Po godzinach rozwijam dwa własne produkty działające na produkcji, Domowy Skarbnik i Root Keeper, na własnym VPS-ie za Traefikiem. Poza kodem — rodzina i wypoczynek na świeżym powietrzu."
+      "Od {since:modulesGarden} buduję backend w PHP — głównie Laravel — i rozwijam platformę PanelAlpha, która firmom usługowym umożliwia automatyzację zarządzania WordPress. Najbliżej mi do integracji z panelami hostingowymi (cPanel, Plesk, DirectAdmin); przyczyniam się też do open-source'owego PanelAlpha Engine. Zawsze chciałem programować i tworzyć coś własnego: lubię technologie i rozwiązywanie problemów.",
+      "Lubię przejąć feature i dowieźć go od warstwy backendowej po działającą logikę — a gdy potrzeba, wchodzę we frontend (Vue.js). W kontaktach cenię konkret. Biorę odpowiedzialność za zadanie i doprowadzam je do końca; pracuję na żywym produkcie, więc liczy się dla mnie kod, który faktycznie działa u klientów.",
+      "Po godzinach rozwijam dwa własne produkty działające na produkcji, Domowy Skarbnik i Root Keeper, na własnym VPS-ie za Traefikiem. Na bieżąco uczę się pracy z AI: czytam, testuję narzędzia i biorę udział w kursach (m.in. 10xDevs). Kod z agentami AI piszę w procesie z testami i review — to ja odpowiadam za to, co trafia na produkcję.",
+      "Mieszkam w Lublinie. Poza kodem — rodzina, spacery i góry, praca na świeżym powietrzu i dobra książka."
     ]
   },
   "aiWorkflow": {
     "index": "AI / Workflow",
     "title": "Praca z agentami AI",
     "subtitle": "Agenci (Claude Code, Cursor) piszą dużą część mojego kodu, ale to ja odpowiadam za to, co trafia na produkcję. Proces dopracowuję na kursie 10xDevs, a jego ślady są w publicznych repozytoriach.",
+    "proof": {
+      "lead": "Każda zmiana zostawia w repozytorium folder z dokumentacją. Kilka, które pokazują, jak to działa:",
+      "items": [
+        {
+          "project": "Root Keeper",
+          "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive/2026-09-22-production-data-safety",
+          "shows": "Zasady pracy na danych produkcyjnych (szyfrowane kopie, backup przed migracją) ustalone, zanim na produkcję trafiły prawdziwe dane."
+        },
+        {
+          "project": "Root Keeper",
+          "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive/2026-10-01-restore-from-backup",
+          "shows": "Odtwarzanie z kopii jako przepływ testowany w CI, nie skrypt w szufladzie."
+        },
+        {
+          "project": "Root Keeper",
+          "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive/2026-10-02-testing-ownership-boundaries",
+          "shows": "Granice własności danych między kontami sprawdzane testami."
+        },
+        {
+          "project": "Root Keeper",
+          "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive/2026-10-22-e2e-in-ci",
+          "shows": "Playwright wpięty w pipeline przy każdym PR, nie odpalany ręcznie."
+        },
+        {
+          "project": "Domowy Skarbnik",
+          "url": "https://github.com/sebastian-kostecki/household-treasurer/tree/main/context/archive/2026-11-04-import-category-suggestions",
+          "shows": "Podpowiedzi kategorii przy imporcie jako logika domenowa (model, ADR, testy), nie tylko UI."
+        }
+      ],
+      "counterLabel": "Zarchiwizowane zmiany w dwóch publicznych repozytoriach",
+      "archiveLinks": [
+        {
+          "title": "Root Keeper: archiwum",
+          "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive"
+        },
+        {
+          "title": "Domowy Skarbnik: archiwum",
+          "url": "https://github.com/sebastian-kostecki/household-treasurer/tree/main/context/archive"
+        }
+      ]
+    },
     "steps": [
       {
         "title": "Kontekst przed kodem",
@@ -113,7 +199,7 @@
       },
       {
         "title": "Research, plan, wdrożenie",
-        "body": "Każda zmiana ma własny folder z researchem, planem i przeglądem implementacji. Po wdrożeniu trafia do archiwum.",
+        "body": "Zmiana dostaje własny folder z dokumentacją: najczęściej plan, przy większych także research i przegląd implementacji. Po wdrożeniu trafia do archiwum.",
         "link": {
           "title": "Archiwum zmian",
           "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive"
@@ -149,37 +235,44 @@
       {
         "name": "PHP",
         "icon": "simple-icons:php",
-        "level": "Język główny"
+        "level": "Język główny",
+        "usedIn": "PanelAlpha, moduły WHMCS, Root Keeper, Domowy Skarbnik"
       },
       {
         "name": "Laravel",
         "icon": "simple-icons:laravel",
-        "level": "Backend produkcyjny"
+        "level": "Backend produkcyjny",
+        "usedIn": "PanelAlpha, Root Keeper, Domowy Skarbnik, Menu Maker"
       },
       {
         "name": "PostgreSQL",
         "icon": "simple-icons:postgresql",
-        "level": "Produkty własne"
+        "level": "Produkty własne",
+        "usedIn": "Root Keeper, Domowy Skarbnik"
       },
       {
         "name": "MySQL",
         "icon": "simple-icons:mysql",
-        "level": "Produkt komercyjny"
+        "level": "Produkt komercyjny",
+        "usedIn": "PanelAlpha"
       },
       {
         "name": "TypeScript",
         "icon": "simple-icons:typescript",
-        "level": "Vue i React"
+        "level": "Vue i React",
+        "usedIn": "Root Keeper (React), Domowy Skarbnik (Vue), ta strona"
       },
       {
         "name": "Docker",
         "icon": "simple-icons:docker",
-        "level": "Środowiska"
+        "level": "Środowiska",
+        "usedIn": "PanelAlpha Engine, deploy na własnym VPS-ie"
       },
       {
         "name": "Vue.js",
         "icon": "simple-icons:vuedotjs",
-        "level": "Frontend feature'ów"
+        "level": "Frontend feature'ów",
+        "usedIn": "PanelAlpha, Domowy Skarbnik, ta strona"
       }
     ],
     "categories": [
@@ -240,10 +333,10 @@
     ]
   },
   "projects": {
-    "homePreview": {
-      "index": "02 / Projekty",
-      "title": "Wybrane realizacje komercyjne",
-      "subtitle": "PanelAlpha, open-source'owy PanelAlpha Engine oraz pięć samodzielnie zaimplementowanych modułów WHMCS."
+    "homeExperience": {
+      "index": "02 / Doświadczenie",
+      "title": "Doświadczenie",
+      "subtitle": "Zakres mojej pracy przy PanelAlpha, w tym wkład w open-source'owy PanelAlpha Engine, oraz moduły WHMCS dla ModulesGarden."
     },
     "index": "01 / Projekty",
     "title": "Wybrane projekty",
@@ -254,13 +347,13 @@
       "context": {
         "employer": "ModulesGarden",
         "role": "Backend Developer",
-        "period": "3,5+ roku"
+        "period": "{years:panelAlpha}"
       },
       "description": "Produkcyjna platforma B2B do automatyzacji zarządzania WordPress dla firm hostingowych i agencji.",
       "contributionTitle": "Mój wkład",
       "responsibilities": [
         "Backend Laravel i rozwój API platformy",
-        "Integracje hostingowe, DNS, e-mail, SSL, backup i storage",
+        "Integracje z panelami hostingowymi (cPanel, Plesk, DirectAdmin) i PowerDNS oraz usługami e-mail, SSL, backup i storage",
         "Cykl życia instancji WordPress oraz obsługa Git",
         "Integracja WHMCS i powiązana logika billingowa",
         "Vue.js i Vuetify przy funkcjach obejmujących backend oraz UI"
@@ -270,33 +363,10 @@
         "title": "Zobacz PanelAlpha",
         "url": "https://panelalpha.com",
         "primary": true
-      }
-    },
-    "openSource": {
-      "eyebrow": "Open source",
-      "title": "PanelAlpha Engine",
-      "context": {
-        "employer": "ModulesGarden",
-        "role": "Współautor",
-        "period": "2026"
       },
-      "description": "Open-source'owa platforma do self-hostingu projektów na własnym VPS-ie. Agent AI wdraża i utrzymuje projekty przez MCP. Licencja Apache 2.0.",
-      "contributionTitle": "Mój wkład (publiczne commity)",
-      "responsibilities": [
-        "Automatyczny redeploy projektu po git push",
-        "Menedżer plików projektu: przenoszenie, pobieranie, zmiana uprawnień",
-        "Zarządzanie dyrektywami PHP domeny z poziomu silnika",
-        "Statystyki transferu i odwiedzin liczone z istniejących logów"
-      ],
-      "tags": ["PHP", "Docker", "MCP", "AI agents", "Self-hosting"],
-      "link": {
-        "title": "Repozytorium",
-        "url": "https://github.com/panelalpha/panelalpha-engine",
-        "primary": true
-      },
-      "secondaryLink": {
-        "title": "Moje commity",
-        "url": "https://github.com/panelalpha/panelalpha-engine/commits?author=skostecki"
+      "openSourceContribution": {
+        "text": "Wkład w open-source'owy PanelAlpha Engine: auto-deploy po git push, menedżer plików, dyrektywy PHP per domena, statystyki transferu.",
+        "context": "Platforma do self-hostingu projektów, którą agenci AI obsługują przez MCP."
       }
     },
     "commercialGroup": {
@@ -347,19 +417,23 @@
           "featured": true,
           "highlights": [
             "Kwoty w groszach jako liczby całkowite, nigdy float",
-            "14 decyzji architektonicznych (ADR), słownik domeny i CHANGELOG",
-            "Ponad 130 plików testów Pest, CI na GitHub Actions, ponad 40 PR-ów",
+            "Decyzje architektoniczne (ADR), słownik domeny i CHANGELOG",
+            "Testy Pest uruchamiane w CI na GitHub Actions",
             "Własny design system i wdrożenie na VPS za Traefikiem"
           ],
-          "note": "Repozytorium prywatne, kod pokażę na rozmowie",
           "tags": ["Laravel 13", "PHP 8.5", "PostgreSQL", "Vue 3", "TypeScript", "Inertia", "Pest"],
           "links": [
             {
               "title": "Wersja live",
               "url": "https://treasurer.kostecki.dev",
               "primary": true
+            },
+            {
+              "title": "GitHub",
+              "url": "https://github.com/sebastian-kostecki/household-treasurer"
             }
-          ]
+          ],
+          "proves": "Laravel 13 + PostgreSQL + Inertia od zera do produkcji, z ADR, changelogiem i testami Pest w CI."
         },
         {
           "title": "Root Keeper",
@@ -371,7 +445,7 @@
             "Daty częściowe jak w aktach: sam rok lub miesiąc, „około”, miesiące słownie i cyframi rzymskimi",
             "Reguły relacji pilnowane na serwerze: najwyżej dwoje rodziców, brak cykli",
             "Logowanie hasłem lub kluczem dostępu (passkey)",
-            "4 workflowy CI: lint, Larastan 7, testy Pest i e2e w Playwright; ponad 600 commitów"
+            "Workflowy CI: lint, Larastan 7, testy Pest i e2e w Playwright"
           ],
           "tags": [
             "Laravel 13",
@@ -392,7 +466,8 @@
               "title": "GitHub",
               "url": "https://github.com/sebastian-kostecki/root-keeper"
             }
-          ]
+          ],
+          "proves": "Ten sam backend z innym frontendem (React 19 + TypeScript), pipeline'y CI: lint, Larastan, Pest, Playwright e2e."
         },
         {
           "title": "Menu Maker",
@@ -440,6 +515,11 @@
           ]
         }
       ]
+    },
+    "homeProducts": {
+      "index": "03 / Własne produkty",
+      "title": "Własne produkty na produkcji",
+      "subtitle": "Produkty, które buduję po godzinach i utrzymuję na własnym VPS-ie. Pełne opisy na stronie projektów."
     }
   },
   "contact": {
