@@ -50,6 +50,12 @@ export interface CommercialWorkContext {
   period: string
 }
 
+export interface OpenSourceContribution {
+  text: string
+  context: string
+  link: ProjectLink
+}
+
 export interface FeaturedProject {
   eyebrow: string
   title: string
@@ -59,7 +65,7 @@ export interface FeaturedProject {
   responsibilities: string[]
   tags: string[]
   link?: ProjectLink
-  secondaryLink?: ProjectLink
+  openSourceContribution?: OpenSourceContribution
 }
 
 export interface AiWorkflowStep {
@@ -224,7 +230,7 @@ export interface SiteContent {
     categories: SkillCategory[]
   }
   projects: {
-    homePreview: {
+    homeExperience: {
       index: string
       title: string
       subtitle: string
@@ -233,7 +239,6 @@ export interface SiteContent {
     title: string
     subtitle: string
     featured: FeaturedProject
-    openSource: FeaturedProject
     commercialGroup: CommercialProjectGroup
     personal: PersonalProjects
   }

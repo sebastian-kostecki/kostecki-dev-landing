@@ -33,7 +33,6 @@ function projectIndex(index: number) {
 
       <div class="space-y-6">
         <PanelAlphaFeature :project="content.projects.featured" />
-        <PanelAlphaFeature :project="content.projects.openSource" />
         <CommercialProjectGroup :group="content.projects.commercialGroup" />
       </div>
 

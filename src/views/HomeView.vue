@@ -41,31 +41,21 @@ const content = useContent()
       </div>
     </section>
 
-    <AiWorkflowSection />
-
     <section class="px-4 py-24 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-6xl">
         <SectionHeading
-          :index="content.projects.homePreview.index"
-          :title="content.projects.homePreview.title"
-          :subtitle="content.projects.homePreview.subtitle"
+          :index="content.projects.homeExperience.index"
+          :title="content.projects.homeExperience.title"
+          :subtitle="content.projects.homeExperience.subtitle"
         />
         <div class="space-y-5">
-          <PanelAlphaFeature :project="content.projects.featured" compact />
-          <PanelAlphaFeature :project="content.projects.openSource" compact />
+          <PanelAlphaFeature :project="content.projects.featured" />
           <CommercialProjectGroup :group="content.projects.commercialGroup" compact />
-        </div>
-        <div class="mt-10">
-          <RouterLink
-            to="/projects"
-            class="inline-flex items-center gap-2 font-mono text-sm font-semibold text-primary transition-colors hover:text-primary-glow"
-          >
-            {{ content.ui.seeAllProjects }}
-            <ArrowRight class="h-4 w-4" />
-          </RouterLink>
         </div>
       </div>
     </section>
+
+    <AiWorkflowSection />
 
     <section class="px-4 py-24 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-6xl">

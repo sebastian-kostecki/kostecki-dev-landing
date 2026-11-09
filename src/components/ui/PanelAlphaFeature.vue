@@ -2,15 +2,9 @@
 import { ArrowUpRight, Check } from '@lucide/vue'
 import type { FeaturedProject } from '@/types/content'
 
-withDefaults(
-  defineProps<{
-    project: FeaturedProject
-    compact?: boolean
-  }>(),
-  {
-    compact: false,
-  },
-)
+defineProps<{
+  project: FeaturedProject
+}>()
 </script>
 
 <template>
@@ -25,13 +19,12 @@ withDefaults(
         {{ project.eyebrow }}
       </p>
 
-      <div class="mt-4 grid gap-8" :class="compact ? '' : 'lg:grid-cols-[1fr_1.15fr]'">
+      <div class="mt-4 grid gap-8 lg:grid-cols-[1fr_1.15fr]">
         <div>
           <h3 class="font-mono text-2xl font-bold text-card-foreground sm:text-3xl">
             {{ project.title }}
           </h3>
           <div
-            v-if="!compact"
             class="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-xs text-muted-foreground"
           >
             <span>{{ project.context.employer }}</span>
@@ -54,10 +47,7 @@ withDefaults(
             </span>
           </div>
 
-          <div
-            v-if="project.link?.url || project.secondaryLink?.url"
-            class="mt-7 flex flex-wrap items-center gap-3"
-          >
+          <div v-if="project.link?.url" class="mt-7 flex flex-wrap items-center gap-3">
             <a
               v-if="project.link?.url"
               :href="project.link.url"
@@ -68,20 +58,10 @@ withDefaults(
               {{ project.link.title }}
               <ArrowUpRight class="h-4 w-4" />
             </a>
-            <a
-              v-if="project.secondaryLink?.url"
-              :href="project.secondaryLink.url"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-secondary"
-            >
-              {{ project.secondaryLink.title }}
-              <ArrowUpRight class="h-4 w-4" />
-            </a>
           </div>
         </div>
 
-        <div v-if="!compact">
+        <div>
           <p class="font-mono text-sm font-semibold text-foreground">
             {{ project.contributionTitle }}
           </p>
@@ -93,6 +73,27 @@ withDefaults(
             >
               <Check class="mt-0.5 h-4 w-4 shrink-0 text-primary" />
               <span>{{ responsibility }}</span>
+            </li>
+            <li
+              v-if="project.openSourceContribution"
+              class="flex gap-3 text-sm leading-relaxed text-muted-foreground"
+            >
+              <Check class="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+              <div>
+                <span>{{ project.openSourceContribution.text }}</span>
+                <p class="mt-1 text-xs text-muted-foreground/80">
+                  {{ project.openSourceContribution.context }}
+                </p>
+                <a
+                  :href="project.openSourceContribution.link.url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mt-2 inline-flex items-center gap-1.5 font-mono text-xs font-medium text-primary transition-colors hover:text-primary-glow"
+                >
+                  {{ project.openSourceContribution.link.title }}
+                  <ArrowUpRight class="h-3.5 w-3.5" aria-hidden="true" />
+                </a>
+              </div>
             </li>
           </ul>
         </div>

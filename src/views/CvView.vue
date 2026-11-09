@@ -6,10 +6,7 @@ import { useContent } from '@/composables/useContent'
 const content = useContent()
 
 const profile = computed(() => content.value.summary.items.filter((item) => !item.href))
-const experience = computed(() => [
-  content.value.projects.featured,
-  content.value.projects.openSource,
-])
+const experience = computed(() => [content.value.projects.featured])
 const products = computed(() =>
   content.value.projects.personal.items.filter((project) => project.featured),
 )
@@ -97,6 +94,15 @@ function printCv() {
                 class="mt-2 list-disc space-y-0.5 pl-5 text-sm text-foreground/80 marker:text-primary"
               >
                 <li v-for="item in job.responsibilities" :key="item">{{ item }}</li>
+                <li v-if="job.openSourceContribution">
+                  {{ job.openSourceContribution.text }}
+                  <a
+                    :href="job.openSourceContribution.link.url"
+                    class="text-primary hover:underline"
+                  >
+                    {{ job.openSourceContribution.link.title }}
+                  </a>
+                </li>
               </ul>
             </div>
             <div class="cv-avoid-break">

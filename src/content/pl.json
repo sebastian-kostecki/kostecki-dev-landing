@@ -324,10 +324,10 @@
     ]
   },
   "projects": {
-    "homePreview": {
-      "index": "02 / Projekty",
-      "title": "Wybrane realizacje komercyjne",
-      "subtitle": "PanelAlpha, open-source'owy PanelAlpha Engine oraz pięć samodzielnie zaimplementowanych modułów WHMCS."
+    "homeExperience": {
+      "index": "02 / Doświadczenie",
+      "title": "Doświadczenie",
+      "subtitle": "Zakres mojej pracy przy PanelAlpha w ModulesGarden, w tym wkład w open-source'owy PanelAlpha Engine, oraz moduły WHMCS."
     },
     "index": "01 / Projekty",
     "title": "Wybrane projekty",
@@ -344,7 +344,7 @@
       "contributionTitle": "Mój wkład",
       "responsibilities": [
         "Backend Laravel i rozwój API platformy",
-        "Integracje hostingowe, DNS, e-mail, SSL, backup i storage",
+        "Integracje z panelami hostingowymi (cPanel, Plesk, DirectAdmin) i PowerDNS oraz usługami e-mail, SSL, backup i storage",
         "Cykl życia instancji WordPress oraz obsługa Git",
         "Integracja WHMCS i powiązana logika billingowa",
         "Vue.js i Vuetify przy funkcjach obejmujących backend oraz UI"
@@ -354,33 +354,14 @@
         "title": "Zobacz PanelAlpha",
         "url": "https://panelalpha.com",
         "primary": true
-      }
-    },
-    "openSource": {
-      "eyebrow": "Open source",
-      "title": "PanelAlpha Engine",
-      "context": {
-        "employer": "ModulesGarden",
-        "role": "Współautor",
-        "period": "2026"
       },
-      "description": "Open-source'owa platforma do self-hostingu projektów na własnym VPS-ie. Agent AI wdraża i utrzymuje projekty przez MCP. Licencja Apache 2.0.",
-      "contributionTitle": "Mój wkład (publiczne commity)",
-      "responsibilities": [
-        "Automatyczny redeploy projektu po git push",
-        "Menedżer plików projektu: przenoszenie, pobieranie, zmiana uprawnień",
-        "Zarządzanie dyrektywami PHP domeny z poziomu silnika",
-        "Statystyki transferu i odwiedzin liczone z istniejących logów"
-      ],
-      "tags": ["PHP", "Docker", "MCP", "AI agents", "Self-hosting"],
-      "link": {
-        "title": "Repozytorium",
-        "url": "https://github.com/panelalpha/panelalpha-engine",
-        "primary": true
-      },
-      "secondaryLink": {
-        "title": "Moje commity",
-        "url": "https://github.com/panelalpha/panelalpha-engine/commits?author=skostecki"
+      "openSourceContribution": {
+        "text": "Wkład w open-source'owy PanelAlpha Engine: auto-deploy po git push, menedżer plików, dyrektywy PHP per domena, statystyki transferu.",
+        "context": "Platforma do self-hostingu projektów, którą agenci AI obsługują przez MCP.",
+        "link": {
+          "title": "Commity skostecki",
+          "url": "https://github.com/panelalpha/panelalpha-engine/commits?author=skostecki"
+        }
       }
     },
     "commercialGroup": {
