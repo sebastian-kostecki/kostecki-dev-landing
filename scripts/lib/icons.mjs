@@ -30,7 +30,7 @@ async function* sourceFiles(dir) {
  * Collects every "prefix:name" icon referenced in .vue/.ts/.json files under `srcDir`
  * (src/generated/ is skipped, it holds the output).
  * @param {string} srcDir
- * @returns {Promise<Map<string, string[]>>} sorted unique names per prefix, only prefixes in use
+ * @returns {Promise<Map<string, string[]>>} sorted unique names per prefix (prefixes sorted too, so output is stable), only prefixes in use
  */
 export async function collectIconNames(srcDir) {
   /** @type {Map<string, Set<string>>} */
@@ -42,7 +42,11 @@ export async function collectIconNames(srcDir) {
       used.get(prefix)?.add(name)
     }
   }
-  return new Map([...used].map(([prefix, set]) => [prefix, [...set].sort()]))
+  return new Map(
+    [...used]
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([prefix, set]) => [prefix, [...set].sort()]),
+  )
 }
 
 /**

@@ -19,7 +19,7 @@ try {
     `[icons] wrote ${collections.map((c) => `${c.prefix} (${Object.keys(c.icons).length})`).join(', ')}`,
   )
 } catch (error) {
-  console.error(error instanceof Error ? error.message : error)
-  if (error instanceof Error && error.cause) console.error('Caused by:', error.cause)
+  // Node prints the stack and the whole cause chain for an Error object.
+  console.error('[icons] failed:', error)
   process.exit(1)
 }

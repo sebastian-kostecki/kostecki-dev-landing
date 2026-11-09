@@ -172,7 +172,7 @@ Strona przestaje pobierać cokolwiek z zewnętrznych hostów: ikony z wygenerowa
 - Type checking passes: `pnpm type-check`
 - Linting passes: `pnpm lint`
 - Build z prerenderem przechodzi: `pnpm build`
-- W `dist/` nie ma odwołań do zewnętrznych hostów ikon i fontów: `grep -rE 'googleapis|gstatic|api\.iconify\.design' dist` nic nie zwraca
+- W `dist/` nie ma odwołań do Google Fonts: `grep -rE 'googleapis|gstatic' dist` nic nie zwraca; do `api.iconify.design` strona nie wysyła żądań (domyślny provider `@iconify/vue` zostaje w bundlu jako ciąg znaków, ale `registerIcons()` podmienia moduł API — pilnuje tego `scripts/__tests__/icons.spec.ts`)
 - W `dist/assets/` są pliki `.woff2`: `ls dist/assets/*.woff2`
 
 #### Manual Verification:
