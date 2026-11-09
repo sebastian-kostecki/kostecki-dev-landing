@@ -9,8 +9,6 @@ const dictionaries: Record<string, SiteContent> = {
   en: en as unknown as SiteContent,
 }
 
-const ENGINE_COMMITS_URL = 'https://github.com/panelalpha/panelalpha-engine/commits?author=skostecki'
-
 describe.each(Object.keys(dictionaries))('projects experience (%s)', (locale) => {
   const projects = dictionaries[locale]!.projects
 
@@ -21,7 +19,6 @@ describe.each(Object.keys(dictionaries))('projects experience (%s)', (locale) =>
   it('exposes Engine as an open-source contribution of PanelAlpha', () => {
     const contribution = projects.featured.openSourceContribution
     expect(contribution).toBeDefined()
-    expect(contribution!.link.url).toBe(ENGINE_COMMITS_URL)
     expect(contribution!.text).not.toBe('')
     expect(contribution!.context).not.toBe('')
   })
@@ -38,11 +35,6 @@ describe.each(Object.keys(dictionaries))('projects experience (%s)', (locale) =>
 })
 
 describe('projects experience across locales', () => {
-  it('uses the same Engine link URL', () => {
-    const url = (content: SiteContent) => content.projects.featured.openSourceContribution?.link.url
-    expect(url(dictionaries.en!)).toBe(url(dictionaries.pl!))
-  })
-
   it('has the same number of responsibilities', () => {
     const count = (content: SiteContent) => content.projects.featured.responsibilities.length
     expect(count(dictionaries.en!)).toBe(count(dictionaries.pl!))

@@ -357,11 +357,7 @@
       },
       "openSourceContribution": {
         "text": "Contributions to the open-source PanelAlpha Engine: auto-deploy on git push, file manager, per-domain PHP directives, transfer statistics.",
-        "context": "A self-hosting platform for projects that AI agents operate over MCP.",
-        "link": {
-          "title": "skostecki commits",
-          "url": "https://github.com/panelalpha/panelalpha-engine/commits?author=skostecki"
-        }
+        "context": "A self-hosting platform for projects that AI agents operate over MCP."
       }
     },
     "commercialGroup": {

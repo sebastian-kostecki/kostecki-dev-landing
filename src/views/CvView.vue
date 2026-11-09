@@ -96,12 +96,6 @@ function printCv() {
                 <li v-for="item in job.responsibilities" :key="item">{{ item }}</li>
                 <li v-if="job.openSourceContribution">
                   {{ job.openSourceContribution.text }}
-                  <a
-                    :href="job.openSourceContribution.link.url"
-                    class="text-primary hover:underline"
-                  >
-                    {{ job.openSourceContribution.link.title }}
-                  </a>
                 </li>
               </ul>
             </div>

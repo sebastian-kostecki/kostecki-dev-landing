@@ -358,19 +358,19 @@ Nie dotyczy (statyczna treść, brak danych użytkowników). Wycofanie = revert 
 
 #### Automated
 
-- [x] 1.1 Test treści doświadczenia nie przechodzi przed zmianą treści i przechodzi po niej: `pnpm test experience`
-- [x] 1.2 Wszystkie testy przechodzą, w tym parytet locale: `pnpm test`
-- [x] 1.3 Sprawdzenie typów przechodzi: `pnpm type-check`
-- [x] 1.4 Lint przechodzi: `pnpm lint`
-- [x] 1.5 Build przechodzi: `pnpm build`
-- [x] 1.6 Brak odwołań do usuniętych kluczy: `grep -rn --exclude-dir=__tests__ -e openSource -e homePreview -e secondaryLink src` zwraca tylko `openSourceContribution`
+- [x] 1.1 Test treści doświadczenia nie przechodzi przed zmianą treści i przechodzi po niej: `pnpm test experience` — 90ef5f8
+- [x] 1.2 Wszystkie testy przechodzą, w tym parytet locale: `pnpm test` — 90ef5f8
+- [x] 1.3 Sprawdzenie typów przechodzi: `pnpm type-check` — 90ef5f8
+- [x] 1.4 Lint przechodzi: `pnpm lint` — 90ef5f8
+- [x] 1.5 Build przechodzi: `pnpm build` — 90ef5f8
+- [x] 1.6 Brak odwołań do usuniętych kluczy: `grep -rn --exclude-dir=__tests__ -e openSource -e homePreview -e secondaryLink src` zwraca tylko `openSourceContribution` — 90ef5f8
 
 #### Manual
 
 - [x] 1.7 Na `/` sekcja „02 / Doświadczenie” stoi między O mnie a sekcją AI i pokazuje pełną kartę PanelAlpha z listą zakresu oraz grupę WHMCS z liczbą 5
 - [x] 1.8 Ostatni punkt zakresu to Engine z linkiem „Commity skostecki · konto firmowe”, który otwiera listę commitów `skostecki` w nowej karcie
-- [x] 1.9 `/projects` nie ma osobnej karty Engine; `/cv` ma jedną pozycję PanelAlpha z punktem Engine, także w podglądzie wydruku
-- [x] 1.10 Układ czytelny przy 375 px (pełna karta PanelAlpha bez poziomego scrolla)
+- [x] 1.9 `/projects` nie ma osobnej karty Engine; `/cv` ma jedną pozycję PanelAlpha z punktem Engine, także w podglądzie wydruku — 90ef5f8
+- [x] 1.10 Układ czytelny przy 375 px (pełna karta PanelAlpha bez poziomego scrolla) — 90ef5f8
 
 ### Phase 2: Własne produkty — teasery i czysta treść
 

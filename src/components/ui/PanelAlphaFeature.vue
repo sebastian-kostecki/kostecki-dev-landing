@@ -84,15 +84,6 @@ defineProps<{
                 <p class="mt-1 text-xs text-muted-foreground/80">
                   {{ project.openSourceContribution.context }}
                 </p>
-                <a
-                  :href="project.openSourceContribution.link.url"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="mt-2 inline-flex items-center gap-1.5 font-mono text-xs font-medium text-primary transition-colors hover:text-primary-glow"
-                >
-                  {{ project.openSourceContribution.link.title }}
-                  <ArrowUpRight class="h-3.5 w-3.5" aria-hidden="true" />
-                </a>
               </div>
             </li>
           </ul>

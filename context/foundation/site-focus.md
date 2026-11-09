@@ -52,7 +52,7 @@ projekty poboczne (pisane z agentami, pokazują proces, nie talent do kodowania)
 | Lista „ostatnich zmian” | **Nie.** Nazwy folderów zaczynają się datą, więc po przerwie lista pokazuje to samo, co pusty commit log. |
 | Liczby w treści | Tylko liczone przy buildzie (staże, licznik archiwum) albo wcale. Żadnych literałów typu „14 ADR”, „130+ testów”. |
 | Własne projekty na home | Teasery: nazwa, stack, jedno zdanie „co udowadnia” bez liczb. Pełne karty tylko na `/projects`. |
-| PanelAlpha Engine | Nie jest osobną kartą. To punkt w zakresie pracy przy PanelAlpha, z linkiem do commitów `skostecki`. |
+| PanelAlpha Engine | Nie jest osobną kartą. To punkt w zakresie pracy przy PanelAlpha, bez osobnego linku do commitów. |
 | Liczby z PanelAlpha | Żadnych. Tylko zakres odpowiedzialności. |
 | Zdjęcie | Tak, w sekcji „O mnie”, duotone w stylu strony. |
 | Pisanie / blog | Nie teraz. Żadnej sekcji „notes” bez pierwszego tekstu. |
@@ -121,7 +121,7 @@ Spoza gałęzi, nowe: prerender (B1). Lokalizacja w URL i `hreflang` (B2) odło�
 - Migracja client area z Vue 2 / Vuetify 2 do Vue 3 / Vuetify 4 / TypeScript
   **(tylko po zgodzie pracodawcy; inaczej pomijamy).**
 - Wkład w open-source'owy PanelAlpha Engine: auto-deploy z git push, menedżer plików,
-  dyrektywy PHP per domena, statystyki transferu. Link: commity autora `skostecki`. Jedno zdanie kontekstu: platforma, którą agenci AI operują
+  dyrektywy PHP per domena, statystyki transferu. Bez linku do commitów. Jedno zdanie kontekstu: platforma, którą agenci AI operują
   przez MCP.
 
 ### Praca z agentami AI
