@@ -466,16 +466,16 @@ Brak danych do migracji. Wycofanie: revert commitów faz; fazy są niezależnie 
 
 #### Automated
 
-- [x] 3.1 Testy przechodzą (spójność kluczy po dodaniu `cv.*`, `routes.cv`): `pnpm test`
-- [x] 3.2 Type-check przechodzi: `pnpm type-check`
-- [x] 3.3 Lint przechodzi: `pnpm lint`
-- [x] 3.4 Build przechodzi: `pnpm build`
-- [x] 3.5 Żaden link CV nie otwiera nowej karty: `grep -n 'cv.href' src/components/layout/SiteHeader.vue src/views/ContactView.vue` pokazuje tylko `RouterLink`/`:to`
-- [x] 3.10 Build nie tworzy katalogu kolidującego z trasą `/cv`: `pnpm build && test ! -e dist/cv`
+- [x] 3.1 Testy przechodzą (spójność kluczy po dodaniu `cv.*`, `routes.cv`): `pnpm test` — 473249d
+- [x] 3.2 Type-check przechodzi: `pnpm type-check` — 473249d
+- [x] 3.3 Lint przechodzi: `pnpm lint` — 473249d
+- [x] 3.4 Build przechodzi: `pnpm build` — 473249d
+- [x] 3.5 Żaden link CV nie otwiera nowej karty: `grep -n 'cv.href' src/components/layout/SiteHeader.vue src/views/ContactView.vue` pokazuje tylko `RouterLink`/`:to` — 473249d
+- [x] 3.10 Build nie tworzy katalogu kolidującego z trasą `/cv`: `pnpm build && test ! -e dist/cv` — 473249d
 
 #### Manual
 
-- [x] 3.6 `/cv` (PL i EN) renderuje imię, etykietę, profil z panelu (bez wiersza kontaktu), doświadczenie, produkty, umiejętności, kontakt; tytuł karty „CV — Sebastian Kostecki”
-- [x] 3.7 Podgląd druku (Ctrl+P) na `/cv`: tylko arkusz CV, bez nagłówka i stopki, czytelne kolory na białym tle; przycisk „Zapisz jako PDF” otwiera okno druku
-- [x] 3.8 Przycisk „CV” w hero, nagłówku (desktop i mobile) i kontakcie prowadzi do `/cv` w tej samej karcie bez przeładowania; menu mobilne zamyka się po kliknięciu
-- [x] 3.9 Bezpośrednie wejście na `/cv` (odświeżenie) działa w `pnpm preview`
+- [x] 3.6 `/cv` (PL i EN) renderuje imię, etykietę, profil z panelu (bez wiersza kontaktu), doświadczenie, produkty, umiejętności, kontakt; tytuł karty „CV — Sebastian Kostecki” — 473249d
+- [x] 3.7 Podgląd druku (Ctrl+P) na `/cv`: tylko arkusz CV, bez nagłówka i stopki, czytelne kolory na białym tle; przycisk „Zapisz jako PDF” otwiera okno druku — 473249d
+- [x] 3.8 Przycisk „CV” w hero, nagłówku (desktop i mobile) i kontakcie prowadzi do `/cv` w tej samej karcie bez przeładowania; menu mobilne zamyka się po kliknięciu — 473249d
+- [x] 3.9 Bezpośrednie wejście na `/cv` (odświeżenie) działa w `pnpm preview` — 473249d
