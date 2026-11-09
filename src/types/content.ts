@@ -14,6 +14,7 @@ export interface SkillItem {
   icon?: string
   image?: string
   level?: string
+  usedIn?: string
 }
 
 export interface SkillCategory {

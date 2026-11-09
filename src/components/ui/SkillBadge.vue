@@ -6,6 +6,7 @@ defineProps<{
   icon?: string
   image?: string
   level?: string
+  usedIn?: string
 }>()
 </script>
 
@@ -21,6 +22,7 @@ defineProps<{
     <div class="min-w-0">
       <p class="truncate font-mono text-sm font-medium text-card-foreground">{{ name }}</p>
       <p v-if="level" class="truncate text-xs text-muted-foreground">{{ level }}</p>
+      <p v-if="usedIn" class="mt-1.5 text-xs leading-snug text-foreground/70">{{ usedIn }}</p>
     </div>
   </div>
 </template>

@@ -233,37 +233,44 @@
       {
         "name": "PHP",
         "icon": "simple-icons:php",
-        "level": "Język główny"
+        "level": "Język główny",
+        "usedIn": "PanelAlpha, moduły WHMCS, Root Keeper, Domowy Skarbnik"
       },
       {
         "name": "Laravel",
         "icon": "simple-icons:laravel",
-        "level": "Backend produkcyjny"
+        "level": "Backend produkcyjny",
+        "usedIn": "PanelAlpha, Root Keeper, Domowy Skarbnik, Menu Maker"
       },
       {
         "name": "PostgreSQL",
         "icon": "simple-icons:postgresql",
-        "level": "Produkty własne"
+        "level": "Produkty własne",
+        "usedIn": "Root Keeper, Domowy Skarbnik"
       },
       {
         "name": "MySQL",
         "icon": "simple-icons:mysql",
-        "level": "Produkt komercyjny"
+        "level": "Produkt komercyjny",
+        "usedIn": "PanelAlpha"
       },
       {
         "name": "TypeScript",
         "icon": "simple-icons:typescript",
-        "level": "Vue i React"
+        "level": "Vue i React",
+        "usedIn": "Root Keeper (React), Domowy Skarbnik (Vue), ta strona"
       },
       {
         "name": "Docker",
         "icon": "simple-icons:docker",
-        "level": "Środowiska"
+        "level": "Środowiska",
+        "usedIn": "PanelAlpha Engine, deploy na własnym VPS-ie"
       },
       {
         "name": "Vue.js",
         "icon": "simple-icons:vuedotjs",
-        "level": "Frontend feature'ów"
+        "level": "Frontend feature'ów",
+        "usedIn": "PanelAlpha, Domowy Skarbnik, ta strona"
       }
     ],
     "categories": [

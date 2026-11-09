@@ -116,13 +116,14 @@ Spoza gałęzi, nowe: prerender (B1). Lokalizacja w URL i `hreflang` (B2) odło�
 
 ### Doświadczenie: PanelAlpha (zakres, bez liczb)
 
-- Integracje z panelami hostingowymi (cPanel, Plesk, DirectAdmin) i PowerDNS.
+- Integracje z panelami hostingowymi (cPanel, Plesk, DirectAdmin) i PowerDNS oraz usługami e-mail, SSL, backup i storage.
 - Moduły WHMCS (pięć, z notą o autorstwie, jak dziś).
 - Migracja client area z Vue 2 / Vuetify 2 do Vue 3 / Vuetify 4 / TypeScript
-  **(tylko po zgodzie pracodawcy; inaczej pomijamy).**
+  **(tylko po zgodzie pracodawcy; inaczej pomijamy).** Zgoda nadal czeka (p. 9), więc
+  punkt nie jest pokazywany.
 - Wkład w open-source'owy PanelAlpha Engine: auto-deploy z git push, menedżer plików,
-  dyrektywy PHP per domena, statystyki transferu. Bez linku do commitów. Jedno zdanie kontekstu: platforma, którą agenci AI operują
-  przez MCP.
+  dyrektywy PHP per domena, statystyki transferu. Link „Commity skostecki” z dopiskiem
+  „konto firmowe”. Jedno zdanie kontekstu: platforma, którą agenci AI operują przez MCP.
 
 ### Praca z agentami AI
 
@@ -209,3 +210,7 @@ Każda zmiana cytuje ten dokument w `change.md`.
   „każda z researchem, planem i przeglądem” (dane: plan w 114 ze 121 folderów, przegląd
   w 105); p. 7 lead i pozycja Skarbnika zgodne z wdrożoną kopią; para backup to jedna
   pozycja (`restore-from-backup`); krok 2 sekcji skorygowany; p. 9 zamknięty.
+- **2026-11-09, wdrożenie `site-focus-experience`.** Engine nie ma osobnej karty na stronie
+  głównej, w `/projects` ani w `/cv` (jest punktem w Doświadczeniu PanelAlpha). Skills tylko
+  na `/skills`, z linią „gdzie użyte” przy każdej pozycji stacku podstawowego. Literały skali
+  usunięte z kart produktów i CV, z testem strażnika. Skarbnik linkuje do publicznego repo.

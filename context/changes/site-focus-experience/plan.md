@@ -376,30 +376,30 @@ Nie dotyczy (statyczna treść, brak danych użytkowników). Wycofanie = revert 
 
 #### Automated
 
-- [x] 2.1 Test treści produktów nie przechodzi przed zmianą treści i przechodzi po niej: `pnpm test products`
-- [x] 2.2 Wszystkie testy przechodzą: `pnpm test`
-- [x] 2.3 Sprawdzenie typów przechodzi: `pnpm type-check`
-- [x] 2.4 Lint przechodzi: `pnpm lint`
-- [x] 2.5 Build przechodzi: `pnpm build`
+- [x] 2.1 Test treści produktów nie przechodzi przed zmianą treści i przechodzi po niej: `pnpm test products` — 74fcde6
+- [x] 2.2 Wszystkie testy przechodzą: `pnpm test` — 74fcde6
+- [x] 2.3 Sprawdzenie typów przechodzi: `pnpm type-check` — 74fcde6
+- [x] 2.4 Lint przechodzi: `pnpm lint` — 74fcde6
+- [x] 2.5 Build przechodzi: `pnpm build` — 74fcde6
 
 #### Manual
 
-- [x] 2.6 Na `/` po sekcji AI są dwa teasery (zrzut, nazwa, tagi, „Udowadnia: …”, link do hosta live i GitHub) i link do `/projects`; sekcji Skills na home nie ma
-- [x] 2.7 Na `/projects` karta Skarbnika ma przycisk GitHub prowadzący do publicznego repo i nie ma notatki „Repozytorium prywatne”; żaden punkt kart produktów nie zawiera liczby skali
-- [x] 2.8 `/cv` w sekcji produktów nie pokazuje „14 decyzji” ani „130 plików”
-- [x] 2.9 Teasery czytelne przy 375 px (jedna kolumna, linki nie wychodzą poza kartę)
+- [x] 2.6 Na `/` po sekcji AI są dwa teasery (zrzut, nazwa, tagi, „Udowadnia: …”, link do hosta live i GitHub) i link do `/projects`; sekcji Skills na home nie ma — 74fcde6
+- [x] 2.7 Na `/projects` karta Skarbnika ma przycisk GitHub prowadzący do publicznego repo i nie ma notatki „Repozytorium prywatne”; żaden punkt kart produktów nie zawiera liczby skali — 74fcde6
+- [x] 2.8 `/cv` w sekcji produktów nie pokazuje „14 decyzji” ani „130 plików” — 74fcde6
+- [x] 2.9 Teasery czytelne przy 375 px (jedna kolumna, linki nie wychodzą poza kartę) — 74fcde6
 
 ### Phase 3: Skills „gdzie użyte” i domknięcie foundation
 
 #### Automated
 
-- [ ] 3.1 Test treści skills nie przechodzi przed dodaniem `usedIn` i przechodzi po nim: `pnpm test skills`
-- [ ] 3.2 Wszystkie testy przechodzą: `pnpm test`
-- [ ] 3.3 Sprawdzenie typów przechodzi: `pnpm type-check`
-- [ ] 3.4 Lint przechodzi: `pnpm lint`
-- [ ] 3.5 Build przechodzi: `pnpm build`
+- [x] 3.1 Test treści skills nie przechodzi przed dodaniem `usedIn` i przechodzi po nim: `pnpm test skills`
+- [x] 3.2 Wszystkie testy przechodzą: `pnpm test`
+- [x] 3.3 Sprawdzenie typów przechodzi: `pnpm type-check`
+- [x] 3.4 Lint przechodzi: `pnpm lint`
+- [x] 3.5 Build przechodzi: `pnpm build`
 
 #### Manual
 
-- [ ] 3.6 Na `/skills` każda z 7 pozycji stacku podstawowego pokazuje linię „gdzie użyte” pod poziomem, w PL i EN
-- [ ] 3.7 `site-focus.md` p. 7 i p. 11 zgadzają się z tym, co widać na stronie
+- [x] 3.6 Na `/skills` każda z 7 pozycji stacku podstawowego pokazuje linię „gdzie użyte” pod poziomem, w PL i EN
+- [x] 3.7 `site-focus.md` p. 7 i p. 11 zgadzają się z tym, co widać na stronie
