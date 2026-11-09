@@ -82,8 +82,8 @@
   "hero": {
     "label": "Backend Developer / PHP · Laravel",
     "name": "Sebastian Kostecki",
-    "valueProp": "For {years:modulesGarden} I've been building a production B2B product:",
-    "valuePropAccent": "PanelAlpha at ModulesGarden.",
+    "valueProp": "PHP and Laravel backends",
+    "valuePropAccent": "that run in production.",
     "subtitle": "Hosting control panel integrations, WHMCS modules, features from the data model to logic running for customers. I write code with AI agents, in a process with tests and review that leaves public evidence.",
     "ctaPrimary": {
       "label": "Let's talk",
@@ -95,7 +95,7 @@
     "items": [
       {
         "label": "Role",
-        "value": "Backend Developer (PHP / Laravel), ModulesGarden"
+        "value": "Backend Developer (PHP / Laravel), PanelAlpha"
       },
       {
         "label": "Experience",
