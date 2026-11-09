@@ -190,6 +190,7 @@ export interface SiteContent {
     sourceCode: string
     siteSource: string
     photoPlaceholder: string
+    photoAlt: string
     featuredProjectLabel: string
     provesLabel: string
     backHome: string

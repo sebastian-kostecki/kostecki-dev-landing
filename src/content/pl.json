@@ -55,7 +55,8 @@
     "siteSource": "Źródło",
     "featuredProjectLabel": "Projekt własny na produkcji",
     "provesLabel": "Udowadnia",
-    "photoPlaceholder": "Zdjęcie"
+    "photoPlaceholder": "Zdjęcie",
+    "photoAlt": "Sebastian Kostecki"
   },
   "nav": [
     {

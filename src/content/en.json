@@ -55,7 +55,8 @@
     "siteSource": "Source",
     "featuredProjectLabel": "Personal project in production",
     "provesLabel": "Proves",
-    "photoPlaceholder": "Photo"
+    "photoPlaceholder": "Photo",
+    "photoAlt": "Sebastian Kostecki"
   },
   "nav": [
     {

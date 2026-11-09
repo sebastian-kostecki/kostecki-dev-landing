@@ -37,7 +37,11 @@ const featuredPersonal = computed(() =>
         <div class="lg:col-span-4">
           <SectionHeading :index="content.about.index" :title="content.about.title" />
           <div class="corner-frame mx-3 max-w-[11rem] sm:max-w-[15rem]">
-            <DuotonePhoto :placeholder-label="content.ui.photoPlaceholder" />
+            <DuotonePhoto
+              src="/assets/about/sebastian.webp"
+              :alt="content.ui.photoAlt"
+              :placeholder-label="content.ui.photoPlaceholder"
+            />
           </div>
         </div>
         <div class="space-y-5 text-base leading-relaxed text-muted-foreground lg:col-span-8">
