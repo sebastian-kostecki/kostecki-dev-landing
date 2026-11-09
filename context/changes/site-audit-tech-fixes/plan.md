@@ -370,10 +370,10 @@ Fonty z własnej domeny usuwają dwa połączenia DNS/TLS do Google. Pakiety `@f
 
 #### Automated
 
-- [x] 4.1 Każda komenda `pnpm <x>` z README istnieje w `package.json`
-- [x] 4.2 Każda ścieżka plików z README istnieje w repo
-- [x] 4.3 Pozycje B4, B6, C1, D1, D2, D3, D5 w audycie są `[x]`
+- [x] 4.1 Każda komenda `pnpm <x>` z README istnieje w `package.json` — 540145c
+- [x] 4.2 Każda ścieżka plików z README istnieje w repo — 540145c
+- [x] 4.3 Pozycje B4, B6, C1, D1, D2, D3, D5 w audycie są `[x]` — 540145c
 
 #### Manual
 
-- [x] 4.4 README czyta się jako opis tego projektu; wiadomo z niego, jak zbudować, przetestować i sprawdzić nginx
+- [x] 4.4 README czyta się jako opis tego projektu; wiadomo z niego, jak zbudować, przetestować i sprawdzić nginx — 540145c
