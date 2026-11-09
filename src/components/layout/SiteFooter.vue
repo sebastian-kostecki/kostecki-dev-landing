@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
 import { useContent } from '@/composables/useContent'
+import { SITE_REPO_URL } from '@/seo/page-meta'
 
 const content = useContent()
 const year = new Date().getFullYear()
@@ -49,7 +50,7 @@ const year = new Date().getFullYear()
           {{ content.ui.footerStack }}
           <span aria-hidden="true" class="mx-2 text-primary">/</span>
           <a
-            href="https://github.com/sebastian-kostecki/kostecki-dev-landing"
+            :href="SITE_REPO_URL"
             target="_blank"
             rel="noopener noreferrer"
             class="transition-colors hover:text-primary"

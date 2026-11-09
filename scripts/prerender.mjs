@@ -19,7 +19,16 @@ function escapeText(value) {
 }
 
 async function run() {
-  const { render, injectPage, staticRoutes, dictionaries } = await import(
+  const {
+    render,
+    injectPage,
+    staticPaths,
+    staticRoutes,
+    dictionaries,
+    buildSitemap,
+    buildJsonLd,
+    buildLlmsTxt,
+  } = await import(
     pathToFileURL(ssrEntry).href
   )
 
@@ -32,14 +41,15 @@ async function run() {
   }
 
   const pl = dictionaries.pl
+  const jsonLd = buildJsonLd(pl)
   const written = []
 
   for (const { path: routePath, name } of staticRoutes) {
     const { html, meta } = await render(routePath)
     const file = targetFile(routePath)
     await mkdir(path.dirname(file), { recursive: true })
-    await writeFile(file, injectPage(template, { appHtml: html, meta }))
-    written.push({ file, expectedTitle: pl.routes[name].title, routePath })
+    await writeFile(file, injectPage(template, { appHtml: html, meta, jsonLd }))
+    written.push({ file, expectedTitle: pl.routes[name].title, routePath, expectJsonLd: true })
   }
 
   const notFound = await render(NOT_FOUND_PATH)
@@ -48,9 +58,14 @@ async function run() {
     notFoundFile,
     injectPage(template, { appHtml: notFound.html, meta: notFound.meta, noindex: true }),
   )
-  written.push({ file: notFoundFile, expectedTitle: pl.routes.notFound.title, routePath: '404' })
+  written.push({ file: notFoundFile, expectedTitle: pl.routes.notFound.title, routePath: '404', expectJsonLd: false })
 
-  for (const { file, expectedTitle, routePath } of written) {
+  const sitemapFile = path.join(distDir, 'sitemap.xml')
+  const llmsFile = path.join(distDir, 'llms.txt')
+  await writeFile(sitemapFile, buildSitemap(staticPaths))
+  await writeFile(llmsFile, buildLlmsTxt(dictionaries.en, staticRoutes))
+
+  for (const { file, expectedTitle, routePath, expectJsonLd } of written) {
     const content = await readFile(file, 'utf8')
     if (!content.includes(`<title>${escapeText(expectedTitle)}</title>`)) {
       throw new Error(`${routePath}: ${path.relative(root, file)} lacks <title>${expectedTitle}</title>`)
@@ -58,10 +73,23 @@ async function run() {
     if (content.includes(APP_PLACEHOLDER) || !/<div id="app">\s*\S/.test(content)) {
       throw new Error(`${routePath}: ${path.relative(root, file)} has an empty #app`)
     }
+    const hasJsonLd = content.includes('<script type="application/ld+json">')
+    if (hasJsonLd !== expectJsonLd) {
+      throw new Error(
+        `${routePath}: ${path.relative(root, file)} ${expectJsonLd ? 'lacks' : 'must not contain'} an application/ld+json block`,
+      )
+    }
+  }
+
+  for (const file of [sitemapFile, llmsFile]) {
+    if ((await readFile(file, 'utf8')).trim() === '') {
+      throw new Error(`${path.relative(root, file)} is empty`)
+    }
   }
 
   console.log('[prerender] wrote:')
   for (const { file } of written) console.log(`  ${path.relative(root, file)}`)
+  for (const file of [sitemapFile, llmsFile]) console.log(`  ${path.relative(root, file)}`)
 }
 
 try {

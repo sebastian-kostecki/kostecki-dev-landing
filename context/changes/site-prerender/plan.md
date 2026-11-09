@@ -351,35 +351,35 @@ Pięć tras renderowanych w jednym procesie Node to sekundy; build SSR dodaje je
 
 #### Automated
 
-- [x] 2.1 Testy przechodzą: `pnpm test`
-- [x] 2.2 Type check i lint przechodzą: `pnpm type-check && pnpm lint`
-- [x] 2.3 Build przechodzi i tworzy 5 plików tras oraz `dist/404.html`
-- [x] 2.4 Każdy plik ma własny tytuł (`dist/projects/index.html` → `Projekty — Sebastian Kostecki`)
-- [x] 2.5 Canonical per trasa w `dist/cv/index.html`, brak canonical w `dist/404.html`
-- [x] 2.6 Ponowne `pnpm prerender` na wyrenderowanym `dist/` kończy się kodem 1 z komunikatem o placeholderze `#app`
+- [x] 2.1 Testy przechodzą: `pnpm test` — be3bae4
+- [x] 2.2 Type check i lint przechodzą: `pnpm type-check && pnpm lint` — be3bae4
+- [x] 2.3 Build przechodzi i tworzy 5 plików tras oraz `dist/404.html` — be3bae4
+- [x] 2.4 Każdy plik ma własny tytuł (`dist/projects/index.html` → `Projekty — Sebastian Kostecki`) — be3bae4
+- [x] 2.5 Canonical per trasa w `dist/cv/index.html`, brak canonical w `dist/404.html` — be3bae4
+- [x] 2.6 Ponowne `pnpm prerender` na wyrenderowanym `dist/` kończy się kodem 1 z komunikatem o placeholderze `#app` — be3bae4
 
 #### Manual
 
-- [x] 2.7 `pnpm preview` + `curl` pokazuje treść `/skills` w HTML bez JS
-- [x] 2.8 Przeglądarka z wyłączonym JS: `/projects` pokazuje listę projektów
-- [x] 2.9 Z włączonym JS strona działa jak przed zmianą, w konsoli brak błędów
+- [x] 2.7 `pnpm preview` + `curl` pokazuje treść `/skills` w HTML bez JS — be3bae4
+- [x] 2.8 Przeglądarka z wyłączonym JS: `/projects` pokazuje listę projektów — be3bae4
+- [x] 2.9 Z włączonym JS strona działa jak przed zmianą, w konsoli brak błędów — be3bae4
 
 ### Phase 3: Artefakty dla maszyn z treści
 
 #### Automated
 
-- [ ] 3.1 Testy przechodzą: `pnpm test`
-- [ ] 3.2 Type check i lint przechodzą: `pnpm type-check && pnpm lint`
-- [ ] 3.3 Build przechodzi: `pnpm build`
-- [ ] 3.4 Sitemap ma 5 URL-i i brak `lastmod`
-- [ ] 3.5 `public/sitemap.xml` nie istnieje
-- [ ] 3.6 JSON-LD na 5 stronach tras, brak na `dist/404.html`
-- [ ] 3.7 `dist/llms.txt` istnieje i nie zawiera „commit”
+- [x] 3.1 Testy przechodzą: `pnpm test`
+- [x] 3.2 Type check i lint przechodzą: `pnpm type-check && pnpm lint`
+- [x] 3.3 Build przechodzi: `pnpm build`
+- [x] 3.4 Sitemap ma 5 URL-i i brak `lastmod`
+- [x] 3.5 `public/sitemap.xml` nie istnieje
+- [x] 3.6 JSON-LD na 5 stronach tras, brak na `dist/404.html`
+- [x] 3.7 `dist/llms.txt` istnieje i nie zawiera „commit”
 
 #### Manual
 
-- [ ] 3.8 JSON-LD z `dist/index.html` przechodzi walidator schema.org bez błędów
-- [ ] 3.9 Treść `dist/llms.txt` czyta się poprawnie i zgadza się ze stroną
+- [x] 3.8 JSON-LD z `dist/index.html` przechodzi walidator schema.org bez błędów
+- [x] 3.9 Treść `dist/llms.txt` czyta się poprawnie i zgadza się ze stroną
 
 ### Phase 4: nginx — prawdziwe 404 (B4)
 

@@ -1,6 +1,7 @@
 import type { SiteContent } from '@/types/content'
 
 export const SITE_URL = 'https://kostecki.dev'
+export const SITE_REPO_URL = 'https://github.com/sebastian-kostecki/kostecki-dev-landing'
 
 export interface PageMeta {
   title: string

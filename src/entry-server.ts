@@ -8,6 +8,9 @@ import { pageMeta, type PageMeta } from '@/seo/page-meta'
 
 export { staticPaths, staticRoutes } from '@/router/routes'
 export { injectPage } from '@/seo/html-template'
+export { buildSitemap } from '@/seo/sitemap'
+export { buildJsonLd } from '@/seo/structured-data'
+export { buildLlmsTxt } from '@/seo/llms'
 export { dictionaries } from '@/composables/useContent'
 
 export async function render(

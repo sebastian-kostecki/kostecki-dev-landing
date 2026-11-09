@@ -6,3 +6,9 @@ export const careerSince = {
 } as const
 
 export type CareerKey = keyof typeof careerSince
+
+// Current employer: the one place for facts about ModulesGarden (used by JSON-LD).
+export const employer = {
+  name: 'ModulesGarden',
+  url: 'https://www.modulesgarden.com',
+} as const
