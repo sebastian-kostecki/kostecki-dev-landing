@@ -394,4 +394,4 @@ Pięć tras renderowanych w jednym procesie Node to sekundy; build SSR dodaje je
 #### Manual
 
 - [x] 4.5 Na kontenerze lokalnym `/nie-ma` pokazuje stronę 404, link „wróć” prowadzi do `/` — fdbb8be
-- [ ] 4.6 Po deployu przez repo infra: `/nie-ma` zwraca 404, `/projects` zwraca 200 z treścią w HTML
+- [x] 4.6 Po deployu przez repo infra: `/nie-ma` zwraca 404, `/projects` zwraca 200 z treścią w HTML — zweryfikowane na produkcji 2026-11-09 (po restarcie kontenera `landing`; kontener trzymał starą wersję `nginx.conf`)

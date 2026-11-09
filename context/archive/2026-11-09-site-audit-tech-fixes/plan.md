@@ -364,7 +364,7 @@ Fonty z własnej domeny usuwają dwa połączenia DNS/TLS do Google. Pakiety `@f
 #### Manual
 
 - [x] 3.4 Na kontenerze lokalnym: wszystkie trasy i `/nie-ma` bez naruszeń CSP w konsoli; ikony, fonty, style i przełącznik języka działają — e62ead4
-- [ ] 3.5 Po deployu przez repo infra: `curl -sI` na `/` i `/nie-ma` pokazuje sześć nagłówków; securityheaders.com co najmniej A
+- [ ] 3.5 Po deployu przez repo infra: `curl -sI` na `/` i `/nie-ma` pokazuje sześć nagłówków; securityheaders.com co najmniej A — 2026-11-09: sześć nagłówków potwierdzone na `/` i `/nie-ma` (curl); ocena securityheaders.com do sprawdzenia ręcznie
 
 ### Phase 4: README i audyt (D5)
 
