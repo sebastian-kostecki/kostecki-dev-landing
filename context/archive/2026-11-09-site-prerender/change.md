@@ -1,10 +1,10 @@
 ---
 change_id: site-prerender
 title: Prerender wszystkich tras po buildzie wraz z sitemapą, JSON-LD i llms.txt
-status: impl_reviewed
+status: archived
 created: 2026-11-09
 updated: 2026-11-09
-archived_at: null
+archived_at: 2026-11-09T14:13:32Z
 ---
 
 ## Notes
