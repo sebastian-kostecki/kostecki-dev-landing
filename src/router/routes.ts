@@ -5,17 +5,22 @@ import SkillsView from '@/views/SkillsView.vue'
 import ContactView from '@/views/ContactView.vue'
 import CvView from '@/views/CvView.vue'
 import NotFoundView from '@/views/NotFoundView.vue'
+import pl from '@/content/pl.json'
 
 export type RouteName = 'home' | 'projects' | 'skills' | 'contact' | 'cv' | 'not-found'
 
 type NamedRouteRecord = RouteRecordRaw & { name: RouteName }
+
+// `cv.href` in the content files is the single switch for the CV page: empty hides
+// the CV links and, here, the /cv route (so no prerender, sitemap or llms.txt entry).
+const cvPublished = pl.cv.href.length > 0
 
 const namedRoutes: NamedRouteRecord[] = [
   { path: '/', name: 'home', component: HomeView },
   { path: '/projects', name: 'projects', component: ProjectsView },
   { path: '/skills', name: 'skills', component: SkillsView },
   { path: '/contact', name: 'contact', component: ContactView },
-  { path: '/cv', name: 'cv', component: CvView },
+  ...(cvPublished ? [{ path: '/cv', name: 'cv', component: CvView } as NamedRouteRecord] : []),
   { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFoundView },
 ]
 

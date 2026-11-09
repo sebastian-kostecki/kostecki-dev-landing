@@ -122,7 +122,7 @@
     ]
   },
   "cv": {
-    "href": "/cv",
+    "href": "",
     "title": "CV",
     "intro": "A print-ready version of this site, built from the same data as every other page.",
     "print": "Save as PDF",

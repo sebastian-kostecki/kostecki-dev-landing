@@ -66,7 +66,8 @@ check_status() {
   fi
 }
 
-for p in / /projects /projects/ /skills /contact /cv /sitemap.xml /llms.txt /favicon.svg; do
+# /cv jest ukryte (cv.href puste w src/content); po opublikowaniu dopisz je tutaj.
+for p in / /projects /projects/ /skills /contact /sitemap.xml /llms.txt /favicon.svg; do
   check_status "$p" 200
 done
 check_status /nie-ma 404
