@@ -18,6 +18,7 @@
     "lint": "run-s lint:*",
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
+    "check:nginx": "bash scripts/check-nginx.sh",
     "format": "prettier --write --experimental-cli src/",
     "generate:icons": "node scripts/build-icons.mjs",
     "generate:favicons": "node scripts/generate-favicons.mjs",

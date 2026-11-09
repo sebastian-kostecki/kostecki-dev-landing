@@ -339,31 +339,31 @@ Fonty z własnej domeny usuwają dwa połączenia DNS/TLS do Google. Pakiety `@f
 
 #### Automated
 
-- [x] 2.1 Testy D1 i D2 nie przechodzą przed zmianą i przechodzą po niej: `pnpm test`
-- [x] 2.2 `pnpm generate:icons` kończy się sukcesem, a `git diff --exit-code src/generated/icons.json` po nim jest pusty
-- [x] 2.3 Type checking passes: `pnpm type-check`
-- [x] 2.4 Linting passes: `pnpm lint`
-- [x] 2.5 Build z prerenderem przechodzi: `pnpm build`
-- [x] 2.6 W `dist/` nie ma odwołań do zewnętrznych hostów ikon i fontów
-- [x] 2.7 W `dist/assets/` są pliki `.woff2`
+- [x] 2.1 Testy D1 i D2 nie przechodzą przed zmianą i przechodzą po niej: `pnpm test` — 91b1cef
+- [x] 2.2 `pnpm generate:icons` kończy się sukcesem, a `git diff --exit-code src/generated/icons.json` po nim jest pusty — 91b1cef
+- [x] 2.3 Type checking passes: `pnpm type-check` — 91b1cef
+- [x] 2.4 Linting passes: `pnpm lint` — 91b1cef
+- [x] 2.5 Build z prerenderem przechodzi: `pnpm build` — 91b1cef
+- [x] 2.6 W `dist/` nie ma odwołań do zewnętrznych hostów ikon i fontów — 91b1cef
+- [x] 2.7 W `dist/assets/` są pliki `.woff2` — 91b1cef
 
 #### Manual
 
-- [x] 2.8 DevTools Network: brak żądań do `api.iconify.design`, `fonts.googleapis.com`, `fonts.gstatic.com`; ikony w stopce, na `/skills`, `/projects` i `/contact` widoczne
-- [x] 2.9 Fonty wyglądają jak przed zmianą, polskie znaki poprawne
-- [x] 2.10 Ikony widoczne z włączonym blokerem reklam
+- [x] 2.8 DevTools Network: brak żądań do `api.iconify.design`, `fonts.googleapis.com`, `fonts.gstatic.com`; ikony w stopce, na `/skills`, `/projects` i `/contact` widoczne — 91b1cef
+- [x] 2.9 Fonty wyglądają jak przed zmianą, polskie znaki poprawne — 91b1cef
+- [x] 2.10 Ikony widoczne z włączonym blokerem reklam — 91b1cef
 
 ### Phase 3: Nagłówki bezpieczeństwa (D3)
 
 #### Automated
 
-- [ ] 3.1 `scripts/check-nginx.sh` nie przechodzi przed zmianą w `docker/nginx.conf` i przechodzi po niej: `pnpm build && pnpm check:nginx`
-- [ ] 3.2 Linting passes: `pnpm lint`
-- [ ] 3.3 Testy dalej przechodzą: `pnpm test`
+- [x] 3.1 `scripts/check-nginx.sh` nie przechodzi przed zmianą w `docker/nginx.conf` i przechodzi po niej: `pnpm build && pnpm check:nginx`
+- [x] 3.2 Linting passes: `pnpm lint`
+- [x] 3.3 Testy dalej przechodzą: `pnpm test`
 
 #### Manual
 
-- [ ] 3.4 Na kontenerze lokalnym: wszystkie trasy i `/nie-ma` bez naruszeń CSP w konsoli; ikony, fonty, style i przełącznik języka działają
+- [x] 3.4 Na kontenerze lokalnym: wszystkie trasy i `/nie-ma` bez naruszeń CSP w konsoli; ikony, fonty, style i przełącznik języka działają
 - [ ] 3.5 Po deployu przez repo infra: `curl -sI` na `/` i `/nie-ma` pokazuje sześć nagłówków; securityheaders.com co najmniej A
 
 ### Phase 4: README i audyt (D5)
