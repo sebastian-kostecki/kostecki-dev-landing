@@ -6,6 +6,9 @@
 // copy of the tracked src/generated/archive.fallback.json, then exit 1. Every fallback
 // warns with the original error. A content error (bad URL, PL/EN mismatch, missing
 // folder) is never a fallback case: it exits 1.
+// ARCHIVE_STRICT=1 disables the fallback: a failed fetch exits 1 and leaves the result
+// untouched. The scheduled refresh on the VPS uses it, so an outage fails the job
+// visibly instead of republishing a stale count as if it were fresh.
 // GITHUB_TOKEN is optional. ARCHIVE_GITHUB_API overrides the API base (offline tests).
 
 import { mkdir, readFile, rename, writeFile } from 'node:fs/promises'
@@ -25,6 +28,7 @@ const OUTPUT = resolve(ROOT, 'src/generated/archive.json')
 const FALLBACK = resolve(ROOT, 'src/generated/archive.fallback.json')
 const API = process.env.ARCHIVE_GITHUB_API ?? 'https://api.github.com'
 const TOKEN = process.env.GITHUB_TOKEN
+const STRICT = process.env.ARCHIVE_STRICT === '1'
 
 async function github(path) {
   const headers = { Accept: 'application/vnd.github+json', 'User-Agent': 'kostecki-dev-build' }
@@ -103,6 +107,10 @@ let listings = null
 try {
   listings = await fetchListings()
 } catch (error) {
+  if (STRICT) {
+    console.error('[archive] fetch failed and ARCHIVE_STRICT=1 forbids the fallback', error)
+    process.exit(1)
+  }
   const existing = await readResult(OUTPUT, 'existing result')
   if (existing) {
     console.warn(
