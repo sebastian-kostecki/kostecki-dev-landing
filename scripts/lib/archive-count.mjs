@@ -5,6 +5,7 @@
 export const ARCHIVE_REPOS = [
   'sebastian-kostecki/root-keeper',
   'sebastian-kostecki/household-treasurer',
+  'sebastian-kostecki/menu-maker',
 ]
 
 /**

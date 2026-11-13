@@ -10,6 +10,7 @@ import {
 
 const RK = 'sebastian-kostecki/root-keeper'
 const HT = 'sebastian-kostecki/household-treasurer'
+const MM = 'sebastian-kostecki/menu-maker'
 const url = (repo: string, folder: string) =>
   `https://github.com/${repo}/tree/main/context/archive/${folder}`
 const contentWith = (...urls: string[]) => ({
@@ -17,8 +18,8 @@ const contentWith = (...urls: string[]) => ({
 })
 
 describe('ARCHIVE_REPOS', () => {
-  it('lists both archive repositories', () => {
-    expect(ARCHIVE_REPOS).toEqual([RK, HT])
+  it('lists the three archive repositories', () => {
+    expect(ARCHIVE_REPOS).toEqual([RK, HT, MM])
   })
 })
 

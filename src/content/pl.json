@@ -176,7 +176,7 @@
           "shows": "Podpowiedzi kategorii przy imporcie jako logika domenowa (model, ADR, testy), nie tylko UI."
         }
       ],
-      "counterLabel": "Zarchiwizowane zmiany w dwóch publicznych repozytoriach",
+      "counterLabel": "Zarchiwizowane zmiany w trzech publicznych repozytoriach",
       "archiveLinks": [
         {
           "title": "Root Keeper: archiwum",
@@ -185,6 +185,10 @@
         {
           "title": "Domowy Skarbnik: archiwum",
           "url": "https://github.com/sebastian-kostecki/household-treasurer/tree/main/context/archive"
+        },
+        {
+          "title": "Menu Maker: archiwum",
+          "url": "https://github.com/sebastian-kostecki/menu-maker/tree/main/context/archive"
         }
       ]
     },

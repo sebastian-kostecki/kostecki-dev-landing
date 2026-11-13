@@ -1,4 +1,4 @@
-// Counts the folders in context/archive of both public repos and writes
+// Counts the folders in context/archive of the public repos in ARCHIVE_REPOS and writes
 // src/generated/archive.json, which the AI workflow section reads. Also checks that
 // every archive folder linked in src/content/{pl,en}.json still exists.
 //
@@ -80,7 +80,7 @@ async function readLocale(name) {
   return JSON.parse(await readFile(resolve(ROOT, `src/content/${name}.json`), 'utf8'))
 }
 
-/** Lists both archives. All or nothing: one failing repo fails the whole fetch. */
+/** Lists every archive. All or nothing: one failing repo fails the whole fetch. */
 async function fetchListings() {
   const entries = await Promise.all(
     ARCHIVE_REPOS.map(async (repo) => {

@@ -16,7 +16,7 @@ describe.each(Object.keys(dictionaries))('aiWorkflow.proof (%s)', (locale) => {
     expect(proof.items).toHaveLength(5)
   })
 
-  it('links every item to an archive folder of one of the two repos', () => {
+  it('links every item to an archive folder of one of the archive repos', () => {
     for (const item of proof.items) {
       expect(item.url).toMatch(ARCHIVE_FOLDER_URL)
     }
@@ -28,13 +28,18 @@ describe.each(Object.keys(dictionaries))('aiWorkflow.proof (%s)', (locale) => {
     }
   })
 
-  it('links to both archives', () => {
-    expect(proof.archiveLinks).toHaveLength(2)
+  it('links to every counted archive', () => {
+    expect(proof.archiveLinks).toHaveLength(3)
     const urls = proof.archiveLinks.map((link) => link.url).sort()
     expect(urls).toEqual([
       'https://github.com/sebastian-kostecki/household-treasurer/tree/main/context/archive',
+      'https://github.com/sebastian-kostecki/menu-maker/tree/main/context/archive',
       'https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive',
     ])
+  })
+
+  it('names the number of counted repositories in the counter label', () => {
+    expect(proof.counterLabel).toMatch(locale === 'pl' ? /trzech/ : /three/)
   })
 })
 
@@ -60,6 +65,10 @@ describe('ARCHIVE_FOLDER_URL', () => {
 
   it('accepts a plain archive folder URL', () => {
     expect(folder).toMatch(ARCHIVE_FOLDER_URL)
+  })
+
+  it('accepts a menu-maker archive folder URL', () => {
+    expect(folder.replace('root-keeper', 'menu-maker')).toMatch(ARCHIVE_FOLDER_URL)
   })
 
   it.each([
