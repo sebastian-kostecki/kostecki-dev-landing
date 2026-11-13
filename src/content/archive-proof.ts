@@ -2,9 +2,9 @@
 // so tests run without the build script. The URL pattern is intentionally duplicated in
 // scripts/lib/archive-count.mjs (src/ does not import .mjs: no allowJs in the app tsconfigs).
 
-/** URL of a folder in the `context/archive` of one of the two public repos. */
+/** URL of a folder in the `context/archive` of one of the counted public repos (ARCHIVE_REPOS). */
 export const ARCHIVE_FOLDER_URL =
-  /^https:\/\/github\.com\/sebastian-kostecki\/(?:root-keeper|household-treasurer)\/tree\/main\/context\/archive\/[\w.-]+$/
+  /^https:\/\/github\.com\/sebastian-kostecki\/(?:root-keeper|household-treasurer|menu-maker)\/tree\/main\/context\/archive\/[\w.-]+$/
 
 /** Last path segment of the folder URL without the `YYYY-MM-DD-` prefix. */
 export function archiveFolderLabel(url: string): string {

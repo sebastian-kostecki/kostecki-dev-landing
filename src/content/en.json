@@ -176,7 +176,7 @@
           "shows": "Category suggestions on import as domain logic (model, ADR, tests), not just UI."
         }
       ],
-      "counterLabel": "Archived changes across two public repositories",
+      "counterLabel": "Archived changes across three public repositories",
       "archiveLinks": [
         {
           "title": "Root Keeper: archive",
@@ -185,6 +185,10 @@
         {
           "title": "Domowy Skarbnik: archive",
           "url": "https://github.com/sebastian-kostecki/household-treasurer/tree/main/context/archive"
+        },
+        {
+          "title": "Menu Maker: archive",
+          "url": "https://github.com/sebastian-kostecki/menu-maker/tree/main/context/archive"
         }
       ]
     },
