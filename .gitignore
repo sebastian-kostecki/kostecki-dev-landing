@@ -45,6 +45,10 @@ __screenshots__/
 # Generated at build time (src/generated/archive.fallback.json is tracked)
 src/generated/archive.json
 
+# Served copy of dist/ and deploy state on the VPS (written by kostecki-dev-infra scripts)
+/www/
+/.deploy/
+
 # Narzędzia kursu 10xDevs (lokalne, nie część strony)
 /.claude/
 /.10x-cli.json

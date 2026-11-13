@@ -4,7 +4,7 @@ Personal landing page and portfolio of Sebastian Kostecki at [kostecki.dev](http
 
 Stack: Vue 3, TypeScript, Vite, vue-router, vitest, oxlint + ESLint. Package manager: pnpm.
 
-Infrastructure and deploy: [kostecki-dev-infra](https://github.com/sebastian-kostecki/kostecki-dev-infra) (`docs/LANDING.md`). The build produces one HTML file per route plus `404.html`, so `docker/nginx.conf` must be deployed to the server together with `dist/`. Values derived from the date (years of experience, footer year) are frozen into the prerendered HTML and `llms.txt` at build time, so a rebuild and deploy refreshes them for crawlers without JavaScript; the browser recomputes them on load.
+Infrastructure and deploy: [kostecki-dev-infra](https://github.com/sebastian-kostecki/kostecki-dev-infra) (`docs/LANDING.md`). The build produces one HTML file per route plus `404.html`, so `docker/nginx.conf` must be deployed to the server together with the build. nginx serves `www/`, a copy of `dist/` that the infra scripts sync after a successful build, so a running build never takes the site down. Values derived from the date (years of experience, footer year) are frozen into the prerendered HTML and `llms.txt` at build time, so a rebuild and deploy refreshes them for crawlers without JavaScript; the browser recomputes them on load.
 
 ## Commands
 
@@ -30,7 +30,7 @@ All copy lives in `src/content/pl.json` and `src/content/en.json`; the shape is 
 
 ## Archive counter
 
-`pnpm dev` and `pnpm build` first run `pnpm generate:archive`, which writes the gitignored `src/generated/archive.json`; on a fresh clone run it once before a standalone `pnpm type-check`. Without network it keeps the existing result or the tracked `src/generated/archive.fallback.json` and warns loudly.
+`pnpm dev` and `pnpm build` first run `pnpm generate:archive`, which writes the gitignored `src/generated/archive.json`; on a fresh clone run it once before a standalone `pnpm type-check`. Without network it keeps the existing result or the tracked `src/generated/archive.fallback.json` and warns loudly. With `ARCHIVE_STRICT=1` it skips that fallback and exits 1 instead; the daily refresh on the VPS (`scripts/refresh-landing.sh` in kostecki-dev-infra) runs in that mode, so a GitHub outage fails the job visibly and the site keeps its last published build.
 
 ## Icons
 

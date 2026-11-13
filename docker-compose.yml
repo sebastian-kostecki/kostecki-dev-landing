@@ -4,7 +4,9 @@ services:
     container_name: landing
     restart: unless-stopped
     volumes:
-      - ./dist:/usr/share/nginx/html:ro
+      # www/ is a copy of dist/ that the infra deploy scripts sync after a successful build,
+      # so the site never serves a half-written dist/ while pnpm build runs.
+      - ./www:/usr/share/nginx/html:ro
       - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf:ro
     networks:
       - proxy
