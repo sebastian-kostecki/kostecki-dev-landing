@@ -12,8 +12,8 @@ I also co-author **[PanelAlpha Engine](https://github.com/panelalpha/panelalpha-
 
 | Project | What it is | Stack |
 |---|---|---|
-| **Domowy Skarbnik** ([live](https://treasurer.kostecki.dev)) | Yearly household budget: plan vs actual, liquidity, bank statement import. CHANGELOG, ADRs, CI. | Laravel 13, PostgreSQL, Vue 3, Inertia |
-| **[Root Keeper](https://github.com/sebastian-kostecki/root-keeper)** ([live](https://genealog.kostecki.dev)) | Family tree where every fact is linked to a source record. | Laravel 13, React 19, TypeScript, Playwright |
+| **Domowy Skarbnik** ([live](https://budget.kostecki.dev)) | Yearly household budget: plan vs actual, liquidity, bank statement import. CHANGELOG, ADRs, CI. | Laravel 13, PostgreSQL, Vue 3, Inertia |
+| **[Root Keeper](https://github.com/sebastian-kostecki/root-keeper)** ([live](https://genealogy.kostecki.dev)) | Family tree where every fact is linked to a source record. | Laravel 13, React 19, TypeScript, Playwright |
 | **[Menu Maker](https://github.com/sebastian-kostecki/menu-maker)** | AI-assisted weekly meal planner with a PDF shopping list. | Laravel, Vue, Inertia |
 | **[FocusBlocker](https://github.com/sebastian-kostecki/focus-bloker)** | Windows site blocker: hosts file, Task Scheduler, browser extension. | PowerShell |
 

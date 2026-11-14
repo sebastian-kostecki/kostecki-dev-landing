@@ -429,7 +429,7 @@
           "links": [
             {
               "title": "Live app",
-              "url": "https://treasurer.kostecki.dev",
+              "url": "https://budget.kostecki.dev",
               "primary": true
             },
             {
@@ -463,7 +463,7 @@
           "links": [
             {
               "title": "Live app",
-              "url": "https://genealog.kostecki.dev",
+              "url": "https://genealogy.kostecki.dev",
               "primary": true
             },
             {

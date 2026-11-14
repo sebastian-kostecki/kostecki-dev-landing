@@ -33,10 +33,10 @@ Stanowiska sprzed 11.2022 z LinkedIn: firma, rola, daty, 1–2 zdania zakresu.
 
 ## Własne produkty na produkcji
 
-**Domowy Skarbnik** · [treasurer.kostecki.dev](https://treasurer.kostecki.dev) · [GitHub](https://github.com/sebastian-kostecki/household-treasurer)
+**Domowy Skarbnik** · [budget.kostecki.dev](https://budget.kostecki.dev) · [GitHub](https://github.com/sebastian-kostecki/household-treasurer)
 Roczny budżet domowy: plan kontra wykonanie, płynność na kontach i lokatach, import wyciągów CSV/XLSX z mBanku i BNP Paribas. Laravel 13, PHP 8.5, PostgreSQL, Vue 3, TypeScript, Inertia. Kwoty w groszach jako liczby całkowite, decyzje architektoniczne (ADR), słownik domeny, CHANGELOG, testy Pest w CI.
 
-**Root Keeper** · [genealog.kostecki.dev](https://genealog.kostecki.dev) · [GitHub](https://github.com/sebastian-kostecki/root-keeper)
+**Root Keeper** · [genealogy.kostecki.dev](https://genealogy.kostecki.dev) · [GitHub](https://github.com/sebastian-kostecki/root-keeper)
 Drzewo genealogiczne, w którym każda data ma źródło w skanie aktu. Laravel 13, PostgreSQL, React 19, TypeScript, Inertia. Daty częściowe jak w aktach, reguły relacji pilnowane na serwerze, logowanie passkey. CI: lint, Larastan 7, Pest, e2e Playwright.
 
 Oba produkty działają na własnym VPS-ie: Traefik, Docker Compose, restic, systemd, Cloudflare.
