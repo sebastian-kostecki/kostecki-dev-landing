@@ -2,7 +2,7 @@
 
 A family tree where every fact is linked to a source: a parish record, a civil registry entry, a gravestone. Built for after-hours genealogy research, where "probably" is not good enough.
 
-Live: https://genealog.kostecki.dev
+Live: https://genealogy.kostecki.dev
 
 ## What it does
 

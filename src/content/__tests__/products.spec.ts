@@ -68,7 +68,7 @@ describe('featured products across locales', () => {
 
 describe('links', () => {
   it('hostOf returns the host of a valid URL', () => {
-    expect(hostOf('https://treasurer.kostecki.dev/path')).toBe('treasurer.kostecki.dev')
+    expect(hostOf('https://budget.kostecki.dev/path')).toBe('budget.kostecki.dev')
   })
 
   it('hostOf returns the input and logs an error for an invalid URL', () => {
@@ -80,6 +80,6 @@ describe('links', () => {
 
   it('isRepo recognises github.com', () => {
     expect(isRepo('https://github.com/sebastian-kostecki/root-keeper')).toBe(true)
-    expect(isRepo('https://genealog.kostecki.dev')).toBe(false)
+    expect(isRepo('https://genealogy.kostecki.dev')).toBe(false)
   })
 })
