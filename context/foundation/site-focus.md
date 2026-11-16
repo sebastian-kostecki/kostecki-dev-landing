@@ -46,11 +46,11 @@ projekty poboczne (pisane z agentami, pokazują proces, nie talent do kodowania)
 
 | Temat | Decyzja |
 | --- | --- |
-| Pierwsze zdanie hero | Rola, staż, nazwa produktu i pracodawcy. Bez branży. AI dopiero w drugim zdaniu. |
+| Pierwsze zdanie hero | ~~Rola, staż, nazwa produktu i pracodawcy. Bez branży.~~ Od 2026-11-16: nisza (panele hostingowe cPanel/Plesk/DirectAdmin, WHMCS i billing, PowerDNS na Laravelu). Drugie zdanie: backend, który działa na produkcji. Pod spodem jedno zdanie o dostępności (wariant dyskretny). |
 | Elementy „żywe” w hero | Brak. Hero = tekst + panel „W skrócie” + zdjęcie. Commit log z gałęzi `design/hero-variants` **nie** wchodzi. |
 | Główny dowód w sekcji AI | 3–5 **ręcznie wybranych** zmian z archiwów, każda z jednym zdaniem „co pokazuje” i linkiem do folderu. Etykiety bez dat. Pod nimi licznik wszystkich zarchiwizowanych zmian pobierany przy buildzie. Cztery kroki procesu zostają. |
 | Lista „ostatnich zmian” | **Nie.** Nazwy folderów zaczynają się datą, więc po przerwie lista pokazuje to samo, co pusty commit log. |
-| Liczby w treści | Tylko liczone przy buildzie (staże, licznik archiwum) albo wcale. Żadnych literałów typu „14 ADR”, „130+ testów”. |
+| Liczby w treści | Tylko liczone przy buildzie (staże, licznik archiwum) albo wcale. Żadnych literałów typu „14 ADR”, „130+ testów”. Wyjątek: czas trwania zamkniętej zmiany w przykładzie sekcji AI (fakt historyczny, nie starzeje się). |
 | Własne projekty na home | Teasery: nazwa, stack, jedno zdanie „co udowadnia” bez liczb. Pełne karty tylko na `/projects`. |
 | PanelAlpha Engine | Nie jest osobną kartą. To punkt w zakresie pracy przy PanelAlpha, bez osobnego linku do commitów. |
 | Liczby z PanelAlpha | Żadnych. Tylko zakres odpowiedzialności. |
@@ -214,3 +214,11 @@ Każda zmiana cytuje ten dokument w `change.md`.
   głównej, w `/projects` ani w `/cv` (jest punktem w Doświadczeniu PanelAlpha). Skills tylko
   na `/skills`, z linią „gdzie użyte” przy każdej pozycji stacku podstawowego. Literały skali
   usunięte z kart produktów i CV, z testem strażnika. Skarbnik linkuje do publicznego repo.
+- **2026-11-16, zmiana `feat/site-niche-and-collaboration`.** Cel rozszerzony: lepiej płatna rola
+  mid backend (Laravel) oraz pierwsze zlecenia po godzinach. Zmieniono: nisza hostingowa wchodzi
+  do pierwszego zdania hero i do metadanych strony głównej (decyzja Sebastiana, odwraca p. 3
+  „nie headline”); zdanie o dostępności pod nagłówkiem; sekcja „Współpraca” (dwie usługi:
+  backend Laravel dla produktu, praca z agentami AI w zespole; bez modułów WHMCS i integracji
+  hostingowych, test strażnika); przykład `production-data-safety` w sekcji AI (plan →
+  pierwsze chronione wdrożenie ok. 9 h, źródła: commity 593ce6c1 i 3c8bd4b7, PR #13).
+  Liczby o PanelAlpha nadal żadnych (brak zgody). CV i rekomendacja czekają na pliki.

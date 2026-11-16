@@ -1,13 +1,13 @@
 {
   "meta": {
-    "title": "Sebastian Kostecki — Backend Developer (Laravel)",
-    "description": "Backend Developer (Laravel). Production PHP applications: PanelAlpha, the open-source PanelAlpha Engine, hosting and WHMCS integrations, and my own products on Laravel 13.",
+    "title": "Sebastian Kostecki — Laravel backend for hosting panels, WHMCS, PowerDNS",
+    "description": "Laravel backend developer: hosting control panel integrations (cPanel, Plesk, DirectAdmin), WHMCS billing and PowerDNS. PanelAlpha and my own products.",
     "lang": "en"
   },
   "routes": {
     "home": {
-      "title": "Sebastian Kostecki — Backend Developer (Laravel)",
-      "description": "Backend Developer (Laravel). Production PHP applications: PanelAlpha, the open-source PanelAlpha Engine, hosting and WHMCS integrations, and my own products on Laravel 13."
+      "title": "Sebastian Kostecki — Laravel backend for hosting panels, WHMCS, PowerDNS",
+      "description": "Laravel backend developer: hosting control panel integrations (cPanel, Plesk, DirectAdmin), WHMCS billing and PowerDNS. PanelAlpha and my own products."
     },
     "projects": {
       "title": "Projects — Sebastian Kostecki",
@@ -83,9 +83,10 @@
   "hero": {
     "label": "Backend Developer / PHP · Laravel",
     "name": "Sebastian Kostecki",
-    "valueProp": "PHP and Laravel backends",
-    "valuePropAccent": "that run in production.",
-    "subtitle": "Hosting control panel integrations, WHMCS modules, features from the data model to logic running for customers. I write code with AI agents, in a process with tests and review that leaves public evidence.",
+    "valueProp": "Laravel backends that connect hosting control panels (cPanel, Plesk, DirectAdmin), WHMCS billing and PowerDNS.",
+    "valuePropAccent": "PHP and Laravel backends that run in production.",
+    "availability": "Open to conversations about a mid-level backend (Laravel) role, and to after-hours projects. Contract (B2B) or employment, remote.",
+    "subtitle": "Features from the data model to logic running for customers. I write code with AI agents, in a process with tests and review that leaves public evidence.",
     "ctaPrimary": {
       "label": "Let's talk",
       "href": "/contact"
@@ -147,6 +148,28 @@
     "index": "AI / Workflow",
     "title": "Working with AI agents",
     "subtitle": "Agents (Claude Code, Cursor) write a large share of my code, but I own what reaches production. I am refining the process in the 10xDevs course, and its traces are in my public repositories.",
+    "example": {
+      "eyebrow": "One change, from plan to production",
+      "title": "Root Keeper: production data safety",
+      "rows": [
+        {
+          "label": "Problem",
+          "value": "Backups were not encrypted, the backup alert had no working mail setup, deploys migrated the database without a backup, and nobody had ever tried a restore."
+        },
+        {
+          "label": "What was built",
+          "value": "Deploys now refuse to start without the required secrets and back up the database before migrating. Archives are AES-256 encrypted, the alert mail arrives, and a restore was drilled and written up in a runbook."
+        },
+        {
+          "label": "Time",
+          "value": "From plan to the first protected deploy: about 9 hours, on the same day."
+        }
+      ],
+      "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive/2026-09-22-production-data-safety",
+      "urlLabel": "Change folder",
+      "prUrl": "https://github.com/sebastian-kostecki/root-keeper/pull/13",
+      "prLabel": "Pull request"
+    },
     "proof": {
       "lead": "Every change leaves a documentation folder in the repository. A few that show how it works:",
       "items": [
@@ -522,6 +545,27 @@
       "subtitle": "Products I build after hours and run on my own VPS. Full descriptions are on the projects page."
     }
   },
+  "collaboration": {
+    "index": "04 / Work with me",
+    "title": "Work with me",
+    "subtitle": "After hours, I take on projects in two areas.",
+    "services": [
+      {
+        "title": "Laravel backend for your product",
+        "scope": "From the data model to deployment.",
+        "outcome": "You get a backend that runs in production, with tests in CI, documented decisions and a repeatable deploy."
+      },
+      {
+        "title": "AI agents in your team's workflow",
+        "scope": "Context in the repo, rules for agents, quality gates in CI.",
+        "outcome": "Your team ships faster with agents, while tests and review in CI decide what reaches production."
+      }
+    ],
+    "cta": {
+      "label": "Tell me what you're building",
+      "href": "/contact"
+    }
+  },
   "contact": {
     "index": "04 / Contact",
     "title": "Let's talk",
@@ -545,8 +589,7 @@
         "value": "kontakt@kostecki.dev",
         "href": "mailto:kontakt@kostecki.dev"
       }
-    ],
-    "ctaHeadline": "Let's talk about working together"
+    ]
   },
   "footer": {
     "servicesTitle": "Specialization",

@@ -89,10 +89,27 @@ export interface AiProof {
   archiveLinks: ProjectLink[]
 }
 
+export interface AiWorkflowExampleRow {
+  label: string
+  value: string
+}
+
+/** One archived change told end to end; every fact comes from the linked folder and PR. */
+export interface AiWorkflowExample {
+  eyebrow: string
+  title: string
+  rows: AiWorkflowExampleRow[]
+  url: string
+  urlLabel: string
+  prUrl: string
+  prLabel: string
+}
+
 export interface AiWorkflow {
   index: string
   title: string
   subtitle: string
+  example: AiWorkflowExample
   proof: AiProof
   steps: AiWorkflowStep[]
   closing: string
@@ -158,6 +175,21 @@ export interface CvCopy {
   generated: string
 }
 
+export interface CollaborationService {
+  title: string
+  scope: string
+  /** One sentence: what the client gets. */
+  outcome: string
+}
+
+export interface Collaboration {
+  index: string
+  title: string
+  subtitle: string
+  services: CollaborationService[]
+  cta: CtaLink
+}
+
 export interface SiteContent {
   meta: {
     title: string
@@ -206,6 +238,8 @@ export interface SiteContent {
     name: string
     valueProp: string
     valuePropAccent: string
+    /** One sentence under the headline: role level, contract form, work mode. */
+    availability: string
     subtitle?: string
     ctaPrimary: CtaLink
   }
@@ -255,8 +289,8 @@ export interface SiteContent {
     title: string
     subtitle: string
     methods: ContactMethod[]
-    ctaHeadline: string
   }
+  collaboration: Collaboration
   footer: {
     servicesTitle: string
     services: string[]

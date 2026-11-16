@@ -1,13 +1,13 @@
 {
   "meta": {
-    "title": "Sebastian Kostecki — Backend Developer (Laravel)",
-    "description": "Backend Developer (Laravel). Produkcyjne aplikacje PHP: PanelAlpha, open-source'owy PanelAlpha Engine, integracje hostingowe i WHMCS oraz własne produkty na Laravel 13.",
+    "title": "Sebastian Kostecki — Laravel: panele hostingowe, WHMCS, PowerDNS",
+    "description": "Backend Developer (Laravel): integracje z panelami hostingowymi (cPanel, Plesk, DirectAdmin), WHMCS i billingiem oraz PowerDNS. PanelAlpha i własne produkty.",
     "lang": "pl"
   },
   "routes": {
     "home": {
-      "title": "Sebastian Kostecki — Backend Developer (Laravel)",
-      "description": "Backend Developer (Laravel). Produkcyjne aplikacje PHP: PanelAlpha, open-source'owy PanelAlpha Engine, integracje hostingowe i WHMCS oraz własne produkty na Laravel 13."
+      "title": "Sebastian Kostecki — Laravel: panele hostingowe, WHMCS, PowerDNS",
+      "description": "Backend Developer (Laravel): integracje z panelami hostingowymi (cPanel, Plesk, DirectAdmin), WHMCS i billingiem oraz PowerDNS. PanelAlpha i własne produkty."
     },
     "projects": {
       "title": "Projekty — Sebastian Kostecki",
@@ -83,9 +83,10 @@
   "hero": {
     "label": "Backend Developer / PHP · Laravel",
     "name": "Sebastian Kostecki",
-    "valueProp": "Backend w PHP i Laravelu,",
-    "valuePropAccent": "który działa na produkcji.",
-    "subtitle": "Integracje z panelami hostingowymi, moduły WHMCS, feature od modelu danych po działającą logikę u klienta. Kod piszę z agentami AI, w procesie z testami i review, który ma publiczne dowody.",
+    "valueProp": "Integracje z panelami hostingowymi (cPanel, Plesk, DirectAdmin), WHMCS i billingiem oraz PowerDNS na backendzie Laravel.",
+    "valuePropAccent": "Backend w PHP i Laravelu, który działa na produkcji.",
+    "availability": "Otwarty na rozmowy o roli mid backend (Laravel) i na projekty po godzinach. B2B lub UoP, zdalnie.",
+    "subtitle": "Feature od modelu danych po działającą logikę u klienta. Kod piszę z agentami AI, w procesie z testami i review, który ma publiczne dowody.",
     "ctaPrimary": {
       "label": "Porozmawiajmy",
       "href": "/contact"
@@ -147,6 +148,28 @@
     "index": "AI / Workflow",
     "title": "Praca z agentami AI",
     "subtitle": "Agenci (Claude Code, Cursor) piszą dużą część mojego kodu, ale to ja odpowiadam za to, co trafia na produkcję. Proces dopracowuję na kursie 10xDevs, a jego ślady są w publicznych repozytoriach.",
+    "example": {
+      "eyebrow": "Przykład od planu do wdrożenia",
+      "title": "Root Keeper: bezpieczeństwo danych produkcyjnych",
+      "rows": [
+        {
+          "label": "Problem",
+          "value": "Kopie zapasowe nie były szyfrowane, alarm o backupie nie miał skonfigurowanej poczty, deploy migrował bazę bez kopii, a odtworzenia nikt nie próbował."
+        },
+        {
+          "label": "Co powstało",
+          "value": "Deploy odmawia startu bez sekretów i robi kopię bazy przed migracją. Archiwa są szyfrowane AES-256, alarm mailowy dociera, a odtworzenie z kopii zostało przećwiczone i opisane w runbooku."
+        },
+        {
+          "label": "Czas",
+          "value": "Od planu do pierwszego chronionego wdrożenia: około 9 godzin, tego samego dnia."
+        }
+      ],
+      "url": "https://github.com/sebastian-kostecki/root-keeper/tree/main/context/archive/2026-09-22-production-data-safety",
+      "urlLabel": "Folder zmiany",
+      "prUrl": "https://github.com/sebastian-kostecki/root-keeper/pull/13",
+      "prLabel": "Pull request"
+    },
     "proof": {
       "lead": "Każda zmiana zostawia w repozytorium folder z dokumentacją. Kilka, które pokazują, jak to działa:",
       "items": [
@@ -522,6 +545,27 @@
       "subtitle": "Produkty, które buduję po godzinach i utrzymuję na własnym VPS-ie. Pełne opisy na stronie projektów."
     }
   },
+  "collaboration": {
+    "index": "04 / Współpraca",
+    "title": "Współpraca",
+    "subtitle": "Po godzinach biorę projekty w dwóch obszarach.",
+    "services": [
+      {
+        "title": "Backend Laravel dla produktu",
+        "scope": "Od modelu danych do wdrożenia.",
+        "outcome": "Dostajesz backend, który działa na produkcji, z testami w CI, opisanymi decyzjami i powtarzalnym wdrożeniem."
+      },
+      {
+        "title": "Praca z agentami AI w zespole",
+        "scope": "Kontekst w repozytorium, reguły dla agentów, bramki jakości w CI.",
+        "outcome": "Zespół pisze kod z agentami szybciej, a testy i review w CI decydują, co trafia na produkcję."
+      }
+    ],
+    "cta": {
+      "label": "Napisz, nad czym pracujesz",
+      "href": "/contact"
+    }
+  },
   "contact": {
     "index": "04 / Kontakt",
     "title": "Porozmawiajmy",
@@ -545,8 +589,7 @@
         "value": "kontakt@kostecki.dev",
         "href": "mailto:kontakt@kostecki.dev"
       }
-    ],
-    "ctaHeadline": "Porozmawiajmy o współpracy"
+    ]
   },
   "footer": {
     "servicesTitle": "Specjalizacja",

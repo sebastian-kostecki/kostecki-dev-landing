@@ -14,6 +14,14 @@ const archiveTotal = computed(() =>
   new Intl.NumberFormat(locale.value === 'pl' ? 'pl-PL' : 'en-US').format(archive.total),
 )
 
+const exampleLinks = computed(() => {
+  const example = content.value.aiWorkflow.example
+  return [
+    { url: example.url, title: example.urlLabel },
+    { url: example.prUrl, title: example.prLabel },
+  ]
+})
+
 function stepIndex(index: number) {
   return String(index + 1).padStart(2, '0')
 }
@@ -28,6 +36,36 @@ function stepIndex(index: number) {
         :title="content.aiWorkflow.title"
         :subtitle="content.aiWorkflow.subtitle"
       />
+
+      <article class="panel mb-12 rounded-md p-6 sm:p-8">
+        <p class="font-mono text-xs tracking-[0.25em] text-primary uppercase">
+          {{ content.aiWorkflow.example.eyebrow }}
+        </p>
+        <h3 class="mt-3 font-mono text-xl font-semibold text-card-foreground">
+          {{ content.aiWorkflow.example.title }}
+        </h3>
+        <dl class="mt-6 grid gap-5 md:grid-cols-3">
+          <div v-for="row in content.aiWorkflow.example.rows" :key="row.label">
+            <dt class="font-mono text-[11px] tracking-[0.15em] text-muted-foreground uppercase">
+              {{ row.label }}
+            </dt>
+            <dd class="mt-2 text-sm leading-relaxed text-foreground">{{ row.value }}</dd>
+          </div>
+        </dl>
+        <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+          <a
+            v-for="link in exampleLinks"
+            :key="link.url"
+            :href="link.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-primary transition-colors hover:text-primary-glow"
+          >
+            {{ link.title }}
+            <ArrowUpRight class="h-3.5 w-3.5" aria-hidden="true" />
+          </a>
+        </div>
+      </article>
 
       <div class="mb-12">
         <p class="max-w-3xl text-sm leading-relaxed text-muted-foreground">

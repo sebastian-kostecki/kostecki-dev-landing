@@ -24,8 +24,14 @@ const content = useContent()
       class="mt-6 font-mono text-2xl leading-tight font-semibold tracking-tight text-foreground sm:text-[1.75rem]"
     >
       {{ content.hero.valueProp }}
-      <br />
-      <span class="text-gradient">{{ content.hero.valuePropAccent }}</span>
+      <span class="mt-3 block text-gradient">{{ content.hero.valuePropAccent }}</span>
+    </p>
+
+    <p
+      class="mt-6 flex max-w-xl items-start gap-3 font-mono text-sm leading-relaxed text-foreground"
+    >
+      <span aria-hidden="true" class="mt-[0.45rem] h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+      <span>{{ content.hero.availability }}</span>
     </p>
 
     <p
