@@ -8,6 +8,7 @@ import PanelAlphaFeature from '@/components/ui/PanelAlphaFeature.vue'
 import CommercialProjectGroup from '@/components/ui/CommercialProjectGroup.vue'
 import ProductTeaser from '@/components/ui/ProductTeaser.vue'
 import AiWorkflowSection from '@/components/ui/AiWorkflowSection.vue'
+import CollaborationSection from '@/components/ui/CollaborationSection.vue'
 import { computed } from 'vue'
 import { useContent } from '@/composables/useContent'
 
@@ -92,17 +93,6 @@ const featuredPersonal = computed(() =>
       </div>
     </section>
 
-    <section class="px-4 py-24 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-3xl text-center">
-        <h2 class="font-mono text-3xl font-bold text-foreground sm:text-4xl">
-          {{ content.contact.ctaHeadline }}
-        </h2>
-        <p class="mx-auto mt-4 max-w-xl text-muted-foreground">{{ content.contact.subtitle }}</p>
-        <RouterLink to="/contact" class="btn-primary mt-8">
-          {{ content.hero.ctaPrimary.label }}
-          <ArrowRight class="h-4 w-4" />
-        </RouterLink>
-      </div>
-    </section>
+    <CollaborationSection />
   </div>
 </template>

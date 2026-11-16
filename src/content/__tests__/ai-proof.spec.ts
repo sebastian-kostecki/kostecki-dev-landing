@@ -43,6 +43,34 @@ describe.each(Object.keys(dictionaries))('aiWorkflow.proof (%s)', (locale) => {
   })
 })
 
+describe.each(Object.keys(dictionaries))('aiWorkflow.example (%s)', (locale) => {
+  const example = dictionaries[locale]!.aiWorkflow.example
+
+  it('links to an archive folder and its pull request', () => {
+    expect(example.url).toMatch(ARCHIVE_FOLDER_URL)
+    expect(example.prUrl).toMatch(
+      /^https:\/\/github\.com\/sebastian-kostecki\/(root-keeper|household-treasurer)\/pull\/\d+$/,
+    )
+  })
+
+  it('has problem, result and time copy', () => {
+    for (const row of example.rows) {
+      expect(row.label).not.toBe('')
+      expect(row.value).not.toBe('')
+    }
+    expect(example.rows).toHaveLength(3)
+  })
+})
+
+describe('aiWorkflow.example across locales', () => {
+  it('points to the same change', () => {
+    expect(dictionaries.en!.aiWorkflow.example.url).toBe(dictionaries.pl!.aiWorkflow.example.url)
+    expect(dictionaries.en!.aiWorkflow.example.prUrl).toBe(
+      dictionaries.pl!.aiWorkflow.example.prUrl,
+    )
+  })
+})
+
 describe('aiWorkflow.proof across locales', () => {
   it('uses identical URLs in the same order', () => {
     const urls = (content: SiteContent) => content.aiWorkflow.proof.items.map((item) => item.url)
