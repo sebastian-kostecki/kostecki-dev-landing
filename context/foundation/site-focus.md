@@ -46,7 +46,7 @@ projekty poboczne (pisane z agentami, pokazują proces, nie talent do kodowania)
 
 | Temat | Decyzja |
 | --- | --- |
-| Pierwsze zdanie hero | ~~Rola, staż, nazwa produktu i pracodawcy. Bez branży.~~ Od 2026-11-16: nisza (panele hostingowe cPanel/Plesk/DirectAdmin, WHMCS i billing, PowerDNS na Laravelu). Drugie zdanie: backend, który działa na produkcji. Pod spodem jedno zdanie o dostępności (wariant dyskretny). |
+| Pierwsze zdanie hero | ~~Rola, staż, nazwa produktu i pracodawcy. Bez branży.~~ 2026-11-16: próba z niszą w hero wycofana (za dużo tekstu na wejściu); hero zostaje jak przed zmianą. Nisza jest w metadanych strony głównej. |
 | Elementy „żywe” w hero | Brak. Hero = tekst + panel „W skrócie” + zdjęcie. Commit log z gałęzi `design/hero-variants` **nie** wchodzi. |
 | Główny dowód w sekcji AI | 3–5 **ręcznie wybranych** zmian z archiwów, każda z jednym zdaniem „co pokazuje” i linkiem do folderu. Etykiety bez dat. Pod nimi licznik wszystkich zarchiwizowanych zmian pobierany przy buildzie. Cztery kroki procesu zostają. |
 | Lista „ostatnich zmian” | **Nie.** Nazwy folderów zaczynają się datą, więc po przerwie lista pokazuje to samo, co pusty commit log. |
@@ -222,3 +222,6 @@ Każda zmiana cytuje ten dokument w `change.md`.
   hostingowych, test strażnika); przykład `production-data-safety` w sekcji AI (plan →
   pierwsze chronione wdrożenie ok. 9 h, źródła: commity 593ce6c1 i 3c8bd4b7, PR #13).
   Liczby o PanelAlpha nadal żadnych (brak zgody). CV i rekomendacja czekają na pliki.
+  Tego samego dnia hero przywrócone do wersji sprzed zmiany (decyzja Sebastiana: za dużo tekstu
+  na wejściu), razem ze zdaniem o dostępności. Zostają: sekcja „Współpraca”, przykład w sekcji AI,
+  nisza w metadanych.

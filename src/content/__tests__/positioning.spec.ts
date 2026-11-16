@@ -15,21 +15,6 @@ const NICHE_TERMS = ['cPanel', 'Plesk', 'DirectAdmin', 'WHMCS', 'PowerDNS', 'Lar
 describe.each(Object.keys(dictionaries))('positioning (%s)', (locale) => {
   const content = dictionaries[locale]!
 
-  it('names the niche in the first hero sentence', () => {
-    for (const term of NICHE_TERMS) {
-      expect(content.hero.valueProp).toContain(term)
-    }
-  })
-
-  it('keeps the production line as the second hero sentence', () => {
-    expect(content.hero.valuePropAccent).not.toBe('')
-  })
-
-  it('states availability in one sentence pair under the headline', () => {
-    expect(content.hero.availability).toMatch(/Laravel/)
-    expect(content.hero.availability.length).toBeLessThan(160)
-  })
-
   it('puts the niche into home title, description and Open Graph copy', () => {
     const meta = pageMeta('home', content, '/')
     for (const term of ['WHMCS', 'PowerDNS', 'Laravel']) {

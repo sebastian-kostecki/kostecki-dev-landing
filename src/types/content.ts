@@ -238,8 +238,6 @@ export interface SiteContent {
     name: string
     valueProp: string
     valuePropAccent: string
-    /** One sentence under the headline: role level, contract form, work mode. */
-    availability: string
     subtitle?: string
     ctaPrimary: CtaLink
   }

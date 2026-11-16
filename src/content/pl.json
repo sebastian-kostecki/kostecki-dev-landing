@@ -83,9 +83,9 @@
   "hero": {
     "label": "Backend Developer / PHP · Laravel",
     "name": "Sebastian Kostecki",
-    "valueProp": "Backend Laravel dla hostingu: cPanel, Plesk, DirectAdmin, WHMCS i billing, PowerDNS.",
-    "valuePropAccent": "Taki, który działa na produkcji.",
-    "availability": "Otwarty na rozmowy o roli mid backend (Laravel) i na projekty po godzinach. B2B lub UoP, zdalnie.",
+    "valueProp": "Backend w PHP i Laravelu,",
+    "valuePropAccent": "który działa na produkcji.",
+    "subtitle": "Integracje z panelami hostingowymi, moduły WHMCS, feature od modelu danych po działającą logikę u klienta. Kod piszę z agentami AI, w procesie z testami i review, który ma publiczne dowody.",
     "ctaPrimary": {
       "label": "Porozmawiajmy",
       "href": "/contact"
