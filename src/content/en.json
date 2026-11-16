@@ -83,10 +83,9 @@
   "hero": {
     "label": "Backend Developer / PHP · Laravel",
     "name": "Sebastian Kostecki",
-    "valueProp": "Laravel backends that connect hosting control panels (cPanel, Plesk, DirectAdmin), WHMCS billing and PowerDNS.",
-    "valuePropAccent": "PHP and Laravel backends that run in production.",
+    "valueProp": "Laravel backends for hosting: cPanel, Plesk, DirectAdmin, WHMCS billing, PowerDNS.",
+    "valuePropAccent": "The kind that runs in production.",
     "availability": "Open to conversations about a mid-level backend (Laravel) role, and to after-hours projects. Contract (B2B) or employment, remote.",
-    "subtitle": "Features from the data model to logic running for customers. I write code with AI agents, in a process with tests and review that leaves public evidence.",
     "ctaPrimary": {
       "label": "Let's talk",
       "href": "/contact"
