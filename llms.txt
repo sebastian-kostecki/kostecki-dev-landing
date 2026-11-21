@@ -1,0 +1,20 @@
+# Sebastian Kostecki — Backend Developer / PHP · Laravel
+
+> Laravel backend developer: hosting control panel integrations (cPanel, Plesk, DirectAdmin), WHMCS billing and PowerDNS. PanelAlpha and my own products.
+
+- LinkedIn: https://www.linkedin.com/in/kostecki-sebastian
+- GitHub: https://github.com/sebastian-kostecki
+- E-mail: kontakt@kostecki.dev
+
+## Pages
+
+- [Sebastian Kostecki — Laravel backend for hosting panels, WHMCS, PowerDNS](https://kostecki.dev/): Laravel backend developer: hosting control panel integrations (cPanel, Plesk, DirectAdmin), WHMCS billing and PowerDNS. PanelAlpha and my own products.
+- [Projects — Sebastian Kostecki](https://kostecki.dev/projects): PanelAlpha, the open-source PanelAlpha Engine, WHMCS modules for ModulesGarden, and my own products: Domowy Skarbnik and Root Keeper.
+- [Skills — Sebastian Kostecki](https://kostecki.dev/skills): PHP, Laravel, PostgreSQL, MySQL, TypeScript, Docker and Vue.js, plus hosting integrations, testing, CI and self-hosted infrastructure.
+- [Contact — Sebastian Kostecki](https://kostecki.dev/contact): Interested in working together or chatting about backend? Reach out on LinkedIn, GitHub or by e-mail.
+
+## Public code
+
+- [Domowy Skarbnik](https://github.com/sebastian-kostecki/household-treasurer): A yearly household budget: plan vs actual, liquidity across accounts and term deposits, and CSV/XLSX statement import from mBank and BNP Paribas.
+- [Root Keeper](https://github.com/sebastian-kostecki/root-keeper): A family tree where every date has a source. People, relationships and scanned records that confirm births, marriages and deaths.
+- [Source](https://github.com/sebastian-kostecki/kostecki-dev-landing)
