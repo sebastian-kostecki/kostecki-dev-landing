@@ -5,7 +5,7 @@
 **Osobista strona i portfolio Sebastiana Kosteckiego — dwujęzyczna (polski i angielski), ciemna, w stylu monospace, prerenderowana do statycznego HTML.**
 
 [![Strona](https://img.shields.io/website?url=https%3A%2F%2Fkostecki.dev&style=for-the-badge&label=kostecki.dev&up_message=online&down_message=offline)](https://kostecki.dev)
-[![Build site](https://img.shields.io/github/actions/workflow/status/sebastian-kostecki/kostecki-dev-landing/build-site.yml?branch=master&style=for-the-badge&label=Build&logo=githubactions&logoColor=white)](../../actions/workflows/build-site.yml)
+[![Build site](https://img.shields.io/github/actions/workflow/status/sebastian-kostecki/kostecki-dev-landing/build-site.yml?branch=master&style=for-the-badge&label=Build&logo=githubactions&logoColor=white)](https://github.com/sebastian-kostecki/kostecki-dev-landing/actions/workflows/build-site.yml)
 
 [![Vue 3](https://img.shields.io/badge/Vue_3-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white)](https://vuejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -15,7 +15,7 @@
 [![pnpm](https://img.shields.io/badge/pnpm-F69220?style=for-the-badge&logo=pnpm&logoColor=white)](https://pnpm.io/)
 [![nginx](https://img.shields.io/badge/nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)](https://nginx.org/)
 
-[Odwiedź stronę](https://kostecki.dev) · [Zgłoś problem](../../issues/new)
+[Odwiedź stronę](https://kostecki.dev) · [Zgłoś problem](https://github.com/sebastian-kostecki/kostecki-dev-landing/issues/new)
 
 [English](README.md) · **Polski**
 
