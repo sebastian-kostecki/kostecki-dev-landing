@@ -36,10 +36,8 @@ export interface Project {
   imageAlt?: string
   placeholderIndex?: number
   badge?: 'wip'
-  /** Featured projects render as a wide card with a screenshot and highlights. */
+  /** Featured projects (in production) render as a wide card on /projects and a teaser on the home page. */
   featured?: boolean
-  /** Renders as the same wide card on /projects, without a teaser on the home page. */
-  wide?: boolean
   highlights?: string[]
   /** Short note shown next to the links, e.g. that the repository is private. */
   note?: string

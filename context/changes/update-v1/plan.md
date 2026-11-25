@@ -65,7 +65,7 @@ zmieniają kolor z czerwonego na zielony, a `pnpm test`, `pnpm lint` i `pnpm bui
 
 - Nie publikujemy `/cv` (`cv.href` zostaje pusty) i nie zmieniamy `context/cv/*`. Punkt 7
   briefu wypada (decyzja Sebastiana 2026-11-25), razem z poziomem angielskiego.
-- Menu Maker nie dostaje `featured: true`. Na stronie głównej zostają dwa teasery.
+- ~~Menu Maker nie dostaje `featured: true`. Na stronie głównej zostają dwa teasery.~~ Zmienione w Fazie 5 (decyzja Sebastiana 2026-11-25): Menu Maker jest `featured`, na home są trzy teasery.
 - Nie zmieniamy hero poza tekstami (bez nowych elementów, bez zmiany układu) ani tokenów
   w `src/assets/main.css`.
 - Nie dodajemy konta demo ani publicznego podglądu aplikacji za logowaniem (uwaga z przeglądu,
@@ -458,6 +458,13 @@ poprzednich zmianach.
 
 Dodana 2026-11-25 po przeglądzie ręcznym, na prośbę Sebastiana.
 
+> **Rewizja tego samego dnia:** Sebastian poprosił o uwzględnienie wszystkich własnych produktów
+> na produkcji. Menu Maker dostał `featured: true` i `proves`, więc ma dużą kartę na `/projects`
+> **i** trzeci teaser na home. Pole `wide` z punktu 1 zostało usunięte, bo nie było już potrzebne.
+> `products.spec.ts` wymaga teraz dokładnie trzech wyróżnionych produktów (zmieniło się wymaganie).
+> Siatka teaserów w `HomeView.vue`: `lg:grid-cols-3` zamiast `md:grid-cols-2`. Kroki 5.1 i 5.3
+> opisują stan sprzed rewizji. Stan po rewizji sprawdzają kroki 5.6–5.8.
+
 ### Overview
 
 Menu Maker dostaje na `/projects` tę samą szeroką kartę co Domowy Skarbnik i Root Keeper.
@@ -616,8 +623,11 @@ przywraca i jego.
 - [x] 5.1 Nowe asercje Menu Maker wide i Nawigator dnia przechodzą — 520b4db
 - [x] 5.2 pnpm lint i pnpm build przechodzą — 520b4db
 - [x] 5.3 W dist Menu Maker ma szeroką kartę, Nawigator małą, home dwa teasery — 520b4db
+- [ ] 5.6 products.spec wymaga trzech wyróżnionych, Menu Maker featured z proves, testy przechodzą
+- [ ] 5.7 W dist trzy teasery na home i trzy duże karty na /projects
 
 #### Manual
 
 - [ ] 5.4 Karta Menu Makera wygląda jak karty Skarbnika i Root Keepera
 - [ ] 5.5 Karta Nawigatora dnia w PL i EN poprawna
+- [ ] 5.8 Trzy teasery na home wyglądają dobrze na desktopie, tablecie i mobile

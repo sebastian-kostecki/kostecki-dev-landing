@@ -505,7 +505,7 @@
           "subtitle": "Tygodniowy jadłospis rodziny z własnych przepisów: składniki skalowane do domowników z pomocą AI i jeden PDF z planem i listą zakupów.",
           "image": "/assets/projects/menu-maker.webp",
           "imageAlt": "Gotowy jadłospis Menu Makera na tydzień z listą zakupów, na przykładowych danych",
-          "wide": true,
+          "featured": true,
           "highlights": [
             "Tydzień posiłków losowany z własnych przepisów, z podmianą dania i resztkami na kolejny dzień",
             "Składniki liczone w kodzie i dopracowywane przez AI w kolejce; gdy AI zawiedzie, zostają wyliczone ilości",
@@ -516,7 +516,8 @@
           "links": [
           { "title": "Wersja live", "url": "https://menu.kostecki.dev", "primary": true },
           { "title": "GitHub", "url": "https://github.com/sebastian-kostecki/menu-maker" }
-          ]
+          ],
+          "proves": "AI w produkcyjnym przepływie: skalowanie w kolejce z wynikiem liczonym w kodzie, gdy model zawiedzie, oraz wizualna bramka Playwright w CI."
         },
         {
           "title": "Nawigator dnia",

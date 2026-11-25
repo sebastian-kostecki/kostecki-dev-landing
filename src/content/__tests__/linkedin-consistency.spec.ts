@@ -59,10 +59,10 @@ describe.each(Object.keys(dictionaries))('LinkedIn consistency (%s)', (locale) =
     expect(github!.primary).toBeFalsy()
   })
 
-  it('shows Menu Maker as a wide card like the featured products, without a home teaser', () => {
+  it('shows Menu Maker as a featured product in production, like the other two', () => {
     const menu = content.projects.personal.items.find((item) => item.title === 'Menu Maker')!
-    expect(menu.wide).toBe(true)
-    expect(menu.featured).toBeFalsy()
+    expect(menu.featured).toBe(true)
+    expect(menu.proves?.trim()).toBeTruthy()
     expect(menu.image).toMatch(/\.webp$/)
     expect(menu.imageAlt?.trim()).toBeTruthy()
     expect(menu.highlights?.length).toBeGreaterThanOrEqual(3)
@@ -75,7 +75,6 @@ describe.each(Object.keys(dictionaries))('LinkedIn consistency (%s)', (locale) =
     const navigator = content.projects.personal.items.find((item) => item.title === 'Nawigator dnia')
     expect(navigator).toBeDefined()
     expect(navigator!.featured).toBeFalsy()
-    expect(navigator!.wide).toBeFalsy()
     expect(
       navigator!.links.some((link) => link.url === 'https://github.com/sebastian-kostecki/day-navigator'),
     ).toBe(true)

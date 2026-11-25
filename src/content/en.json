@@ -505,7 +505,7 @@
           "subtitle": "A family's weekly meal plan from your own recipes: ingredients scaled to the household with AI and one PDF with the plan and the shopping list.",
           "image": "/assets/projects/menu-maker.webp",
           "imageAlt": "Menu Maker's finished weekly meal plan with the shopping list, on sample data",
-          "wide": true,
+          "featured": true,
           "highlights": [
             "A week of meals drawn from your own recipes, with recipe swaps and leftovers for the next day",
             "Ingredients computed in code and refined by AI in a queue; if AI fails, the computed quantities stay",
@@ -516,7 +516,8 @@
           "links": [
           { "title": "Live app", "url": "https://menu.kostecki.dev", "primary": true },
           { "title": "GitHub", "url": "https://github.com/sebastian-kostecki/menu-maker" }
-          ]
+          ],
+          "proves": "AI in a production flow: scaling in a queue with a code-computed fallback when the model fails, and a Playwright visual gate in CI."
         },
         {
           "title": "Nawigator dnia",

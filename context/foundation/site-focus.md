@@ -66,6 +66,7 @@ projekty poboczne (pisane z agentami, pokazują proces, nie talent do kodowania)
 | PanelAlpha Engine (2026-11-25, rewizja) | Nadal bez osobnej karty i bez linku do commitów, ale blok open source w karcie PanelAlpha linkuje do repo Engine i Single Server Edition. |
 | Formuła „Laravel + Vue” (2026-11-25) | Tylko w trzech miejscach: etykieta hero, wiersz „Rola” w „W skrócie” i metadane. Gdzie indziej: „backend w Laravelu, interfejs w Vue”. |
 | `/cv` (2026-11-25) | Nadal ukryte. |
+| Własne produkty na home (2026-11-25) | Trzy teasery (Skarbnik, Root Keeper, Menu Maker), bo wszystkie trzy działają na produkcji. Siatka trzykolumnowa od `lg`, niżej jedna kolumna. |
 
 ## 5. Kolejność sekcji na stronie głównej
 
@@ -75,7 +76,7 @@ projekty poboczne (pisane z agentami, pokazują proces, nie talent do kodowania)
    może brzmieć „Jak pracuję”, bo zderza się z sekcją AI. Propozycja: „O mnie”.
 3. **Doświadczenie** (dowód 1): PanelAlpha z zakresem, w tym Engine; moduły WHMCS.
 4. **Praca z agentami AI** (dowód 2): wybrane zmiany, licznik archiwum, cztery kroki.
-5. **Własne produkty** (dowód 3): dwa teasery z linią „co udowadnia”, link do `/projects`.
+5. **Własne produkty** (dowód 3): teaser każdego produktu na produkcji (od 2026-11-25 trzy) z linią „co udowadnia”, link do `/projects`.
 6. **Kontakt**: e-mail pierwszy, kopiowanie, LinkedIn, GitHub.
 7. **Stopka**: link „Źródło” do repo landing.
 
@@ -235,6 +236,6 @@ Każda zmiana cytuje ten dokument w `change.md`.
   Zmieniono: rola full-stack (Laravel + Vue) zamiast backend; daty od 07.2022 (ModulesGarden)
   i 11.2022 (PanelAlpha); PanelAlpha jako hosting projektów z Gita, z linkami do repo Engine
   i Single Server Edition w bloku open source (rewizja decyzji o Engine); Claude Code i Claude
-  Design zamiast Cursora; trzy własne produkty na produkcji (Menu Maker z linkiem live, bez
-  osobnego teasera na home); formuła „Laravel + Vue” tylko w etykiecie hero, wierszu „Rola”
+  Design zamiast Cursora; trzy własne produkty na produkcji (Menu Maker z linkiem live,
+  dużą kartą na `/projects` i trzecim teaserem na home); Nawigator dnia w siatce projektów; formuła „Laravel + Vue” tylko w etykiecie hero, wierszu „Rola”
   i metadanych; zgoda ModulesGarden na opis migracji jest; `/cv` nadal ukryte.
