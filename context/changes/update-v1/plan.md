@@ -623,8 +623,8 @@ przywraca i jego.
 - [x] 5.1 Nowe asercje Menu Maker wide i Nawigator dnia przechodzą — 520b4db
 - [x] 5.2 pnpm lint i pnpm build przechodzą — 520b4db
 - [x] 5.3 W dist Menu Maker ma szeroką kartę, Nawigator małą, home dwa teasery — 520b4db
-- [ ] 5.6 products.spec wymaga trzech wyróżnionych, Menu Maker featured z proves, testy przechodzą
-- [ ] 5.7 W dist trzy teasery na home i trzy duże karty na /projects
+- [x] 5.6 products.spec wymaga trzech wyróżnionych, Menu Maker featured z proves, testy przechodzą — 8450e03
+- [x] 5.7 W dist trzy teasery na home i trzy duże karty na /projects — 8450e03
 
 #### Manual
 
