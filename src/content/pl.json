@@ -372,27 +372,31 @@
       "title": "PanelAlpha",
       "context": {
         "employer": "ModulesGarden",
-        "role": "Backend Developer",
+        "role": "Full-stack Developer",
         "period": "{years:panelAlpha}"
       },
-      "description": "Produkcyjna platforma B2B do automatyzacji zarządzania WordPress dla firm hostingowych i agencji.",
+      "description": "Platforma do hostingu i zarządzania projektami na własnych serwerach, od WordPressa po dowolne aplikacje z Gita.",
       "contributionTitle": "Mój wkład",
       "responsibilities": [
         "Backend Laravel i rozwój API platformy",
-        "Integracje z panelami hostingowymi (cPanel, Plesk, DirectAdmin) i PowerDNS oraz usługami e-mail, SSL, backup i storage",
-        "Cykl życia instancji WordPress oraz obsługa Git",
+        "Integracje z panelami hostingowymi (cPanel, Plesk, DirectAdmin), WP Cloud i DNS (PowerDNS, Cloudflare, Bunny DNS) oraz usługami e-mail, SSL, backup i storage",
+        "Hosting projektów z Gita i WordPressa: cykl życia instancji",
         "Integracja WHMCS i powiązana logika billingowa",
-        "Vue.js i Vuetify przy funkcjach obejmujących backend oraz UI"
+        "Frontend platformy w Vue.js: migracja na Vue 3 i TypeScript, projekty interfejsu w Claude Design"
       ],
-      "tags": ["PHP", "Laravel", "MySQL", "Vue.js", "Vuetify", "WHMCS"],
+      "tags": ["PHP", "Laravel", "MySQL", "Vue.js", "TypeScript", "Vuetify", "WHMCS"],
       "link": {
         "title": "Zobacz PanelAlpha",
         "url": "https://panelalpha.com",
         "primary": true
       },
       "openSourceContribution": {
-        "text": "Wkład w open-source'owy PanelAlpha Engine: auto-deploy po git push, menedżer plików, dyrektywy PHP per domena, statystyki transferu.",
-        "context": "Platforma do self-hostingu projektów, którą agenci AI obsługują przez MCP."
+        "text": "Wkład w open-source'owy PanelAlpha Engine (auto-deploy po git push, menedżer plików, dyrektywy PHP per domena, statystyki transferu) oraz PanelAlpha Single Server Edition: backend i frontend panelu hostingowego na własny VPS, działającego na API Engine.",
+        "context": "Engine obsługują też agenci AI przez MCP.",
+        "links": [
+          { "title": "PanelAlpha Engine", "url": "https://github.com/panelalpha/panelalpha-engine" },
+          { "title": "Single Server Edition", "url": "https://github.com/panelalpha/panelalpha-single-server" }
+        ]
       }
     },
     "commercialGroup": {
@@ -401,7 +405,7 @@
       "context": {
         "employer": "ModulesGarden",
         "role": "PHP Developer",
-        "period": "~6 miesięcy"
+        "period": "07–11.2022"
       },
       "description": "Narzędzia rozszerzające billing, automatyzację i obsługę infrastruktury w WHMCS.",
       "authorship": "Każdy z poniższych modułów zaimplementowałem samodzielnie w ramach pracy dla ModulesGarden.",

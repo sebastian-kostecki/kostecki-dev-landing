@@ -56,6 +56,7 @@ export interface CommercialWorkContext {
 export interface OpenSourceContribution {
   text: string
   context: string
+  links?: ProjectLink[]
 }
 
 export interface FeaturedProject {

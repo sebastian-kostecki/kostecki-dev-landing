@@ -24,23 +24,33 @@ describe('formatDuration', () => {
     expect(formatDuration('modulesGarden', 'en', 'years')).toBe('4 years')
   })
 
-  it('formats half years at 2026-11-09', () => {
+  it('formats whole years for both start dates at 2026-11-09', () => {
     at(2026, 11, 9)
-    expect(formatDuration('panelAlpha', 'pl', 'years')).toBe('3,5 roku')
-    expect(formatDuration('panelAlpha', 'en', 'years')).toBe('3.5 years')
+    expect(formatDuration('panelAlpha', 'pl', 'years')).toBe('4 lata')
+    expect(formatDuration('panelAlpha', 'en', 'years')).toBe('4 years')
+  })
+
+  it('formats half years at 2027-02-15', () => {
+    at(2027, 2, 15)
+    expect(formatDuration('modulesGarden', 'pl', 'years')).toBe('4,5 roku')
+    expect(formatDuration('modulesGarden', 'en', 'years')).toBe('4.5 years')
   })
 
   it('does not append "+" between half-year steps', () => {
     at(2027, 2, 15)
-    expect(formatDuration('panelAlpha', 'pl', 'years')).toBe('3,5 roku')
+    expect(formatDuration('modulesGarden', 'pl', 'years')).toBe('4,5 roku')
+    at(2027, 5, 1)
+    expect(formatDuration('modulesGarden', 'pl', 'years')).toBe('4,5 roku')
   })
 
   it('rolls over at the half-year boundary', () => {
-    at(2027, 5, 10)
+    at(2027, 4, 10)
     expect(formatDuration('modulesGarden', 'pl', 'years')).toBe('4,5 roku')
-    expect(formatDuration('modulesGarden', 'pl', 'since')).toBe('4,5 roku')
     expect(formatDuration('panelAlpha', 'pl', 'years')).toBe('4 lata')
     expect(formatDuration('panelAlpha', 'pl', 'since')).toBe('4 lat')
+    at(2027, 5, 10)
+    expect(formatDuration('panelAlpha', 'pl', 'years')).toBe('4,5 roku')
+    expect(formatDuration('panelAlpha', 'pl', 'since')).toBe('4,5 roku')
   })
 
   it('uses "lat" for five years', () => {
@@ -53,8 +63,9 @@ describe('formatDuration', () => {
     expect(formatDuration('modulesGarden', 'pl', 'years')).toBe('1 rok')
     expect(formatDuration('modulesGarden', 'pl', 'since')).toBe('roku')
     expect(formatDuration('modulesGarden', 'en', 'years')).toBe('1 year')
-    expect(formatDuration('panelAlpha', 'pl', 'years')).toBe('0,5 roku')
-    expect(formatDuration('panelAlpha', 'en', 'years')).toBe('0.5 years')
+    at(2023, 2, 15)
+    expect(formatDuration('modulesGarden', 'pl', 'years')).toBe('0,5 roku')
+    expect(formatDuration('modulesGarden', 'en', 'years')).toBe('0.5 years')
   })
 
   it('handles the 12-14 and 22-24 Polish plural exceptions', () => {
@@ -101,7 +112,7 @@ describe('resolveDurations', () => {
     }
     expect(resolveDurations(input, 'pl')).toEqual({
       a: 'Od 4 lat',
-      b: ['3,5 roku', { c: 'x' }],
+      b: ['4 lata', { c: 'x' }],
       n: null,
       num: 7,
       flag: true,

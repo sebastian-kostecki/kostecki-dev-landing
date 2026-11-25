@@ -84,6 +84,22 @@ defineProps<{
                 <p class="mt-1 text-xs text-muted-foreground/80">
                   {{ project.openSourceContribution.context }}
                 </p>
+                <ul
+                  v-if="project.openSourceContribution.links?.length"
+                  class="mt-2 flex flex-wrap gap-x-4 gap-y-1"
+                >
+                  <li v-for="link in project.openSourceContribution.links" :key="link.url">
+                    <a
+                      :href="link.url"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center gap-1 font-mono text-xs text-primary underline-offset-4 hover:underline"
+                    >
+                      {{ link.title }}
+                      <ArrowUpRight class="h-3 w-3" aria-hidden="true" />
+                    </a>
+                  </li>
+                </ul>
               </div>
             </li>
           </ul>

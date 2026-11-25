@@ -502,9 +502,9 @@ przywraca i jego.
 
 #### Automated
 
-- [x] 1.1 Nowe asercje w linkedin-consistency.spec.ts nie przechodzą z powodu treści
-- [x] 1.2 Pozostałe testy przechodzą
-- [x] 1.3 pnpm lint przechodzi
+- [x] 1.1 Nowe asercje w linkedin-consistency.spec.ts nie przechodzą z powodu treści — aae165e
+- [x] 1.2 Pozostałe testy przechodzą — aae165e
+- [x] 1.3 pnpm lint przechodzi — aae165e
 
 #### Manual
 
@@ -514,10 +514,10 @@ przywraca i jego.
 
 #### Automated
 
-- [ ] 2.1 Asercje dat, opisu PanelAlpha i linków OSS przechodzą
-- [ ] 2.2 experience, products, locales i useDuration przechodzą
-- [ ] 2.3 pnpm type-check przechodzi
-- [ ] 2.4 pnpm lint przechodzi
+- [x] 2.1 Asercje dat, opisu PanelAlpha i linków OSS przechodzą
+- [x] 2.2 experience, products, locales i useDuration przechodzą
+- [x] 2.3 pnpm type-check przechodzi
+- [x] 2.4 pnpm lint przechodzi
 
 #### Manual
 
