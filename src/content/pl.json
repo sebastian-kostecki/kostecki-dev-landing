@@ -542,10 +542,6 @@
               "title": "Strona",
               "url": "https://rozgadanajana.pl",
               "primary": true
-            },
-            {
-              "title": "GitHub",
-              "url": "https://github.com/sebastian-kostecki/rozgadana-jana"
             }
           ]
         },
@@ -557,7 +553,7 @@
           "links": [
             {
               "title": "GitHub",
-              "url": "https://github.com/sebastian-kostecki/focus-bloker",
+              "url": "https://github.com/sebastian-kostecki/focus-blocker",
               "primary": true
             }
           ]

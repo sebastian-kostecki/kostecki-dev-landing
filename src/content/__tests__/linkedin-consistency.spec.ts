@@ -15,6 +15,17 @@ const OSS_LINKS = [
   'https://github.com/panelalpha/panelalpha-single-server',
 ]
 
+// Public repositories on github.com/sebastian-kostecki (checked 2026-11-25). A link to any other
+// repo is a 404 for visitors or an old name that only works through a redirect.
+const PUBLIC_REPOS = [
+  'household-treasurer',
+  'root-keeper',
+  'menu-maker',
+  'day-navigator',
+  'focus-blocker',
+  'kostecki-dev-landing',
+]
+
 describe('career dates', () => {
   it('counts from the LinkedIn dates', () => {
     expect(careerSince).toEqual({ modulesGarden: '2022-07', panelAlpha: '2022-11' })
@@ -78,6 +89,14 @@ describe.each(Object.keys(dictionaries))('LinkedIn consistency (%s)', (locale) =
     expect(
       navigator!.links.some((link) => link.url === 'https://github.com/sebastian-kostecki/day-navigator'),
     ).toBe(true)
+  })
+
+  it('links only to public repositories under their current names', () => {
+    const repos = [...serialized.matchAll(/github\.com\/sebastian-kostecki\/([\w.-]+)/g)].map(
+      (match) => match[1],
+    )
+    expect(repos.length).toBeGreaterThan(0)
+    expect(repos.filter((repo) => !PUBLIC_REPOS.includes(repo!))).toEqual([])
   })
 
   it('links the open source block to the Engine and Single Server repos', () => {
