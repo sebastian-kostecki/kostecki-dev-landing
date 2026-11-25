@@ -541,10 +541,10 @@ przywraca i jego.
 
 #### Automated
 
-- [x] 4.1 pnpm test, pnpm lint i pnpm build przechodzą
-- [x] 4.2 Grep w dist nie znajduje Cursor ani backend developer
-- [x] 4.3 dist/index.html ma jobTitle Full-stack Developer i nową meta description
-- [x] 4.4 dist/cv nie istnieje
+- [x] 4.1 pnpm test, pnpm lint i pnpm build przechodzą — 9032cf1
+- [x] 4.2 Grep w dist nie znajduje Cursor ani backend developer — 9032cf1
+- [x] 4.3 dist/index.html ma jobTitle Full-stack Developer i nową meta description — 9032cf1
+- [x] 4.4 dist/cv nie istnieje — 9032cf1
 
 #### Manual
 
