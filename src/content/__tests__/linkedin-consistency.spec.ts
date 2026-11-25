@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import pl from '@/content/pl.json'
 import en from '@/content/en.json'
 import { careerSince } from '@/content/career'
+import { scaleLiterals } from '@/content/content-rules'
 import type { SiteContent } from '@/types/content'
 
 const dictionaries: Record<string, SiteContent> = {
@@ -56,6 +57,28 @@ describe.each(Object.keys(dictionaries))('LinkedIn consistency (%s)', (locale) =
     const github = menu!.links.find((link) => link.url.includes('github.com'))
     expect(github).toBeDefined()
     expect(github!.primary).toBeFalsy()
+  })
+
+  it('shows Menu Maker as a wide card like the featured products, without a home teaser', () => {
+    const menu = content.projects.personal.items.find((item) => item.title === 'Menu Maker')!
+    expect(menu.wide).toBe(true)
+    expect(menu.featured).toBeFalsy()
+    expect(menu.image).toMatch(/\.webp$/)
+    expect(menu.imageAlt?.trim()).toBeTruthy()
+    expect(menu.highlights?.length).toBeGreaterThanOrEqual(3)
+    for (const highlight of menu.highlights ?? []) {
+      expect(scaleLiterals(highlight)).toEqual([])
+    }
+  })
+
+  it('lists Nawigator dnia with its public repository', () => {
+    const navigator = content.projects.personal.items.find((item) => item.title === 'Nawigator dnia')
+    expect(navigator).toBeDefined()
+    expect(navigator!.featured).toBeFalsy()
+    expect(navigator!.wide).toBeFalsy()
+    expect(
+      navigator!.links.some((link) => link.url === 'https://github.com/sebastian-kostecki/day-navigator'),
+    ).toBe(true)
   })
 
   it('links the open source block to the Engine and Single Server repos', () => {

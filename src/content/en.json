@@ -502,14 +502,34 @@
         },
         {
           "title": "Menu Maker",
-          "subtitle": "Weekly meal planning with AI, ingredient scaling, and PDF export. Laravel, Vue, Inertia.",
-          "image": "/assets/projects/menu-maker.png",
-          "placeholderIndex": 2,
-          "tags": ["Laravel", "Vue", "Inertia.js", "AI", "Pest"],
+          "subtitle": "A family's weekly meal plan from your own recipes: ingredients scaled to the household with AI and one PDF with the plan and the shopping list.",
+          "image": "/assets/projects/menu-maker.webp",
+          "imageAlt": "Menu Maker's finished weekly meal plan with the shopping list, on sample data",
+          "wide": true,
+          "highlights": [
+            "A week of meals drawn from your own recipes, with recipe swaps and leftovers for the next day",
+            "Ingredients computed in code and refined by AI in a queue; if AI fails, the computed quantities stay",
+            "One PDF with the plan, a consolidated shopping list and optional recipe pages",
+            "Larastan, Pest tests and a Playwright visual gate in CI; deployed to a VPS behind Traefik"
+          ],
+          "tags": ["Laravel 13", "PHP 8.5", "PostgreSQL", "Vue 3", "Inertia", "Pest", "Playwright"],
           "links": [
           { "title": "Live app", "url": "https://menu.kostecki.dev", "primary": true },
           { "title": "GitHub", "url": "https://github.com/sebastian-kostecki/menu-maker" }
-        ]
+          ]
+        },
+        {
+          "title": "Nawigator dnia",
+          "subtitle": "A Windows tray app for a developer's working day: GitLab and GitHub assignments, a to-do list and a work-time counter. Read-only, with no tokens stored.",
+          "image": null,
+          "tags": ["Tauri 2", "Rust", "React 19", "TypeScript", "SQLite", "Windows"],
+          "links": [
+            {
+              "title": "GitHub",
+              "url": "https://github.com/sebastian-kostecki/day-navigator",
+              "primary": true
+            }
+          ]
         },
         {
           "title": "Rozgadana Jana",

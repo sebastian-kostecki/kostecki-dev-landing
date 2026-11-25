@@ -502,14 +502,34 @@
         },
         {
           "title": "Menu Maker",
-          "subtitle": "Planowanie tygodniowych posiłków z AI, skalowaniem składników i eksportem PDF. Laravel, Vue, Inertia.",
-          "image": "/assets/projects/menu-maker.png",
-          "placeholderIndex": 2,
-          "tags": ["Laravel", "Vue", "Inertia.js", "AI", "Pest"],
+          "subtitle": "Tygodniowy jadłospis rodziny z własnych przepisów: składniki skalowane do domowników z pomocą AI i jeden PDF z planem i listą zakupów.",
+          "image": "/assets/projects/menu-maker.webp",
+          "imageAlt": "Gotowy jadłospis Menu Makera na tydzień z listą zakupów, na przykładowych danych",
+          "wide": true,
+          "highlights": [
+            "Tydzień posiłków losowany z własnych przepisów, z podmianą dania i resztkami na kolejny dzień",
+            "Składniki liczone w kodzie i dopracowywane przez AI w kolejce; gdy AI zawiedzie, zostają wyliczone ilości",
+            "Jeden PDF z planem, zbiorczą listą zakupów i opcjonalnie przepisami",
+            "Larastan, testy Pest i wizualna bramka Playwright w CI; wdrożenie na VPS za Traefikiem"
+          ],
+          "tags": ["Laravel 13", "PHP 8.5", "PostgreSQL", "Vue 3", "Inertia", "Pest", "Playwright"],
           "links": [
           { "title": "Wersja live", "url": "https://menu.kostecki.dev", "primary": true },
           { "title": "GitHub", "url": "https://github.com/sebastian-kostecki/menu-maker" }
-        ]
+          ]
+        },
+        {
+          "title": "Nawigator dnia",
+          "subtitle": "Aplikacja w zasobniku Windows na dzień pracy programisty: przypisane zadania z GitLaba i GitHuba, lista „Do zrobienia” i licznik czasu pracy. Tylko do odczytu, bez przechowywania tokenów.",
+          "image": null,
+          "tags": ["Tauri 2", "Rust", "React 19", "TypeScript", "SQLite", "Windows"],
+          "links": [
+            {
+              "title": "GitHub",
+              "url": "https://github.com/sebastian-kostecki/day-navigator",
+              "primary": true
+            }
+          ]
         },
         {
           "title": "Rozgadana Jana",

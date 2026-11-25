@@ -454,6 +454,63 @@ poprzednich zmianach.
 
 ---
 
+## Faza 5: Menu Maker jako duża karta i Nawigator dnia
+
+Dodana 2026-11-25 po przeglądzie ręcznym, na prośbę Sebastiana.
+
+### Overview
+
+Menu Maker dostaje na `/projects` tę samą szeroką kartę co Domowy Skarbnik i Root Keeper.
+Na stronie głównej nadal są dwa teasery. Nowy projekt Nawigator dnia (`day-navigator`) trafia
+do siatki pozostałych projektów.
+
+### Changes Required:
+
+#### 1. Szeroka karta bez teasera
+
+**Files**: `src/types/content.ts`, `src/views/ProjectsView.vue`
+
+**Intent**: `featured` oznacza jednocześnie szeroką kartę i teaser na stronie głównej, a
+`products.spec.ts` wymaga dokładnie dwóch teaserów. Osobne pole rozdziela te dwie rzeczy.
+
+**Contract**: `Project.wide?: boolean`. `ProjectsView` renderuje `FeaturedProjectCard` dla
+`featured || wide`, a `ProjectCard` dla pozostałych. `HomeView` bez zmian.
+
+#### 2. Menu Maker
+
+**Files**: `src/content/{pl,en}.json`, `public/assets/projects/menu-maker.webp`
+
+**Contract**: `wide: true`, nowy podtytuł, `imageAlt`, cztery wyróżniki bez literałów skali,
+tagi z wersjami jak w innych dużych kartach. Zrzut to zatwierdzony wzorzec testu wizualnego
+Menu Makera (`tests/e2e/__screenshots__/visual/meal-plan-show.spec.ts/meal-plan-show-desktop.png`,
+dane przykładowe), przycięty do 1200×953 jak pozostałe. Stary `menu-maker.png` (748×191)
+usunięty, nic go nie używało. Wyróżniki potwierdzone w README i `.github/workflows/master.yml`
+repo `menu-maker`.
+
+#### 3. Nawigator dnia
+
+**Contract**: wpis po Menu Makerze, `image: null`, tagi Tauri 2, Rust, React 19, TypeScript,
+SQLite, Windows, link do GitHuba jako `primary` (mała karta pokazuje tylko link „strona/demo”
+i GitHub, więc bez osobnego linku do wydań).
+
+### Success Criteria:
+
+#### Automated Verification:
+
+- Nowe asercje w `linkedin-consistency.spec.ts` (Menu Maker `wide` ze zrzutem i wyróżnikami,
+  Nawigator dnia z repo) przechodzą z czerwonego na zielony: `pnpm test`
+- `pnpm lint` i `pnpm build` przechodzą
+- W `dist/projects/index.html` Menu Maker ma szeroką kartę, a Nawigator dnia małą; strona
+  główna ma dwa teasery
+
+#### Manual Verification:
+
+- Karta Menu Makera na `/projects` wygląda jak karty Skarbnika i Root Keepera, na desktopie
+  i mobile
+- Karta Nawigatora dnia w PL i EN ma poprawny opis i link do GitHuba
+
+---
+
 ## Testing Strategy
 
 ### Unit Tests:
@@ -551,3 +608,16 @@ przywraca i jego.
 - [ ] 4.5 og-image.png poprawny, tekst w karcie
 - [ ] 4.6 Strony w PL i EN z poprawnymi linkami live i OSS
 - [ ] 4.7 Menu Maker bez WIP, podtytuł Trzy z nich
+
+### Phase 5: Menu Maker jako duża karta i Nawigator dnia
+
+#### Automated
+
+- [ ] 5.1 Nowe asercje Menu Maker wide i Nawigator dnia przechodzą
+- [ ] 5.2 pnpm lint i pnpm build przechodzą
+- [ ] 5.3 W dist Menu Maker ma szeroką kartę, Nawigator małą, home dwa teasery
+
+#### Manual
+
+- [ ] 5.4 Karta Menu Makera wygląda jak karty Skarbnika i Root Keepera
+- [ ] 5.5 Karta Nawigatora dnia w PL i EN poprawna

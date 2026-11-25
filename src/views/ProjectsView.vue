@@ -10,10 +10,10 @@ import { useContent } from '@/composables/useContent'
 const content = useContent()
 
 const featuredPersonal = computed(() =>
-  content.value.projects.personal.items.filter((project) => project.featured),
+  content.value.projects.personal.items.filter((project) => project.featured || project.wide),
 )
 const otherPersonal = computed(() =>
-  content.value.projects.personal.items.filter((project) => !project.featured),
+  content.value.projects.personal.items.filter((project) => !project.featured && !project.wide),
 )
 
 function projectIndex(index: number) {
