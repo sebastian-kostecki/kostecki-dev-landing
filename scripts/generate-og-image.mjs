@@ -19,7 +19,7 @@ const svg = `
     stroke-linejoin="round"
   />
   <text x="340" y="280" fill="#ffffff" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="64" font-weight="800">Sebastian Kostecki</text>
-  <text x="340" y="360" fill="#a1a1aa" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="36" font-weight="500">Backend Developer · PHP · Laravel</text>
+  <text x="340" y="360" fill="#a1a1aa" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="36" font-weight="500">Full-stack Developer · PHP · Vue</text>
   <text x="340" y="430" fill="#e63946" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="28" font-weight="600">kostecki.dev</text>
 </svg>
 `

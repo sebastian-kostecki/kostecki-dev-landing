@@ -528,9 +528,9 @@ przywraca i jego.
 
 #### Automated
 
-- [x] 3.1 Cały linkedin-consistency.spec.ts przechodzi
-- [x] 3.2 Cały zestaw testów przechodzi
-- [x] 3.3 pnpm type-check i pnpm lint przechodzą
+- [x] 3.1 Cały linkedin-consistency.spec.ts przechodzi — 061a397
+- [x] 3.2 Cały zestaw testów przechodzi — 061a397
+- [x] 3.3 pnpm type-check i pnpm lint przechodzą — 061a397
 
 #### Manual
 
@@ -541,10 +541,10 @@ przywraca i jego.
 
 #### Automated
 
-- [ ] 4.1 pnpm test, pnpm lint i pnpm build przechodzą
-- [ ] 4.2 Grep w dist nie znajduje Cursor ani backend developer
-- [ ] 4.3 dist/index.html ma jobTitle Full-stack Developer i nową meta description
-- [ ] 4.4 dist/cv nie istnieje
+- [x] 4.1 pnpm test, pnpm lint i pnpm build przechodzą
+- [x] 4.2 Grep w dist nie znajduje Cursor ani backend developer
+- [x] 4.3 dist/index.html ma jobTitle Full-stack Developer i nową meta description
+- [x] 4.4 dist/cv nie istnieje
 
 #### Manual
 
