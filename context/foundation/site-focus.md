@@ -8,7 +8,8 @@ przegląd własnych decyzji tego samego dnia (p. 11).
 
 ## 1. Cel i odbiorca
 
-- **Cel zawodowy (12 mies.):** rola backend / senior Laravel w firmie produktowej.
+- **Cel zawodowy (12 mies.):** rola full-stack (Laravel + Vue) w firmie produktowej, z backendem
+  jako najmocniejszą stroną.
   Nie rola „AI engineer”. AI jest sposobem pracy, nie tożsamością.
 - **Odbiorca 1 (15 sekund):** rekruter. Szuka: rola, lata, stack, obecny pracodawca,
   CV, kontakt. Obsługuje go hero i panel „W skrócie”. Język tych dwóch elementów jest
@@ -20,7 +21,7 @@ przegląd własnych decyzji tego samego dnia (p. 11).
 
 ## 2. Teza strony (jedno zdanie)
 
-> Backend developer PHP/Laravel z 4 latami w produkcyjnym produkcie B2B (PanelAlpha,
+> Full-stack developer PHP/Laravel + Vue z 4 latami w produkcyjnym produkcie (PanelAlpha,
 > ModulesGarden). Kod pisze z agentami AI w udokumentowanym procesie, który ma publiczne,
 > weryfikowalne dowody.
 
@@ -35,7 +36,7 @@ przegląd własnych decyzji tego samego dnia (p. 11).
    liczba sama się nie obroni, bo ok. połowa zmian w Skarbniku to przebiegi UI i kontrakty
    design systemu z 5–6 listopada. Dowodem jest **wybór** reprezentatywnych zmian (p. 4),
    liczba jest tłem.
-3. **Własne produkty na produkcji.** Dwa, na własnym VPS-ie, z CI, ADR i changelogiem.
+3. **Własne produkty na produkcji.** Trzy, na własnym VPS-ie (Domowy Skarbnik, Root Keeper, Menu Maker), z CI, ADR i changelogiem.
    Potwierdzają stack z hero (Laravel 13, PostgreSQL, Inertia) od zera do produkcji.
 
 Co **nie** wyróżnia i nie ma być headline'em: „używam Claude Code / Cursora” (w 2026 to
@@ -60,6 +61,13 @@ projekty poboczne (pisane z agentami, pokazują proces, nie talent do kodowania)
 | Prerender | Tak, osobna zmiana. Treść jest statycznym JSON-em, więc prerender po buildzie jest tani i odblokowuje sens JSON-LD, sitemapy i `llms.txt`. |
 | Baza prac | Od `development`. Z `design/hero-variants` przenosimy wybrane elementy (p. 6). |
 | Redesign | Nie. Zostaje dark / mono / czerwony akcent. Wyróżniają autentyczne artefakty, nie layout. |
+| Rola (2026-11-25) | Full-stack, spójnie z LinkedInem (24.11) i GitHubem: Sebastian odpowiada też za frontend PanelAlpha (migracja na Vue 3 + TypeScript, panel Single Server Edition). |
+| Zgoda na migrację (2026-11-25) | Zgoda ModulesGarden na opis migracji jest. |
+| PanelAlpha Engine (2026-11-25, rewizja) | Nadal bez osobnej karty i bez linku do commitów, ale blok open source w karcie PanelAlpha linkuje do repo Engine i Single Server Edition. |
+| Formuła „Laravel + Vue” (2026-11-25) | Tylko w trzech miejscach: etykieta hero, wiersz „Rola” w „W skrócie” i metadane. Gdzie indziej: „backend w Laravelu, interfejs w Vue”. |
+| `/cv` (2026-11-25) | Nadal ukryte. |
+| Własne produkty na home (2026-11-25) | Trzy teasery (Skarbnik, Root Keeper, Menu Maker), bo wszystkie trzy działają na produkcji. Siatka trzykolumnowa od `lg`, niżej jedna kolumna. |
+| ModulesGarden i PanelAlpha (2026-11-25) | Dwa projekty tego samego pracodawcy, jak dwa stanowiska na LinkedInie: ModulesGarden (moduły WHMCS, 07–11.2022), potem PanelAlpha. Karta PanelAlpha bez „ModulesGarden /”, JSON-LD `worksFor` = PanelAlpha (jak `company` na GitHubie). |
 
 ## 5. Kolejność sekcji na stronie głównej
 
@@ -69,7 +77,7 @@ projekty poboczne (pisane z agentami, pokazują proces, nie talent do kodowania)
    może brzmieć „Jak pracuję”, bo zderza się z sekcją AI. Propozycja: „O mnie”.
 3. **Doświadczenie** (dowód 1): PanelAlpha z zakresem, w tym Engine; moduły WHMCS.
 4. **Praca z agentami AI** (dowód 2): wybrane zmiany, licznik archiwum, cztery kroki.
-5. **Własne produkty** (dowód 3): dwa teasery z linią „co udowadnia”, link do `/projects`.
+5. **Własne produkty** (dowód 3): teaser każdego produktu na produkcji (od 2026-11-25 trzy) z linią „co udowadnia”, link do `/projects`.
 6. **Kontakt**: e-mail pierwszy, kopiowanie, LinkedIn, GitHub.
 7. **Stopka**: link „Źródło” do repo landing.
 
@@ -168,7 +176,7 @@ Spoza gałęzi, nowe: prerender (B1). Lokalizacja w URL i `hreflang` (B2) odło�
 ## 9. Otwarte
 
 - Plik ze zdjęciem (Sebastian dostarcza).
-- Zgoda ModulesGarden na opis migracji client area **oraz** potwierdzenie, że repo
+- ~~Zgoda ModulesGarden na opis migracji client area~~ (2026-11-25: jest) **oraz** potwierdzenie, że repo
   `client-area-next` może pozostać na prywatnym koncie (audyt, proposal p. 1).
 - ~~Ostateczny wybór 3–5 zmian do sekcji AI~~ — zamknięte: zmiana `site-focus-ai-proof` (pięć pozycji, p. 7).
 - Sposób prerenderu: post-build (np. prerender ścieżek z `src/router`) albo `vite-ssg`.
@@ -225,3 +233,10 @@ Każda zmiana cytuje ten dokument w `change.md`.
   Tego samego dnia hero przywrócone do wersji sprzed zmiany (decyzja Sebastiana: za dużo tekstu
   na wejściu), razem ze zdaniem o dostępności. Zostają: sekcja „Współpraca”, przykład w sekcji AI,
   nisza w metadanych.
+- **2026-11-25, zmiana `update-v1`.** Spójność z LinkedInem (24.11) i README na GitHubie.
+  Zmieniono: rola full-stack (Laravel + Vue) zamiast backend; daty od 07.2022 (ModulesGarden)
+  i 11.2022 (PanelAlpha); PanelAlpha jako hosting projektów z Gita, z linkami do repo Engine
+  i Single Server Edition w bloku open source (rewizja decyzji o Engine); Claude Code i Claude
+  Design zamiast Cursora; trzy własne produkty na produkcji (Menu Maker z linkiem live,
+  dużą kartą na `/projects` i trzecim teaserem na home); Nawigator dnia w siatce projektów; formuła „Laravel + Vue” tylko w etykiecie hero, wierszu „Rola”
+  i metadanych; zgoda ModulesGarden na opis migracji jest; `/cv` nadal ukryte.

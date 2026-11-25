@@ -74,7 +74,7 @@ const featuredPersonal = computed(() =>
           :title="content.projects.homeProducts.title"
           :subtitle="content.projects.homeProducts.subtitle"
         />
-        <div class="grid gap-5 md:grid-cols-2">
+        <div class="grid gap-5 lg:grid-cols-3">
           <ProductTeaser
             v-for="project in featuredPersonal"
             :key="project.title"

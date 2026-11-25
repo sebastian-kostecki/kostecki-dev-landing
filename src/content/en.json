@@ -1,17 +1,17 @@
 {
   "meta": {
-    "title": "Sebastian Kostecki — Laravel backend for hosting panels, WHMCS, PowerDNS",
-    "description": "Laravel backend developer: hosting control panel integrations (cPanel, Plesk, DirectAdmin), WHMCS billing and PowerDNS. PanelAlpha and my own products.",
+    "title": "Sebastian Kostecki — Laravel + Vue developer: hosting panels, WHMCS, PowerDNS",
+    "description": "Full-stack Laravel + Vue developer: hosting control panel integrations (cPanel, Plesk, DirectAdmin), WHMCS and PowerDNS, hosting projects from Git. PanelAlpha and my own products.",
     "lang": "en"
   },
   "routes": {
     "home": {
-      "title": "Sebastian Kostecki — Laravel backend for hosting panels, WHMCS, PowerDNS",
-      "description": "Laravel backend developer: hosting control panel integrations (cPanel, Plesk, DirectAdmin), WHMCS billing and PowerDNS. PanelAlpha and my own products."
+      "title": "Sebastian Kostecki — Laravel + Vue developer: hosting panels, WHMCS, PowerDNS",
+      "description": "Full-stack Laravel + Vue developer: hosting control panel integrations (cPanel, Plesk, DirectAdmin), WHMCS and PowerDNS, hosting projects from Git. PanelAlpha and my own products."
     },
     "projects": {
       "title": "Projects — Sebastian Kostecki",
-      "description": "PanelAlpha, the open-source PanelAlpha Engine, WHMCS modules for ModulesGarden, and my own products: Domowy Skarbnik and Root Keeper."
+      "description": "PanelAlpha, the open-source PanelAlpha Engine, WHMCS modules for ModulesGarden, and my own products: Domowy Skarbnik, Root Keeper and Menu Maker."
     },
     "skills": {
       "title": "Skills — Sebastian Kostecki",
@@ -19,7 +19,7 @@
     },
     "contact": {
       "title": "Contact — Sebastian Kostecki",
-      "description": "Interested in working together or chatting about backend? Reach out on LinkedIn, GitHub or by e-mail."
+      "description": "Interested in working together or chatting about Laravel and Vue? Reach out on LinkedIn, GitHub or by e-mail."
     },
     "notFound": {
       "title": "Not found — kostecki.dev",
@@ -27,7 +27,7 @@
     },
     "cv": {
       "title": "CV — Sebastian Kostecki",
-      "description": "CV of Sebastian Kostecki, Backend Developer (Laravel): experience, products of his own and stack. Print and PDF ready."
+      "description": "CV of Sebastian Kostecki, Full-stack Developer (Laravel + Vue): experience, products of his own and stack. Print and PDF ready."
     }
   },
   "ui": {
@@ -50,7 +50,7 @@
     "notFoundTitle": "Page not found",
     "notFoundBody": "The page you're looking for doesn't exist or has been moved.",
     "brandName": "kostecki.dev",
-    "footerTagline": "PHP & Laravel backend developer — APIs, integrations and infrastructure automation.",
+    "footerTagline": "Full-stack developer — APIs, integrations and interfaces in Laravel and Vue.",
     "footerStack": "Laravel · PHP · Docker",
     "siteSource": "Source",
     "featuredProjectLabel": "Personal project in production",
@@ -81,11 +81,11 @@
     }
   ],
   "hero": {
-    "label": "Backend Developer / PHP · Laravel",
+    "label": "Full-stack Developer / PHP · Laravel · Vue",
     "name": "Sebastian Kostecki",
-    "valueProp": "PHP and Laravel backends",
+    "valueProp": "Laravel and Vue applications",
     "valuePropAccent": "that run in production.",
-    "subtitle": "Hosting control panel integrations, WHMCS modules, features from the data model to logic running for customers. I write code with AI agents, in a process with tests and review that leaves public evidence.",
+    "subtitle": "Hosting control panel integrations, WHMCS modules, features from the data model to the Vue interface. I write code with AI agents, in a process with tests and review that leaves public evidence.",
     "ctaPrimary": {
       "label": "Let's talk",
       "href": "/contact"
@@ -96,11 +96,11 @@
     "items": [
       {
         "label": "Role",
-        "value": "Backend Developer (PHP / Laravel), PanelAlpha"
+        "value": "Full-stack Developer (PHP / Laravel + Vue), PanelAlpha"
       },
       {
         "label": "Experience",
-        "value": "{years:modulesGarden} commercially, {years:panelAlpha} of it on PanelAlpha"
+        "value": "{years:modulesGarden} commercially: ModulesGarden, then PanelAlpha"
       },
       {
         "label": "Stack",
@@ -108,7 +108,7 @@
       },
       {
         "label": "In production",
-        "value": "PanelAlpha (B2B) and 2 products of my own on my own VPS"
+        "value": "PanelAlpha and 3 products of my own on my own VPS"
       },
       {
         "label": "AI workflow",
@@ -137,16 +137,16 @@
     "index": "01 / About",
     "title": "Who I am",
     "paragraphs": [
-      "For {years:modulesGarden} I've been building PHP backends, mostly Laravel, and working on PanelAlpha, a platform that helps service companies automate WordPress management. I'm closest to hosting control panel integrations (cPanel, Plesk, DirectAdmin), and I also contribute to the open-source PanelAlpha Engine. I've always wanted to program and build things of my own: I like technology and solving problems.",
-      "I like owning a feature from the backend layer through to working business logic — and when needed, I pick up the frontend (Vue.js). In working with others I value directness. I take responsibility for a task and see it through to the end; I work on a live product, so I care about code that actually works for customers.",
-      "After hours I build two products of my own that run in production, Domowy Skarbnik and Root Keeper, on my own VPS behind Traefik. I keep learning to work with AI: I read, test tools and take part in courses (10xDevs among them). I write code with AI agents in a process with tests and review — I'm the one accountable for what reaches production.",
+      "For {years:modulesGarden} I've been building applications in PHP and Laravel, with interfaces in Vue. I work on PanelAlpha, a platform for hosting projects on your own servers, from WordPress to any app from Git. I'm closest to hosting control panel integrations (cPanel, Plesk, DirectAdmin), and I also contribute to the open-source PanelAlpha Engine. I've always wanted to program and build things of my own: I like technology and solving problems.",
+      "I like owning a feature from the backend layer through to the Vue interface; lately I've been migrating the PanelAlpha frontend to Vue 3 and TypeScript. In working with others I value directness. I take responsibility for a task and see it through to the end; I work on a live product, so I care about code that actually works for customers.",
+      "After hours I build three products of my own that run in production, Domowy Skarbnik, Root Keeper and Menu Maker, on my own VPS behind Traefik. I keep learning to work with AI: I read, test tools and take part in courses (10xDevs among them). I write code with AI agents in a process with tests and review — I'm the one accountable for what reaches production.",
       "I live in Lublin. Outside of code — family, walks and the mountains, working outdoors, and a good book."
     ]
   },
   "aiWorkflow": {
     "index": "AI / Workflow",
     "title": "Working with AI agents",
-    "subtitle": "Agents (Claude Code, Cursor) write a large share of my code, but I own what reaches production. I am refining the process in the 10xDevs course, and its traces are in my public repositories.",
+    "subtitle": "Agents (Claude Code, Claude Design) write a large share of my code, but I own what reaches production. I am refining the process in the 10xDevs course, and its traces are in my public repositories.",
     "example": {
       "eyebrow": "One change, from plan to production",
       "title": "Root Keeper: production data safety",
@@ -253,9 +253,9 @@
   "skills": {
     "index": "03 / Skills",
     "title": "Skills & Tools",
-    "subtitle": "The stack I use to build and maintain production backends — plus supporting competencies from commercial work.",
+    "subtitle": "The stack I use to build and maintain production applications: a Laravel backend and a Vue frontend — plus supporting competencies from commercial work.",
     "coreTitle": "Core stack",
-    "coreDescription": "The stack I use to build and maintain production backends — and frontend when a feature requires it.",
+    "coreDescription": "The stack I use to build and maintain production applications: a Laravel backend and a Vue frontend.",
     "competenciesLabel": "Competencies",
     "core": [
       {
@@ -297,7 +297,7 @@
       {
         "name": "Vue.js",
         "icon": "simple-icons:vuedotjs",
-        "level": "Feature frontends",
+        "level": "Product interfaces",
         "usedIn": "PanelAlpha, Domowy Skarbnik, this site"
       }
     ],
@@ -312,6 +312,7 @@
           "PowerDNS",
           "Cloudflare",
           "Bunny DNS",
+          "WP Cloud",
           "Let's Encrypt",
           "mailcow",
           "Fastly",
@@ -329,8 +330,8 @@
         "tags": ["WHMCS", "Stripe"]
       },
       {
-        "name": "Supporting frontend",
-        "description": "I implement UI work when a feature spans both backend and frontend changes.",
+        "name": "Frontend (Vue 3 + TypeScript)",
+        "description": "I build and migrate interfaces in Vue 3 and TypeScript, including features that span the backend.",
         "tags": [
           "Vue.js",
           "React",
@@ -354,7 +355,7 @@
       {
         "name": "Tools and workflow",
         "description": "I work with AI agents using the 10xDevs process: context, plan, implementation, review.",
-        "tags": ["Git", "Claude Code", "Cursor", "PhpStorm", "Laravel Boost (MCP)", "10xDevs"]
+        "tags": ["Git", "Claude Code", "Claude Design", "PhpStorm", "Laravel Boost (MCP)", "10xDevs"]
       }
     ]
   },
@@ -371,28 +372,31 @@
       "eyebrow": "Flagship commercial project",
       "title": "PanelAlpha",
       "context": {
-        "employer": "ModulesGarden",
-        "role": "Backend Developer",
+        "role": "Full-stack Developer",
         "period": "{years:panelAlpha}"
       },
-      "description": "A production B2B platform that automates WordPress management for hosting companies and agencies.",
+      "description": "A platform for hosting and managing projects on your own servers, from WordPress to any app from Git.",
       "contributionTitle": "My contribution",
       "responsibilities": [
         "Laravel backend and platform API development",
-        "Integrations with hosting panels (cPanel, Plesk, DirectAdmin) and PowerDNS, plus email, SSL, backup, and storage services",
-        "WordPress instance lifecycle and Git support",
+        "Integrations with hosting panels (cPanel, Plesk, DirectAdmin), WP Cloud and DNS (PowerDNS, Cloudflare, Bunny DNS), plus email, SSL, backup, and storage services",
+        "Hosting projects from Git and WordPress: instance lifecycle",
         "WHMCS integration and related billing logic",
-        "Vue.js and Vuetify for features spanning backend and UI"
+        "Platform frontend in Vue.js: migration to Vue 3 and TypeScript, interface designs in Claude Design"
       ],
-      "tags": ["PHP", "Laravel", "MySQL", "Vue.js", "Vuetify", "WHMCS"],
+      "tags": ["PHP", "Laravel", "MySQL", "Vue.js", "TypeScript", "Vuetify", "WHMCS"],
       "link": {
         "title": "View PanelAlpha",
         "url": "https://panelalpha.com",
         "primary": true
       },
       "openSourceContribution": {
-        "text": "Contributions to the open-source PanelAlpha Engine: auto-deploy on git push, file manager, per-domain PHP directives, transfer statistics.",
-        "context": "A self-hosting platform for projects that AI agents operate over MCP."
+        "text": "Contributions to the open-source PanelAlpha Engine (auto-deploy on git push, file manager, per-domain PHP directives, transfer statistics) and PanelAlpha Single Server Edition: backend and frontend of a hosting panel for your own VPS, built on the Engine API.",
+        "context": "AI agents can operate Engine over MCP.",
+        "links": [
+          { "title": "PanelAlpha Engine", "url": "https://github.com/panelalpha/panelalpha-engine" },
+          { "title": "Single Server Edition", "url": "https://github.com/panelalpha/panelalpha-single-server" }
+        ]
       }
     },
     "commercialGroup": {
@@ -401,7 +405,7 @@
       "context": {
         "employer": "ModulesGarden",
         "role": "PHP Developer",
-        "period": "~6 months"
+        "period": "07–11.2022"
       },
       "description": "Tools extending billing, automation, and infrastructure workflows in WHMCS.",
       "authorship": "I independently implemented each module below while working for ModulesGarden.",
@@ -433,7 +437,7 @@
     "personal": {
       "index": "02 / Personal projects",
       "title": "Personal projects",
-      "subtitle": "Products I build after hours. Two of them run in production on my own VPS.",
+      "subtitle": "Products I build after hours. Three of them run in production on my own VPS.",
       "items": [
         {
           "title": "Domowy Skarbnik",
@@ -497,15 +501,32 @@
         },
         {
           "title": "Menu Maker",
-          "subtitle": "Weekly meal planning with AI, ingredient scaling, and PDF export. Laravel, Vue, Inertia.",
-          "image": "/assets/projects/menu-maker.png",
-          "placeholderIndex": 2,
-          "badge": "wip",
-          "tags": ["Laravel", "Vue", "Inertia.js", "AI", "Pest"],
+          "subtitle": "A family's weekly meal plan from your own recipes: ingredients scaled to the household with AI and one PDF with the plan and the shopping list.",
+          "image": "/assets/projects/menu-maker.webp",
+          "imageAlt": "Menu Maker's finished weekly meal plan with the shopping list, on sample data",
+          "featured": true,
+          "highlights": [
+            "A week of meals drawn from your own recipes, with recipe swaps and leftovers for the next day",
+            "Ingredients computed in code and refined by AI in a queue; if AI fails, the computed quantities stay",
+            "One PDF with the plan, a consolidated shopping list and optional recipe pages",
+            "Larastan, Pest tests and a Playwright visual gate in CI; deployed to a VPS behind Traefik"
+          ],
+          "tags": ["Laravel 13", "PHP 8.5", "PostgreSQL", "Vue 3", "Inertia", "Pest", "Playwright"],
+          "links": [
+          { "title": "Live app", "url": "https://menu.kostecki.dev", "primary": true },
+          { "title": "GitHub", "url": "https://github.com/sebastian-kostecki/menu-maker" }
+          ],
+          "proves": "AI in a production flow: scaling in a queue with a code-computed fallback when the model fails, and a Playwright visual gate in CI."
+        },
+        {
+          "title": "Nawigator dnia",
+          "subtitle": "A Windows tray app for a developer's working day: GitLab and GitHub assignments, a to-do list and a work-time counter. Read-only, with no tokens stored.",
+          "image": null,
+          "tags": ["Tauri 2", "Rust", "React 19", "TypeScript", "SQLite", "Windows"],
           "links": [
             {
               "title": "GitHub",
-              "url": "https://github.com/sebastian-kostecki/menu-maker",
+              "url": "https://github.com/sebastian-kostecki/day-navigator",
               "primary": true
             }
           ]
@@ -520,10 +541,6 @@
               "title": "Website",
               "url": "https://rozgadanajana.pl",
               "primary": true
-            },
-            {
-              "title": "GitHub",
-              "url": "https://github.com/sebastian-kostecki/rozgadana-jana"
             }
           ]
         },
@@ -535,7 +552,7 @@
           "links": [
             {
               "title": "GitHub",
-              "url": "https://github.com/sebastian-kostecki/focus-bloker",
+              "url": "https://github.com/sebastian-kostecki/focus-blocker",
               "primary": true
             }
           ]
@@ -554,9 +571,9 @@
     "subtitle": "After hours, I take on projects in two areas.",
     "services": [
       {
-        "title": "Laravel backend for your product",
-        "scope": "From the data model to deployment.",
-        "outcome": "You get a backend that runs in production, with tests in CI, documented decisions and a repeatable deploy."
+        "title": "Backend and interface for your product",
+        "scope": "From the data model through the Vue interface to deployment.",
+        "outcome": "You get an application that runs in production, with tests in CI, documented decisions and a repeatable deploy."
       },
       {
         "title": "AI agents in your team's workflow",
@@ -572,7 +589,7 @@
   "contact": {
     "index": "04 / Contact",
     "title": "Let's talk",
-    "subtitle": "Interested in working together or chatting about backend? Get in touch — I usually reply within a day.",
+    "subtitle": "Interested in working together or chatting about Laravel and Vue? Get in touch — I usually reply within a day.",
     "methods": [
       {
         "type": "linkedin",
@@ -597,8 +614,8 @@
   "footer": {
     "servicesTitle": "Specialization",
     "services": [
-      "Production PHP backends (Laravel)",
-      "APIs, external integrations, and WordPress automation"
+      "Production apps: Laravel backend, Vue interface",
+      "APIs, external integrations, and project hosting"
     ],
     "mediaTitle": "Profiles",
     "social": [

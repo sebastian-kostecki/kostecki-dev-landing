@@ -78,7 +78,7 @@ function printCv() {
                   {{ job.context.role }} · {{ job.title }}
                 </h3>
                 <span class="font-mono text-xs text-muted-foreground">
-                  {{ job.context.employer }} · {{ job.context.period }}
+                  {{ [job.context.employer, job.context.period].filter(Boolean).join(' · ') }}
                 </span>
               </div>
               <p class="mt-1 text-sm text-foreground/80">{{ job.description }}</p>

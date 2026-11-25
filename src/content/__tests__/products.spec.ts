@@ -17,8 +17,8 @@ describe.each(Object.keys(dictionaries))('featured products (%s)', (locale) => {
   const content = dictionaries[locale]!
   const products = featured(content)
 
-  it('has exactly 2 featured products with a non-empty proves line', () => {
-    expect(products).toHaveLength(2)
+  it('has exactly 3 featured products with a non-empty proves line', () => {
+    expect(products).toHaveLength(3)
     for (const product of products) {
       expect(product.proves?.trim()).toBeTruthy()
     }
