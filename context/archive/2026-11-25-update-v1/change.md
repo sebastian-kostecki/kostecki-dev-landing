@@ -1,10 +1,10 @@
 ---
 change_id: update-v1
 title: Spójność strony z LinkedInem — rola full-stack, daty, PanelAlpha, AI i trzy produkty
-status: implemented
+status: archived
 created: 2026-11-25
 updated: 2026-11-25
-archived_at: null
+archived_at: 2026-11-25T10:12:52Z
 ---
 
 ## Notes
