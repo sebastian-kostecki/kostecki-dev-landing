@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { describe, expect, it } from 'vitest'
+import pl from '@/content/pl.json'
 
 const html = readFileSync(fileURLToPath(new URL('../../index.html', import.meta.url)), 'utf8')
 
@@ -31,5 +32,16 @@ describe('index.html', () => {
     ['script src', urls('script', 'src')],
   ])('loads every %s from this origin or the canonical host', (_label, list) => {
     expect(list.filter((url) => !isAllowed(url))).toEqual([])
+  })
+
+  it.each([
+    ['name', 'description'],
+    ['property', 'og:description'],
+    ['name', 'twitter:description'],
+  ])('keeps meta %s="%s" equal to pl.meta.description', (attr, key) => {
+    const tag = (html.match(/<meta\b[^>]*>/g) ?? []).find((el) => el.includes(`${attr}="${key}"`))
+    expect(tag).toBeDefined()
+    const content = /\bcontent="([^"]*)"/.exec(tag!)?.[1]
+    expect(content).toBe(pl.meta.description)
   })
 })
