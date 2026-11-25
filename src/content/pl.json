@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Sebastian Kostecki — Laravel: panele hostingowe, WHMCS, PowerDNS",
-    "description": "Backend Developer (Laravel): integracje z panelami hostingowymi (cPanel, Plesk, DirectAdmin), WHMCS i billingiem oraz PowerDNS. PanelAlpha i własne produkty.",
+    "description": "Full-stack Developer (Laravel + Vue): integracje z panelami hostingowymi (cPanel, Plesk, DirectAdmin), WHMCS i PowerDNS, hosting projektów z Gita. PanelAlpha i własne produkty.",
     "lang": "pl"
   },
   "routes": {
     "home": {
       "title": "Sebastian Kostecki — Laravel: panele hostingowe, WHMCS, PowerDNS",
-      "description": "Backend Developer (Laravel): integracje z panelami hostingowymi (cPanel, Plesk, DirectAdmin), WHMCS i billingiem oraz PowerDNS. PanelAlpha i własne produkty."
+      "description": "Full-stack Developer (Laravel + Vue): integracje z panelami hostingowymi (cPanel, Plesk, DirectAdmin), WHMCS i PowerDNS, hosting projektów z Gita. PanelAlpha i własne produkty."
     },
     "projects": {
       "title": "Projekty — Sebastian Kostecki",
@@ -19,7 +19,7 @@
     },
     "contact": {
       "title": "Kontakt — Sebastian Kostecki",
-      "description": "Zainteresowany współpracą lub rozmową o backendzie? Napisz na LinkedIn, GitHub lub e-mail."
+      "description": "Zainteresowany współpracą lub rozmową o Laravelu i Vue? Napisz na LinkedIn, GitHub lub e-mail."
     },
     "notFound": {
       "title": "Nie znaleziono — kostecki.dev",
@@ -27,7 +27,7 @@
     },
     "cv": {
       "title": "CV — Sebastian Kostecki",
-      "description": "CV Sebastiana Kosteckiego, Backend Developera (Laravel): doświadczenie, własne produkty i stack. Wersja do druku i PDF."
+      "description": "CV Sebastiana Kosteckiego, Full-stack Developera (Laravel + Vue): doświadczenie, własne produkty i stack. Wersja do druku i PDF."
     }
   },
   "ui": {
@@ -50,7 +50,7 @@
     "notFoundTitle": "Nie znaleziono strony",
     "notFoundBody": "Strona, której szukasz, nie istnieje albo została przeniesiona.",
     "brandName": "kostecki.dev",
-    "footerTagline": "Backend Developer (Laravel) — API, integracje i automatyzacja infrastruktury.",
+    "footerTagline": "Full-stack Developer — API, integracje i interfejsy w Laravelu i Vue.",
     "footerStack": "Laravel · PHP · Docker",
     "siteSource": "Źródło",
     "featuredProjectLabel": "Projekt własny na produkcji",
@@ -81,11 +81,11 @@
     }
   ],
   "hero": {
-    "label": "Backend Developer / PHP · Laravel",
+    "label": "Full-stack Developer / PHP · Laravel · Vue",
     "name": "Sebastian Kostecki",
-    "valueProp": "Backend w PHP i Laravelu,",
-    "valuePropAccent": "który działa na produkcji.",
-    "subtitle": "Integracje z panelami hostingowymi, moduły WHMCS, feature od modelu danych po działającą logikę u klienta. Kod piszę z agentami AI, w procesie z testami i review, który ma publiczne dowody.",
+    "valueProp": "Aplikacje w Laravelu i Vue,",
+    "valuePropAccent": "które działają na produkcji.",
+    "subtitle": "Integracje z panelami hostingowymi, moduły WHMCS, feature od modelu danych po interfejs w Vue. Kod piszę z agentami AI, w procesie z testami i review, który ma publiczne dowody.",
     "ctaPrimary": {
       "label": "Porozmawiajmy",
       "href": "/contact"
@@ -96,11 +96,11 @@
     "items": [
       {
         "label": "Rola",
-        "value": "Backend Developer (PHP / Laravel), PanelAlpha"
+        "value": "Full-stack Developer (PHP / Laravel + Vue), PanelAlpha"
       },
       {
         "label": "Doświadczenie",
-        "value": "{years:modulesGarden} komercyjnie, w tym {years:panelAlpha} przy PanelAlpha"
+        "value": "{years:modulesGarden} komercyjnie w ModulesGarden, głównie przy PanelAlpha"
       },
       {
         "label": "Stack",
@@ -108,7 +108,7 @@
       },
       {
         "label": "Na produkcji",
-        "value": "PanelAlpha (B2B) oraz 2 własne produkty na własnym VPS-ie"
+        "value": "PanelAlpha oraz 3 własne produkty na własnym VPS-ie"
       },
       {
         "label": "Praca z AI",
@@ -137,16 +137,16 @@
     "index": "01 / O mnie",
     "title": "Kim jestem",
     "paragraphs": [
-      "Od {since:modulesGarden} buduję backend w PHP — głównie Laravel — i rozwijam platformę PanelAlpha, która firmom usługowym umożliwia automatyzację zarządzania WordPress. Najbliżej mi do integracji z panelami hostingowymi (cPanel, Plesk, DirectAdmin); przyczyniam się też do open-source'owego PanelAlpha Engine. Zawsze chciałem programować i tworzyć coś własnego: lubię technologie i rozwiązywanie problemów.",
-      "Lubię przejąć feature i dowieźć go od warstwy backendowej po działającą logikę — a gdy potrzeba, wchodzę we frontend (Vue.js). W kontaktach cenię konkret. Biorę odpowiedzialność za zadanie i doprowadzam je do końca; pracuję na żywym produkcie, więc liczy się dla mnie kod, który faktycznie działa u klientów.",
-      "Po godzinach rozwijam dwa własne produkty działające na produkcji, Domowy Skarbnik i Root Keeper, na własnym VPS-ie za Traefikiem. Na bieżąco uczę się pracy z AI: czytam, testuję narzędzia i biorę udział w kursach (m.in. 10xDevs). Kod z agentami AI piszę w procesie z testami i review — to ja odpowiadam za to, co trafia na produkcję.",
+      "Od {since:modulesGarden} buduję aplikacje w PHP i Laravelu, a interfejsy w Vue. Rozwijam PanelAlpha, platformę do hostingu projektów na własnych serwerach, od WordPressa po dowolne aplikacje z Gita. Najbliżej mi do integracji z panelami hostingowymi (cPanel, Plesk, DirectAdmin); przyczyniam się też do open-source'owego PanelAlpha Engine. Zawsze chciałem programować i tworzyć coś własnego: lubię technologie i rozwiązywanie problemów.",
+      "Lubię przejąć feature i dowieźć go od warstwy backendowej po interfejs w Vue; ostatnio migruję frontend PanelAlpha na Vue 3 i TypeScript. W kontaktach cenię konkret. Biorę odpowiedzialność za zadanie i doprowadzam je do końca; pracuję na żywym produkcie, więc liczy się dla mnie kod, który faktycznie działa u klientów.",
+      "Po godzinach rozwijam trzy własne produkty działające na produkcji, Domowy Skarbnik, Root Keeper i Menu Maker, na własnym VPS-ie za Traefikiem. Na bieżąco uczę się pracy z AI: czytam, testuję narzędzia i biorę udział w kursach (m.in. 10xDevs). Kod z agentami AI piszę w procesie z testami i review — to ja odpowiadam za to, co trafia na produkcję.",
       "Mieszkam w Lublinie. Poza kodem — rodzina, spacery i góry, praca na świeżym powietrzu i dobra książka."
     ]
   },
   "aiWorkflow": {
     "index": "AI / Workflow",
     "title": "Praca z agentami AI",
-    "subtitle": "Agenci (Claude Code, Cursor) piszą dużą część mojego kodu, ale to ja odpowiadam za to, co trafia na produkcję. Proces dopracowuję na kursie 10xDevs, a jego ślady są w publicznych repozytoriach.",
+    "subtitle": "Agenci (Claude Code, Claude Design) piszą dużą część mojego kodu, ale to ja odpowiadam za to, co trafia na produkcję. Proces dopracowuję na kursie 10xDevs, a jego ślady są w publicznych repozytoriach.",
     "example": {
       "eyebrow": "Przykład od planu do wdrożenia",
       "title": "Root Keeper: bezpieczeństwo danych produkcyjnych",
@@ -253,9 +253,9 @@
   "skills": {
     "index": "03 / Umiejętności",
     "title": "Umiejętności i narzędzia",
-    "subtitle": "Stack, w którym buduję i utrzymuję produkcyjny backend — oraz kompetencje uzupełniające używane w pracy komercyjnej.",
+    "subtitle": "Stack, w którym buduję i utrzymuję produkcyjne aplikacje: backend w Laravelu i frontend w Vue — oraz kompetencje uzupełniające z pracy komercyjnej.",
     "coreTitle": "Stack podstawowy",
-    "coreDescription": "Stack, w którym buduję i utrzymuję produkcyjny backend — oraz frontend, gdy feature tego wymaga.",
+    "coreDescription": "Stack, w którym buduję i utrzymuję produkcyjne aplikacje: backend w Laravelu i frontend w Vue.",
     "competenciesLabel": "Kompetencje",
     "core": [
       {
@@ -297,7 +297,7 @@
       {
         "name": "Vue.js",
         "icon": "simple-icons:vuedotjs",
-        "level": "Frontend feature'ów",
+        "level": "Interfejsy produktu",
         "usedIn": "PanelAlpha, Domowy Skarbnik, ta strona"
       }
     ],
@@ -312,6 +312,7 @@
           "PowerDNS",
           "Cloudflare",
           "Bunny DNS",
+          "WP Cloud",
           "Let's Encrypt",
           "mailcow",
           "Fastly",
@@ -329,8 +330,8 @@
         "tags": ["WHMCS", "Stripe"]
       },
       {
-        "name": "Frontend uzupełniający",
-        "description": "Implementuję warstwę UI, gdy funkcja obejmuje zmiany po stronie backendu i frontendu.",
+        "name": "Frontend (Vue 3 + TypeScript)",
+        "description": "Buduję i migruję interfejsy w Vue 3 i TypeScript, także przy funkcjach obejmujących backend.",
         "tags": [
           "Vue.js",
           "React",
@@ -354,7 +355,7 @@
       {
         "name": "Narzędzia i workflow",
         "description": "Pracuję z agentami AI w procesie z kursu 10xDevs: kontekst, plan, implementacja, review.",
-        "tags": ["Git", "Claude Code", "Cursor", "PhpStorm", "Laravel Boost (MCP)", "10xDevs"]
+        "tags": ["Git", "Claude Code", "Claude Design", "PhpStorm", "Laravel Boost (MCP)", "10xDevs"]
       }
     ]
   },
@@ -437,7 +438,7 @@
     "personal": {
       "index": "02 / Projekty własne",
       "title": "Projekty własne",
-      "subtitle": "Produkty, które rozwijam po godzinach. Dwa z nich działają na produkcji na moim VPS-ie.",
+      "subtitle": "Produkty, które rozwijam po godzinach. Trzy z nich działają na produkcji na moim VPS-ie.",
       "items": [
         {
           "title": "Domowy Skarbnik",
@@ -504,15 +505,11 @@
           "subtitle": "Planowanie tygodniowych posiłków z AI, skalowaniem składników i eksportem PDF. Laravel, Vue, Inertia.",
           "image": "/assets/projects/menu-maker.png",
           "placeholderIndex": 2,
-          "badge": "wip",
           "tags": ["Laravel", "Vue", "Inertia.js", "AI", "Pest"],
           "links": [
-            {
-              "title": "GitHub",
-              "url": "https://github.com/sebastian-kostecki/menu-maker",
-              "primary": true
-            }
-          ]
+          { "title": "Wersja live", "url": "https://menu.kostecki.dev", "primary": true },
+          { "title": "GitHub", "url": "https://github.com/sebastian-kostecki/menu-maker" }
+        ]
         },
         {
           "title": "Rozgadana Jana",
@@ -558,9 +555,9 @@
     "subtitle": "Po godzinach biorę projekty w dwóch obszarach.",
     "services": [
       {
-        "title": "Backend Laravel dla produktu",
-        "scope": "Od modelu danych do wdrożenia.",
-        "outcome": "Dostajesz backend, który działa na produkcji, z testami w CI, opisanymi decyzjami i powtarzalnym wdrożeniem."
+        "title": "Backend i interfejs dla produktu",
+        "scope": "Od modelu danych po interfejs w Vue i wdrożenie.",
+        "outcome": "Dostajesz aplikację, która działa na produkcji, z testami w CI, opisanymi decyzjami i powtarzalnym wdrożeniem."
       },
       {
         "title": "Praca z agentami AI w zespole",
@@ -576,7 +573,7 @@
   "contact": {
     "index": "04 / Kontakt",
     "title": "Porozmawiajmy",
-    "subtitle": "Zainteresowany współpracą lub rozmową o backendzie? Napisz — zwykle odpisuję w ciągu dnia.",
+    "subtitle": "Zainteresowany współpracą lub rozmową o Laravelu i Vue? Napisz — zwykle odpisuję w ciągu dnia.",
     "methods": [
       {
         "type": "linkedin",
@@ -601,8 +598,8 @@
   "footer": {
     "servicesTitle": "Specjalizacja",
     "services": [
-      "Produkcyjne aplikacje backendowe w PHP (Laravel)",
-      "API, integracje zewnętrzne i automatyzacja WordPress"
+      "Produkcyjne aplikacje: backend w Laravelu, interfejs w Vue",
+      "API, integracje zewnętrzne i hosting projektów"
     ],
     "mediaTitle": "Profile",
     "social": [

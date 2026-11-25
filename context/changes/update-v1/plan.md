@@ -514,10 +514,10 @@ przywraca i jego.
 
 #### Automated
 
-- [x] 2.1 Asercje dat, opisu PanelAlpha i linków OSS przechodzą
-- [x] 2.2 experience, products, locales i useDuration przechodzą
-- [x] 2.3 pnpm type-check przechodzi
-- [x] 2.4 pnpm lint przechodzi
+- [x] 2.1 Asercje dat, opisu PanelAlpha i linków OSS przechodzą — 42b4ba6
+- [x] 2.2 experience, products, locales i useDuration przechodzą — 42b4ba6
+- [x] 2.3 pnpm type-check przechodzi — 42b4ba6
+- [x] 2.4 pnpm lint przechodzi — 42b4ba6
 
 #### Manual
 
@@ -528,9 +528,9 @@ przywraca i jego.
 
 #### Automated
 
-- [ ] 3.1 Cały linkedin-consistency.spec.ts przechodzi
-- [ ] 3.2 Cały zestaw testów przechodzi
-- [ ] 3.3 pnpm type-check i pnpm lint przechodzą
+- [x] 3.1 Cały linkedin-consistency.spec.ts przechodzi
+- [x] 3.2 Cały zestaw testów przechodzi
+- [x] 3.3 pnpm type-check i pnpm lint przechodzą
 
 #### Manual
 
