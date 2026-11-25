@@ -572,7 +572,7 @@ przywraca i jego.
 
 #### Manual
 
-- [ ] 1.4 site-focus.md opisuje decyzje z 2026-11-25 bez sprzeczności
+- [x] 1.4 site-focus.md opisuje decyzje z 2026-11-25 bez sprzeczności — przegląd ręczny 2026-11-25
 
 ### Phase 2: Daty i karta PanelAlpha
 
@@ -585,8 +585,8 @@ przywraca i jego.
 
 #### Manual
 
-- [ ] 2.5 Karta PanelAlpha: pięć punktów, dwa linki OSS, okres 4 lata
-- [ ] 2.6 Karta WHMCS pokazuje 07–11.2022
+- [x] 2.5 Karta PanelAlpha: pięć punktów, dwa linki OSS, okres 4 lata — przegląd ręczny 2026-11-25
+- [x] 2.6 Karta WHMCS pokazuje 07–11.2022 — przegląd ręczny 2026-11-25
 
 ### Phase 3: Rola i teksty w całym serwisie
 
@@ -598,8 +598,8 @@ przywraca i jego.
 
 #### Manual
 
-- [ ] 3.4 Hero na desktopie i mobile bez zmian w układzie
-- [ ] 3.5 Teksty PL i EN naturalne, formuła Laravel + Vue tylko w ustalonych miejscach
+- [x] 3.4 Hero na desktopie i mobile bez zmian w układzie — przegląd ręczny 2026-11-25
+- [x] 3.5 Teksty PL i EN naturalne, formuła Laravel + Vue tylko w ustalonych miejscach — przegląd ręczny 2026-11-25
 
 ### Phase 4: Obraz OG, build i weryfikacja
 
@@ -612,9 +612,9 @@ przywraca i jego.
 
 #### Manual
 
-- [ ] 4.5 og-image.png poprawny, tekst w karcie
-- [ ] 4.6 Strony w PL i EN z poprawnymi linkami live i OSS
-- [ ] 4.7 Menu Maker bez WIP, podtytuł Trzy z nich
+- [x] 4.5 og-image.png poprawny, tekst w karcie — przegląd ręczny 2026-11-25
+- [x] 4.6 Strony w PL i EN z poprawnymi linkami live i OSS — przegląd ręczny 2026-11-25
+- [x] 4.7 Menu Maker bez WIP, podtytuł Trzy z nich — przegląd ręczny 2026-11-25
 
 ### Phase 5: Menu Maker jako duża karta i Nawigator dnia
 
@@ -628,6 +628,6 @@ przywraca i jego.
 
 #### Manual
 
-- [ ] 5.4 Karta Menu Makera wygląda jak karty Skarbnika i Root Keepera
-- [ ] 5.5 Karta Nawigatora dnia w PL i EN poprawna
-- [ ] 5.8 Trzy teasery na home wyglądają dobrze na desktopie, tablecie i mobile
+- [x] 5.4 Karta Menu Makera wygląda jak karty Skarbnika i Root Keepera — przegląd ręczny 2026-11-25
+- [x] 5.5 Karta Nawigatora dnia w PL i EN poprawna — przegląd ręczny 2026-11-25
+- [x] 5.8 Trzy teasery na home wyglądają dobrze na desktopie, tablecie i mobile — przegląd ręczny 2026-11-25
