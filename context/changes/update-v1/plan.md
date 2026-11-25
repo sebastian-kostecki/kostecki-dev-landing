@@ -613,9 +613,9 @@ przywraca i jego.
 
 #### Automated
 
-- [ ] 5.1 Nowe asercje Menu Maker wide i Nawigator dnia przechodzą
-- [ ] 5.2 pnpm lint i pnpm build przechodzą
-- [ ] 5.3 W dist Menu Maker ma szeroką kartę, Nawigator małą, home dwa teasery
+- [x] 5.1 Nowe asercje Menu Maker wide i Nawigator dnia przechodzą — 520b4db
+- [x] 5.2 pnpm lint i pnpm build przechodzą — 520b4db
+- [x] 5.3 W dist Menu Maker ma szeroką kartę, Nawigator małą, home dwa teasery — 520b4db
 
 #### Manual
 
