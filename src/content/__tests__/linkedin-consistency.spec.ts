@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import pl from '@/content/pl.json'
 import en from '@/content/en.json'
-import { careerSince } from '@/content/career'
+import { careerSince, employer } from '@/content/career'
 import { scaleLiterals } from '@/content/content-rules'
 import type { SiteContent } from '@/types/content'
 
@@ -29,6 +29,14 @@ const PUBLIC_REPOS = [
 describe('career dates', () => {
   it('counts from the LinkedIn dates', () => {
     expect(careerSince).toEqual({ modulesGarden: '2022-07', panelAlpha: '2022-11' })
+  })
+})
+
+describe('current organisation', () => {
+  // ModulesGarden and PanelAlpha are two projects of the same employer; LinkedIn and the GitHub
+  // profile list the current role under PanelAlpha.
+  it('is PanelAlpha in JSON-LD', () => {
+    expect(employer).toEqual({ name: 'PanelAlpha', url: 'https://panelalpha.com' })
   })
 })
 
@@ -89,6 +97,18 @@ describe.each(Object.keys(dictionaries))('LinkedIn consistency (%s)', (locale) =
     expect(
       navigator!.links.some((link) => link.url === 'https://github.com/sebastian-kostecki/day-navigator'),
     ).toBe(true)
+  })
+
+  it('presents ModulesGarden and PanelAlpha as two projects, not employer and product', () => {
+    const experience = content.summary.items.find((item) => item.value.includes('{years:modulesGarden}'))!
+    expect(experience.value).toContain('ModulesGarden')
+    expect(experience.value).toContain('PanelAlpha')
+    expect(experience.value).not.toMatch(/(w|at) ModulesGarden/)
+    expect(content.projects.featured.context.employer).toBeUndefined()
+  })
+
+  it('names all three products in the projects page description', () => {
+    expect(content.routes.projects.description).toContain('Menu Maker')
   })
 
   it('links only to public repositories under their current names', () => {

@@ -27,8 +27,10 @@ defineProps<{
           <div
             class="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-xs text-muted-foreground"
           >
-            <span>{{ project.context.employer }}</span>
-            <span aria-hidden="true" class="text-primary">/</span>
+            <template v-if="project.context.employer">
+              <span>{{ project.context.employer }}</span>
+              <span aria-hidden="true" class="text-primary">/</span>
+            </template>
             <span>{{ project.context.role }}</span>
             <span aria-hidden="true" class="text-primary">/</span>
             <span>{{ project.context.period }}</span>

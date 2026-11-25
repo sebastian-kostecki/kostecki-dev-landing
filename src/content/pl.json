@@ -11,7 +11,7 @@
     },
     "projects": {
       "title": "Projekty — Sebastian Kostecki",
-      "description": "PanelAlpha, open-source'owy PanelAlpha Engine, moduły WHMCS dla ModulesGarden oraz własne produkty: Domowy Skarbnik i Root Keeper."
+      "description": "PanelAlpha, open-source'owy PanelAlpha Engine, moduły WHMCS dla ModulesGarden oraz własne produkty: Domowy Skarbnik, Root Keeper i Menu Maker."
     },
     "skills": {
       "title": "Umiejętności — Sebastian Kostecki",
@@ -100,7 +100,7 @@
       },
       {
         "label": "Doświadczenie",
-        "value": "{years:modulesGarden} komercyjnie w ModulesGarden, głównie przy PanelAlpha"
+        "value": "{years:modulesGarden} komercyjnie: ModulesGarden, potem PanelAlpha"
       },
       {
         "label": "Stack",
@@ -372,7 +372,6 @@
       "eyebrow": "Główny projekt komercyjny",
       "title": "PanelAlpha",
       "context": {
-        "employer": "ModulesGarden",
         "role": "Full-stack Developer",
         "period": "{years:panelAlpha}"
       },

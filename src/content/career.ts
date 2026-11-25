@@ -7,8 +7,9 @@ export const careerSince = {
 
 export type CareerKey = keyof typeof careerSince
 
-// Current employer: the one place for facts about ModulesGarden (used by JSON-LD).
+// Current organisation for JSON-LD `worksFor`. ModulesGarden and PanelAlpha are two projects of
+// the same employer; LinkedIn and the GitHub profile list the current role under PanelAlpha.
 export const employer = {
-  name: 'ModulesGarden',
-  url: 'https://www.modulesgarden.com',
+  name: 'PanelAlpha',
+  url: 'https://panelalpha.com',
 } as const

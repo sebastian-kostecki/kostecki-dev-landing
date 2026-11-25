@@ -48,7 +48,8 @@ export interface Project {
 }
 
 export interface CommercialWorkContext {
-  employer: string
+  /** Omitted when the card title already names the project (PanelAlpha). */
+  employer?: string
   role: string
   period: string
 }

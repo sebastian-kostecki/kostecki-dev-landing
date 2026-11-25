@@ -67,6 +67,7 @@ projekty poboczne (pisane z agentami, pokazują proces, nie talent do kodowania)
 | Formuła „Laravel + Vue” (2026-11-25) | Tylko w trzech miejscach: etykieta hero, wiersz „Rola” w „W skrócie” i metadane. Gdzie indziej: „backend w Laravelu, interfejs w Vue”. |
 | `/cv` (2026-11-25) | Nadal ukryte. |
 | Własne produkty na home (2026-11-25) | Trzy teasery (Skarbnik, Root Keeper, Menu Maker), bo wszystkie trzy działają na produkcji. Siatka trzykolumnowa od `lg`, niżej jedna kolumna. |
+| ModulesGarden i PanelAlpha (2026-11-25) | Dwa projekty tego samego pracodawcy, jak dwa stanowiska na LinkedInie: ModulesGarden (moduły WHMCS, 07–11.2022), potem PanelAlpha. Karta PanelAlpha bez „ModulesGarden /”, JSON-LD `worksFor` = PanelAlpha (jak `company` na GitHubie). |
 
 ## 5. Kolejność sekcji na stronie głównej
 
