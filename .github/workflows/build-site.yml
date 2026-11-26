@@ -50,9 +50,15 @@ jobs:
         env:
           ARCHIVE_STRICT: '1'
           GITHUB_TOKEN: ${{ github.token }}
+          # Repository variable (not a secret: the ID is public in the page). Unset = no tracker.
+          UMAMI_WEBSITE_ID: ${{ vars.UMAMI_WEBSITE_ID }}
         run: |
           pnpm build
           test -s dist/index.html
+          if [ -n "$UMAMI_WEBSITE_ID" ]; then
+            grep -q 'src="/u/script.js"' dist/index.html
+            grep -q 'src="/u/script.js"' dist/404.html
+          fi
 
       # After the build: the app (and so its tests) imports src/generated/archive.json,
       # which the build writes.

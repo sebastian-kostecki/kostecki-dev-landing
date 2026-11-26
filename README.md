@@ -40,6 +40,10 @@ Icons are not fetched at runtime. `pnpm generate:icons` (`scripts/build-icons.mj
 
 JetBrains Mono and Work Sans are self-hosted through `@fontsource-variable/*` packages; there are no requests to Google Fonts.
 
+## Analytics
+
+Self-hosted [Umami](https://umami.is): no cookies, no consent banner. The build adds `<script defer src="/u/script.js" data-website-id="…" data-domains="kostecki.dev">` to every page when `UMAMI_WEBSITE_ID` is set (the GitHub Actions repository variable of the same name; `scripts/lib/umami.mjs`, plugin in `vite.config.ts`). Without it, the build has no tracker and logs a warning. Traefik routes `/u/script.js` and `/u/api/send` on `kostecki.dev` to Umami, so the tracker is same-origin and the CSP stays `script-src 'self'; connect-src 'self'`. Dashboard: `stats.kostecki.dev`. Server side and first setup: [kostecki-dev-infra](https://github.com/sebastian-kostecki/kostecki-dev-infra) (`docs/umami.md`).
+
 ## Security headers and CSP
 
 `docker/nginx.conf` sets Strict-Transport-Security, X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy and a Content-Security-Policy. Rules:
