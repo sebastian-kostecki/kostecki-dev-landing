@@ -1,0 +1,21 @@
+# Sebastian Kostecki — Full-stack Developer / PHP · Laravel · Vue
+
+> Full-stack Laravel + Vue developer: hosting control panel integrations (cPanel, Plesk, DirectAdmin), WHMCS and PowerDNS, hosting projects from Git. PanelAlpha and my own products.
+
+- LinkedIn: https://www.linkedin.com/in/kostecki-sebastian
+- GitHub: https://github.com/sebastian-kostecki
+- E-mail: kontakt@kostecki.dev
+
+## Pages
+
+- [Sebastian Kostecki — Laravel + Vue developer: hosting panels, WHMCS, PowerDNS](https://kostecki.dev/): Full-stack Laravel + Vue developer: hosting control panel integrations (cPanel, Plesk, DirectAdmin), WHMCS and PowerDNS, hosting projects from Git. PanelAlpha and my own products.
+- [Projects — Sebastian Kostecki](https://kostecki.dev/projects): PanelAlpha, the open-source PanelAlpha Engine, WHMCS modules for ModulesGarden, and my own products: Domowy Skarbnik, Root Keeper and Menu Maker.
+- [Skills — Sebastian Kostecki](https://kostecki.dev/skills): PHP, Laravel, PostgreSQL, MySQL, TypeScript, Docker and Vue.js, plus hosting integrations, testing, CI and self-hosted infrastructure.
+- [Contact — Sebastian Kostecki](https://kostecki.dev/contact): Interested in working together or chatting about Laravel and Vue? Reach out on LinkedIn, GitHub or by e-mail.
+
+## Public code
+
+- [Domowy Skarbnik](https://github.com/sebastian-kostecki/household-treasurer): A yearly household budget: plan vs actual, liquidity across accounts and term deposits, and CSV/XLSX statement import from mBank and BNP Paribas.
+- [Root Keeper](https://github.com/sebastian-kostecki/root-keeper): A family tree where every date has a source. People, relationships and scanned records that confirm births, marriages and deaths.
+- [Menu Maker](https://github.com/sebastian-kostecki/menu-maker): A family's weekly meal plan from your own recipes: ingredients scaled to the household with AI and one PDF with the plan and the shopping list.
+- [Source](https://github.com/sebastian-kostecki/kostecki-dev-landing)
